@@ -1,0 +1,41 @@
+{
+  "brandLogos": [
+    "/images/logos/logo-1.svg",
+    "/images/logos/logo-2.svg",
+    "/images/logos/logo-3.svg",
+    "/images/logos/logo-4.svg",
+    "/images/logos/logo-5.svg",
+    "/images/logos/logo-6.svg",
+    "/images/logos/logo-7.svg",
+    "/images/logos/logo-8.svg",
+    "/images/logos/logo-9.svg",
+    "/images/logos/logo-10.svg",
+    "/images/logos/logo-11.svg",
+    "/images/logos/logo-12.svg",
+    "/images/logos/logo-13.svg",
+    "/images/logos/logo-14.svg"
+  ],
+  "metrics": {
+    "projectsDelivered": "20+",
+    "messagesProcessed": "50K+",
+    "languagesSupported": "5+",
+    "avgHoursSaved": "15/week"
+  },
+  "techCloud": [
+    "Chat Integration",
+    "Voice Support",
+    "PDF Reading",
+    "Albanian Support",
+    "Multi-language",
+    "Booking Systems",
+    "Invoice Processing",
+    "Customer Support",
+    "Admin Dashboards",
+    "Mobile Apps",
+    "GDPR Compliance",
+    "EU Standards",
+    "Real-time Updates",
+    "Workflow Automation",
+    "System Connectors"
+  ]
+}

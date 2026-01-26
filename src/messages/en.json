@@ -1,0 +1,60 @@
+{
+  "nav": {
+    "services": "Services",
+    "aiLab": "AI Lab",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "plansAndPricing": "Plans and Pricing",
+    "getStarted": "Get Started Today",
+    "home": "Home",
+    "achievements": "Achievements",
+    "ourWork": "Our Work",
+    "faqs": "FAQs",
+    "viewPlans": "View Plans and Pricing"
+  },
+  "hero": {
+    "statusBadge": "Available for New Projects",
+    "mainHeading": "AI THAT WORKS FOR",
+    "subtitle": "AI that actually works. No fluff. No hype. Just results.",
+    "ctaPrimary": "View Plans and Pricing",
+    "ctaSecondary": "See Our Work",
+    "letsGo": "Let's Go"
+  },
+  "features": {
+    "delivery": "48 Hours",
+    "deliveryDesc": "Delivery",
+    "portal": "Access to Private",
+    "portalDesc": "Project Portal",
+    "unlimited": "Unlimited",
+    "unlimitedDesc": "Revisions"
+  },
+  "sections": {
+    "testimonials": "What Clients Say",
+    "brands": "Trusted By",
+    "achievements": "Our Achievements",
+    "benefits": "Why Choose Us",
+    "howItWorks": "How It Works",
+    "services": "Our Services",
+    "portfolio": "Our Portfolio",
+    "pricing": "Engagement Models",
+    "faq": "Frequently Asked Questions",
+    "cta": "Ready to Get Started?"
+  },
+  "cta": {
+    "bookCall": "Book a Call",
+    "learnMore": "Learn More",
+    "viewProject": "View Project",
+    "readMore": "Read More"
+  },
+  "footer": {
+    "copyright": "MATRIKS. All rights reserved.",
+    "building": "building...",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Try again"
+  }
+}
