@@ -2,8 +2,6 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing, type Locale } from '@/i18n/routing';
-import { inter, phudu, satoshi, euclidCircularB, chelseaMarket } from '@/lib/fonts';
-import '../globals.css';
 
 interface LocaleLayoutProps {
   children: React.ReactNode;
@@ -55,21 +53,9 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
   setRequestLocale(locale);
   const messages = await getMessages();
 
-  const fontVariables = [
-    inter.variable,
-    phudu.variable,
-    satoshi.variable,
-    euclidCircularB.variable,
-    chelseaMarket.variable,
-  ].join(' ');
-
   return (
-    <html lang={locale === 'al' ? 'sq' : locale} suppressHydrationWarning>
-      <body className={`${fontVariables} antialiased`}>
-        <NextIntlClientProvider messages={messages}>
-          {children}
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider messages={messages} locale={locale}>
+      {children}
+    </NextIntlClientProvider>
   );
 }

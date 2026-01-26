@@ -67,7 +67,7 @@ export function AnimatedText({ words, className }: AnimatedTextProps) {
         <span className="absolute inset-0">
           {/* Blue border */}
           <span
-            className="absolute inset-[-4px] border-[7.9px] border-[rgb(52,145,255)]"
+            className="absolute -top-[2px] -bottom-[2px] -left-[3px] -right-[3px] border-[2px] border-[rgb(52,145,255)]"
             style={{ borderRadius: 0 }}
           />
 
@@ -77,14 +77,14 @@ export function AnimatedText({ words, className }: AnimatedTextProps) {
               <span
                 key={corner}
                 className={cn(
-                  'absolute w-2 h-2 bg-[rgb(52,145,255)] pulse-animation',
-                  corner === 'top-left' && '-top-1 -left-1',
-                  corner === 'top-right' && '-top-1 -right-1',
-                  corner === 'bottom-left' && '-bottom-1 -left-1',
-                  corner === 'bottom-right' && '-bottom-1 -right-1'
+                  'absolute w-[6px] h-[6px] bg-[rgb(52,145,255)] pulse-animation',
+                  corner === 'top-left' && '-top-[5px] -left-[6px]',
+                  corner === 'top-right' && '-top-[5px] -right-[6px]',
+                  corner === 'bottom-left' && '-bottom-[5px] -left-[6px]',
+                  corner === 'bottom-right' && '-bottom-[5px] -right-[6px]'
                 )}
                 style={{
-                  boxShadow: '0 0 8px rgba(52, 145, 255, 0.5)',
+                  boxShadow: '0 0 6px rgba(52, 145, 255, 0.4)',
                 }}
               />
             )

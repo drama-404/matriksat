@@ -13,35 +13,41 @@ export function SelectionBox({
   children,
   className,
   animate = false,
-  strokeWidth = 7.9,
+  strokeWidth = 2,
 }: SelectionBoxProps) {
-  const cornerSize = 8;
+  const cornerSize = 6;
+  const cornerGap = 6;
 
   return (
     <div className={cn('relative inline-flex', className)}>
       {/* Content */}
-      <div className="relative z-10 px-3 py-2">
+      <div className="relative z-10 px-2 py-0.5">
         {children}
       </div>
 
-      {/* Selection Box Border */}
-      <svg
-        className="absolute inset-0 w-full h-full pointer-events-none"
-        preserveAspectRatio="none"
-      >
-        <rect
-          x={strokeWidth / 2}
-          y={strokeWidth / 2}
-          width={`calc(100% - ${strokeWidth}px)`}
-          height={`calc(100% - ${strokeWidth}px)`}
-          fill="rgb(245, 245, 245)"
-          stroke="rgb(52, 145, 255)"
-          strokeWidth={strokeWidth}
-          rx="0"
-        />
-      </svg>
+      {/* Broken Frame Border — each side drawn independently with corner gaps */}
+      {/* Top */}
+      <span
+        className="absolute pointer-events-none bg-[rgb(52,145,255)]"
+        style={{ top: 0, left: cornerGap, right: cornerGap, height: strokeWidth }}
+      />
+      {/* Bottom */}
+      <span
+        className="absolute pointer-events-none bg-[rgb(52,145,255)]"
+        style={{ bottom: 0, left: cornerGap, right: cornerGap, height: strokeWidth }}
+      />
+      {/* Left */}
+      <span
+        className="absolute pointer-events-none bg-[rgb(52,145,255)]"
+        style={{ left: 0, top: cornerGap, bottom: cornerGap, width: strokeWidth }}
+      />
+      {/* Right */}
+      <span
+        className="absolute pointer-events-none bg-[rgb(52,145,255)]"
+        style={{ right: 0, top: cornerGap, bottom: cornerGap, width: strokeWidth }}
+      />
 
-      {/* Matrix Corner Handles */}
+      {/* Corner Handles */}
       {/* Top Left */}
       <div
         className={cn(

@@ -25,10 +25,15 @@ export function Hero({ locale }: HeroProps) {
         'pt-[83px]' // Offset for fixed navbar
       )}
     >
-      {/* Grid Overlay Background */}
+      {/* Graph-Paper Grid Background with Vignette Mask */}
       <div
         className="absolute inset-0 grid-pattern pointer-events-none"
-        style={{ height: 550 }}
+        style={{
+          WebkitMaskImage:
+            'radial-gradient(65% 55% at 50% 46%, black 50%, transparent 100%)',
+          maskImage:
+            'radial-gradient(65% 55% at 50% 46%, black 50%, transparent 100%)',
+        }}
         aria-hidden="true"
       />
 
