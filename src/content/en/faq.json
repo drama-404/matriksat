@@ -1,0 +1,62 @@
+{
+  "heading": "Frequently Asked Questions",
+  "subheading": "We Get It\u2014Curiosity Leads to Success! Got questions? That's a great sign. Here are some",
+  "footerText": "Can't find your answer?",
+  "footerCta": "Send us a Mail",
+  "items": [
+    {
+      "id": "who-behind",
+      "question": "Who's behind MATRIKS?",
+      "answer": "A team of experienced AI engineers and full-stack developers passionate about building practical AI solutions for businesses.",
+      "avatarLabel": "Hi! MATRIKS here"
+    },
+    {
+      "id": "delivery-process",
+      "question": "How does the delivery process work?",
+      "answer": "We start with a discovery call, build a working prototype within days, gather your feedback, and iterate until you're 100% satisfied. Most projects launch within 2\u20134 weeks.",
+      "avatarLabel": "Hi! MATRIKS here"
+    },
+    {
+      "id": "revision-limit",
+      "question": "Is there a limit to revisions?",
+      "answer": "No limits! We iterate until the solution meets your exact requirements. Your satisfaction is our priority.",
+      "avatarLabel": "Hi! MATRIKS here"
+    },
+    {
+      "id": "speed",
+      "question": "How fast will I receive my solution?",
+      "answer": "Initial prototypes typically within 48\u201372 hours. Full builds depend on complexity, but most projects complete within 2\u20134 weeks.",
+      "avatarLabel": "Hi! MATRIKS here"
+    },
+    {
+      "id": "dont-like",
+      "question": "What if I don't like the solution?",
+      "answer": "We work with you through unlimited revisions until it's right. If we can't deliver what you need, we'll be transparent about it upfront.",
+      "avatarLabel": "Hi! MATRIKS here"
+    },
+    {
+      "id": "platforms",
+      "question": "Do you work with platforms like Shopify/WordPress?",
+      "answer": "Yes! We integrate with most platforms. If you have specific requirements, let's discuss them during discovery.",
+      "avatarLabel": "Hi! MATRIKS here"
+    },
+    {
+      "id": "pause-cancel",
+      "question": "Can I pause or cancel my project?",
+      "answer": "For ongoing support, yes. For one-time projects, we agree on scope upfront and deliver on that commitment.",
+      "avatarLabel": "Hi! MATRIKS here"
+    },
+    {
+      "id": "why-not-hire",
+      "question": "Why not just hire a full-time developer?",
+      "answer": "Full-time costs \u20ac40k\u201380k/year plus benefits. With us, you pay only for what you need, with flexibility to scale up or down.",
+      "avatarLabel": "Hi! MATRIKS here"
+    },
+    {
+      "id": "refund",
+      "question": "Can I get a refund?",
+      "answer": "We don't offer refunds, but we stand by our work. If you're not satisfied, we'll revise until you are. We can pause projects if needed.",
+      "avatarLabel": "Hi! MATRIKS here"
+    }
+  ]
+}

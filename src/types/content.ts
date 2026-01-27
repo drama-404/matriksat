@@ -3,9 +3,16 @@ export interface Service {
   title: string;
   description: string;
   icon: string;
-  hoverImage: string;
   remotionId: string;
   features: string[];
+}
+
+export interface ServicesContent {
+  heading: string;
+  subheading: string;
+  services: Service[];
+  footerText: string;
+  footerHighlight: string;
 }
 
 export interface Testimonial {
@@ -22,7 +29,7 @@ export interface Testimonial {
 export interface Project {
   id: string;
   title: string;
-  description: string;
+  logoText: string;
   image: string;
   tags: string[];
   modalContent: {
@@ -32,6 +39,12 @@ export interface Project {
   };
 }
 
+export interface ProjectsContent {
+  headerLabel: string;
+  heading: string;
+  projects: Project[];
+}
+
 export interface FAQItem {
   id: string;
   question: string;
@@ -39,14 +52,55 @@ export interface FAQItem {
   avatarLabel: string;
 }
 
+export interface FAQContent {
+  heading: string;
+  subheading: string;
+  footerText: string;
+  footerCta: string;
+  items: FAQItem[];
+}
+
 export interface EngagementModel {
   id: string;
   name: string;
   description: string;
+  icon: string;
   features: string[];
   pricing: string;
-  cta: string;
-  highlighted?: boolean;
+  pricingPeriod: string;
+  ctaPrimary: string;
+  ctaPrimaryHover: string;
+  ctaSecondary: string;
+  ctaSecondaryHover: string;
+  highlighted: boolean;
+  badge: string | null;
+}
+
+export interface PricingContent {
+  heading: string;
+  subheading: string;
+  models: EngagementModel[];
+}
+
+export interface FinalCtaContent {
+  heading: string;
+  ctaButton: string;
+  ctaSub: string;
+  trustText: string;
+  buildingText: string;
+  tickerTop: string[];
+  tickerBottom: string[];
+}
+
+export interface MobileMockup {
+  id: string;
+  label: string;
+  rotation: number;
+}
+
+export interface MobileShowcaseContent {
+  heading: string;
+  mockups: MobileMockup[];
 }
 
 export interface HeroContent {

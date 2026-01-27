@@ -9,6 +9,13 @@ import { QuoteSection } from '@/components/sections/QuoteSection';
 import { AchievementBento } from '@/components/sections/AchievementBento';
 import { BenefitsGrid } from '@/components/sections/BenefitsGrid';
 import { HowItWorks } from '@/components/sections/HowItWorks';
+import { ServicesGrid } from '@/components/sections/ServicesGrid';
+import { Portfolio } from '@/components/sections/Portfolio';
+import { WorldClock } from '@/components/sections/WorldClock';
+import { EngagementModels } from '@/components/sections/EngagementModels';
+import { MobileShowcase } from '@/components/sections/MobileShowcase';
+import { FAQ } from '@/components/sections/FAQ';
+import { FinalCTA } from '@/components/sections/FinalCTA';
 import type { Locale } from '@/i18n/routing';
 
 interface HomePageProps {
@@ -31,6 +38,13 @@ export default async function HomePage({ params }: HomePageProps) {
         <AchievementBento locale={locale as Locale} />
         <BenefitsGrid locale={locale as Locale} />
         <HowItWorks locale={locale as Locale} />
+        <ServicesGrid locale={locale as Locale} />
+        <Portfolio locale={locale as Locale} />
+        <WorldClock />
+        <EngagementModels locale={locale as Locale} />
+        <MobileShowcase locale={locale as Locale} />
+        <FAQ locale={locale as Locale} />
+        <FinalCTA locale={locale as Locale} />
       </main>
       <Footer locale={locale as Locale} />
     </>

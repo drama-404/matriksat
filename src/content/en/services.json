@@ -1,0 +1,80 @@
+{
+  "heading": "What We Build",
+  "subheading": "From intelligent chatbots to full-stack platforms — we deliver AI solutions that actually work.",
+  "services": [
+    {
+      "id": "chatbots",
+      "title": "Intelligent Chatbots",
+      "description": "Multi-language AI chatbots that handle 80% of customer inquiries. WhatsApp, web, Messenger — wherever your customers are.",
+      "icon": "chat",
+      "remotionId": "ChatbotsDemo",
+      "features": ["Multi-language", "WhatsApp", "Messenger", "Web Widget"]
+    },
+    {
+      "id": "invoice-ocr",
+      "title": "Invoice OCR",
+      "description": "Scan, extract, and process invoices automatically. No more manual data entry — let AI handle the paperwork.",
+      "icon": "document",
+      "remotionId": "InvoiceOCRDemo",
+      "features": ["PDF Extraction", "Multi-format", "Auto-categorize", "Export"]
+    },
+    {
+      "id": "booking-systems",
+      "title": "Booking Systems",
+      "description": "Smart reservation systems that sync calendars, send reminders, and handle cancellations without human intervention.",
+      "icon": "calendar",
+      "remotionId": "BookingSystemsDemo",
+      "features": ["Calendar Sync", "Reminders", "Auto-confirm", "Multi-platform"]
+    },
+    {
+      "id": "dashboards",
+      "title": "Customer Dashboards",
+      "description": "Real-time dashboards that turn raw data into actionable insights. Charts, KPIs, and reports your team will actually use.",
+      "icon": "chart",
+      "remotionId": "CustomerDashboardsDemo",
+      "features": ["Real-time Data", "Custom KPIs", "Export Reports", "Role-based Access"]
+    },
+    {
+      "id": "sentiment",
+      "title": "Sentiment Analysis",
+      "description": "Understand what your customers really think. AI-powered analysis of reviews, feedback, and social mentions.",
+      "icon": "emoji",
+      "remotionId": "SentimentAnalysisDemo",
+      "features": ["Review Analysis", "Social Listening", "Trend Detection", "Alerts"]
+    },
+    {
+      "id": "reviews",
+      "title": "Review Management",
+      "description": "Aggregate reviews from Google, Booking.com, TripAdvisor — respond smartly, spot trends, protect your reputation.",
+      "icon": "star",
+      "remotionId": "ReviewManagementDemo",
+      "features": ["Multi-platform", "Auto-respond", "Analytics", "Alerts"]
+    },
+    {
+      "id": "mobile-apps",
+      "title": "Mobile Apps",
+      "description": "Cross-platform mobile apps built for performance. From booking flows to internal tools — native feel, web speed.",
+      "icon": "phone",
+      "remotionId": "MobileAppsDemo",
+      "features": ["iOS & Android", "Push Notifications", "Offline Mode", "Fast Launch"]
+    },
+    {
+      "id": "connectors",
+      "title": "System Connectors",
+      "description": "Connect your tools. CRM, ERP, payment systems, legacy databases — we build the bridges between your systems.",
+      "icon": "connector",
+      "remotionId": "SystemConnectorsDemo",
+      "features": ["API Integration", "Data Sync", "Webhooks", "Legacy Support"]
+    },
+    {
+      "id": "gdpr",
+      "title": "GDPR Compliance",
+      "description": "Stay compliant without the headache. Automated consent management, data requests, and audit trails.",
+      "icon": "shield",
+      "remotionId": "GDPRComplianceDemo",
+      "features": ["Consent Management", "Data Requests", "Audit Logs", "Auto-deletion"]
+    }
+  ],
+  "footerText": "That's not it we do even",
+  "footerHighlight": "More..."
+}

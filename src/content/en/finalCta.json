@@ -1,0 +1,23 @@
+{
+  "heading": "If you scrolled this far, It's time to LEVEL UP",
+  "ctaButton": "Join the Elite Club",
+  "ctaSub": "Just click",
+  "trustText": "Trust me we are good at this :)",
+  "buildingText": "building...",
+  "tickerTop": [
+    "Fix chatbot flow",
+    "Process 100 invoices",
+    "Build booking system",
+    "Dashboard redesign",
+    "WhatsApp bot setup",
+    "OCR pipeline deploy"
+  ],
+  "tickerBottom": [
+    "WhatsApp integration",
+    "Multi-language support",
+    "GDPR compliance",
+    "API connectors",
+    "Sentiment analysis",
+    "Review aggregation"
+  ]
+}

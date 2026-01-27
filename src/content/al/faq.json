@@ -1,0 +1,62 @@
+{
+  "heading": "Pyetjet me te Shpeshta",
+  "subheading": "E Kuptojme\u2014Kurioziteti con ne Sukses! Keni pyetje? Kjo eshte nje shenje e mire. Ja disa",
+  "footerText": "Nuk gjeni pergjigjen tuaj?",
+  "footerCta": "Na dergoni nje Email",
+  "items": [
+    {
+      "id": "who-behind",
+      "question": "Kush eshte pas MATRIKS?",
+      "answer": "Nje ekip inxhinieresh AI me pervoje dhe zhvilluesish full-stack te pasionuar per ndertimin e zgjidhjeve praktike AI per bizneset.",
+      "avatarLabel": "Pershendetje! MATRIKS ketu"
+    },
+    {
+      "id": "delivery-process",
+      "question": "Si funksionon procesi i dorezimit?",
+      "answer": "Fillojme me nje thirrje zbulimi, ndertojme nje prototip funksional brenda ditesh, grumbullojme komente tuaja, dhe iterojme derisa te jeni 100% te kenaqur. Shumica e projekteve nisin brenda 2\u20134 javesh.",
+      "avatarLabel": "Pershendetje! MATRIKS ketu"
+    },
+    {
+      "id": "revision-limit",
+      "question": "A ka limit ne rishikime?",
+      "answer": "Jo! Iterojme derisa zgjidhja te plotesoje kerkesat tuaja te sakta. Kenaqesia juaj eshte prioriteti yne.",
+      "avatarLabel": "Pershendetje! MATRIKS ketu"
+    },
+    {
+      "id": "speed",
+      "question": "Sa shpejt do te marr zgjidhjen time?",
+      "answer": "Prototipet fillestare zakonisht brenda 48\u201372 oresh. Ndertimet e plota varen nga kompleksiteti, por shumica e projekteve perfundojne brenda 2\u20134 javesh.",
+      "avatarLabel": "Pershendetje! MATRIKS ketu"
+    },
+    {
+      "id": "dont-like",
+      "question": "Po sikur nuk me pelqen zgjidhja?",
+      "answer": "Punojme me ju permes rishikimeve te pakufizuara derisa te jete e drejte. Nese nuk mund te ofrojme ate qe keni nevoje, do te jemi transparent per kete qe ne fillim.",
+      "avatarLabel": "Pershendetje! MATRIKS ketu"
+    },
+    {
+      "id": "platforms",
+      "question": "A punoni me platforma si Shopify/WordPress?",
+      "answer": "Po! Integrohemi me shumicen e platformave. Nese keni kerkesa specifike, le ti diskutojme gjate zbulimit.",
+      "avatarLabel": "Pershendetje! MATRIKS ketu"
+    },
+    {
+      "id": "pause-cancel",
+      "question": "A mund ta ndaloj ose anuloj projektin tim?",
+      "answer": "Per mbeshtetje te vazhdueshme, po. Per projekte nje-here, biem dakord per fushen qe ne fillim dhe dorezojme sipas atij angazhimi.",
+      "avatarLabel": "Pershendetje! MATRIKS ketu"
+    },
+    {
+      "id": "why-not-hire",
+      "question": "Pse jo thjesht te punesoj nje zhvillues me kohe te plote?",
+      "answer": "Kostoja e kohes se plote eshte \u20ac40k\u201380k/vit plus perfitim. Me ne, paguani vetem per ate qe keni nevoje, me fleksibilitet per te rritur ose ulur.",
+      "avatarLabel": "Pershendetje! MATRIKS ketu"
+    },
+    {
+      "id": "refund",
+      "question": "A mund te marr nje rimbursim?",
+      "answer": "Nuk ofrojme rimbursime, por qendrojme pas punes sone. Nese nuk jeni te kenaqur, do te rishikojme derisa te jeni. Mund te ndalojme projektet nese eshte e nevojshme.",
+      "avatarLabel": "Pershendetje! MATRIKS ketu"
+    }
+  ]
+}

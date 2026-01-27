@@ -1,0 +1,9 @@
+{
+  "heading": "Mobile Apps Built for Impact",
+  "mockups": [
+    { "id": "booking", "label": "Booking App", "rotation": -3 },
+    { "id": "dashboard", "label": "Dashboard App", "rotation": 1 },
+    { "id": "chat", "label": "Chat App", "rotation": -1 },
+    { "id": "ecommerce", "label": "E-commerce App", "rotation": 2 }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "heading": "Modele Fleksibel Angazhimi",
+  "subheading": "Zgjidhni qasjen qe i pershtatet nevojave tuaja. Pa kontrata bllokuese, pa surpriza.",
+  "models": [
+    {
+      "id": "discovery",
+      "name": "Sprinti i Zbulimit",
+      "description": "Perfekte per eksplorimin e fizibilitetit dhe percaktimin e projektit tuaj AI",
+      "icon": "compass",
+      "features": [
+        "Sprint 2-javor",
+        "Analiza e kerkesave",
+        "Studim fizibiliteti teknik",
+        "Prototip funksional",
+        "Rekomandime arkitekture",
+        "Dokumentacion i plote"
+      ],
+      "pricing": "Nga \u20ac50",
+      "pricingPeriod": "nje-here",
+      "ctaPrimary": "Rezervo nje Thirrje",
+      "ctaPrimaryHover": "Do Jemi Aty",
+      "ctaSecondary": "Lidhu ne WhatsApp",
+      "ctaSecondaryHover": "Bisede e Shpejte",
+      "highlighted": false,
+      "badge": null
+    },
+    {
+      "id": "build-launch",
+      "name": "Ndertu & Lanco",
+      "description": "Implementim i plote nga prototipi ne vendosjen ne prodhim",
+      "icon": "rocket",
+      "features": [
+        "Ndertim & vendosje e plote",
+        "Integrim modeli AI i personalizuar",
+        "Mbeshtetje shumegjuheshe",
+        "Panel administratori",
+        "3 muaj mbeshtetje",
+        "Trajnim & dokumentacion",
+        "Pronesim i kodit burimor"
+      ],
+      "pricing": "Nga \u20ac200",
+      "pricingPeriod": "pagese fleksibel",
+      "ctaPrimary": "Rezervo nje Thirrje",
+      "ctaPrimaryHover": "Do Jemi Aty",
+      "ctaSecondary": "Lidhu ne WhatsApp",
+      "ctaSecondaryHover": "Bisede e Shpejte",
+      "highlighted": true,
+      "badge": "Me Popullorja"
+    },
+    {
+      "id": "ongoing",
+      "name": "Mbeshtetje e Vazhdueshme",
+      "description": "Retainer per perditesime te vazhdueshme, mirembajtje, dhe shtesa funksionesh",
+      "icon": "headset",
+      "features": [
+        "Retainer mujor",
+        "Mbeshtetje prioritare",
+        "Perditesime funksionesh",
+        "Monitorim performance",
+        "Ndihme ne shkallezim",
+        "Integrime te personalizuara",
+        "Varet nga fusha"
+      ],
+      "pricing": "Cmim i Personalizuar",
+      "pricingPeriod": "Bazuar ne nevojat tuaja",
+      "ctaPrimary": "Rezervo nje Thirrje",
+      "ctaPrimaryHover": "Do Jemi Aty",
+      "ctaSecondary": "Lidhu ne WhatsApp",
+      "ctaSecondaryHover": "Bisede e Shpejte",
+      "highlighted": false,
+      "badge": null
+    }
+  ]
+}

@@ -130,6 +130,33 @@ body {
   animation: ticker 30s linear infinite;
 }
 
+/* Final CTA Tickers - Seamless loops */
+@keyframes ticker-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes ticker-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.ticker-left-animation {
+  animation: ticker-left 30s linear infinite;
+}
+
+.ticker-right-animation {
+  animation: ticker-right 35s linear infinite;
+}
+
 /* Matrix Corner Handle Pulse */
 @keyframes pulse-glow {
   0%, 100% {

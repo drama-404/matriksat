@@ -1,0 +1,9 @@
+{
+  "heading": "Aplikacione Mobile te Ndertuara per Ndikim",
+  "mockups": [
+    { "id": "booking", "label": "Aplikacion Rezervimi", "rotation": -3 },
+    { "id": "dashboard", "label": "Aplikacion Paneli", "rotation": 1 },
+    { "id": "chat", "label": "Aplikacion Bisede", "rotation": -1 },
+    { "id": "ecommerce", "label": "Aplikacion E-commerce", "rotation": 2 }
+  ]
+}

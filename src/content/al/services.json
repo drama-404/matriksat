@@ -1,0 +1,80 @@
+{
+  "heading": "Cfare Ndertojme",
+  "subheading": "Nga chatbot-et inteligjente deri tek platformat full-stack — ofrojme zgjidhje AI qe funksionojne vertet.",
+  "services": [
+    {
+      "id": "chatbots",
+      "title": "Chatbot Inteligjente",
+      "description": "Chatbot-e AI shumegjuheshe qe trajtojne 80% te pyetjeve te klienteve. WhatsApp, web, Messenger — kudo ku jane klientet tuaj.",
+      "icon": "chat",
+      "remotionId": "ChatbotsDemo",
+      "features": ["Shumegjuhesh", "WhatsApp", "Messenger", "Web Widget"]
+    },
+    {
+      "id": "invoice-ocr",
+      "title": "Faturat OCR",
+      "description": "Skanoni, nxirrni dhe perpunoni faturat automatikisht. Jo me futje manuale te dhenash — lini AI te merret me dokumentet.",
+      "icon": "document",
+      "remotionId": "InvoiceOCRDemo",
+      "features": ["Nxjerrje PDF", "Shumeformat", "Auto-kategorizim", "Eksport"]
+    },
+    {
+      "id": "booking-systems",
+      "title": "Sisteme Rezervimi",
+      "description": "Sisteme rezervimi te zgjuara qe sinkronizojne kalendaret, dergojne kujtesa dhe trajtojne anulimet pa nderhyrje njerezore.",
+      "icon": "calendar",
+      "remotionId": "BookingSystemsDemo",
+      "features": ["Sinkronizim Kalendari", "Kujtesa", "Auto-konfirmim", "Shumeplatforme"]
+    },
+    {
+      "id": "dashboards",
+      "title": "Panele Klientesh",
+      "description": "Panele ne kohe reale qe kthejne te dhenat e paperpunuara ne njohuri te zbatueshme. Grafike, KPI dhe raporte qe ekipi juaj do ti perdore vertet.",
+      "icon": "chart",
+      "remotionId": "CustomerDashboardsDemo",
+      "features": ["Te dhena ne kohe reale", "KPI te personalizuara", "Eksport Raportesh", "Akses sipas Rolit"]
+    },
+    {
+      "id": "sentiment",
+      "title": "Analiza e Ndjenjave",
+      "description": "Kuptoni cfare mendojne vertet klientet tuaj. Analiza e fuqizuar nga AI e komenteve, feedback-ut dhe permendjet ne rrjetet sociale.",
+      "icon": "emoji",
+      "remotionId": "SentimentAnalysisDemo",
+      "features": ["Analiza Komenteve", "Degjim Social", "Zbulim Tendencash", "Njoftime"]
+    },
+    {
+      "id": "reviews",
+      "title": "Menaxhimi i Komenteve",
+      "description": "Grumbulloni komente nga Google, Booking.com, TripAdvisor — pergjigjuni me zgjuarsi, identifikoni tendencat, mbroni reputacionin tuaj.",
+      "icon": "star",
+      "remotionId": "ReviewManagementDemo",
+      "features": ["Shumeplatforme", "Auto-pergjigje", "Analitike", "Njoftime"]
+    },
+    {
+      "id": "mobile-apps",
+      "title": "Aplikacione Mobile",
+      "description": "Aplikacione mobile ndër-platforme te ndertuar per performancen. Nga flukset e rezervimit deri tek mjetet e brendshme.",
+      "icon": "phone",
+      "remotionId": "MobileAppsDemo",
+      "features": ["iOS & Android", "Njoftimet Push", "Modaliteti Offline", "Hapje e Shpejte"]
+    },
+    {
+      "id": "connectors",
+      "title": "Lidhesit e Sistemeve",
+      "description": "Lidhni mjetet tuaja. CRM, ERP, sisteme pagese, databaza legacy — ndertojme urat mes sistemeve tuaja.",
+      "icon": "connector",
+      "remotionId": "SystemConnectorsDemo",
+      "features": ["Integrim API", "Sinkronizim te Dhenash", "Webhooks", "Mbeshtetje Legacy"]
+    },
+    {
+      "id": "gdpr",
+      "title": "Pershtatje GDPR",
+      "description": "Qendroni ne perputhje pa dhimbje koke. Menaxhim automatik i pelqimit, kerkesave per te dhena dhe gjurmeve te auditimit.",
+      "icon": "shield",
+      "remotionId": "GDPRComplianceDemo",
+      "features": ["Menaxhim Pelqimi", "Kerkesa te Dhenash", "Regjistrat e Auditimit", "Auto-fshirje"]
+    }
+  ],
+  "footerText": "Kjo nuk eshte e gjitha, bejme edhe",
+  "footerHighlight": "Me shume..."
+}

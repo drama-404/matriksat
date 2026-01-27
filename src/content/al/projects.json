@@ -1,0 +1,66 @@
+{
+  "headerLabel": "Ende te hutuar per ne",
+  "heading": "Shiko punen tone",
+  "projects": [
+    {
+      "id": "hotel-bot",
+      "title": "Asistent Rezervimi Hoteli",
+      "logoText": "Hotel Bot",
+      "image": "/images/projects/hotel-bot.jpg",
+      "tags": ["Chatbot AI", "Mikpritje", "Shumegjuhesh"],
+      "modalContent": {
+        "challenge": "Nje hotel 4-yjesh ne Tirane po humbiste rezervime sepse mysafiret nuk merrnin pergjigje te shpejta per disponueshmerine, cmimet dhe sherbimet — sidomos jashte orarit te punes.",
+        "solution": "Ndertuam nje chatbot shumegjuhesh ne WhatsApp + web qe trajton pyetjet per dhoma, perpunon rezervimet dhe dergon email konfirmimi — ne shqip, anglisht, italisht dhe gjermanisht.",
+        "results": "Boti trajton 80% te pyetjeve te mysafireve automatikisht. Rezervimet direkte u rritën me 35% ne muajin e pare. Stafi tani fokusohet ne pervojen e mysafireve ne vend te pergjigjes se pyetjeve te perseritura."
+      }
+    },
+    {
+      "id": "product-search",
+      "title": "Kerkim Vizual Produktesh",
+      "logoText": "Product Search",
+      "image": "/images/projects/product-search.jpg",
+      "tags": ["Vizion Kompjuterik", "E-commerce", "Kerkim AI"],
+      "modalContent": {
+        "challenge": "Nje platforme e-commerce me 10,000+ produkte kishte veshtiresi me kerkimin me tekst. Klientet nuk gjenin produkte kur nuk dinin emrin e sakte.",
+        "solution": "Implementuam kerkim vizual te fuqizuar nga AI — klientet bejne nje foto ose ngarkojne nje imazh, dhe sistemi gjen produkte perputhuese menjehere duke perdorur vizionin kompjuterik.",
+        "results": "Konvertimi kerkim-ne-blerje u permiresua me 28%. Koha mesatare per te gjetur nje produkt ra nga 3 minuta ne 15 sekonda. Piket e kenaqesise se klienteve u rriten me 22%."
+      }
+    },
+    {
+      "id": "farm-tracker",
+      "title": "Gjurmuesi Ferme-ne-Eksport",
+      "logoText": "Farm Tracker",
+      "image": "/images/projects/farm-tracker.jpg",
+      "tags": ["Zinxhiri i Furnizimit", "Kodet QR", "Gjurmueshmi"],
+      "modalContent": {
+        "challenge": "Nje eksportues bujqesor kishte nevoje te gjurmonte prodhimet nga ferma ne destinacion per perputhje me BE-ne. Regjistrat ne leter ishin te pabesueshme dhe auditimet zgjatsin javë.",
+        "solution": "Ndertuam nje sistem gjurmimi me baze QR. Cdo grumbulli merr nje kod unik qe skanohet ne cdo pike kontrolli — ferme, perpunim, paketim, transport. E gjithe zinxhiri i dukshem ne nje panel.",
+        "results": "Koha e pergatitjes se auditimit u reduktua nga 2 jave ne 2 ore. Zero shkelje perputhshmerie qe nga nisja. Klienti u zgjerua ne 3 tregje te reja te BE-se brenda 6 muajsh."
+      }
+    },
+    {
+      "id": "invoice-ai",
+      "title": "Perpunuesi i Faturave",
+      "logoText": "Invoice AI",
+      "image": "/images/projects/invoice-ai.jpg",
+      "tags": ["OCR", "Automatizim", "Financa"],
+      "modalContent": {
+        "challenge": "Nje firme kontabiliteti e mesme perpunonte 500+ fatura ne muaj me dore. Gabimet ne futjen e te dhenave shkaktonin vonesa pagesash dhe zhgenjim te klienteve.",
+        "solution": "Vendosem nje tubacion OCR qe skanon faturat (PDF, foto, email), nxjerr fushat kyc (shuma, data, furnitori, artikujt e linjes), dhe shtyn te dhenat direkt ne softuerin e tyre te kontabilitetit.",
+        "results": "Koha e perpunimit ra nga 8 minuta ne 30 sekonda per fature. Shkalla e gabimeve ra nga 12% ne nen 1%. Ekipi ridrejtoi 15+ ore ne jave per pune keshilluese."
+      }
+    },
+    {
+      "id": "review-hub",
+      "title": "Paneli i Komenteve",
+      "logoText": "Review Hub",
+      "image": "/images/projects/review-hub.jpg",
+      "tags": ["Analitike", "Shumeplatforme", "Ndjenja"],
+      "modalContent": {
+        "challenge": "Nje zinxhir hotelesh me 8 prona menaxhonte komentet ne Google, Booking.com, TripAdvisor, dhe Facebook vecmas. Asnje pamje e unifikuar, kohe te ngadalta pergjigjeje.",
+        "solution": "Ndertuam nje panel te centralizuar qe grumbullon komentet nga te gjitha platformat, kryen analize ndjenjash, sugjeron pergjigje te gjeneruara nga AI, dhe ndjek tendencat me kalimin e kohes.",
+        "results": "Koha mesatare e pergjigjes ra nga 48 ore ne 4 ore. Vleresimi i pergjithshem u permiresua nga 4.1 ne 4.6 yje brenda 3 muajsh. Menaxhimi tani ka dukshmeri ne kohe reale ne te gjitha pronat."
+      }
+    }
+  ]
+}

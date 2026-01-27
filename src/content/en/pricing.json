@@ -1,0 +1,74 @@
+{
+  "heading": "Flexible Engagement Models",
+  "subheading": "Choose the approach that fits your needs. No lock-in contracts, no surprises.",
+  "models": [
+    {
+      "id": "discovery",
+      "name": "Discovery Sprint",
+      "description": "Perfect for exploring feasibility and scoping your AI project",
+      "icon": "compass",
+      "features": [
+        "2-week sprint",
+        "Requirements analysis",
+        "Technical feasibility study",
+        "Working prototype",
+        "Architecture recommendations",
+        "Full documentation"
+      ],
+      "pricing": "From \u20ac50",
+      "pricingPeriod": "one-time",
+      "ctaPrimary": "Book a Call",
+      "ctaPrimaryHover": "We'll be There",
+      "ctaSecondary": "Connect on WhatsApp",
+      "ctaSecondaryHover": "Quick Chat",
+      "highlighted": false,
+      "badge": null
+    },
+    {
+      "id": "build-launch",
+      "name": "Build & Launch",
+      "description": "Full implementation from prototype to production deployment",
+      "icon": "rocket",
+      "features": [
+        "Complete build & deployment",
+        "Custom AI model integration",
+        "Multi-language support",
+        "Admin dashboard",
+        "3 months support",
+        "Training & documentation",
+        "Source code ownership"
+      ],
+      "pricing": "From \u20ac200",
+      "pricingPeriod": "flexible payment",
+      "ctaPrimary": "Book a Call",
+      "ctaPrimaryHover": "We'll be There",
+      "ctaSecondary": "Connect on WhatsApp",
+      "ctaSecondaryHover": "Quick Chat",
+      "highlighted": true,
+      "badge": "Most Popular"
+    },
+    {
+      "id": "ongoing",
+      "name": "Ongoing Support",
+      "description": "Retainer for continuous updates, maintenance, and feature additions",
+      "icon": "headset",
+      "features": [
+        "Monthly retainer",
+        "Priority support",
+        "Feature updates",
+        "Performance monitoring",
+        "Scaling assistance",
+        "Custom integrations",
+        "Depends on scope"
+      ],
+      "pricing": "Custom Pricing",
+      "pricingPeriod": "Based on your needs",
+      "ctaPrimary": "Book a Call",
+      "ctaPrimaryHover": "We'll be There",
+      "ctaSecondary": "Connect on WhatsApp",
+      "ctaSecondaryHover": "Quick Chat",
+      "highlighted": false,
+      "badge": null
+    }
+  ]
+}
