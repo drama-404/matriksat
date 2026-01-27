@@ -1,0 +1,24 @@
+{
+  "heading": "How simple it can be to get your Projects Done",
+  "subheading": "Just step away from those traditional old methods of hiring plus managing and see for yourself",
+  "steps": [
+    {
+      "id": "step-1",
+      "number": "1",
+      "title": "Discovery Call",
+      "description": "We start with a conversation to understand your needs, challenges, and goals. No commitment required."
+    },
+    {
+      "id": "step-2",
+      "number": "2",
+      "title": "Prototype & Build",
+      "description": "We create a working prototype in days, gather your feedback, and iterate until it's perfect."
+    },
+    {
+      "id": "step-3",
+      "number": "3",
+      "title": "Launch & Automate",
+      "description": "We deploy your solution, ensure everything runs smoothly, and provide ongoing support as needed."
+    }
+  ]
+}

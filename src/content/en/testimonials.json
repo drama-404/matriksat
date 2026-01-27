@@ -1,0 +1,42 @@
+[
+  {
+    "id": "testimonial-1",
+    "author": "Arben Krasniqi",
+    "role": "Owner, Adriatik Hotels Group",
+    "avatar": "/images/avatars/placeholder-1.jpg",
+    "quote": "The chatbot handles 80% of our guest inquiries. Response time went from hours to seconds.",
+    "reply": "We're glad we could help!",
+    "projectImage": "/images/projects/hotel-chatbot-thumb.jpg",
+    "rating": 5
+  },
+  {
+    "id": "testimonial-2",
+    "author": "Elena Murati",
+    "role": "CTO, TechFlow Solutions",
+    "avatar": "/images/avatars/placeholder-2.jpg",
+    "quote": "The AI automation saved us 15 hours per week on invoice processing. Game-changer for our ops team.",
+    "reply": "Thank you!",
+    "projectImage": "/images/projects/invoice-ocr-thumb.jpg",
+    "rating": 5
+  },
+  {
+    "id": "testimonial-3",
+    "author": "Marco Berisha",
+    "role": "Manager, Retail Chain Europa",
+    "avatar": "/images/avatars/placeholder-3.jpg",
+    "quote": "Multi-language support was crucial for our European customers. Seamless integration with our existing systems.",
+    "reply": "We appreciate the feedback!",
+    "projectImage": "/images/projects/multilang-dashboard-thumb.jpg",
+    "rating": 5
+  },
+  {
+    "id": "testimonial-4",
+    "author": "Drita Hoxha",
+    "role": "Founder, DigiAlb Agency",
+    "avatar": "/images/avatars/placeholder-4.jpg",
+    "quote": "Fast turnaround, excellent communication, and the final product exceeded our expectations.",
+    "reply": "Looking forward to working with you again!",
+    "projectImage": "/images/projects/agency-dashboard-thumb.jpg",
+    "rating": 5
+  }
+]

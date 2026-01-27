@@ -68,3 +68,51 @@ export interface SharedContent {
   };
   techCloud: string[];
 }
+
+export interface QuoteContent {
+  avatar: string;
+  text: string;
+  attribution: string;
+  ctaBadge: string;
+}
+
+export interface AchievementCard {
+  id: string;
+  metric: string;
+  subtitle: string;
+  type: 'projects' | 'techCloud' | 'impact';
+  backgroundNumber?: string;
+  header?: string;
+}
+
+export interface AchievementsContent {
+  heading: string;
+  subheading: string;
+  cards: AchievementCard[];
+}
+
+export interface BenefitItem {
+  id: string;
+  icon: string;
+  title: string;
+  description: string;
+}
+
+export interface BenefitsContent {
+  heading: string;
+  subheading: string;
+  items: BenefitItem[];
+}
+
+export interface HowItWorksStep {
+  id: string;
+  number: string;
+  title: string;
+  description: string;
+}
+
+export interface HowItWorksContent {
+  heading: string;
+  subheading: string;
+  steps: HowItWorksStep[];
+}

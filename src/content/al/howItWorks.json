@@ -1,0 +1,24 @@
+{
+  "heading": "Sa e thjeshtë mund të jetë të realizosh Projektet e tua",
+  "subheading": "Thjesht largohu nga ato metoda të vjetra tradicionale të punësimit dhe menaxhimit dhe shiko vetë",
+  "steps": [
+    {
+      "id": "step-1",
+      "number": "1",
+      "title": "Thirrja e Zbulimit",
+      "description": "Fillojmë me një bisedë për të kuptuar nevojat, sfidat, dhe qëllimet tuaja. Pa asnjë detyrim."
+    },
+    {
+      "id": "step-2",
+      "number": "2",
+      "title": "Prototip & Ndërtim",
+      "description": "Krijojmë një prototip funksional brenda ditëve, mbledhim reagimet tuaja, dhe përmirësojmë derisa të jetë perfekt."
+    },
+    {
+      "id": "step-3",
+      "number": "3",
+      "title": "Lansim & Automatizim",
+      "description": "Vendosim zgjidhjen tuaj, sigurojmë që gjithçka funksionon pa probleme, dhe ofrojmë mbështetje të vazhdueshme sipas nevojës."
+    }
+  ]
+}

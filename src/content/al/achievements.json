@@ -1,0 +1,26 @@
+{
+  "heading": "Arritjet Tona",
+  "subheading": "Kuriozë për atë që kemi arritur? Le t'i flasin rezultatet vetë.",
+  "cards": [
+    {
+      "id": "projects-delivered",
+      "metric": "20+ Projekte të Dorëzuara",
+      "subtitle": "Duke ndihmuar biznese në industri të ndryshme të arrijnë qëllimet e tyre",
+      "type": "projects"
+    },
+    {
+      "id": "tech-experience",
+      "metric": "5 Vite Eksperiencë",
+      "subtitle": "Duke sjellë ekspertizë në çdo projekt",
+      "type": "techCloud",
+      "backgroundNumber": "5"
+    },
+    {
+      "id": "impact",
+      "metric": "50K+ Mesazhe të Përpunuara",
+      "subtitle": "që bizneset të fokusohen në atë që ka më shumë rëndësi",
+      "type": "impact",
+      "header": "Impakti"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "heading": "Benefit of MATRIKS",
+  "subheading": "Why Settle for Less? Before you dive in, let's show you why our solutions are the game-changer your business needs.",
+  "items": [
+    {
+      "id": "results-focused",
+      "icon": "chart",
+      "title": "Results-Focused Solutions",
+      "description": "We help businesses grow by building AI tools that turn visitors into customers and streamline operations."
+    },
+    {
+      "id": "fast-delivery",
+      "icon": "lightning",
+      "title": "Lightning-Fast Delivery",
+      "description": "Your projects are delivered within days, not weeks or months. We move fast without compromising quality."
+    },
+    {
+      "id": "transparent-pricing",
+      "icon": "dollar",
+      "title": "Transparent Pricing",
+      "description": "No surprises. Clear pricing from the start. Pay for what you need, when you need it."
+    },
+    {
+      "id": "problem-solving",
+      "icon": "search",
+      "title": "Problem Solving",
+      "description": "We solve your business challenges with innovative AI and automation solutions that drive real results."
+    },
+    {
+      "id": "project-portal",
+      "icon": "screen",
+      "title": "Private Project Portal",
+      "description": "Easily manage your projects, track progress, and communicate with our team from your own dashboard."
+    },
+    {
+      "id": "expert-team",
+      "icon": "handshake",
+      "title": "Expert Team Access",
+      "description": "Work directly with experienced developers and AI specialists. No middlemen, no long-term contracts required."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "heading": "Përfitimet e MATRIKS",
+  "subheading": "Pse të kënaqesh me më pak? Para se të fillosh, le të të tregojmë pse zgjidhjet tona janë ajo që biznesi yt ka nevojë.",
+  "items": [
+    {
+      "id": "results-focused",
+      "icon": "chart",
+      "title": "Zgjidhje të Fokusuara në Rezultate",
+      "description": "Ndihmojmë bizneset të rriten duke ndërtuar mjete AI që kthejnë vizitorët në klientë dhe optimizojnë operacionet."
+    },
+    {
+      "id": "fast-delivery",
+      "icon": "lightning",
+      "title": "Dorëzim Rrufeshëm",
+      "description": "Projektet tuaja dorëzohen brenda ditëve, jo javëve apo muajve. Lëvizim shpejt pa kompromentuar cilësinë."
+    },
+    {
+      "id": "transparent-pricing",
+      "icon": "dollar",
+      "title": "Çmime Transparente",
+      "description": "Pa surpriza. Çmime të qarta që në fillim. Paguaj për atë që ke nevojë, kur ke nevojë."
+    },
+    {
+      "id": "problem-solving",
+      "icon": "search",
+      "title": "Zgjidhje Problemesh",
+      "description": "Zgjidhim sfidat e biznesit tuaj me zgjidhje inovative AI dhe automatizimi që sjellin rezultate reale."
+    },
+    {
+      "id": "project-portal",
+      "icon": "screen",
+      "title": "Portal Privat Projektesh",
+      "description": "Menaxho lehtësisht projektet, ndiq progresin, dhe komuniko me ekipin tonë nga paneli yt."
+    },
+    {
+      "id": "expert-team",
+      "icon": "handshake",
+      "title": "Qasje në Ekipin Ekspert",
+      "description": "Puno drejtpërdrejt me zhvillues me eksperiencë dhe specialistë AI. Pa ndërmjetës, pa kontrata afatgjata."
+    }
+  ]
+}

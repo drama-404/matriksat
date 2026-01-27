@@ -1,0 +1,26 @@
+{
+  "heading": "Our Achievement",
+  "subheading": "Curious about what we've accomplished? Let our track record speak for itself.",
+  "cards": [
+    {
+      "id": "projects-delivered",
+      "metric": "20+ Projects Delivered",
+      "subtitle": "Helping businesses across various industries achieve their goals",
+      "type": "projects"
+    },
+    {
+      "id": "tech-experience",
+      "metric": "5 Years of Experience",
+      "subtitle": "Bringing expertise to every project",
+      "type": "techCloud",
+      "backgroundNumber": "5"
+    },
+    {
+      "id": "impact",
+      "metric": "50K+ Messages Processed",
+      "subtitle": "so businesses can focus on what matters most",
+      "type": "impact",
+      "header": "Impact"
+    }
+  ]
+}

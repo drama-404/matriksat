@@ -1,0 +1,42 @@
+[
+  {
+    "id": "testimonial-1",
+    "author": "Arben Krasniqi",
+    "role": "Pronar, Adriatik Hotels Group",
+    "avatar": "/images/avatars/placeholder-1.jpg",
+    "quote": "Chatbot-i trajton 80% të pyetjeve të mysafirëve. Koha e përgjigjes shkoi nga orë në sekonda.",
+    "reply": "Gëzohemi që mund të ndihmonim!",
+    "projectImage": "/images/projects/hotel-chatbot-thumb.jpg",
+    "rating": 5
+  },
+  {
+    "id": "testimonial-2",
+    "author": "Elena Murati",
+    "role": "CTO, TechFlow Solutions",
+    "avatar": "/images/avatars/placeholder-2.jpg",
+    "quote": "Automatizimi me AI na kurseu 15 orë në javë në përpunimin e faturave. Ndryshim i madh për ekipin tonë.",
+    "reply": "Faleminderit!",
+    "projectImage": "/images/projects/invoice-ocr-thumb.jpg",
+    "rating": 5
+  },
+  {
+    "id": "testimonial-3",
+    "author": "Marco Berisha",
+    "role": "Menaxher, Retail Chain Europa",
+    "avatar": "/images/avatars/placeholder-3.jpg",
+    "quote": "Mbështetja shumëgjuhëshe ishte vendimtare për klientët tanë europianë. Integrim pa probleme me sistemet ekzistuese.",
+    "reply": "E vlerësojmë reagimin tuaj!",
+    "projectImage": "/images/projects/multilang-dashboard-thumb.jpg",
+    "rating": 5
+  },
+  {
+    "id": "testimonial-4",
+    "author": "Drita Hoxha",
+    "role": "Themeluese, DigiAlb Agency",
+    "avatar": "/images/avatars/placeholder-4.jpg",
+    "quote": "Dorëzim i shpejtë, komunikim i shkëlqyer, dhe produkti final i tejkaloi pritshmëritë tona.",
+    "reply": "Presim me padurim të punojmë sërish me ju!",
+    "projectImage": "/images/projects/agency-dashboard-thumb.jpg",
+    "rating": 5
+  }
+]
