@@ -1,13 +1,25 @@
 'use client';
 
+import { useState, useEffect, useRef, type ComponentType } from 'react';
+import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import { fadeInUp, staggerChildren } from '@/components/animations/variants';
+import { useInView } from '@/hooks/useInView';
 import type { Locale } from '@/i18n/routing';
 import type { ServicesContent, Service } from '@/types/content';
 
 import servicesEN from '@/content/en/services.json';
 import servicesAL from '@/content/al/services.json';
+
+// Dynamically import Remotion Player (no SSR)
+const Player = dynamic(
+  () => import('@remotion/player').then((mod) => mod.Player),
+  { ssr: false }
+);
+
+// Dynamically import compositions
+import { compositionMap } from '@/components/remotion/compositions';
 
 interface ServicesGridProps {
   locale: Locale;
@@ -82,13 +94,33 @@ export function ServicesGrid({ locale }: ServicesGridProps) {
   );
 }
 
-/* ─── Service Card ─── */
+/* ─── Service Card with Remotion Player ─── */
 
 function ServiceCard({ service }: { service: Service }) {
   const Icon = serviceIconMap[service.icon] ?? ChatIcon;
+  const { ref, inView } = useInView({ threshold: 0.5, triggerOnce: false });
+  const [hasLoaded, setHasLoaded] = useState(false);
+  const [showVideo, setShowVideo] = useState(false);
+
+  // Get the composition component
+  const CompositionComponent = compositionMap[service.remotionId] as ComponentType | undefined;
+
+  // Delay showing video to allow fade transition
+  useEffect(() => {
+    if (inView && CompositionComponent) {
+      const timer = setTimeout(() => {
+        setHasLoaded(true);
+        setShowVideo(true);
+      }, 200);
+      return () => clearTimeout(timer);
+    } else {
+      setShowVideo(false);
+    }
+  }, [inView, CompositionComponent]);
 
   return (
     <motion.article
+      ref={ref}
       className={cn(
         'relative bg-white rounded-[var(--radius-card)] overflow-hidden card-shadow',
         'h-[280px] p-6 flex flex-col justify-between',
@@ -105,9 +137,41 @@ function ServiceCard({ service }: { service: Service }) {
         {service.title}
       </h3>
 
-      {/* Decorative icon collage (placeholder for Remotion video) */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="relative w-[180px] h-[140px]">
+      {/* Video / Static Icon Container */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
+        {/* Remotion Player */}
+        {hasLoaded && CompositionComponent && (
+          <div
+            className={cn(
+              'absolute inset-0 transition-opacity duration-500',
+              showVideo && inView ? 'opacity-100' : 'opacity-0'
+            )}
+          >
+            <Player
+              component={CompositionComponent}
+              durationInFrames={180}
+              fps={30}
+              compositionWidth={640}
+              compositionHeight={360}
+              controls={false}
+              autoPlay={showVideo && inView}
+              loop
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+              }}
+            />
+          </div>
+        )}
+
+        {/* Static icon collage (shown when video is not playing) */}
+        <div
+          className={cn(
+            'relative w-[180px] h-[140px] transition-opacity duration-300',
+            showVideo && inView ? 'opacity-0' : 'opacity-100'
+          )}
+        >
           {/* Main icon - centered */}
           <div
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-2xl bg-[rgb(245,245,245)] flex items-center justify-center opacity-60 group-hover:opacity-90 transition-opacity duration-300"

@@ -1,13 +1,28 @@
 'use client';
 
+import { useState, useEffect } from 'react';
+import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import { fadeInUp, fadeInLeft, fadeInRight, staggerChildren } from '@/components/animations/variants';
+import { useInView } from '@/hooks/useInView';
 import type { Locale } from '@/i18n/routing';
 import type { HowItWorksContent } from '@/types/content';
 
 import howItWorksEN from '@/content/en/howItWorks.json';
 import howItWorksAL from '@/content/al/howItWorks.json';
+
+// Dynamically import Remotion Player (no SSR)
+const Player = dynamic(
+  () => import('@remotion/player').then((mod) => mod.Player),
+  { ssr: false }
+);
+
+// Dynamically import ChatbotMockup composition
+const ChatbotMockupComposition = dynamic(
+  () => import('@/components/remotion/ChatbotMockup').then((mod) => mod.ChatbotMockup),
+  { ssr: false }
+);
 
 interface HowItWorksProps {
   locale: Locale;
@@ -43,7 +58,7 @@ export function HowItWorks({ locale }: HowItWorksProps) {
 
       {/* 2-Column Layout */}
       <div className="flex flex-col lg:flex-row gap-10 max-w-[1100px] mx-auto">
-        {/* Left Column: Chatbot Mockup Placeholder */}
+        {/* Left Column: Chatbot Mockup with Remotion Player */}
         <motion.div
           className="lg:w-[40%]"
           variants={fadeInLeft}
@@ -51,7 +66,7 @@ export function HowItWorks({ locale }: HowItWorksProps) {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          <ChatbotMockup />
+          <ChatbotPlayer />
         </motion.div>
 
         {/* Right Column: Step Cards */}
@@ -110,10 +125,61 @@ export function HowItWorks({ locale }: HowItWorksProps) {
 }
 
 /**
- * Static chat mockup placeholder — will be replaced with Remotion
- * ChatbotMockup composition in Phase 4.
+ * ChatbotPlayer - Remotion Player wrapper for ChatbotMockup
+ * Shows static fallback until composition is loaded
  */
-function ChatbotMockup() {
+function ChatbotPlayer() {
+  const { ref, inView } = useInView({ threshold: 0.3, triggerOnce: false });
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    // Delay loading to ensure smooth transition
+    if (inView) {
+      const timer = setTimeout(() => setIsLoaded(true), 300);
+      return () => clearTimeout(timer);
+    }
+  }, [inView]);
+
+  return (
+    <div
+      ref={ref}
+      className={cn(
+        'relative rounded-[var(--radius-card)] overflow-hidden',
+        'max-w-[400px] mx-auto lg:mx-0'
+      )}
+      style={{ aspectRatio: '360/460' }}
+      aria-label="Chatbot demo preview"
+    >
+      {/* Remotion Player */}
+      {isLoaded && ChatbotMockupComposition && (
+        <div className="absolute inset-0">
+          <Player
+            component={ChatbotMockupComposition}
+            durationInFrames={240}
+            fps={30}
+            compositionWidth={400}
+            compositionHeight={500}
+            controls={false}
+            autoPlay={inView}
+            loop
+            style={{
+              width: '100%',
+              height: '100%',
+            }}
+          />
+        </div>
+      )}
+
+      {/* Static Fallback (shown while loading) */}
+      {!isLoaded && <StaticChatbotFallback />}
+    </div>
+  );
+}
+
+/**
+ * Static fallback shown while Remotion player loads
+ */
+function StaticChatbotFallback() {
   const messages = [
     { sender: 'user', text: 'Keni dhoma të lira?' },
     { sender: 'ai', text: 'Po! 2 dhoma standard disponueshme për datat tuaja. 🏨' },
@@ -125,9 +191,8 @@ function ChatbotMockup() {
     <div
       className={cn(
         'bg-[rgb(30,30,30)] rounded-[var(--radius-card)] overflow-hidden',
-        'p-4 max-w-[400px] mx-auto lg:mx-0'
+        'p-4 h-full'
       )}
-      aria-label="Chatbot demo preview"
     >
       {/* Header Bar */}
       <div className="flex items-center gap-3 pb-3 border-b border-[rgba(255,255,255,0.1)]">
