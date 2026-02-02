@@ -109,7 +109,6 @@ export interface HeroContent {
   rotatingWords: string[];
   subtitle: string;
   ctaPrimary: string;
-  ctaSecondary: string;
 }
 
 export interface SharedContent {
@@ -149,6 +148,7 @@ export interface BenefitItem {
   id: string;
   icon: string;
   title: string;
+  frontText: string;
   description: string;
 }
 

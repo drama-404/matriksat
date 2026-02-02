@@ -4,8 +4,9 @@ import { Footer } from '@/components/layout/Footer';
 import { Hero } from '@/components/sections/Hero';
 import { FeaturesStrip } from '@/components/sections/FeaturesStrip';
 import { TestimonialsCarousel } from '@/components/sections/TestimonialsCarousel';
-import { BrandMarquee } from '@/components/sections/BrandMarquee';
-import { QuoteSection } from '@/components/sections/QuoteSection';
+// Hidden for now - will revisit later
+// import { BrandMarquee } from '@/components/sections/BrandMarquee';
+// import { QuoteSection } from '@/components/sections/QuoteSection';
 import { AchievementBento } from '@/components/sections/AchievementBento';
 import { BenefitsGrid } from '@/components/sections/BenefitsGrid';
 import { HowItWorks } from '@/components/sections/HowItWorks';
@@ -33,8 +34,9 @@ export default async function HomePage({ params }: HomePageProps) {
         <Hero locale={locale as Locale} />
         <FeaturesStrip />
         <TestimonialsCarousel locale={locale as Locale} />
-        <BrandMarquee />
-        <QuoteSection locale={locale as Locale} />
+        {/* Hidden for now - will revisit later */}
+        {/* <BrandMarquee /> */}
+        {/* <QuoteSection locale={locale as Locale} /> */}
         <AchievementBento locale={locale as Locale} />
         <BenefitsGrid locale={locale as Locale} />
         <HowItWorks locale={locale as Locale} />

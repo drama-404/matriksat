@@ -6,37 +6,43 @@
       "id": "results-focused",
       "icon": "chart",
       "title": "Built for Results",
+      "frontText": "Outcomes over features",
       "description": "Every project starts with one question: what measurable outcome do you need? We build towards that, not feature lists."
     },
     {
       "id": "fast-delivery",
       "icon": "lightning",
       "title": "Weeks, Not Months",
+      "frontText": "Validated fast",
       "description": "Your first working prototype arrives in days. Full projects launch in 2-4 weeks. We move fast because your time matters."
     },
     {
       "id": "transparent-pricing",
       "icon": "dollar",
       "title": "Clear Pricing",
+      "frontText": "No surprises",
       "description": "No surprise invoices. No scope creep fees. You know exactly what you're paying before we write a single line of code."
     },
     {
-      "id": "problem-solving",
-      "icon": "search",
-      "title": "We Dig Into Problems",
-      "description": "Half the work is understanding what's actually broken. We ask the uncomfortable questions so we build the right thing."
+      "id": "disciplined-execution",
+      "icon": "checklist",
+      "title": "Disciplined Execution",
+      "frontText": "Not freelancers",
+      "description": "You're not getting random contractors. You get a structured delivery engine with weekly sprints, clear milestones, and zero babysitting needed."
     },
     {
-      "id": "project-portal",
-      "icon": "screen",
-      "title": "Your Own Dashboard",
-      "description": "Track progress, leave feedback, approve changes — all in one place. No back-and-forth emails or lost Slack messages."
+      "id": "product-thinking",
+      "icon": "compass",
+      "title": "Product Thinking First",
+      "frontText": "Vision into plan",
+      "description": "Your idea becomes a clear roadmap, a real team, and consistent output. We think like founders, not just coders."
     },
     {
-      "id": "expert-team",
-      "icon": "handshake",
-      "title": "Direct Access",
-      "description": "Talk directly to the people building your project. No account managers, no middlemen, no broken telephone."
+      "id": "consistent-progress",
+      "icon": "calendar",
+      "title": "Consistent Progress",
+      "frontText": "Weekly updates",
+      "description": "Weekly progress reports, transparent tracking, and direct communication. You always know exactly where your project stands."
     }
   ]
 }

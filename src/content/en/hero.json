@@ -1,9 +1,8 @@
 {
   "statusBadge": "Taking on New Projects",
-  "mainHeading": "We handle your",
-  "rotatingWords": ["conversations", "invoices", "bookings", "data"],
-  "subtitle": "AI that handles the work you'd rather not do. Chatbots that speak your customers' language. Automations that run while you sleep.",
+  "mainHeading": "We build",
+  "rotatingWords": ["AI chatbots", "custom portals", "MVPs", "automations"],
+  "subtitle": "Full-stack development & AI solutions that actually work. From idea to production in weeks, not months. No fluff, just results.",
   "ctaPrimary": "See How We Work",
-  "ctaSecondary": "View Our Projects",
   "terminalPrompt": "ready"
 }

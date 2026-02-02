@@ -28,11 +28,11 @@ interface HowItWorksProps {
   locale: Locale;
 }
 
-// Animation duration constants (must match HowItWorksShowcase.tsx)
+// Animation duration constants - now 4 steps
 const STEP_DURATION_FRAMES = 300;
 const FPS = 30;
-const STEP_DURATION_MS = (STEP_DURATION_FRAMES / FPS) * 1000;
-const TOTAL_DURATION_FRAMES = 900;
+const NUM_STEPS = 4;
+const TOTAL_DURATION_FRAMES = STEP_DURATION_FRAMES * NUM_STEPS; // 1200 frames
 
 export function HowItWorks({ locale }: HowItWorksProps) {
   const content: HowItWorksContent = locale === 'en' ? howItWorksEN : howItWorksAL;
@@ -40,10 +40,11 @@ export function HowItWorks({ locale }: HowItWorksProps) {
 
   return (
     <section
+      id="how-it-works"
       className="section-container relative"
       aria-labelledby="how-it-works-heading"
     >
-      {/* Dashed border frame (matching Kree8 style) */}
+      {/* Dashed border frame */}
       <div
         className="absolute inset-4 border border-dashed pointer-events-none rounded-[var(--radius-card)]"
         style={{ borderColor: 'rgba(0, 0, 0, 0.12)' }}
@@ -63,7 +64,7 @@ export function HowItWorks({ locale }: HowItWorksProps) {
           className="text-[36px] md:text-[42px] font-bold tracking-[-1.32px] leading-[1.1] text-[var(--color-dark)]"
           style={{ fontFamily: 'var(--font-satoshi), var(--font-inter), sans-serif' }}
         >
-          {content.heading.split('Projects')[0]}
+          How We Get Your
           <br className="hidden sm:block" />
           <span className="text-[var(--color-accent)]">Projects</span> Done
         </h2>
@@ -90,7 +91,7 @@ export function HowItWorks({ locale }: HowItWorksProps) {
 
         {/* Right Column: Step Cards */}
         <motion.div
-          className="lg:w-[58%] flex flex-col gap-5"
+          className="lg:w-[58%] flex flex-col gap-4"
           variants={staggerChildren}
           initial="hidden"
           whileInView="visible"
@@ -130,7 +131,7 @@ function ShowcasePlayer({ onStepChange }: ShowcasePlayerProps) {
     }
   }, [inView]);
 
-  // Track frame changes to sync step highlighting
+  // Track frame changes to sync step highlighting (now 4 steps)
   useEffect(() => {
     if (!playerRef || !inView) return;
 
@@ -138,7 +139,8 @@ function ShowcasePlayer({ onStepChange }: ShowcasePlayerProps) {
       try {
         const frame = playerRef.getCurrentFrame();
         if (typeof frame === 'number') {
-          const currentStep = frame < 300 ? 1 : frame < 600 ? 2 : 3;
+          // 4 steps: 0-299 = 1, 300-599 = 2, 600-899 = 3, 900-1199 = 4
+          const currentStep = Math.min(Math.floor(frame / STEP_DURATION_FRAMES) + 1, NUM_STEPS);
           onStepChange(currentStep);
         }
       } catch {
@@ -171,8 +173,8 @@ function ShowcasePlayer({ onStepChange }: ShowcasePlayerProps) {
         'relative rounded-[var(--radius-card-lg)] overflow-visible',
         'w-full max-w-[400px]'
       )}
-      style={{ aspectRatio: '360/500' }}
-      aria-label="Animated demonstration of our 3-step process"
+      style={{ aspectRatio: '360/520' }}
+      aria-label="Animated demonstration of our 4-step process"
     >
       {/* Remotion Player */}
       {isLoaded && HowItWorksShowcaseComposition && (
@@ -216,34 +218,37 @@ interface StepCardProps {
 }
 
 function StepCard({ step, isActive, index }: StepCardProps) {
-  // Step-specific icons
+  // Step-specific icons for all 4 steps
   const icons = [
-    // Step 1: Calendar
-    <svg key="cal" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-      <line x1="16" y1="2" x2="16" y2="6" />
-      <line x1="8" y1="2" x2="8" y2="6" />
-      <line x1="3" y1="10" x2="21" y2="10" />
+    // Step 1: Search/Understand
+    <svg key="search" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="11" cy="11" r="8" />
+      <line x1="21" y1="21" x2="16.65" y2="16.65" />
     </svg>,
-    // Step 2: Code/Build
+    // Step 2: Map/Plan
+    <svg key="map" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6" />
+      <line x1="8" y1="2" x2="8" y2="18" />
+      <line x1="16" y1="6" x2="16" y2="22" />
+    </svg>,
+    // Step 3: Code/Build
     <svg key="code" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <polyline points="16 18 22 12 16 6" />
       <polyline points="8 6 2 12 8 18" />
     </svg>,
-    // Step 3: Rocket/Launch
-    <svg key="rocket" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
-      <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
-      <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
-      <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+    // Step 4: Growth/Scale
+    <svg key="growth" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <line x1="12" y1="20" x2="12" y2="10" />
+      <line x1="18" y1="20" x2="18" y2="4" />
+      <line x1="6" y1="20" x2="6" y2="16" />
     </svg>,
   ];
 
   return (
     <motion.article
       className={cn(
-        'relative rounded-[var(--radius-card)] p-6 md:p-8 transition-all duration-300',
-        'flex flex-row gap-5 items-start',
+        'relative rounded-[var(--radius-card)] p-5 md:p-6 transition-all duration-300',
+        'flex flex-row gap-4 items-start',
         isActive
           ? 'bg-[var(--color-dark)] text-white shadow-xl'
           : 'bg-white card-shadow'
@@ -256,7 +261,7 @@ function StepCard({ step, isActive, index }: StepCardProps) {
       {/* Step Number/Icon Badge */}
       <div
         className={cn(
-          'flex-shrink-0 w-14 h-14 rounded-2xl',
+          'flex-shrink-0 w-12 h-12 rounded-xl',
           'flex items-center justify-center transition-all duration-300',
           isActive
             ? 'bg-[var(--color-accent)] text-white'
@@ -267,7 +272,7 @@ function StepCard({ step, isActive, index }: StepCardProps) {
           icons[index]
         ) : (
           <span
-            className="text-2xl font-bold"
+            className="text-xl font-bold"
             style={{ fontFamily: 'var(--font-satoshi), var(--font-inter), sans-serif' }}
           >
             {step.number}
@@ -275,11 +280,11 @@ function StepCard({ step, isActive, index }: StepCardProps) {
         )}
       </div>
 
-      <div className="flex-1">
+      <div className="flex-1 min-w-0">
         {/* Step Label */}
         <span
           className={cn(
-            'text-xs font-semibold uppercase tracking-wider',
+            'text-[10px] font-semibold uppercase tracking-wider',
             isActive ? 'text-[var(--color-accent)]' : 'text-[rgba(0,0,0,0.4)]'
           )}
         >
@@ -289,7 +294,7 @@ function StepCard({ step, isActive, index }: StepCardProps) {
         {/* Title */}
         <h3
           className={cn(
-            'text-xl md:text-2xl font-bold mt-1',
+            'text-lg md:text-xl font-bold mt-0.5',
             isActive ? 'text-white' : 'text-[var(--color-dark)]'
           )}
           style={{ fontFamily: 'var(--font-satoshi), var(--font-inter), sans-serif' }}
@@ -300,36 +305,18 @@ function StepCard({ step, isActive, index }: StepCardProps) {
         {/* Description */}
         <p
           className={cn(
-            'mt-2 text-sm md:text-base font-normal leading-relaxed',
+            'mt-1 text-sm font-normal leading-relaxed',
             isActive ? 'text-[rgba(255,255,255,0.7)]' : 'text-[rgba(0,0,0,0.53)]'
           )}
         >
           {step.description}
         </p>
-
-        {/* Progress indicator when active */}
-        <AnimatePresence>
-          {isActive && (
-            <motion.div
-              className="mt-4 flex items-center gap-2"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.3 }}
-            >
-              <div className="w-2 h-2 rounded-full bg-[var(--color-accent)] animate-pulse" />
-              <span className="text-xs font-medium text-[rgba(255,255,255,0.5)]">
-                Currently showing
-              </span>
-            </motion.div>
-          )}
-        </AnimatePresence>
       </div>
 
       {/* Active indicator line */}
       {isActive && (
         <motion.div
-          className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-12 bg-[var(--color-accent)] rounded-r-full"
+          className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-10 bg-[var(--color-accent)] rounded-r-full"
           layoutId="activeIndicator"
           transition={{ type: 'spring', stiffness: 300, damping: 30 }}
         />
@@ -372,16 +359,16 @@ function StaticShowcaseFallback() {
         Loading demo...
       </p>
       <p className="text-[rgba(255,255,255,0.5)] text-sm mt-2 text-center">
-        See how simple it is
+        See how we work
       </p>
 
-      {/* Placeholder step indicators */}
-      <div className="flex gap-3 mt-8">
-        {[1, 2, 3].map((num) => (
+      {/* Placeholder step indicators - now 4 */}
+      <div className="flex gap-2 mt-8">
+        {[1, 2, 3, 4].map((num) => (
           <div
             key={num}
             className={cn(
-              'w-10 h-10 rounded-full flex items-center justify-center',
+              'w-9 h-9 rounded-full flex items-center justify-center',
               num === 1
                 ? 'bg-[var(--color-accent)] text-white'
                 : 'bg-[rgba(255,255,255,0.1)] text-[rgba(255,255,255,0.5)]'

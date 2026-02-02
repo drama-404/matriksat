@@ -98,18 +98,15 @@ export function Hero({ locale }: HeroProps) {
           {content.subtitle}
         </motion.p>
 
-        {/* CTA Buttons */}
+        {/* CTA Button */}
         <motion.div
-          className="flex flex-col sm:flex-row gap-4 mt-10"
+          className="mt-10"
           variants={heroSequence.cta}
           initial="hidden"
           animate="visible"
         >
-          <Button href="#pricing" variant="primary" subText="Let's Go">
+          <Button href="#how-it-works" variant="primary" subText="Let's Go">
             {content.ctaPrimary}
-          </Button>
-          <Button href="#portfolio" variant="outline">
-            {content.ctaSecondary}
           </Button>
         </motion.div>
 

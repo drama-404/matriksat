@@ -1,24 +1,30 @@
 {
-  "heading": "From Idea to Production in Weeks",
-  "subheading": "No lengthy discovery phases. No endless meetings. Here's how we actually work.",
+  "heading": "How We Get Your Projects Done",
+  "subheading": "No guesswork. No scope creep. A clear path from idea to production.",
   "steps": [
     {
       "id": "step-1",
       "number": "1",
-      "title": "Quick Discovery",
-      "description": "A 30-minute call to understand what you're trying to solve. We'll tell you honestly if we're the right fit."
+      "title": "Understand Your Challenge",
+      "description": "We dig into your business, challenges, and what success looks like. The hard questions upfront mean building the right thing from day one."
     },
     {
       "id": "step-2",
       "number": "2",
-      "title": "Build Fast, Show Early",
-      "description": "Working prototype in your hands within days. You'll see real progress before committing to anything big."
+      "title": "Design Your Roadmap",
+      "description": "Team structure, timeline, milestones, and costs — all mapped out. You'll have a clear plan before we write a single line of code."
     },
     {
       "id": "step-3",
       "number": "3",
-      "title": "Ship & Support",
-      "description": "We deploy, train your team, and stick around to make sure everything runs smoothly."
+      "title": "Build in Sprints",
+      "description": "Weekly releases, real demos, tight communication. You see progress every week, not just at the end. No surprises."
+    },
+    {
+      "id": "step-4",
+      "number": "4",
+      "title": "Scale Together",
+      "description": "Add features, expand capacity, improve systems. We stick around as your technical partner, not a one-time vendor."
     }
   ]
 }

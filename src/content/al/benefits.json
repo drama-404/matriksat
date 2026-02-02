@@ -6,37 +6,43 @@
       "id": "results-focused",
       "icon": "chart",
       "title": "Ndërtuar për Rezultate",
+      "frontText": "Rezultate, jo funksione",
       "description": "Çdo projekt fillon me një pyetje: çfarë rezultati të matshëm ju nevojitet? Ne ndërtojmë drejt saj, jo lista funksionesh."
     },
     {
       "id": "fast-delivery",
       "icon": "lightning",
       "title": "Javë, Jo Muaj",
+      "frontText": "Validuar shpejt",
       "description": "Prototipi juaj i parë funksional vjen brenda ditësh. Projektet e plota nisin brenda 2-4 javësh. Lëvizim shpejt sepse koha juaj ka vlerë."
     },
     {
       "id": "transparent-pricing",
       "icon": "dollar",
       "title": "Çmime të Qarta",
+      "frontText": "Pa surpriza",
       "description": "Pa fatura surprizë. Pa tarifa shtesë. E dini saktësisht sa paguani para se të shkruajmë një rresht kod."
     },
     {
-      "id": "problem-solving",
-      "icon": "search",
-      "title": "Gërmojmë në Probleme",
-      "description": "Gjysma e punës është të kuptosh çfarë është prishur vërtet. Bëjmë pyetjet e vështira që të ndërtojmë gjënë e duhur."
+      "id": "disciplined-execution",
+      "icon": "checklist",
+      "title": "Ekzekutim i Disiplinuar",
+      "frontText": "Jo freelancer",
+      "description": "Nuk merrni kontraktorë të rastësishëm. Merrni një motor dorëzimi të strukturuar me sprinte javore, objektiva të qarta, dhe zero nevojë për mbikëqyrje."
     },
     {
-      "id": "project-portal",
-      "icon": "screen",
-      "title": "Dashboard-i Juaj",
-      "description": "Ndiqni progresin, lini komente, aprovoni ndryshimet — të gjitha në një vend. Pa email-a dhe mesazhe të humbura."
+      "id": "product-thinking",
+      "icon": "compass",
+      "title": "Mendim Produkti",
+      "frontText": "Vizioni në plan",
+      "description": "Ideja juaj bëhet një rrugë e qartë, një ekip i vërtetë, dhe rezultate konsistente. Mendojmë si themelues, jo vetëm kodues."
     },
     {
-      "id": "expert-team",
-      "icon": "handshake",
-      "title": "Akses Direkt",
-      "description": "Flisni direkt me njerëzit që ndërtojnë projektin tuaj. Pa ndërmjetës, pa telefon të prishur."
+      "id": "consistent-progress",
+      "icon": "calendar",
+      "title": "Progres Konsistent",
+      "frontText": "Përditësime javore",
+      "description": "Raporte javore progresi, ndjekje transparente, dhe komunikim direkt. Gjithmonë e dini saktësisht ku qëndron projekti juaj."
     }
   ]
 }
