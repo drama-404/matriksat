@@ -29,7 +29,7 @@ export const GDPRComplianceDemo: React.FC = () => {
   const progress = (completedCount / CHECKLIST_ITEMS.length) * 100;
 
   return (
-    <ServiceDemo accentColor="rgb(37, 99, 235)">
+    <ServiceDemo accentColor="rgb(196, 108, 78)">
       <div style={{ display: 'flex', gap: 20, alignItems: 'flex-start' }}>
         {/* Compliance Card - ALWAYS visible */}
         <div
@@ -82,7 +82,7 @@ export const GDPRComplianceDemo: React.FC = () => {
                       width: 18,
                       height: 18,
                       borderRadius: 4,
-                      backgroundColor: isChecked ? 'rgb(34, 197, 94)' : 'rgb(245, 245, 245)',
+                      backgroundColor: isChecked ? 'rgb(138, 154, 124)' : 'rgb(245, 245, 245)',
                       border: isChecked ? 'none' : '1px solid rgba(0, 0, 0, 0.15)',
                       display: 'flex',
                       alignItems: 'center',
@@ -137,7 +137,7 @@ export const GDPRComplianceDemo: React.FC = () => {
                 style={{
                   fontSize: 8,
                   fontWeight: 600,
-                  color: progress === 100 ? 'rgb(34, 197, 94)' : 'rgb(37, 99, 235)',
+                  color: progress === 100 ? 'rgb(138, 154, 124)' : 'rgb(196, 108, 78)',
                 }}
               >
                 {Math.round(progress)}%
@@ -155,7 +155,7 @@ export const GDPRComplianceDemo: React.FC = () => {
                 style={{
                   width: `${progress}%`,
                   height: '100%',
-                  backgroundColor: progress === 100 ? 'rgb(34, 197, 94)' : 'rgb(37, 99, 235)',
+                  backgroundColor: progress === 100 ? 'rgb(138, 154, 124)' : 'rgb(196, 108, 78)',
                   borderRadius: 2,
                   transition: 'width 0.3s',
                 }}
@@ -186,7 +186,7 @@ export const GDPRComplianceDemo: React.FC = () => {
             }}
           >
             <EUFlag />
-            <span style={{ fontSize: 7, fontWeight: 600, color: 'rgb(37, 99, 235)' }}>
+            <span style={{ fontSize: 7, fontWeight: 600, color: 'rgb(196, 108, 78)' }}>
               GDPR
             </span>
             <span style={{ fontSize: 6, color: 'rgba(0, 0, 0, 0.5)' }}>Compliant</span>
@@ -215,7 +215,7 @@ const ShieldIcon: React.FC = () => (
       height="14"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="rgb(37, 99, 235)"
+      stroke="rgb(196, 108, 78)"
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"

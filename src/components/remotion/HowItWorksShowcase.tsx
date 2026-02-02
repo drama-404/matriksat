@@ -199,7 +199,7 @@ const Step1DiscoveryCall: React.FC<StepProps> = ({ localFrame, fps }) => {
               width: 40,
               height: 40,
               borderRadius: '50%',
-              background: `linear-gradient(135deg, ${COLORS.accent}, #6366f1)`,
+              background: `linear-gradient(135deg, ${COLORS.accent}, rgb(166, 88, 58))`,
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -281,7 +281,7 @@ const Step1DiscoveryCall: React.FC<StepProps> = ({ localFrame, fps }) => {
                     backgroundColor: isSelected
                       ? COLORS.accent
                       : isAvailable
-                        ? 'rgba(52, 145, 255, 0.1)'
+                        ? 'rgba(196, 108, 78, 0.1)'
                         : 'transparent',
                     color: isSelected
                       ? 'white'
@@ -981,7 +981,7 @@ const Step3LaunchAutomate: React.FC<StepProps> = ({ localFrame, fps }) => {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            boxShadow: '0 4px 20px rgba(52, 145, 255, 0.4)',
+            boxShadow: '0 4px 20px rgba(196, 108, 78, 0.4)',
             transform: `scale(${widgetScale})`,
           }}
         >
@@ -1129,7 +1129,7 @@ const EcommerceChatbot: React.FC<StepProps> = ({ localFrame }) => {
                   width: 50,
                   height: 50,
                   borderRadius: 8,
-                  backgroundColor: 'rgba(52, 145, 255, 0.2)',
+                  backgroundColor: 'rgba(196, 108, 78, 0.2)',
                 }}
               />
               <div style={{ flex: 1 }}>

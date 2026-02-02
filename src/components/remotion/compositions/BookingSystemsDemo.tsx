@@ -26,7 +26,7 @@ export const BookingSystemsDemo: React.FC = () => {
   const notifY = interpolate(frame, [65, 75], [-20, 0], { extrapolateRight: 'clamp' });
 
   return (
-    <ServiceDemo accentColor="rgb(59, 130, 246)">
+    <ServiceDemo accentColor="rgb(196, 108, 78)">
       <div style={{ position: 'relative' }}>
         {/* Calendar Container - ALWAYS visible */}
         <div
@@ -89,7 +89,7 @@ export const BookingSystemsDemo: React.FC = () => {
                   style={{
                     aspectRatio: '1',
                     borderRadius: 6,
-                    backgroundColor: isBooked ? 'rgb(59, 130, 246)' : 'rgb(245, 245, 245)',
+                    backgroundColor: isBooked ? 'rgb(196, 108, 78)' : 'rgb(245, 245, 245)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -117,7 +117,7 @@ export const BookingSystemsDemo: React.FC = () => {
                     padding: '4px 8px',
                     borderRadius: 4,
                     backgroundColor: isBooked ? 'rgba(59, 130, 246, 0.1)' : 'rgb(245, 245, 245)',
-                    color: isBooked ? 'rgb(59, 130, 246)' : 'rgba(0, 0, 0, 0.5)',
+                    color: isBooked ? 'rgb(196, 108, 78)' : 'rgba(0, 0, 0, 0.5)',
                     fontWeight: isBooked ? 600 : 400,
                     textDecoration: isBooked ? 'line-through' : 'none',
                   }}

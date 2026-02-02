@@ -185,7 +185,7 @@ export function AchievementBento({ locale }: AchievementBentoProps) {
                 className="flex-1 rounded-t-[4px] transition-all"
                 style={{
                   height: `${height}%`,
-                  backgroundColor: index >= 9 ? 'var(--color-accent)' : 'rgba(52, 145, 255, 0.2)',
+                  backgroundColor: index >= 9 ? 'var(--color-accent)' : 'var(--color-accent-subtle)',
                 }}
               />
             ))}

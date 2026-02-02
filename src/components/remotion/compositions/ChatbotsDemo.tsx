@@ -64,7 +64,7 @@ export const ChatbotsDemo: React.FC = () => {
               width: 6,
               height: 6,
               borderRadius: '50%',
-              backgroundColor: 'rgb(34, 197, 94)',
+              backgroundColor: 'rgb(138, 154, 124)',
             }}
           />
         </div>

@@ -24,7 +24,7 @@ export const ReviewManagementDemo: React.FC = () => {
   const animatedRating = interpolate(frame, [55, 80], [0, avgRating], { extrapolateRight: 'clamp' });
 
   return (
-    <ServiceDemo accentColor="rgb(234, 88, 12)">
+    <ServiceDemo accentColor="rgb(196, 108, 78)">
       {/* Container - ALWAYS visible */}
       <div
         style={{
@@ -156,7 +156,7 @@ export const ReviewManagementDemo: React.FC = () => {
                 width: 4,
                 height: 4,
                 borderRadius: '50%',
-                backgroundColor: 'rgb(234, 88, 12)',
+                backgroundColor: 'rgb(196, 108, 78)',
                 opacity: interpolate(
                   (frame + i * 5) % 20,
                   [0, 10, 20],

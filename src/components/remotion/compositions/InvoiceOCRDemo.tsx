@@ -22,7 +22,7 @@ export const InvoiceOCRDemo: React.FC = () => {
   const transferProgress = interpolate(frame, [50, 70], [0, 1], { extrapolateRight: 'clamp' });
 
   return (
-    <ServiceDemo accentColor="rgb(139, 92, 246)">
+    <ServiceDemo accentColor="rgb(196, 108, 78)">
       <div style={{ display: 'flex', gap: 30, alignItems: 'center' }}>
         {/* Invoice Document - ALWAYS visible */}
         <div
@@ -87,7 +87,7 @@ export const InvoiceOCRDemo: React.FC = () => {
                   top: field.top,
                   width: 120,
                   height: 18,
-                  border: '2px solid rgb(139, 92, 246)',
+                  border: '2px solid rgb(196, 108, 78)',
                   borderRadius: 4,
                   backgroundColor: 'rgba(139, 92, 246, 0.1)',
                   opacity: highlightOpacity,
@@ -114,7 +114,7 @@ export const InvoiceOCRDemo: React.FC = () => {
                   width: 6,
                   height: 6,
                   borderRadius: '50%',
-                  backgroundColor: 'rgb(139, 92, 246)',
+                  backgroundColor: 'rgb(196, 108, 78)',
                   opacity: dotOpacity * transferProgress,
                 }}
               />
@@ -136,7 +136,7 @@ export const InvoiceOCRDemo: React.FC = () => {
             style={{
               fontSize: 9,
               fontWeight: 700,
-              color: 'rgb(139, 92, 246)',
+              color: 'rgb(196, 108, 78)',
               marginBottom: 10,
             }}
           >
@@ -180,11 +180,11 @@ export const InvoiceOCRDemo: React.FC = () => {
               gap: 6,
             }}
           >
-            <AnimatedCheck delay={85} size={14} color="rgb(34, 197, 94)" />
+            <AnimatedCheck delay={85} size={14} color="rgb(138, 154, 124)" />
             <span
               style={{
                 fontSize: 8,
-                color: 'rgb(34, 197, 94)',
+                color: 'rgb(138, 154, 124)',
                 fontWeight: 600,
                 opacity: interpolate(frame, [88, 95], [0, 1], { extrapolateRight: 'clamp' }),
               }}

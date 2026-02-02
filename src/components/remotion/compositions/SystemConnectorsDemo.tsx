@@ -31,7 +31,7 @@ export const SystemConnectorsDemo: React.FC = () => {
   const { fps } = useVideoConfig();
 
   return (
-    <ServiceDemo accentColor="rgb(20, 184, 166)">
+    <ServiceDemo accentColor="rgb(196, 108, 78)">
       {/* Container - ALWAYS visible */}
       <div
         style={{
@@ -95,7 +95,7 @@ export const SystemConnectorsDemo: React.FC = () => {
                     cx={particleX}
                     cy={particleY}
                     r="4"
-                    fill="rgb(20, 184, 166)"
+                    fill="rgb(196, 108, 78)"
                   />
                 )}
               </g>
@@ -174,7 +174,7 @@ export const SystemConnectorsDemo: React.FC = () => {
               width: 40,
               height: 40,
               borderRadius: '50%',
-              backgroundColor: 'rgb(20, 184, 166)',
+              backgroundColor: 'rgb(196, 108, 78)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -203,7 +203,7 @@ export const SystemConnectorsDemo: React.FC = () => {
               width: 6,
               height: 6,
               borderRadius: '50%',
-              backgroundColor: 'rgb(34, 197, 94)',
+              backgroundColor: 'rgb(138, 154, 124)',
             }}
           />
           <span style={{ fontSize: 9, color: 'rgba(0, 0, 0, 0.6)', fontWeight: 500 }}>

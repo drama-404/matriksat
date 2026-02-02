@@ -27,7 +27,7 @@ export const MobileAppsDemo: React.FC = () => {
     frame >= 60 ? 2 : frame >= 30 ? 1 : 0;
 
   return (
-    <ServiceDemo accentColor="rgb(168, 85, 247)">
+    <ServiceDemo accentColor="rgb(196, 108, 78)">
       {/* Phone Container - ALWAYS visible */}
       <div
         style={{
@@ -171,7 +171,7 @@ const HomeScreen: React.FC<{ frame: number }> = ({ frame }) => (
         width: 28,
         height: 28,
         borderRadius: 8,
-        backgroundColor: 'rgb(168, 85, 247)',
+        backgroundColor: 'rgb(196, 108, 78)',
         marginBottom: 12,
         display: 'flex',
         alignItems: 'center',
@@ -227,7 +227,7 @@ const BookingScreen: React.FC<{ frame: number }> = ({ frame }) => (
           style={{
             aspectRatio: '1',
             borderRadius: 4,
-            backgroundColor: i >= 4 && i <= 6 ? 'rgb(168, 85, 247)' : 'white',
+            backgroundColor: i >= 4 && i <= 6 ? 'rgb(196, 108, 78)' : 'white',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -244,7 +244,7 @@ const BookingScreen: React.FC<{ frame: number }> = ({ frame }) => (
       style={{
         width: '100%',
         padding: 10,
-        backgroundColor: 'rgb(168, 85, 247)',
+        backgroundColor: 'rgb(196, 108, 78)',
         border: 'none',
         borderRadius: 8,
         color: 'white',
@@ -277,7 +277,7 @@ const ConfirmScreen: React.FC<{ frame: number }> = ({ frame }) => {
           width: 48,
           height: 48,
           borderRadius: '50%',
-          backgroundColor: 'rgb(34, 197, 94)',
+          backgroundColor: 'rgb(138, 154, 124)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -330,11 +330,11 @@ const SwipeIndicator: React.FC<{ frame: number }> = ({ frame }) => {
           width: 20,
           height: 20,
           borderRadius: '50%',
-          border: '2px solid rgb(168, 85, 247)',
+          border: '2px solid rgb(196, 108, 78)',
           transform: `translateX(${x}px)`,
         }}
       />
-      <span style={{ fontSize: 8, color: 'rgb(168, 85, 247)', fontWeight: 500 }}>Swipe</span>
+      <span style={{ fontSize: 8, color: 'rgb(196, 108, 78)', fontWeight: 500 }}>Swipe</span>
     </div>
   );
 };

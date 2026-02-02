@@ -41,7 +41,7 @@ export const SentimentAnalysisDemo: React.FC = () => {
   const gaugeProgress = interpolate(frame, [65, 85], [0, overallScore], { extrapolateRight: 'clamp' });
 
   return (
-    <ServiceDemo accentColor="rgb(234, 179, 8)">
+    <ServiceDemo accentColor="rgb(196, 108, 78)">
       {/* Container - ALWAYS visible */}
       <div
         style={{
@@ -92,10 +92,10 @@ export const SentimentAnalysisDemo: React.FC = () => {
 
             const sentimentColor =
               review.sentiment === 'positive'
-                ? 'rgb(34, 197, 94)'
+                ? 'rgb(138, 154, 124)'
                 : review.sentiment === 'negative'
                 ? 'rgb(239, 68, 68)'
-                : 'rgb(234, 179, 8)';
+                : 'rgb(196, 108, 78)';
 
             return (
               <div
@@ -164,7 +164,7 @@ export const SentimentAnalysisDemo: React.FC = () => {
             <span style={{ fontSize: 9, fontWeight: 600, color: 'rgb(0, 0, 0)' }}>
               Overall Sentiment
             </span>
-            <span style={{ fontSize: 9, fontWeight: 700, color: 'rgb(34, 197, 94)' }}>
+            <span style={{ fontSize: 9, fontWeight: 700, color: 'rgb(138, 154, 124)' }}>
               {Math.round(gaugeProgress)}% Positive
             </span>
           </div>
@@ -180,7 +180,7 @@ export const SentimentAnalysisDemo: React.FC = () => {
             <div
               style={{
                 width: `${gaugeProgress}%`,
-                backgroundColor: 'rgb(34, 197, 94)',
+                backgroundColor: 'rgb(138, 154, 124)',
               }}
             />
             <div
