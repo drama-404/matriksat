@@ -1,42 +1,42 @@
 {
-  "heading": "Benefit of MATRIKS",
-  "subheading": "Why Settle for Less? Before you dive in, let's show you why our solutions are the game-changer your business needs.",
+  "heading": "Why MATRIKS?",
+  "subheading": "You've got options. Here's why teams choose to work with us.",
   "items": [
     {
       "id": "results-focused",
       "icon": "chart",
-      "title": "Results-Focused Solutions",
-      "description": "We help businesses grow by building AI tools that turn visitors into customers and streamline operations."
+      "title": "Built for Results",
+      "description": "Every project starts with one question: what measurable outcome do you need? We build towards that, not feature lists."
     },
     {
       "id": "fast-delivery",
       "icon": "lightning",
-      "title": "Lightning-Fast Delivery",
-      "description": "Your projects are delivered within days, not weeks or months. We move fast without compromising quality."
+      "title": "Weeks, Not Months",
+      "description": "Your first working prototype arrives in days. Full projects launch in 2-4 weeks. We move fast because your time matters."
     },
     {
       "id": "transparent-pricing",
       "icon": "dollar",
-      "title": "Transparent Pricing",
-      "description": "No surprises. Clear pricing from the start. Pay for what you need, when you need it."
+      "title": "Clear Pricing",
+      "description": "No surprise invoices. No scope creep fees. You know exactly what you're paying before we write a single line of code."
     },
     {
       "id": "problem-solving",
       "icon": "search",
-      "title": "Problem Solving",
-      "description": "We solve your business challenges with innovative AI and automation solutions that drive real results."
+      "title": "We Dig Into Problems",
+      "description": "Half the work is understanding what's actually broken. We ask the uncomfortable questions so we build the right thing."
     },
     {
       "id": "project-portal",
       "icon": "screen",
-      "title": "Private Project Portal",
-      "description": "Easily manage your projects, track progress, and communicate with our team from your own dashboard."
+      "title": "Your Own Dashboard",
+      "description": "Track progress, leave feedback, approve changes — all in one place. No back-and-forth emails or lost Slack messages."
     },
     {
       "id": "expert-team",
       "icon": "handshake",
-      "title": "Expert Team Access",
-      "description": "Work directly with experienced developers and AI specialists. No middlemen, no long-term contracts required."
+      "title": "Direct Access",
+      "description": "Talk directly to the people building your project. No account managers, no middlemen, no broken telephone."
     }
   ]
 }

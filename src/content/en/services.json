@@ -1,19 +1,19 @@
 {
   "heading": "What We Build",
-  "subheading": "From intelligent chatbots to full-stack platforms — we deliver AI solutions that actually work.",
+  "subheading": "Chatbots, dashboards, automation tools — whatever your business actually needs.",
   "services": [
     {
       "id": "chatbots",
-      "title": "Intelligent Chatbots",
-      "description": "Multi-language AI chatbots that handle 80% of customer inquiries. WhatsApp, web, Messenger — wherever your customers are.",
+      "title": "Chatbots That Work",
+      "description": "Multi-language AI chatbots that handle 80% of customer questions. WhatsApp, web, Messenger — wherever your customers already are.",
       "icon": "chat",
       "remotionId": "ChatbotsDemo",
       "features": ["Multi-language", "WhatsApp", "Messenger", "Web Widget"]
     },
     {
       "id": "invoice-ocr",
-      "title": "Invoice OCR",
-      "description": "Scan, extract, and process invoices automatically. No more manual data entry — let AI handle the paperwork.",
+      "title": "Invoice Processing",
+      "description": "Scan, extract, and process invoices automatically. Your team stops typing data by hand. The AI handles the paperwork.",
       "icon": "document",
       "remotionId": "InvoiceOCRDemo",
       "features": ["PDF Extraction", "Multi-format", "Auto-categorize", "Export"]
@@ -21,15 +21,15 @@
     {
       "id": "booking-systems",
       "title": "Booking Systems",
-      "description": "Smart reservation systems that sync calendars, send reminders, and handle cancellations without human intervention.",
+      "description": "Reservation systems that sync calendars, send reminders, and handle cancellations. No human required for routine bookings.",
       "icon": "calendar",
       "remotionId": "BookingSystemsDemo",
       "features": ["Calendar Sync", "Reminders", "Auto-confirm", "Multi-platform"]
     },
     {
       "id": "dashboards",
-      "title": "Customer Dashboards",
-      "description": "Real-time dashboards that turn raw data into actionable insights. Charts, KPIs, and reports your team will actually use.",
+      "title": "Custom Dashboards",
+      "description": "Real-time dashboards that turn messy data into clear insights. Charts, KPIs, and reports your team will actually use.",
       "icon": "chart",
       "remotionId": "CustomerDashboardsDemo",
       "features": ["Real-time Data", "Custom KPIs", "Export Reports", "Role-based Access"]
@@ -37,7 +37,7 @@
     {
       "id": "sentiment",
       "title": "Sentiment Analysis",
-      "description": "Understand what your customers really think. AI-powered analysis of reviews, feedback, and social mentions.",
+      "description": "Know what your customers really think. AI-powered analysis of reviews, feedback, and social mentions — across languages.",
       "icon": "emoji",
       "remotionId": "SentimentAnalysisDemo",
       "features": ["Review Analysis", "Social Listening", "Trend Detection", "Alerts"]
@@ -45,7 +45,7 @@
     {
       "id": "reviews",
       "title": "Review Management",
-      "description": "Aggregate reviews from Google, Booking.com, TripAdvisor — respond smartly, spot trends, protect your reputation.",
+      "description": "Pull reviews from Google, Booking, TripAdvisor into one place. Respond faster. Spot trends. Protect your reputation.",
       "icon": "star",
       "remotionId": "ReviewManagementDemo",
       "features": ["Multi-platform", "Auto-respond", "Analytics", "Alerts"]
@@ -53,7 +53,7 @@
     {
       "id": "mobile-apps",
       "title": "Mobile Apps",
-      "description": "Cross-platform mobile apps built for performance. From booking flows to internal tools — native feel, web speed.",
+      "description": "Cross-platform apps built for performance. From booking flows to internal tools — native feel, web speed to build.",
       "icon": "phone",
       "remotionId": "MobileAppsDemo",
       "features": ["iOS & Android", "Push Notifications", "Offline Mode", "Fast Launch"]
@@ -61,7 +61,7 @@
     {
       "id": "connectors",
       "title": "System Connectors",
-      "description": "Connect your tools. CRM, ERP, payment systems, legacy databases — we build the bridges between your systems.",
+      "description": "Connect your tools. CRM, ERP, payment systems, legacy databases — we build the bridges between systems that don't talk to each other.",
       "icon": "connector",
       "remotionId": "SystemConnectorsDemo",
       "features": ["API Integration", "Data Sync", "Webhooks", "Legacy Support"]
@@ -69,12 +69,12 @@
     {
       "id": "gdpr",
       "title": "GDPR Compliance",
-      "description": "Stay compliant without the headache. Automated consent management, data requests, and audit trails.",
+      "description": "Stay compliant without the headache. Automated consent management, data requests, and audit trails — the boring stuff handled.",
       "icon": "shield",
       "remotionId": "GDPRComplianceDemo",
       "features": ["Consent Management", "Data Requests", "Audit Logs", "Auto-deletion"]
     }
   ],
-  "footerText": "That's not it we do even",
-  "footerHighlight": "More..."
+  "footerText": "That's not all — we also do",
+  "footerHighlight": "more..."
 }

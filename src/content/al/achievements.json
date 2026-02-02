@@ -1,24 +1,24 @@
 {
-  "heading": "Arritjet Tona",
-  "subheading": "Kuriozë për atë që kemi arritur? Le t'i flasin rezultatet vetë.",
+  "heading": "Çfarë Kemi Ndërtuar",
+  "subheading": "Numrat janë të mirë. Ja çfarë do të thonë vërtet.",
   "cards": [
     {
       "id": "projects-delivered",
-      "metric": "20+ Projekte të Dorëzuara",
-      "subtitle": "Duke ndihmuar biznese në industri të ndryshme të arrijnë qëllimet e tyre",
+      "metric": "20+ Projekte të Dërguara",
+      "subtitle": "Chatbot, dashboard, mjete automatizimi — në hotele, retail, dhe financa",
       "type": "projects"
     },
     {
       "id": "tech-experience",
-      "metric": "5 Vite Eksperiencë",
-      "subtitle": "Duke sjellë ekspertizë në çdo projekt",
+      "metric": "5 Vite Duke Ndërtuar",
+      "subtitle": "Nga prototipe të shpejta deri në sisteme prodhimi që shërbejnë mijëra përdorues",
       "type": "techCloud",
       "backgroundNumber": "5"
     },
     {
       "id": "impact",
-      "metric": "50K+ Mesazhe të Përpunuara",
-      "subtitle": "që bizneset të fokusohen në atë që ka më shumë rëndësi",
+      "metric": "50K+ Mesazhe të Menaxhuara",
+      "subtitle": "Nga bot-at që ndërtuam, që njerëzit të fokusohen në punën që ka vlerë",
       "type": "impact",
       "header": "Impakti"
     }

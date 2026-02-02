@@ -1,8 +1,9 @@
 {
-  "statusBadge": "Disponibel për Projekte të Reja",
-  "mainHeading": "AI QË PUNON PËR",
-  "rotatingWords": ["KLIENTËT TUAJ", "BIZNESIN REAL", "NDËRSA TI FLESH", "EKIPET NË RRITJE"],
-  "subtitle": "AI që funksionon vërtet. Pa fjalë boshe. Pa hype. Vetëm rezultate.",
-  "ctaPrimary": "Shiko Planet dhe Cmimet",
-  "ctaSecondary": "Shiko Punimet Tona"
+  "statusBadge": "Pranojmë Projekte të Reja",
+  "mainHeading": "Ne menaxhojmë",
+  "rotatingWords": ["bisedat", "faturat", "rezervimet", "të dhënat"],
+  "subtitle": "AI që bën punën që s'dëshironi ta bëni. Chatbot që flasin gjuhën e klientëve tuaj. Automatizime që punojnë ndërsa ju flini.",
+  "ctaPrimary": "Si Punojmë",
+  "ctaSecondary": "Shiko Projektet",
+  "terminalPrompt": "gati"
 }

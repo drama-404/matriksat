@@ -112,7 +112,7 @@ Slightly less mechanical values:
 
 ---
 
-## Phase 2: Hero Section Redesign
+## Phase 2: Hero Section Redesign [COMPLETED]
 
 ### 2.1 Remove SelectionBox
 **Files to modify:**
@@ -191,7 +191,7 @@ Or use animated SVG with flowing characters (0/1 streams) at very low opacity.
 
 ---
 
-## Phase 3: Component Updates
+## Phase 3: Component Updates [COMPLETED]
 
 ### 3.1 Button Component
 **File:** `src/components/ui/Button.tsx`
@@ -232,7 +232,7 @@ Update these files to use CSS variables instead of hardcoded colors:
 
 ---
 
-## Phase 4: Terminal Touches (Matrix Theme)
+## Phase 4: Terminal Touches (Matrix Theme) [COMPLETED]
 
 ### 4.1 Terminal Label Component
 **New file:** `src/components/ui/TerminalLabel.tsx`
@@ -268,7 +268,7 @@ CSS keyframes for very subtle flowing characters (optional enhancement):
 
 ---
 
-## Phase 5: Remotion Compositions Update
+## Phase 5: Remotion Compositions Update [COMPLETED]
 
 ### 5.1 Update Color Variables
 All Remotion compositions should use the new palette:
@@ -283,7 +283,7 @@ All Remotion compositions should use the new palette:
 
 ---
 
-## Phase 6: Content Refresh
+## Phase 6: Content Refresh [COMPLETED]
 
 ### 6.1 Rewrite Copy
 **Files:** All JSON in `src/content/en/` and `src/content/al/`

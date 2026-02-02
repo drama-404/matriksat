@@ -1,6 +1,6 @@
 {
-  "headerLabel": "Still confused about us",
-  "heading": "See our work",
+  "headerLabel": "Real work, real results",
+  "heading": "What We've Built",
   "projects": [
     {
       "id": "hotel-bot",
@@ -10,8 +10,8 @@
       "tags": ["AI Chatbot", "Hospitality", "Multi-language"],
       "modalContent": {
         "challenge": "A 4-star hotel in Tirana was losing bookings because guests couldn't get quick answers about availability, pricing, and amenities — especially outside business hours.",
-        "solution": "We built a multilingual WhatsApp + web chatbot that handles room inquiries, processes bookings, and sends confirmation emails — all in Albanian, English, Italian, and German.",
-        "results": "The bot handles 80% of guest inquiries automatically. Direct bookings increased by 35% in the first month. Staff now focus on in-person guest experience instead of answering repetitive questions."
+        "solution": "We built a multilingual WhatsApp + web chatbot that handles room inquiries, processes bookings, and sends confirmation emails — in Albanian, English, Italian, and German.",
+        "results": "The bot handles 80% of guest inquiries automatically. Direct bookings jumped 35% in the first month. Staff now focus on in-person guest experience instead of answering the same questions over and over."
       }
     },
     {
@@ -21,9 +21,9 @@
       "image": "/images/projects/product-search.jpg",
       "tags": ["Computer Vision", "E-commerce", "AI Search"],
       "modalContent": {
-        "challenge": "An e-commerce platform with 10,000+ products struggled with text-based search. Customers couldn't find products when they didn't know the exact name.",
+        "challenge": "An e-commerce platform with 10,000+ products struggled with text search. Customers couldn't find products when they didn't know the exact name.",
         "solution": "We implemented visual search powered by AI — customers snap a photo or upload an image, and the system finds matching products instantly using computer vision.",
-        "results": "Search-to-purchase conversion improved by 28%. Average time to find a product dropped from 3 minutes to 15 seconds. Customer satisfaction scores increased by 22%."
+        "results": "Search-to-purchase conversion improved 28%. Average time to find a product dropped from 3 minutes to 15 seconds. Customer satisfaction went up 22%."
       }
     },
     {
@@ -33,9 +33,9 @@
       "image": "/images/projects/farm-tracker.jpg",
       "tags": ["Supply Chain", "QR Codes", "Traceability"],
       "modalContent": {
-        "challenge": "An agricultural exporter needed to track produce from farm to destination for EU compliance. Paper records were unreliable and audits took weeks.",
-        "solution": "We built a QR-based traceability system. Each batch gets a unique code scanned at every checkpoint — farm, processing, packaging, shipping. Full chain visible in a dashboard.",
-        "results": "Audit preparation time reduced from 2 weeks to 2 hours. Zero compliance violations since launch. The client expanded to 3 new EU markets within 6 months."
+        "challenge": "An agricultural exporter needed to track produce from farm to destination for EU compliance. Paper records were unreliable and audits took weeks to prepare.",
+        "solution": "We built a QR-based traceability system. Each batch gets a unique code scanned at every checkpoint — farm, processing, packaging, shipping. Full chain visible in one dashboard.",
+        "results": "Audit prep time went from 2 weeks to 2 hours. Zero compliance violations since launch. The client expanded to 3 new EU markets within 6 months."
       }
     },
     {
@@ -45,7 +45,7 @@
       "image": "/images/projects/invoice-ai.jpg",
       "tags": ["OCR", "Automation", "Finance"],
       "modalContent": {
-        "challenge": "A mid-size accounting firm processed 500+ invoices monthly by hand. Data entry errors caused payment delays and client frustration.",
+        "challenge": "A mid-size accounting firm processed 500+ invoices monthly by hand. Data entry errors caused payment delays and frustrated clients.",
         "solution": "We deployed an OCR pipeline that scans invoices (PDF, photo, email), extracts key fields (amount, date, vendor, line items), and pushes data directly into their accounting software.",
         "results": "Processing time dropped from 8 minutes to 30 seconds per invoice. Error rate fell from 12% to under 1%. The team redirected 15+ hours per week to advisory work."
       }

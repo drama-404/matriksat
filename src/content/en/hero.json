@@ -1,8 +1,9 @@
 {
-  "statusBadge": "Available for New Projects",
-  "mainHeading": "AI THAT WORKS FOR",
-  "rotatingWords": ["YOUR CUSTOMERS", "REAL BUSINESS", "WHILE YOU SLEEP", "GROWING TEAMS"],
-  "subtitle": "AI that actually works. No fluff. No hype. Just results.",
-  "ctaPrimary": "View Plans and Pricing",
-  "ctaSecondary": "See Our Work"
+  "statusBadge": "Taking on New Projects",
+  "mainHeading": "We handle your",
+  "rotatingWords": ["conversations", "invoices", "bookings", "data"],
+  "subtitle": "AI that handles the work you'd rather not do. Chatbots that speak your customers' language. Automations that run while you sleep.",
+  "ctaPrimary": "See How We Work",
+  "ctaSecondary": "View Our Projects",
+  "terminalPrompt": "ready"
 }

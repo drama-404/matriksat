@@ -1,24 +1,24 @@
 {
-  "heading": "Sa e thjeshtë mund të jetë të realizosh Projektet e tua",
-  "subheading": "Thjesht largohu nga ato metoda të vjetra tradicionale të punësimit dhe menaxhimit dhe shiko vetë",
+  "heading": "Nga Ideja në Prodhim Brenda Javësh",
+  "subheading": "Pa faza të gjata zbulimi. Pa mbledhje të pafundme. Ja si punojmë vërtet.",
   "steps": [
     {
       "id": "step-1",
       "number": "1",
-      "title": "Thirrja e Zbulimit",
-      "description": "Fillojmë me një bisedë për të kuptuar nevojat, sfidat, dhe qëllimet tuaja. Pa asnjë detyrim."
+      "title": "Zbulim i Shpejtë",
+      "description": "Një thirrje 30-minutëshe për të kuptuar çfarë po përpiqeni të zgjidhni. Do t'ju themi sinqerisht nëse jemi zgjedhja e duhur."
     },
     {
       "id": "step-2",
       "number": "2",
-      "title": "Prototip & Ndërtim",
-      "description": "Krijojmë një prototip funksional brenda ditëve, mbledhim reagimet tuaja, dhe përmirësojmë derisa të jetë perfekt."
+      "title": "Ndërto Shpejt, Trego Herët",
+      "description": "Prototip funksional në duart tuaja brenda ditësh. Do të shihni progres real para se të angazhoheni për diçka të madhe."
     },
     {
       "id": "step-3",
       "number": "3",
-      "title": "Lansim & Automatizim",
-      "description": "Vendosim zgjidhjen tuaj, sigurojmë që gjithçka funksionon pa probleme, dhe ofrojmë mbështetje të vazhdueshme sipas nevojës."
+      "title": "Dërgo & Mbështet",
+      "description": "Ne vendosim, trajnojmë ekipin tuaj, dhe qëndrojmë aty për t'u siguruar që gjithçka funksionon pa probleme."
     }
   ]
 }

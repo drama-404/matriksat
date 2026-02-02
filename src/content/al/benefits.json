@@ -1,42 +1,42 @@
 {
-  "heading": "Përfitimet e MATRIKS",
-  "subheading": "Pse të kënaqesh me më pak? Para se të fillosh, le të të tregojmë pse zgjidhjet tona janë ajo që biznesi yt ka nevojë.",
+  "heading": "Pse MATRIKS?",
+  "subheading": "Keni opsione. Ja pse ekipet zgjedhin të punojnë me ne.",
   "items": [
     {
       "id": "results-focused",
       "icon": "chart",
-      "title": "Zgjidhje të Fokusuara në Rezultate",
-      "description": "Ndihmojmë bizneset të rriten duke ndërtuar mjete AI që kthejnë vizitorët në klientë dhe optimizojnë operacionet."
+      "title": "Ndërtuar për Rezultate",
+      "description": "Çdo projekt fillon me një pyetje: çfarë rezultati të matshëm ju nevojitet? Ne ndërtojmë drejt saj, jo lista funksionesh."
     },
     {
       "id": "fast-delivery",
       "icon": "lightning",
-      "title": "Dorëzim Rrufeshëm",
-      "description": "Projektet tuaja dorëzohen brenda ditëve, jo javëve apo muajve. Lëvizim shpejt pa kompromentuar cilësinë."
+      "title": "Javë, Jo Muaj",
+      "description": "Prototipi juaj i parë funksional vjen brenda ditësh. Projektet e plota nisin brenda 2-4 javësh. Lëvizim shpejt sepse koha juaj ka vlerë."
     },
     {
       "id": "transparent-pricing",
       "icon": "dollar",
-      "title": "Çmime Transparente",
-      "description": "Pa surpriza. Çmime të qarta që në fillim. Paguaj për atë që ke nevojë, kur ke nevojë."
+      "title": "Çmime të Qarta",
+      "description": "Pa fatura surprizë. Pa tarifa shtesë. E dini saktësisht sa paguani para se të shkruajmë një rresht kod."
     },
     {
       "id": "problem-solving",
       "icon": "search",
-      "title": "Zgjidhje Problemesh",
-      "description": "Zgjidhim sfidat e biznesit tuaj me zgjidhje inovative AI dhe automatizimi që sjellin rezultate reale."
+      "title": "Gërmojmë në Probleme",
+      "description": "Gjysma e punës është të kuptosh çfarë është prishur vërtet. Bëjmë pyetjet e vështira që të ndërtojmë gjënë e duhur."
     },
     {
       "id": "project-portal",
       "icon": "screen",
-      "title": "Portal Privat Projektesh",
-      "description": "Menaxho lehtësisht projektet, ndiq progresin, dhe komuniko me ekipin tonë nga paneli yt."
+      "title": "Dashboard-i Juaj",
+      "description": "Ndiqni progresin, lini komente, aprovoni ndryshimet — të gjitha në një vend. Pa email-a dhe mesazhe të humbura."
     },
     {
       "id": "expert-team",
       "icon": "handshake",
-      "title": "Qasje në Ekipin Ekspert",
-      "description": "Puno drejtpërdrejt me zhvillues me eksperiencë dhe specialistë AI. Pa ndërmjetës, pa kontrata afatgjata."
+      "title": "Akses Direkt",
+      "description": "Flisni direkt me njerëzit që ndërtojnë projektin tuaj. Pa ndërmjetës, pa telefon të prishur."
     }
   ]
 }

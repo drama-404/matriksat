@@ -1,24 +1,24 @@
 {
-  "heading": "Our Achievement",
-  "subheading": "Curious about what we've accomplished? Let our track record speak for itself.",
+  "heading": "What We've Built",
+  "subheading": "Numbers are nice. Here's what they actually mean.",
   "cards": [
     {
       "id": "projects-delivered",
-      "metric": "20+ Projects Delivered",
-      "subtitle": "Helping businesses across various industries achieve their goals",
+      "metric": "20+ Projects Shipped",
+      "subtitle": "Chatbots, dashboards, automation tools — across hospitality, retail, and finance",
       "type": "projects"
     },
     {
       "id": "tech-experience",
-      "metric": "5 Years of Experience",
-      "subtitle": "Bringing expertise to every project",
+      "metric": "5 Years Building",
+      "subtitle": "From scrappy prototypes to production systems handling thousands of users",
       "type": "techCloud",
       "backgroundNumber": "5"
     },
     {
       "id": "impact",
-      "metric": "50K+ Messages Processed",
-      "subtitle": "so businesses can focus on what matters most",
+      "metric": "50K+ Messages Handled",
+      "subtitle": "By bots we built, so humans could focus on work that matters",
       "type": "impact",
       "header": "Impact"
     }

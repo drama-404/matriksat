@@ -1,6 +1,6 @@
 {
-  "headerLabel": "Ende te hutuar per ne",
-  "heading": "Shiko punen tone",
+  "headerLabel": "Pune e vertete, rezultate te verteta",
+  "heading": "Cfare Kemi Ndertuar",
   "projects": [
     {
       "id": "hotel-bot",
@@ -11,7 +11,7 @@
       "modalContent": {
         "challenge": "Nje hotel 4-yjesh ne Tirane po humbiste rezervime sepse mysafiret nuk merrnin pergjigje te shpejta per disponueshmerine, cmimet dhe sherbimet — sidomos jashte orarit te punes.",
         "solution": "Ndertuam nje chatbot shumegjuhesh ne WhatsApp + web qe trajton pyetjet per dhoma, perpunon rezervimet dhe dergon email konfirmimi — ne shqip, anglisht, italisht dhe gjermanisht.",
-        "results": "Boti trajton 80% te pyetjeve te mysafireve automatikisht. Rezervimet direkte u rritën me 35% ne muajin e pare. Stafi tani fokusohet ne pervojen e mysafireve ne vend te pergjigjes se pyetjeve te perseritura."
+        "results": "Boti trajton 80% te pyetjeve te mysafireve automatikisht. Rezervimet direkte u rritën me 35% ne muajin e pare. Stafi tani fokusohet ne pervojen e mysafireve ne vend te pergjigjes se te njejtave pyetje pa fund."
       }
     },
     {
@@ -23,7 +23,7 @@
       "modalContent": {
         "challenge": "Nje platforme e-commerce me 10,000+ produkte kishte veshtiresi me kerkimin me tekst. Klientet nuk gjenin produkte kur nuk dinin emrin e sakte.",
         "solution": "Implementuam kerkim vizual te fuqizuar nga AI — klientet bejne nje foto ose ngarkojne nje imazh, dhe sistemi gjen produkte perputhuese menjehere duke perdorur vizionin kompjuterik.",
-        "results": "Konvertimi kerkim-ne-blerje u permiresua me 28%. Koha mesatare per te gjetur nje produkt ra nga 3 minuta ne 15 sekonda. Piket e kenaqesise se klienteve u rriten me 22%."
+        "results": "Konvertimi kerkim-ne-blerje u permiresua me 28%. Koha mesatare per te gjetur nje produkt ra nga 3 minuta ne 15 sekonda. Kenaqesia e klienteve u rrit me 22%."
       }
     },
     {
@@ -33,9 +33,9 @@
       "image": "/images/projects/farm-tracker.jpg",
       "tags": ["Zinxhiri i Furnizimit", "Kodet QR", "Gjurmueshmi"],
       "modalContent": {
-        "challenge": "Nje eksportues bujqesor kishte nevoje te gjurmonte prodhimet nga ferma ne destinacion per perputhje me BE-ne. Regjistrat ne leter ishin te pabesueshme dhe auditimet zgjatsin javë.",
+        "challenge": "Nje eksportues bujqesor kishte nevoje te gjurmonte prodhimet nga ferma ne destinacion per perputhje me BE-ne. Regjistrat ne leter ishin te pabesueshme dhe auditimet kerkoning jave pergatitje.",
         "solution": "Ndertuam nje sistem gjurmimi me baze QR. Cdo grumbulli merr nje kod unik qe skanohet ne cdo pike kontrolli — ferme, perpunim, paketim, transport. E gjithe zinxhiri i dukshem ne nje panel.",
-        "results": "Koha e pergatitjes se auditimit u reduktua nga 2 jave ne 2 ore. Zero shkelje perputhshmerie qe nga nisja. Klienti u zgjerua ne 3 tregje te reja te BE-se brenda 6 muajsh."
+        "results": "Koha e pergatitjes se auditimit shkoi nga 2 jave ne 2 ore. Zero shkelje perputhshmerie qe nga nisja. Klienti u zgjerua ne 3 tregje te reja te BE-se brenda 6 muajsh."
       }
     },
     {
@@ -45,7 +45,7 @@
       "image": "/images/projects/invoice-ai.jpg",
       "tags": ["OCR", "Automatizim", "Financa"],
       "modalContent": {
-        "challenge": "Nje firme kontabiliteti e mesme perpunonte 500+ fatura ne muaj me dore. Gabimet ne futjen e te dhenave shkaktonin vonesa pagesash dhe zhgenjim te klienteve.",
+        "challenge": "Nje firme kontabiliteti e mesme perpunonte 500+ fatura ne muaj me dore. Gabimet ne futjen e te dhenave shkaktonin vonesa pagesash dhe zhgenjin klientet.",
         "solution": "Vendosem nje tubacion OCR qe skanon faturat (PDF, foto, email), nxjerr fushat kyc (shuma, data, furnitori, artikujt e linjes), dhe shtyn te dhenat direkt ne softuerin e tyre te kontabilitetit.",
         "results": "Koha e perpunimit ra nga 8 minuta ne 30 sekonda per fature. Shkalla e gabimeve ra nga 12% ne nen 1%. Ekipi ridrejtoi 15+ ore ne jave per pune keshilluese."
       }
