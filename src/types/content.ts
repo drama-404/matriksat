@@ -170,3 +170,32 @@ export interface HowItWorksContent {
   subheading: string;
   steps: HowItWorksStep[];
 }
+
+// Service Categories (merged ServicesGrid + Portfolio)
+export interface IndustryProject {
+  id: string;
+  industry: string;
+  industryIcon: string;
+  title: string;
+  subtitle: string;
+  challenge: string;
+  solution: string;
+  results: string;
+  tags: string[];
+}
+
+export interface ServiceCategory {
+  id: string;
+  title: string;
+  subtitle: string;
+  remotionId: string;
+  description: string;
+  ctaText: string;
+  projects: IndustryProject[];
+}
+
+export interface ServiceCategoriesContent {
+  heading: string;
+  subheading: string;
+  categories: ServiceCategory[];
+}
