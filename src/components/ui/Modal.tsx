@@ -2,14 +2,21 @@
 
 import { useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { cn } from '@/lib/utils';
 
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
   children: React.ReactNode;
+  size?: 'default' | 'wide';
 }
 
-export function Modal({ isOpen, onClose, children }: ModalProps) {
+const sizeClasses = {
+  default: 'max-w-[900px]',
+  wide: 'max-w-[1000px]',
+} as const;
+
+export function Modal({ isOpen, onClose, children, size = 'default' }: ModalProps) {
   const handleKeyDown = useCallback(
     (event: KeyboardEvent) => {
       if (event.key === 'Escape') onClose();
@@ -48,7 +55,10 @@ export function Modal({ isOpen, onClose, children }: ModalProps) {
 
           {/* Modal Container */}
           <motion.div
-            className="relative bg-white rounded-3xl max-w-[900px] w-full max-h-[90vh] overflow-y-auto p-12"
+            className={cn(
+              'relative bg-white rounded-3xl w-full max-h-[90vh] overflow-y-auto p-8 md:p-12',
+              sizeClasses[size]
+            )}
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
