@@ -35,7 +35,7 @@ export function EngagementModels({ locale }: EngagementModelsProps) {
       >
         <h2
           id="pricing-heading"
-          className="text-[33px] font-bold tracking-[-1.32px] leading-[39.6px] text-[rgb(0,0,0)]"
+          className="text-[33px] font-bold tracking-[-1.32px] leading-[39.6px] text-[var(--color-dark)]"
           style={{ fontFamily: 'var(--font-satoshi), var(--font-inter), sans-serif' }}
         >
           {content.heading}
@@ -74,7 +74,7 @@ function PricingCard({ model }: { model: EngagementModel }) {
     <motion.article
       className={cn(
         'rounded-[var(--radius-card-lg)] p-2 card-shadow',
-        isDark ? 'bg-[rgb(22,22,22)]' : 'bg-white'
+        isDark ? 'bg-[var(--color-dark)]' : 'bg-white'
       )}
       variants={fadeInUp}
       whileHover={{ scale: isDark ? 1.03 : 1.01, transition: { duration: 0.2 } }}
@@ -82,12 +82,12 @@ function PricingCard({ model }: { model: EngagementModel }) {
       <div
         className={cn(
           'rounded-[32px] p-6 flex flex-col h-full',
-          isDark ? 'bg-[rgb(22,22,22)]' : 'bg-white'
+          isDark ? 'bg-[var(--color-dark)]' : 'bg-white'
         )}
       >
         {/* Badge */}
         {model.badge && (
-          <span className="self-start text-[11px] font-semibold px-3 py-1.5 rounded-xl bg-[rgb(52,145,255)] text-white mb-4">
+          <span className="self-start text-[11px] font-semibold px-3 py-1.5 rounded-xl bg-[var(--color-accent)] text-white mb-4">
             {model.badge}
           </span>
         )}
@@ -96,7 +96,7 @@ function PricingCard({ model }: { model: EngagementModel }) {
         <div
           className={cn(
             'w-10 h-10 rounded-xl flex items-center justify-center mb-4',
-            isDark ? 'bg-[rgba(255,255,255,0.1)]' : 'bg-[rgb(245,245,245)]'
+            isDark ? 'bg-[rgba(255,255,255,0.1)]' : 'bg-[var(--color-background)]'
           )}
           aria-hidden="true"
         >
@@ -107,7 +107,7 @@ function PricingCard({ model }: { model: EngagementModel }) {
         <h3
           className={cn(
             'text-[28px] font-bold mb-3',
-            isDark ? 'text-white' : 'text-[rgb(0,0,0)]'
+            isDark ? 'text-white' : 'text-[var(--color-dark)]'
           )}
           style={{ fontFamily: 'var(--font-satoshi), var(--font-inter), sans-serif' }}
         >
@@ -118,7 +118,7 @@ function PricingCard({ model }: { model: EngagementModel }) {
         <div
           className={cn(
             'rounded-xl p-3 mb-6',
-            isDark ? 'bg-[rgba(255,255,255,0.1)]' : 'bg-[rgb(245,245,245)]'
+            isDark ? 'bg-[rgba(255,255,255,0.1)]' : 'bg-[var(--color-background)]'
           )}
         >
           <p
@@ -145,12 +145,12 @@ function PricingCard({ model }: { model: EngagementModel }) {
                   cx="8"
                   cy="8"
                   r="7"
-                  stroke={isDark ? 'rgb(52,145,255)' : 'rgb(34,197,94)'}
+                  stroke={isDark ? 'var(--color-accent)' : 'var(--color-success)'}
                   strokeWidth="1.5"
                 />
                 <polyline
                   points="5 8 7 10 11 6"
-                  stroke={isDark ? 'rgb(52,145,255)' : 'rgb(34,197,94)'}
+                  stroke={isDark ? 'var(--color-accent)' : 'var(--color-success)'}
                   strokeWidth="1.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -171,7 +171,7 @@ function PricingCard({ model }: { model: EngagementModel }) {
           <span
             className={cn(
               'text-[29px] font-semibold',
-              isDark ? 'text-white' : 'text-[rgb(0,0,0)]'
+              isDark ? 'text-white' : 'text-[var(--color-dark)]'
             )}
           >
             {model.pricing}
@@ -195,7 +195,7 @@ function PricingCard({ model }: { model: EngagementModel }) {
           <Button
             variant="outline"
             href="#contact"
-            className={isDark ? 'border-white text-white hover:bg-white hover:text-[rgb(22,22,22)]' : ''}
+            className={isDark ? 'border-white text-white hover:bg-white hover:text-[var(--color-dark)]' : ''}
           >
             {model.ctaSecondary}
           </Button>
@@ -209,7 +209,7 @@ function PricingCard({ model }: { model: EngagementModel }) {
 
 function CompassIcon() {
   return (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="text-[rgb(52,145,255)]">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="text-[var(--color-accent)]">
       <circle cx="12" cy="12" r="10" />
       <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
     </svg>
@@ -218,7 +218,7 @@ function CompassIcon() {
 
 function RocketIcon() {
   return (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="text-[rgb(52,145,255)]">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="text-[var(--color-accent)]">
       <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
       <path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
       <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
@@ -229,7 +229,7 @@ function RocketIcon() {
 
 function HeadsetIcon() {
   return (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="text-[rgb(52,145,255)]">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="text-[var(--color-accent)]">
       <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
       <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" />
     </svg>

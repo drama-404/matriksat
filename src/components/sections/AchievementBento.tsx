@@ -49,7 +49,7 @@ export function AchievementBento({ locale }: AchievementBentoProps) {
       >
         <h2
           id="achievement-heading"
-          className="text-[33px] font-bold tracking-[-1.32px] leading-[39.6px] text-[rgb(0,0,0)]"
+          className="text-[33px] font-bold tracking-[-1.32px] leading-[39.6px] text-[var(--color-dark)]"
           style={{ fontFamily: 'var(--font-satoshi), var(--font-inter), sans-serif' }}
         >
           {content.heading}
@@ -79,16 +79,16 @@ export function AchievementBento({ locale }: AchievementBentoProps) {
           variants={fadeInUp}
         >
           {/* Image Collage Area */}
-          <div className="bg-[rgb(245,245,245)] rounded-[22px] h-[262px] flex items-center justify-center relative overflow-hidden">
+          <div className="bg-[var(--color-background)] rounded-[22px] h-[262px] flex items-center justify-center relative overflow-hidden">
             {/* Placeholder project thumbnails at slight angles */}
             <div className="absolute w-[120px] h-[90px] bg-white rounded-[13px] card-shadow -rotate-3 top-8 left-8" />
             <div className="absolute w-[120px] h-[90px] bg-white rounded-[13px] card-shadow rotate-2 top-12 left-24" />
             <div className="absolute w-[120px] h-[90px] bg-white rounded-[13px] card-shadow -rotate-1 bottom-8 right-8" />
-            <div className="absolute w-[100px] h-[75px] bg-[rgb(52,145,255)] opacity-10 rounded-[13px] rotate-3 bottom-12 left-16" />
+            <div className="absolute w-[100px] h-[75px] bg-[var(--color-accent)] opacity-10 rounded-[13px] rotate-3 bottom-12 left-16" />
           </div>
 
           <p
-            className="mt-4 text-2xl font-bold text-[rgb(0,0,0)]"
+            className="mt-4 text-2xl font-bold text-[var(--color-dark)]"
             style={{ fontFamily: 'var(--font-satoshi), var(--font-inter), sans-serif' }}
           >
             {content.cards[0].metric}
@@ -125,8 +125,8 @@ export function AchievementBento({ locale }: AchievementBentoProps) {
               <span
                 key={tag}
                 className={cn(
-                  'absolute text-[11px] font-medium text-[rgb(0,0,0)]',
-                  'bg-[rgb(245,245,245)] border border-[rgba(0,0,0,0.1)]',
+                  'absolute text-[11px] font-medium text-[var(--color-dark)]',
+                  'bg-[var(--color-background)] border border-[rgba(0,0,0,0.1)]',
                   'rounded-2xl px-3 py-1.5 whitespace-nowrap',
                   'float-animation'
                 )}
@@ -141,7 +141,7 @@ export function AchievementBento({ locale }: AchievementBentoProps) {
           </div>
 
           <p
-            className="mt-4 text-2xl font-bold text-[rgb(0,0,0)] relative z-10"
+            className="mt-4 text-2xl font-bold text-[var(--color-dark)] relative z-10"
             style={{ fontFamily: 'var(--font-satoshi), var(--font-inter), sans-serif' }}
           >
             {content.cards[1].metric}
@@ -161,14 +161,14 @@ export function AchievementBento({ locale }: AchievementBentoProps) {
           variants={fadeInUp}
         >
           <p
-            className="text-lg font-bold text-[rgb(0,0,0)]"
+            className="text-lg font-bold text-[var(--color-dark)]"
             style={{ fontFamily: 'var(--font-satoshi), var(--font-inter), sans-serif' }}
           >
             {content.cards[2].header}
           </p>
 
           <p
-            className="mt-4 text-[32px] font-bold text-[rgb(0,0,0)]"
+            className="mt-4 text-[32px] font-bold text-[var(--color-dark)]"
             style={{ fontFamily: 'var(--font-satoshi), var(--font-inter), sans-serif' }}
           >
             {content.cards[2].metric}
@@ -185,7 +185,7 @@ export function AchievementBento({ locale }: AchievementBentoProps) {
                 className="flex-1 rounded-t-[4px] transition-all"
                 style={{
                   height: `${height}%`,
-                  backgroundColor: index >= 9 ? 'rgb(52, 145, 255)' : 'rgba(52, 145, 255, 0.2)',
+                  backgroundColor: index >= 9 ? 'var(--color-accent)' : 'rgba(52, 145, 255, 0.2)',
                 }}
               />
             ))}

@@ -34,7 +34,7 @@ export function FAQ({ locale }: FAQProps) {
       >
         <h2
           id="faq-heading"
-          className="text-[33px] font-bold tracking-[-1.32px] leading-[39.6px] text-[rgb(0,0,0)]"
+          className="text-[33px] font-bold tracking-[-1.32px] leading-[39.6px] text-[var(--color-dark)]"
           style={{ fontFamily: 'var(--font-satoshi), var(--font-inter), sans-serif' }}
         >
           {content.heading}
@@ -83,10 +83,10 @@ export function FAQ({ locale }: FAQProps) {
           href="mailto:matriks.dev@gmail.com"
           className={cn(
             'inline-flex items-center gap-2',
-            'bg-[rgb(22,22,22)] text-white rounded-[58px] px-6 py-4',
+            'bg-[var(--color-dark)] text-white rounded-[58px] px-6 py-4',
             'text-sm font-medium',
             'hover:opacity-90 transition-opacity',
-            'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(52,145,255)] focus-visible:ring-offset-2'
+            'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2'
           )}
         >
           <PaperPlaneIcon />
@@ -113,11 +113,11 @@ function FAQChatPair({ faqItem, isOpen, onToggle }: FAQChatPairProps) {
         onClick={onToggle}
         className={cn(
           'self-end max-w-[70%]',
-          'bg-[rgb(245,245,245)] rounded-3xl px-5 py-4',
+          'bg-[var(--color-background)] rounded-3xl px-5 py-4',
           'flex items-center gap-3',
           'text-left cursor-pointer',
-          'hover:bg-[rgb(235,235,235)] transition-colors',
-          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(52,145,255)]'
+          'hover:bg-[var(--color-accent-subtle)] transition-colors',
+          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]'
         )}
         aria-expanded={isOpen}
         aria-controls={`answer-${faqItem.id}`}
@@ -134,7 +134,7 @@ function FAQChatPair({ faqItem, isOpen, onToggle }: FAQChatPairProps) {
             <line x1="2" y1="5" x2="8" y2="5" />
           </svg>
         </motion.span>
-        <span className="text-[15px] font-medium text-[rgb(0,0,0)]">{faqItem.question}</span>
+        <span className="text-[15px] font-medium text-[var(--color-dark)]">{faqItem.question}</span>
       </button>
 
       {/* Answer Section - Left Aligned */}
@@ -151,7 +151,7 @@ function FAQChatPair({ faqItem, isOpen, onToggle }: FAQChatPairProps) {
             {/* Avatar */}
             <div className="flex flex-col items-center gap-1 flex-shrink-0">
               <div
-                className="w-10 h-10 rounded-full bg-[rgb(52,145,255)] flex items-center justify-center text-white text-xs font-bold"
+                className="w-10 h-10 rounded-full bg-[var(--color-accent)] flex items-center justify-center text-white text-xs font-bold"
                 aria-hidden="true"
               >
                 M

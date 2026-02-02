@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { cn } from '@/lib/utils';
 import { useScrollDirection } from '@/hooks/useScrollDirection';
-import { SelectionBox } from '@/components/ui/SelectionBox';
 import { Button } from '@/components/ui/Button';
 import { LanguageToggle } from './LanguageToggle';
 import { navbarVariants } from '@/components/animations/variants';
@@ -31,7 +30,7 @@ export function Navbar({ locale }: NavbarProps) {
       className={cn(
         'fixed top-0 left-0 right-0 z-50',
         'h-[83px]',
-        'bg-[rgba(245,245,245,0.91)] backdrop-blur-[5px]',
+        'bg-[var(--color-navbar-bg)] backdrop-blur-[5px]',
         'navbar-shadow'
       )}
       variants={navbarVariants}
@@ -42,20 +41,28 @@ export function Navbar({ locale }: NavbarProps) {
         className="flex items-center justify-between h-full mx-auto px-8"
         style={{ maxWidth: 1094 }}
       >
-        {/* Logo */}
+        {/* Logo with subtle underline accent */}
         <Link
           href={`/${locale}`}
-          className="flex items-center"
+          className="flex items-center group"
           aria-label="MATRIKS Home"
         >
-          <SelectionBox>
+          <span className="relative">
             <span
-              className="text-lg font-semibold tracking-tight"
+              className="text-lg font-semibold tracking-tight text-[var(--color-dark)]"
               style={{ fontFamily: 'var(--font-euclid)' }}
             >
               MATRIKS
             </span>
-          </SelectionBox>
+            {/* Terracotta underline accent */}
+            <span
+              className={cn(
+                'absolute -bottom-0.5 left-0 h-[2px] w-0',
+                'bg-[var(--color-accent)]',
+                'group-hover:w-full transition-all duration-300 ease-out'
+              )}
+            />
+          </span>
         </Link>
 
         {/* Navigation Links - Hidden on mobile */}
@@ -66,8 +73,8 @@ export function Navbar({ locale }: NavbarProps) {
                 href={link.href}
                 className={cn(
                   'text-base font-medium',
-                  'text-[rgba(0,0,0,0.53)]',
-                  'hover:text-[rgb(0,0,0)]',
+                  'text-[var(--color-muted)]',
+                  'hover:text-[var(--color-dark)]',
                   'transition-colors duration-200',
                   'tracking-[-0.48px]'
                 )}
@@ -91,7 +98,7 @@ export function Navbar({ locale }: NavbarProps) {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2"
+            className="lg:hidden p-2 text-[var(--color-dark)]"
             aria-label="Open menu"
           >
             <svg

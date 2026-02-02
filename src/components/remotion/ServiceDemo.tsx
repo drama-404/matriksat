@@ -18,7 +18,7 @@ interface ServiceDemoProps {
 }
 
 export const ServiceDemo: React.FC<ServiceDemoProps> = ({
-  accentColor = 'rgb(52, 145, 255)',
+  accentColor = 'rgb(196, 108, 78)',
   children,
 }) => {
   const frame = useCurrentFrame();
@@ -31,7 +31,7 @@ export const ServiceDemo: React.FC<ServiceDemoProps> = ({
   return (
     <AbsoluteFill
       style={{
-        backgroundColor: 'rgb(245, 245, 245)',
+        backgroundColor: 'rgb(252, 250, 247)',
         fontFamily: 'Inter, Satoshi, system-ui, sans-serif',
       }}
     >
@@ -88,7 +88,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
   text,
   sender,
   delay,
-  accentColor = 'rgb(52, 145, 255)',
+  accentColor = 'rgb(196, 108, 78)',
 }) => {
   const frame = useCurrentFrame();
 
@@ -229,7 +229,7 @@ interface ProgressBarProps {
 export const ProgressBar: React.FC<ProgressBarProps> = ({
   progress,
   delay,
-  color = 'rgb(52, 145, 255)',
+  color = 'rgb(196, 108, 78)',
   height = 6,
 }) => {
   const frame = useCurrentFrame();

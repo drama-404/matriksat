@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { cn } from '@/lib/utils';
-import { SelectionBox } from '@/components/ui/SelectionBox';
+import { TerminalLabel } from '@/components/ui/TerminalLabel';
 import type { Locale } from '@/i18n/routing';
 
 interface FooterProps {
@@ -23,7 +23,7 @@ export function Footer({ locale }: FooterProps) {
   const t = useTranslations('footer');
 
   return (
-    <footer className="bg-[rgb(22,22,22)] text-white">
+    <footer className="bg-[var(--color-dark)] text-white">
       {/* Task Ticker */}
       <div className="overflow-hidden py-4 border-b border-white/10">
         <div className="ticker-animation whitespace-nowrap">
@@ -32,7 +32,7 @@ export function Footer({ locale }: FooterProps) {
               key={index}
               className="inline-flex items-center gap-2 mx-8 text-sm text-white/70"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-[rgb(52,145,255)]" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-accent)]" />
               {task}
             </span>
           ))}
@@ -44,26 +44,31 @@ export function Footer({ locale }: FooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Logo & Description */}
           <div className="md:col-span-2">
-            <Link href={`/${locale}`} className="inline-block mb-6">
-              <SelectionBox>
+            <Link href={`/${locale}`} className="inline-block mb-6 group">
+              <span className="relative">
                 <span
                   className="text-lg font-semibold tracking-tight text-white"
                   style={{ fontFamily: 'var(--font-euclid)' }}
                 >
                   MATRIKS
                 </span>
-              </SelectionBox>
+                {/* Terracotta underline accent */}
+                <span
+                  className={cn(
+                    'absolute -bottom-0.5 left-0 h-[2px] w-0',
+                    'bg-[var(--color-accent)]',
+                    'group-hover:w-full transition-all duration-300 ease-out'
+                  )}
+                />
+              </span>
             </Link>
             <p className="text-white/70 max-w-sm mb-6">
               AI that actually works. No fluff. No hype. Just results for
               businesses in Albania and Europe.
             </p>
-            <p
-              className="text-white/50 text-sm"
-              style={{ fontFamily: 'var(--font-chelsea-market)' }}
-            >
-              {t('building')}
-            </p>
+            <TerminalLabel className="text-white/40">
+              {locale === 'en' ? 'building...' : 'duke ndërtuar...'}
+            </TerminalLabel>
           </div>
 
           {/* Quick Links */}

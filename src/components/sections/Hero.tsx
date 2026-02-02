@@ -3,7 +3,8 @@
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/Button';
-import { AnimatedText } from '@/components/ui/AnimatedText';
+import { TextMorph } from '@/components/ui/TextMorph';
+import { TerminalLabel } from '@/components/ui/TerminalLabel';
 import { heroSequence } from '@/components/animations/variants';
 import type { Locale } from '@/i18n/routing';
 
@@ -25,9 +26,9 @@ export function Hero({ locale }: HeroProps) {
         'pt-[83px]' // Offset for fixed navbar
       )}
     >
-      {/* Graph-Paper Grid Background with Vignette Mask */}
+      {/* Data Flow Background Pattern with Vignette Mask */}
       <div
-        className="absolute inset-0 grid-pattern pointer-events-none"
+        className="absolute inset-0 data-flow-pattern pointer-events-none"
         style={{
           WebkitMaskImage:
             'radial-gradient(65% 55% at 50% 46%, black 50%, transparent 100%)',
@@ -46,17 +47,17 @@ export function Hero({ locale }: HeroProps) {
           initial="hidden"
           animate="visible"
         >
-          {/* Pulsing Green Dot */}
+          {/* Pulsing Status Dot (warm green) */}
           <span className="relative flex items-center justify-center">
             <span
-              className="absolute w-2 h-2 rounded-full bg-[rgb(65,193,107)] status-pulse"
+              className="absolute w-2 h-2 rounded-full bg-[var(--color-status-outer)] status-pulse"
               aria-hidden="true"
             />
-            <span className="w-1 h-1 rounded-full bg-[rgb(75,191,113)]" />
+            <span className="w-1 h-1 rounded-full bg-[var(--color-status-inner)]" />
           </span>
           <span
             className={cn(
-              'text-sm font-medium text-[rgb(0,0,0)]',
+              'text-sm font-medium text-[var(--color-dark)]',
               'tracking-[-0.42px]'
             )}
           >
@@ -66,10 +67,7 @@ export function Hero({ locale }: HeroProps) {
 
         {/* Main Heading */}
         <motion.h1
-          className={cn(
-            'max-w-[900px]',
-            'text-[rgb(0,0,0)]'
-          )}
+          className={cn('max-w-[900px]', 'text-[var(--color-dark)]')}
           style={{
             fontFamily: 'var(--font-phudu)',
             fontSize: 'var(--font-hero)',
@@ -83,13 +81,13 @@ export function Hero({ locale }: HeroProps) {
         >
           {content.mainHeading}
           <br />
-          <AnimatedText words={content.rotatingWords} />
+          <TextMorph words={content.rotatingWords} interval={3000} />
         </motion.h1>
 
         {/* Subtitle */}
         <motion.p
           className={cn(
-            'mt-6 text-xl text-[rgb(0,0,0)]',
+            'mt-6 text-xl text-[var(--color-dark)]',
             'leading-[26px] tracking-[-0.6px]',
             'max-w-[600px]'
           )}
@@ -113,6 +111,17 @@ export function Hero({ locale }: HeroProps) {
           <Button href="#portfolio" variant="outline">
             {content.ctaSecondary}
           </Button>
+        </motion.div>
+
+        {/* Terminal Touch */}
+        <motion.div
+          className="mt-12"
+          variants={heroSequence.cta}
+          initial="hidden"
+          animate="visible"
+          transition={{ delay: 0.3 }}
+        >
+          <TerminalLabel>{locale === 'en' ? 'ready' : 'gati'}</TerminalLabel>
         </motion.div>
       </div>
 

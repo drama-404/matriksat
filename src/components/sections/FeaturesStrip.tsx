@@ -81,10 +81,10 @@ export function FeaturesStrip({ className }: FeaturesStripProps) {
             >
               <feature.Icon />
               <div className="text-center">
-                <p className="text-base font-medium text-[rgb(0,0,0)] leading-tight">
+                <p className="text-base font-medium text-[var(--color-dark)] leading-tight">
                   {feature.bold}
                 </p>
-                <p className="text-base font-normal text-[rgb(0,0,0)] leading-tight">
+                <p className="text-base font-normal text-[var(--color-dark)] leading-tight">
                   {feature.regular}
                 </p>
               </div>

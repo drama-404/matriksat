@@ -41,7 +41,7 @@ export function Portfolio({ locale }: PortfolioProps) {
         </p>
         <h2
           id="portfolio-heading"
-          className="text-[33px] font-bold tracking-[-1.32px] leading-[39.6px] text-[rgb(0,0,0)]"
+          className="text-[33px] font-bold tracking-[-1.32px] leading-[39.6px] text-[var(--color-dark)]"
           style={{ fontFamily: 'var(--font-satoshi), var(--font-inter), sans-serif' }}
         >
           {content.heading}
@@ -83,7 +83,7 @@ export function Portfolio({ locale }: PortfolioProps) {
               {selectedProject.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="text-xs font-medium px-3 py-1.5 rounded-full bg-[rgb(245,245,245)]"
+                  className="text-xs font-medium px-3 py-1.5 rounded-full bg-[var(--color-background)]"
                   style={{ color: 'rgba(0, 0, 0, 0.7)' }}
                 >
                   {tag}
@@ -167,7 +167,7 @@ function ProjectCard({ project, viewLabel, onSelect }: ProjectCardProps) {
                 key={i}
                 className="w-12 h-12 rounded-lg"
                 style={{
-                  backgroundColor: i % 2 === 0 ? 'rgb(52,145,255)' : 'rgb(22,22,22)',
+                  backgroundColor: i % 2 === 0 ? 'var(--color-accent)' : 'var(--color-dark)',
                   opacity: 0.3 + (i * 0.07),
                 }}
               />
@@ -187,7 +187,7 @@ function ProjectCard({ project, viewLabel, onSelect }: ProjectCardProps) {
         >
           {/* Project Logo/Name */}
           <span
-            className="text-lg font-bold text-[rgb(0,0,0)]"
+            className="text-lg font-bold text-[var(--color-dark)]"
             style={{ fontFamily: 'var(--font-satoshi), var(--font-inter), sans-serif' }}
           >
             {project.logoText}
@@ -197,10 +197,10 @@ function ProjectCard({ project, viewLabel, onSelect }: ProjectCardProps) {
           <button
             className={cn(
               'flex items-center gap-2 bg-white rounded-[58px] px-6 py-4',
-              'text-sm font-medium text-[rgb(0,0,0)]',
-              'group-hover:bg-[rgb(22,22,22)] group-hover:text-white',
+              'text-sm font-medium text-[var(--color-dark)]',
+              'group-hover:bg-[var(--color-dark)] group-hover:text-white',
               'transition-colors duration-300',
-              'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(52,145,255)]'
+              'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]'
             )}
             aria-label={`${viewLabel}: ${project.title}`}
           >

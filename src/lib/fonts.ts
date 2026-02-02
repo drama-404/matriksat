@@ -4,6 +4,7 @@ import {
   Chelsea_Market,
   DM_Sans,
   Space_Grotesk,
+  JetBrains_Mono,
 } from 'next/font/google';
 
 export const inter = Inter({
@@ -42,5 +43,13 @@ export const euclidCircularB = Space_Grotesk({
   subsets: ['latin'],
   weight: ['400', '500', '600'],
   variable: '--font-euclid',
+  display: 'swap',
+});
+
+// JetBrains Mono - Terminal touches for MATRIKS identity
+export const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  variable: '--font-jetbrains',
   display: 'swap',
 });

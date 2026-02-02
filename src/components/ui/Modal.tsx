@@ -59,7 +59,7 @@ export function Modal({ isOpen, onClose, children }: ModalProps) {
             {/* Close Button */}
             <button
               onClick={onClose}
-              className="absolute top-6 right-6 w-10 h-10 rounded-full bg-[rgb(245,245,245)] flex items-center justify-center hover:bg-[rgb(230,230,230)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(52,145,255)]"
+              className="absolute top-6 right-6 w-10 h-10 rounded-full bg-[var(--color-background)] flex items-center justify-center hover:bg-[var(--color-accent-subtle)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]"
               aria-label="Close modal"
             >
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="rgb(0,0,0)" strokeWidth="2" strokeLinecap="round" aria-hidden="true">

@@ -57,7 +57,7 @@ export function WorldClock() {
               {tz.city}, {tz.country}
             </span>
             <span
-              className="text-lg font-semibold text-[rgb(0,0,0)] tabular-nums"
+              className="text-lg font-semibold text-[var(--color-dark)] tabular-nums"
               style={{ fontVariantNumeric: 'tabular-nums' }}
             >
               {times[index]}

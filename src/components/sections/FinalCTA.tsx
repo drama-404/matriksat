@@ -18,7 +18,7 @@ export function FinalCTA({ locale }: FinalCTAProps) {
   return (
     <section className="section-container" aria-labelledby="final-cta-heading">
       <motion.div
-        className="relative max-w-[1082px] mx-auto rounded-[var(--radius-card-lg)] bg-[rgb(22,22,22)] px-8 py-16 sm:py-24 overflow-hidden"
+        className="relative max-w-[1082px] mx-auto rounded-[var(--radius-card-lg)] bg-[var(--color-dark)] px-8 py-16 sm:py-24 overflow-hidden"
         variants={fadeInUp}
         initial="hidden"
         whileInView="visible"
@@ -66,7 +66,7 @@ export function FinalCTA({ locale }: FinalCTAProps) {
             />
             <motion.a
               href="#pricing"
-              className="relative inline-flex items-center gap-2 bg-white text-[rgb(22,22,22)] rounded-[72px] px-8 py-5 text-base font-semibold hover:opacity-90 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(52,145,255)] focus-visible:ring-offset-2 focus-visible:ring-offset-[rgb(22,22,22)]"
+              className="relative inline-flex items-center gap-2 bg-white text-[var(--color-dark)] rounded-[72px] px-8 py-5 text-base font-semibold hover:opacity-90 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-dark)]"
               animate={{
                 scale: [1, 1.02, 1],
               }}

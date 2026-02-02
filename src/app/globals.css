@@ -5,22 +5,31 @@
    ═══════════════════════════════════════════════════════════════ */
 
 :root {
-  /* Primary Colors (exact match to Kree8) */
-  --color-background: rgb(245, 245, 245);
-  --color-accent: rgb(52, 145, 255);
-  --color-dark: rgb(22, 22, 22);
-  --color-success: rgb(34, 197, 94);
+  /* ═══════════════════════════════════════════════════════════════
+     PRIMARY PALETTE - Warm Earth Tones (MATRIKS Identity)
+     ═══════════════════════════════════════════════════════════════ */
+  --color-background: rgb(252, 250, 247);     /* Warm cream */
+  --color-accent: rgb(196, 108, 78);          /* Terracotta */
+  --color-accent-secondary: rgb(138, 154, 124); /* Muted olive */
+  --color-dark: rgb(38, 35, 33);              /* Warm charcoal */
+  --color-success: rgb(138, 154, 124);        /* Sage green */
   --color-white: rgb(255, 255, 255);
 
-  /* Secondary/Utility Colors */
-  --color-muted: rgba(0, 0, 0, 0.53);
+  /* UTILITY COLORS */
+  --color-muted: rgba(38, 35, 33, 0.53);
   --color-dark-overlay: rgba(255, 255, 255, 0.7);
-  --color-border: rgba(0, 0, 0, 0.17);
-  --color-navbar-bg: rgba(245, 245, 245, 0.91);
+  --color-border: rgba(38, 35, 33, 0.12);
+  --color-navbar-bg: rgba(252, 250, 247, 0.91);
+  --color-card: rgb(255, 255, 255);
+  --color-accent-subtle: rgba(196, 108, 78, 0.08);
 
-  /* Status Colors */
-  --color-status-outer: rgb(65, 193, 107);
-  --color-status-inner: rgb(75, 191, 113);
+  /* MATRIX THEME COLORS (subtle terminal touches) */
+  --color-terminal: rgb(138, 154, 124);       /* For monospace accents */
+  --color-data-stream: rgba(196, 108, 78, 0.06); /* For flowing decorations */
+
+  /* Status Colors (warmer greens) */
+  --color-status-outer: rgb(138, 154, 124);
+  --color-status-inner: rgb(148, 164, 134);
 
   /* Spacing (sacred values from Kree8) */
   --spacing-section: 39px;
@@ -28,32 +37,33 @@
   --max-content-width: 1100px;
   --navbar-height: 83px;
 
-  /* Border Radius */
-  --radius-card: 28px;
-  --radius-card-lg: 40px;
-  --radius-button: 118px;
-  --radius-sm: 13px;
-  --radius-md: 26px;
+  /* Border Radius (softened values) */
+  --radius-card: 24px;
+  --radius-card-lg: 32px;
+  --radius-button: 100px;
+  --radius-sm: 12px;
+  --radius-md: 20px;
 
   /* Typography Scale */
   --font-hero: 69px;
   --font-hero-line-height: 67.62px;
   --font-hero-letter-spacing: -2.07px;
 
-  /* Multi-layer Shadow (7 layers for depth) */
+  /* Multi-layer Shadow (warmer tones with subtle terracotta tint) */
   --shadow-button:
-    rgba(0, 0, 0, 0.02) 0px 1px 2px 0px,
-    rgba(0, 0, 0, 0.03) 0px 2px 4px 0px,
-    rgba(0, 0, 0, 0.04) 0px 4px 8px 0px,
-    rgba(0, 0, 0, 0.05) 0px 8px 16px 0px,
-    rgba(0, 0, 0, 0.04) 0px 12px 24px 0px,
-    rgba(0, 0, 0, 0.03) 0px 16px 32px 0px,
-    rgba(0, 0, 0, 0.02) 0px 20px 40px 0px;
+    rgba(38, 35, 33, 0.02) 0px 1px 2px 0px,
+    rgba(38, 35, 33, 0.03) 0px 2px 4px 0px,
+    rgba(196, 108, 78, 0.04) 0px 4px 8px 0px,
+    rgba(38, 35, 33, 0.05) 0px 8px 16px 0px,
+    rgba(196, 108, 78, 0.03) 0px 12px 24px 0px,
+    rgba(38, 35, 33, 0.03) 0px 16px 32px 0px,
+    rgba(38, 35, 33, 0.02) 0px 20px 40px 0px;
 
-  --shadow-navbar: rgba(0, 0, 0, 0.02) 0px 22px 43px 0px;
+  --shadow-navbar: rgba(38, 35, 33, 0.03) 0px 22px 43px 0px;
   --shadow-card:
-    rgba(0, 0, 0, 0.04) 0px 4px 16px 0px,
-    rgba(0, 0, 0, 0.02) 0px 8px 32px 0px;
+    rgba(38, 35, 33, 0.04) 0px 2px 8px 0px,
+    rgba(196, 108, 78, 0.04) 0px 8px 24px 0px,
+    rgba(38, 35, 33, 0.02) 0px 16px 32px 0px;
 
   /* Font Variables */
   --font-inter: var(--font-inter);
@@ -61,22 +71,28 @@
   --font-satoshi: var(--font-satoshi);
   --font-euclid: var(--font-euclid);
   --font-chelsea: var(--font-chelsea-market);
+  --font-mono: var(--font-jetbrains);
 }
 
 /* Tailwind CSS 4 Theme Extension */
 @theme inline {
   --color-background: var(--color-background);
   --color-accent: var(--color-accent);
+  --color-accent-secondary: var(--color-accent-secondary);
   --color-dark: var(--color-dark);
   --color-success: var(--color-success);
   --color-muted: var(--color-muted);
   --color-border: var(--color-border);
+  --color-terminal: var(--color-terminal);
+  --color-card: var(--color-card);
+  --color-accent-subtle: var(--color-accent-subtle);
 
   --font-sans: var(--font-inter);
   --font-heading: var(--font-satoshi);
   --font-hero: var(--font-phudu);
   --font-brand: var(--font-euclid);
   --font-cursive: var(--font-chelsea-market);
+  --font-mono: var(--font-mono);
 
   --radius-card: var(--radius-card);
   --radius-button: var(--radius-button);
@@ -187,6 +203,47 @@ body {
   animation: float 3s ease-in-out infinite;
 }
 
+/* Terminal Cursor Blink */
+@keyframes terminal-blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+.terminal-cursor {
+  animation: terminal-blink 1s steps(1) infinite;
+}
+
+/* Text Morph Crossfade */
+@keyframes morph-in {
+  0% {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes morph-out {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.98);
+    filter: blur(4px);
+  }
+}
+
 /* Status Dot Pulse */
 @keyframes status-pulse {
   0%, 100% {
@@ -225,11 +282,22 @@ body {
   box-shadow: var(--shadow-navbar);
 }
 
-/* Grid Overlay Pattern (Hero background) — dashed graph-paper */
+/* Data Flow Pattern (Hero background) — subtle warm vertical lines */
+.data-flow-pattern {
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 60px,
+      rgba(196, 108, 78, 0.03) 60px,
+      rgba(196, 108, 78, 0.03) 61px
+    );
+}
+
+/* Legacy grid pattern kept for fallback */
 .grid-pattern {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25'%3E%3Cpath d='M 25 0 L 0 0 0 25' fill='none' stroke='%23000' stroke-width='1' stroke-dasharray='4,3'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25'%3E%3Cpath d='M 25 0 L 0 0 0 25' fill='none' stroke='%23262321' stroke-width='1' stroke-dasharray='4,3' stroke-opacity='0.06'/%3E%3C/svg%3E");
   background-size: 25px 25px;
-  opacity: 0.095;
 }
 
 /* Dashed Border Utilities */

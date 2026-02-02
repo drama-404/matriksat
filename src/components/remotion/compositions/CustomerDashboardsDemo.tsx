@@ -11,10 +11,10 @@ import { ServiceDemo, ProgressBar } from '../ServiceDemo';
 const CHART_BARS = [
   { height: 75, delay: 10, color: 'rgb(59, 130, 246)' },
   { height: 55, delay: 18, color: 'rgb(59, 130, 246)' },
-  { height: 90, delay: 26, color: 'rgb(52, 145, 255)' },
+  { height: 90, delay: 26, color: 'rgb(196, 108, 78)' },
   { height: 40, delay: 34, color: 'rgb(59, 130, 246)' },
   { height: 65, delay: 42, color: 'rgb(59, 130, 246)' },
-  { height: 85, delay: 50, color: 'rgb(52, 145, 255)' },
+  { height: 85, delay: 50, color: 'rgb(196, 108, 78)' },
 ];
 
 const KPIS = [

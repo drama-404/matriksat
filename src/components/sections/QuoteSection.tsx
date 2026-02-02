@@ -39,7 +39,7 @@ export function QuoteSection({ locale }: QuoteSectionProps) {
         <motion.div
           className={cn(
             'w-14 h-14 rounded-full mb-4 overflow-hidden',
-            'bg-[rgb(245,245,245)] flex items-center justify-center'
+            'bg-[var(--color-background)] flex items-center justify-center'
           )}
           variants={fadeIn}
           initial="hidden"
@@ -94,10 +94,10 @@ export function QuoteSection({ locale }: QuoteSectionProps) {
           href="#pricing"
           className={cn(
             'mt-6 inline-block',
-            'bg-[rgb(0,0,0)] text-white text-xs font-normal',
+            'bg-[var(--color-dark)] text-white text-xs font-normal',
             'rounded-[25px] px-3 py-2.5',
             'hover:scale-105 transition-transform',
-            'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(52,145,255)]'
+            'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]'
           )}
           variants={fadeIn}
           initial="hidden"

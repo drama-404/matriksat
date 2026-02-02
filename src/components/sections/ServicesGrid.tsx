@@ -52,7 +52,7 @@ export function ServicesGrid({ locale }: ServicesGridProps) {
       >
         <h2
           id="services-heading"
-          className="text-[33px] font-bold tracking-[-1.32px] leading-[39.6px] text-[rgb(0,0,0)]"
+          className="text-[33px] font-bold tracking-[-1.32px] leading-[39.6px] text-[var(--color-dark)]"
           style={{ fontFamily: 'var(--font-satoshi), var(--font-inter), sans-serif' }}
         >
           {content.heading}
@@ -131,7 +131,7 @@ function ServiceCard({ service }: { service: Service }) {
     >
       {/* Title - absolute positioned top-left */}
       <h3
-        className="relative z-10 text-xl font-bold text-[rgb(0,0,0)]"
+        className="relative z-10 text-xl font-bold text-[var(--color-dark)]"
         style={{ fontFamily: 'var(--font-satoshi), var(--font-inter), sans-serif' }}
       >
         {service.title}
@@ -174,18 +174,18 @@ function ServiceCard({ service }: { service: Service }) {
         >
           {/* Main icon - centered */}
           <div
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-2xl bg-[rgb(245,245,245)] flex items-center justify-center opacity-60 group-hover:opacity-90 transition-opacity duration-300"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-2xl bg-[var(--color-background)] flex items-center justify-center opacity-60 group-hover:opacity-90 transition-opacity duration-300"
             style={{ transform: 'translate(-50%, -50%) rotate(-5deg)' }}
           >
             <Icon className="w-8 h-8" />
           </div>
           {/* Secondary decorative elements */}
           <div
-            className="absolute top-2 right-4 w-10 h-10 rounded-xl bg-[rgb(245,245,245)] opacity-40 group-hover:opacity-70 transition-opacity duration-300"
+            className="absolute top-2 right-4 w-10 h-10 rounded-xl bg-[var(--color-background)] opacity-40 group-hover:opacity-70 transition-opacity duration-300"
             style={{ transform: 'rotate(3deg)' }}
           />
           <div
-            className="absolute bottom-4 left-2 w-12 h-8 rounded-lg bg-[rgb(245,245,245)] opacity-30 group-hover:opacity-60 transition-opacity duration-300"
+            className="absolute bottom-4 left-2 w-12 h-8 rounded-lg bg-[var(--color-background)] opacity-30 group-hover:opacity-60 transition-opacity duration-300"
             style={{ transform: 'rotate(-2deg)' }}
           />
         </div>
@@ -196,7 +196,7 @@ function ServiceCard({ service }: { service: Service }) {
         {service.features.slice(0, 3).map((feature) => (
           <span
             key={feature}
-            className="text-[11px] font-medium px-2.5 py-1 rounded-full bg-[rgb(245,245,245)]"
+            className="text-[11px] font-medium px-2.5 py-1 rounded-full bg-[var(--color-background)]"
             style={{ color: 'rgba(0, 0, 0, 0.6)' }}
           >
             {feature}
@@ -211,7 +211,7 @@ function ServiceCard({ service }: { service: Service }) {
 
 function ChatIcon({ className }: { className?: string }) {
   return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="rgb(52,145,255)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
     </svg>
   );
@@ -219,7 +219,7 @@ function ChatIcon({ className }: { className?: string }) {
 
 function DocumentIcon({ className }: { className?: string }) {
   return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="rgb(52,145,255)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
       <polyline points="14 2 14 8 20 8" />
       <line x1="16" y1="13" x2="8" y2="13" />
@@ -231,7 +231,7 @@ function DocumentIcon({ className }: { className?: string }) {
 
 function CalendarIcon({ className }: { className?: string }) {
   return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="rgb(52,145,255)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
       <line x1="16" y1="2" x2="16" y2="6" />
       <line x1="8" y1="2" x2="8" y2="6" />
@@ -242,7 +242,7 @@ function CalendarIcon({ className }: { className?: string }) {
 
 function ChartIcon({ className }: { className?: string }) {
   return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="rgb(52,145,255)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       <line x1="18" y1="20" x2="18" y2="10" />
       <line x1="12" y1="20" x2="12" y2="4" />
       <line x1="6" y1="20" x2="6" y2="14" />
@@ -252,7 +252,7 @@ function ChartIcon({ className }: { className?: string }) {
 
 function EmojiIcon({ className }: { className?: string }) {
   return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="rgb(52,145,255)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       <circle cx="12" cy="12" r="10" />
       <path d="M8 14s1.5 2 4 2 4-2 4-2" />
       <line x1="9" y1="9" x2="9.01" y2="9" />
@@ -263,7 +263,7 @@ function EmojiIcon({ className }: { className?: string }) {
 
 function StarIcon({ className }: { className?: string }) {
   return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="rgb(52,145,255)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
     </svg>
   );
@@ -271,7 +271,7 @@ function StarIcon({ className }: { className?: string }) {
 
 function PhoneIcon({ className }: { className?: string }) {
   return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="rgb(52,145,255)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
       <line x1="12" y1="18" x2="12.01" y2="18" />
     </svg>
@@ -280,7 +280,7 @@ function PhoneIcon({ className }: { className?: string }) {
 
 function ConnectorIcon({ className }: { className?: string }) {
   return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="rgb(52,145,255)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
       <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
     </svg>
@@ -289,7 +289,7 @@ function ConnectorIcon({ className }: { className?: string }) {
 
 function ShieldIcon({ className }: { className?: string }) {
   return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="rgb(52,145,255)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
       <polyline points="9 12 11 14 15 10" />
     </svg>

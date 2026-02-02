@@ -30,15 +30,15 @@ import {
  *   - Deployed solution showcase
  */
 
-// Theme colors (matching globals.css)
+// Theme colors (matching globals.css - warm earth tones)
 const COLORS = {
-  accent: 'rgb(52, 145, 255)',
-  dark: 'rgb(22, 22, 22)',
-  background: 'rgb(245, 245, 245)',
-  success: 'rgb(34, 197, 94)',
+  accent: 'rgb(196, 108, 78)',      // Terracotta
+  dark: 'rgb(38, 35, 33)',          // Warm charcoal
+  background: 'rgb(252, 250, 247)', // Warm cream
+  success: 'rgb(138, 154, 124)',    // Sage green
   white: 'rgb(255, 255, 255)',
-  muted: 'rgba(0, 0, 0, 0.53)',
-  cardBg: 'rgb(30, 30, 30)',
+  muted: 'rgba(38, 35, 33, 0.53)',
+  cardBg: 'rgb(38, 35, 33)',
 };
 
 // Animation timing constants

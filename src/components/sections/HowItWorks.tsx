@@ -60,12 +60,12 @@ export function HowItWorks({ locale }: HowItWorksProps) {
       >
         <h2
           id="how-it-works-heading"
-          className="text-[36px] md:text-[42px] font-bold tracking-[-1.32px] leading-[1.1] text-[rgb(0,0,0)]"
+          className="text-[36px] md:text-[42px] font-bold tracking-[-1.32px] leading-[1.1] text-[var(--color-dark)]"
           style={{ fontFamily: 'var(--font-satoshi), var(--font-inter), sans-serif' }}
         >
           {content.heading.split('Projects')[0]}
           <br className="hidden sm:block" />
-          <span className="text-[rgb(52,145,255)]">Projects</span> Done
+          <span className="text-[var(--color-accent)]">Projects</span> Done
         </h2>
         <p
           className="mt-4 text-base md:text-lg font-normal max-w-[600px] mx-auto"
@@ -245,7 +245,7 @@ function StepCard({ step, isActive, index }: StepCardProps) {
         'relative rounded-[var(--radius-card)] p-6 md:p-8 transition-all duration-300',
         'flex flex-row gap-5 items-start',
         isActive
-          ? 'bg-[rgb(22,22,22)] text-white shadow-xl'
+          ? 'bg-[var(--color-dark)] text-white shadow-xl'
           : 'bg-white card-shadow'
       )}
       initial={{ opacity: 0, x: 30 }}
@@ -259,8 +259,8 @@ function StepCard({ step, isActive, index }: StepCardProps) {
           'flex-shrink-0 w-14 h-14 rounded-2xl',
           'flex items-center justify-center transition-all duration-300',
           isActive
-            ? 'bg-[rgb(52,145,255)] text-white'
-            : 'bg-[rgb(245,245,245)] border-2 border-[rgba(0,0,0,0.08)] text-[rgb(52,145,255)]'
+            ? 'bg-[var(--color-accent)] text-white'
+            : 'bg-[var(--color-background)] border-2 border-[rgba(0,0,0,0.08)] text-[var(--color-accent)]'
         )}
       >
         {isActive ? (
@@ -280,7 +280,7 @@ function StepCard({ step, isActive, index }: StepCardProps) {
         <span
           className={cn(
             'text-xs font-semibold uppercase tracking-wider',
-            isActive ? 'text-[rgb(52,145,255)]' : 'text-[rgba(0,0,0,0.4)]'
+            isActive ? 'text-[var(--color-accent)]' : 'text-[rgba(0,0,0,0.4)]'
           )}
         >
           Step {step.number}
@@ -290,7 +290,7 @@ function StepCard({ step, isActive, index }: StepCardProps) {
         <h3
           className={cn(
             'text-xl md:text-2xl font-bold mt-1',
-            isActive ? 'text-white' : 'text-[rgb(0,0,0)]'
+            isActive ? 'text-white' : 'text-[var(--color-dark)]'
           )}
           style={{ fontFamily: 'var(--font-satoshi), var(--font-inter), sans-serif' }}
         >
@@ -317,7 +317,7 @@ function StepCard({ step, isActive, index }: StepCardProps) {
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="w-2 h-2 rounded-full bg-[rgb(52,145,255)] animate-pulse" />
+              <div className="w-2 h-2 rounded-full bg-[var(--color-accent)] animate-pulse" />
               <span className="text-xs font-medium text-[rgba(255,255,255,0.5)]">
                 Currently showing
               </span>
@@ -329,7 +329,7 @@ function StepCard({ step, isActive, index }: StepCardProps) {
       {/* Active indicator line */}
       {isActive && (
         <motion.div
-          className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-12 bg-[rgb(52,145,255)] rounded-r-full"
+          className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-12 bg-[var(--color-accent)] rounded-r-full"
           layoutId="activeIndicator"
           transition={{ type: 'spring', stiffness: 300, damping: 30 }}
         />
@@ -345,7 +345,7 @@ function StaticShowcaseFallback() {
   return (
     <div
       className={cn(
-        'bg-[rgb(30,30,30)] rounded-[var(--radius-card-lg)] overflow-hidden',
+        'bg-[var(--color-dark)] rounded-[var(--radius-card-lg)] overflow-hidden',
         'p-6 h-full flex flex-col items-center justify-center'
       )}
     >
@@ -363,7 +363,7 @@ function StaticShowcaseFallback() {
         </div>
         {/* Animated ring */}
         <div
-          className="absolute inset-0 border-2 border-[rgb(52,145,255)] border-t-transparent rounded-full animate-spin"
+          className="absolute inset-0 border-2 border-[var(--color-accent)] border-t-transparent rounded-full animate-spin"
           style={{ animationDuration: '1s' }}
         />
       </div>
@@ -383,7 +383,7 @@ function StaticShowcaseFallback() {
             className={cn(
               'w-10 h-10 rounded-full flex items-center justify-center',
               num === 1
-                ? 'bg-[rgb(52,145,255)] text-white'
+                ? 'bg-[var(--color-accent)] text-white'
                 : 'bg-[rgba(255,255,255,0.1)] text-[rgba(255,255,255,0.5)]'
             )}
           >

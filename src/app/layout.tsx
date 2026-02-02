@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { inter, phudu, satoshi, euclidCircularB, chelseaMarket } from '@/lib/fonts';
+import { inter, phudu, satoshi, euclidCircularB, chelseaMarket, jetbrainsMono } from '@/lib/fonts';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -13,6 +13,7 @@ const fontVariables = [
   satoshi.variable,
   euclidCircularB.variable,
   chelseaMarket.variable,
+  jetbrainsMono.variable,
 ].join(' ');
 
 export default function RootLayout({

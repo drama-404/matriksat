@@ -13,11 +13,12 @@ interface MobileShowcaseProps {
 }
 
 // Decorative screen content colors per mockup
+// Decorative screen accent colors - warm palette with terracotta
 const screenAccents = [
-  'rgb(52, 145, 255)',   // booking - blue
-  'rgb(34, 197, 94)',    // dashboard - green
-  'rgb(168, 85, 247)',   // chat - purple
-  'rgb(245, 158, 11)',   // ecommerce - amber
+  'var(--color-accent)',          // booking - terracotta
+  'var(--color-success)',         // dashboard - sage
+  'rgb(168, 112, 100)',           // chat - muted rose
+  'rgb(196, 158, 78)',            // ecommerce - warm gold
 ];
 
 export function MobileShowcase({ locale }: MobileShowcaseProps) {
@@ -28,7 +29,7 @@ export function MobileShowcase({ locale }: MobileShowcaseProps) {
       {/* Heading */}
       <motion.h2
         id="mobile-heading"
-        className="text-[24px] font-bold text-center mb-12 text-[rgb(0,0,0)]"
+        className="text-[24px] font-bold text-center mb-12 text-[var(--color-dark)]"
         style={{ fontFamily: 'var(--font-satoshi), var(--font-inter), sans-serif' }}
         variants={fadeInUp}
         initial="hidden"
@@ -54,11 +55,11 @@ export function MobileShowcase({ locale }: MobileShowcaseProps) {
             style={{ transform: `rotate(${mockup.rotation}deg)` }}
           >
             {/* Phone Frame */}
-            <div className="w-[160px] h-[300px] sm:w-[180px] sm:h-[340px] rounded-[28px] bg-[rgb(22,22,22)] p-[6px] card-shadow">
+            <div className="w-[160px] h-[300px] sm:w-[180px] sm:h-[340px] rounded-[28px] bg-[var(--color-dark)] p-[6px] card-shadow">
               {/* Screen */}
               <div className="w-full h-full rounded-[22px] bg-white overflow-hidden relative">
                 {/* Notch */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-5 bg-[rgb(22,22,22)] rounded-b-xl z-10" />
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-5 bg-[var(--color-dark)] rounded-b-xl z-10" />
 
                 {/* Decorative screen content */}
                 <div className="pt-8 px-3 space-y-2">

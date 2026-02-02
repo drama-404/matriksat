@@ -91,7 +91,7 @@ export function TestimonialsCarousel({ locale }: TestimonialsCarouselProps) {
               'absolute left-4 top-1/2 -translate-y-1/2 z-10',
               'w-10 h-10 rounded-full bg-white flex items-center justify-center',
               'card-shadow hover:scale-110 transition-transform',
-              'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(52,145,255)]',
+              'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]',
               'hidden md:flex'
             )}
             aria-label="Previous testimonial"
@@ -106,7 +106,7 @@ export function TestimonialsCarousel({ locale }: TestimonialsCarouselProps) {
               'absolute right-4 top-1/2 -translate-y-1/2 z-10',
               'w-10 h-10 rounded-full bg-white flex items-center justify-center',
               'card-shadow hover:scale-110 transition-transform',
-              'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(52,145,255)]',
+              'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]',
               'hidden md:flex'
             )}
             aria-label="Next testimonial"
@@ -125,9 +125,9 @@ export function TestimonialsCarousel({ locale }: TestimonialsCarouselProps) {
               onClick={() => scrollToIndex(index)}
               className={cn(
                 'rounded-full transition-all duration-300',
-                'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(52,145,255)]',
+                'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]',
                 index === activeIndex
-                  ? 'w-2 h-2 bg-[rgb(52,145,255)]'
+                  ? 'w-2 h-2 bg-[var(--color-accent)]'
                   : 'w-1.5 h-1.5 bg-[rgba(0,0,0,0.2)]'
               )}
               role="tab"
@@ -153,7 +153,7 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
     >
       {/* Project Screenshot Placeholder */}
       <div
-        className="w-full h-[293px] rounded-[26px] bg-[rgb(245,245,245)] overflow-hidden"
+        className="w-full h-[293px] rounded-[26px] bg-[var(--color-background)] overflow-hidden"
         aria-hidden="true"
       >
         <div className="w-full h-full flex items-center justify-center text-[rgba(0,0,0,0.2)]">
@@ -175,7 +175,7 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
 
       {/* Reply Bubble */}
       <div className="flex justify-end">
-        <div className="bg-[rgb(22,22,22)] rounded-[18px] px-4 py-3 max-w-[70%]">
+        <div className="bg-[var(--color-dark)] rounded-[18px] px-4 py-3 max-w-[70%]">
           <p className="text-sm font-normal text-white">
             {testimonial.reply}
           </p>
@@ -185,13 +185,13 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
       {/* Profile */}
       <div className="flex items-center gap-3 mt-auto pt-2">
         <div
-          className="w-[42px] h-[42px] rounded-full bg-[rgb(52,145,255)] flex items-center justify-center text-white font-semibold text-sm"
+          className="w-[42px] h-[42px] rounded-full bg-[var(--color-accent)] flex items-center justify-center text-white font-semibold text-sm"
           aria-hidden="true"
         >
           {testimonial.author.split(' ').map(n => n[0]).join('')}
         </div>
         <div>
-          <p className="text-sm font-semibold text-[rgb(0,0,0)]">
+          <p className="text-sm font-semibold text-[var(--color-dark)]">
             {testimonial.author}
           </p>
           <p className="text-xs font-normal" style={{ color: 'rgba(0, 0, 0, 0.53)' }}>
