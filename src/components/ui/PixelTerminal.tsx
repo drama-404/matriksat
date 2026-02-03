@@ -8,10 +8,7 @@ interface PixelTerminalProps {
   className?: string;
 }
 
-// Pixel grid coordinates for each letter in "MATRIKS AI"
-// Each letter is defined as an array of [x, y] coordinates on a 5x7 grid per character
-// The entire text spans approximately 85x7 pixels (including spacing)
-
+// Pixel grid settings
 const PIXEL_SIZE = 4;
 const LETTER_WIDTH = 5;
 const LETTER_HEIGHT = 7;
@@ -94,6 +91,17 @@ const LETTERS: Record<string, number[][]> = {
   ],
 };
 
+// Robot emoji pixel art (7x7 grid)
+const ROBOT_PIXELS: number[][] = [
+  [0, 0, 1, 1, 1, 0, 0],
+  [0, 0, 0, 1, 0, 0, 0],
+  [0, 1, 1, 1, 1, 1, 0],
+  [0, 1, 0, 1, 0, 1, 0],
+  [0, 1, 1, 1, 1, 1, 0],
+  [0, 0, 1, 0, 1, 0, 0],
+  [0, 1, 1, 0, 1, 1, 0],
+];
+
 // Convert text to pixel coordinates
 function textToPixels(text: string): { x: number; y: number }[] {
   const pixels: { x: number; y: number }[] = [];
@@ -121,33 +129,51 @@ function textToPixels(text: string): { x: number; y: number }[] {
   return pixels;
 }
 
-const TEXT = 'MATRIKS AI';
-const ALL_PIXELS = textToPixels(TEXT);
-const TOTAL_WIDTH = ALL_PIXELS.length > 0
-  ? Math.max(...ALL_PIXELS.map((p) => p.x)) + 1
-  : 0;
+// Get robot pixels with offset
+function getRobotPixels(offsetX: number): { x: number; y: number }[] {
+  const pixels: { x: number; y: number }[] = [];
+  for (let row = 0; row < ROBOT_PIXELS.length; row++) {
+    for (let col = 0; col < ROBOT_PIXELS[row].length; col++) {
+      if (ROBOT_PIXELS[row][col] === 1) {
+        pixels.push({
+          x: offsetX + col,
+          y: row,
+        });
+      }
+    }
+  }
+  return pixels;
+}
 
-const STEP_DURATION = 80; // ms per pixel
-const GLOW_DURATION = 200; // ms for glow to fade
-const LOOP_PAUSE = 2000; // pause before restarting
+const TEXT = 'MATRIKS AI';
+const TEXT_PIXELS = textToPixels(TEXT);
+const TEXT_WIDTH = TEXT_PIXELS.length > 0 ? Math.max(...TEXT_PIXELS.map((p) => p.x)) + 1 : 0;
+
+// Robot starts after text with some spacing
+const ROBOT_OFFSET_X = TEXT_WIDTH + 4;
+const ROBOT_PIXEL_LIST = getRobotPixels(ROBOT_OFFSET_X);
+
+// Combine all pixels
+const ALL_PIXELS = [...TEXT_PIXELS, ...ROBOT_PIXEL_LIST];
+const TOTAL_WIDTH = ALL_PIXELS.length > 0 ? Math.max(...ALL_PIXELS.map((p) => p.x)) + 1 : 0;
+
+// Animation timing - FASTER
+const STEP_DURATION = 40; // ms per pixel (was 80)
+const GLOW_DURATION = 150; // ms for glow to fade
+const LOOP_PAUSE = 1500; // pause before restarting
 
 /**
  * PixelTerminal - macOS-style terminal with pixel-drawing animation
- *
- * Animation: A red dot "draws" the text "MATRIKS AI" letter by letter
- * on a pixel grid, like a digital pen writing on graph paper.
- * Loops continuously.
+ * Draws "MATRIKS AI" + robot icon in white, with red drawing cursor
  */
 export function PixelTerminal({ className }: PixelTerminalProps) {
   const [drawnPixels, setDrawnPixels] = useState<Set<string>>(new Set());
   const [glowingPixels, setGlowingPixels] = useState<Set<string>>(new Set());
   const [dotPosition, setDotPosition] = useState<{ x: number; y: number } | null>(null);
-  const [isDrawing, setIsDrawing] = useState(false);
   const animationRef = useRef<NodeJS.Timeout | null>(null);
   const glowTimeoutsRef = useRef<Map<string, NodeJS.Timeout>>(new Map());
 
   const startDrawing = useCallback(() => {
-    setIsDrawing(true);
     setDrawnPixels(new Set());
     setGlowingPixels(new Set());
 
@@ -161,7 +187,6 @@ export function PixelTerminal({ className }: PixelTerminalProps) {
       if (currentPixelIndex >= ALL_PIXELS.length) {
         // Drawing complete - pause then restart
         setDotPosition(null);
-        setIsDrawing(false);
 
         animationRef.current = setTimeout(() => {
           startDrawing();
@@ -195,7 +220,7 @@ export function PixelTerminal({ className }: PixelTerminalProps) {
       animationRef.current = setTimeout(drawNextPixel, STEP_DURATION);
     };
 
-    animationRef.current = setTimeout(drawNextPixel, 500); // Initial delay
+    animationRef.current = setTimeout(drawNextPixel, 300); // Initial delay
   }, []);
 
   useEffect(() => {
@@ -209,8 +234,8 @@ export function PixelTerminal({ className }: PixelTerminalProps) {
     };
   }, [startDrawing]);
 
-  const gridWidth = TOTAL_WIDTH * PIXEL_SIZE + 20;
-  const gridHeight = LETTER_HEIGHT * PIXEL_SIZE + 20;
+  const gridWidth = TOTAL_WIDTH * PIXEL_SIZE + 16;
+  const gridHeight = LETTER_HEIGHT * PIXEL_SIZE + 16;
 
   return (
     <div
@@ -224,61 +249,60 @@ export function PixelTerminal({ className }: PixelTerminalProps) {
         border: '1px solid rgba(255, 255, 255, 0.1)',
       }}
     >
-      {/* macOS Window Chrome */}
+      {/* macOS Window Chrome - minimal */}
       <div
-        className="flex items-center gap-2 px-4 py-3"
+        className="flex items-center gap-2 px-3 py-2"
         style={{
-          background: 'linear-gradient(180deg, rgb(60, 60, 60) 0%, rgb(45, 45, 45) 100%)',
+          background: 'linear-gradient(180deg, rgb(55, 55, 55) 0%, rgb(40, 40, 40) 100%)',
           borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
         }}
       >
         {/* Traffic lights */}
-        <div className="flex gap-2">
-          <div className="w-3 h-3 rounded-full bg-[#ff5f57]" />
-          <div className="w-3 h-3 rounded-full bg-[#febc2e]" />
-          <div className="w-3 h-3 rounded-full bg-[#28c840]" />
+        <div className="flex gap-1.5">
+          <div className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
+          <div className="w-2.5 h-2.5 rounded-full bg-[#febc2e]" />
+          <div className="w-2.5 h-2.5 rounded-full bg-[#28c840]" />
         </div>
         <div className="flex-1 text-center">
-          <span className="text-xs text-[rgba(255,255,255,0.5)] font-medium">
-            terminal — zsh
+          <span className="text-[10px] text-[rgba(255,255,255,0.4)] font-medium">
+            terminal
           </span>
         </div>
-        <div className="w-[52px]" /> {/* Spacer for symmetry */}
+        <div className="w-[40px]" />
       </div>
 
-      {/* Terminal Content */}
-      <div className="p-6" style={{ minHeight: 200 }}>
+      {/* Terminal Content - minimal padding */}
+      <div className="p-3">
         {/* Command prompt line */}
-        <div className="flex items-center gap-2 mb-4">
-          <span className="text-[#28c840] text-sm font-mono">➜</span>
-          <span className="text-[#89b4fa] text-sm font-mono">~</span>
-          <span className="text-white text-sm font-mono">ready_</span>
+        <div className="flex items-center gap-1.5 mb-3">
+          <span className="text-[#28c840] text-xs font-mono">➜</span>
+          <span className="text-[#89b4fa] text-xs font-mono">~</span>
+          <span className="text-white text-xs font-mono">ready_</span>
           <motion.span
-            className="w-2 h-4 bg-white ml-1"
+            className="w-1.5 h-3 bg-white ml-0.5"
             animate={{ opacity: [1, 0] }}
             transition={{ duration: 0.8, repeat: Infinity, repeatType: 'reverse' }}
           />
         </div>
 
-        {/* Pixel Grid Area */}
+        {/* Pixel Grid Area - takes maximum space */}
         <div
           className="relative mx-auto"
           style={{
             width: gridWidth,
             height: gridHeight,
-            marginTop: 20,
           }}
         >
           {/* Background grid dots (subtle) */}
           <div
             className="absolute inset-0"
             style={{
-              backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px)`,
+              backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px)`,
               backgroundSize: `${PIXEL_SIZE}px ${PIXEL_SIZE}px`,
             }}
           />
 
-          {/* Drawn pixels */}
+          {/* Drawn pixels - WHITE color */}
           {ALL_PIXELS.map((pixel, index) => {
             const pixelKey = `${pixel.x}-${pixel.y}`;
             const isDrawn = drawnPixels.has(pixelKey);
@@ -289,8 +313,8 @@ export function PixelTerminal({ className }: PixelTerminalProps) {
                 key={index}
                 className="absolute"
                 style={{
-                  left: pixel.x * PIXEL_SIZE + 10,
-                  top: pixel.y * PIXEL_SIZE + 10,
+                  left: pixel.x * PIXEL_SIZE + 8,
+                  top: pixel.y * PIXEL_SIZE + 8,
                   width: PIXEL_SIZE - 1,
                   height: PIXEL_SIZE - 1,
                   borderRadius: 1,
@@ -298,50 +322,50 @@ export function PixelTerminal({ className }: PixelTerminalProps) {
                 initial={{ opacity: 0, backgroundColor: 'transparent' }}
                 animate={{
                   opacity: isDrawn ? 1 : 0,
-                  backgroundColor: isDrawn ? '#ef4444' : 'transparent',
+                  backgroundColor: isDrawn ? '#ffffff' : 'transparent',
                   boxShadow: isGlowing
-                    ? '0 0 8px 2px rgba(239, 68, 68, 0.8)'
+                    ? '0 0 6px 2px rgba(239, 68, 68, 0.7)'
                     : '0 0 0 0 transparent',
                 }}
                 transition={{
-                  opacity: { duration: 0.05 },
+                  opacity: { duration: 0.03 },
                   boxShadow: { duration: GLOW_DURATION / 1000 },
                 }}
               />
             );
           })}
 
-          {/* Drawing dot (red cursor) */}
+          {/* Drawing dot (RED cursor) */}
           {dotPosition && (
             <motion.div
               className="absolute rounded-full"
               style={{
-                width: PIXEL_SIZE + 4,
-                height: PIXEL_SIZE + 4,
+                width: PIXEL_SIZE + 3,
+                height: PIXEL_SIZE + 3,
                 backgroundColor: '#ef4444',
-                boxShadow: '0 0 12px 4px rgba(239, 68, 68, 0.6)',
+                boxShadow: '0 0 10px 3px rgba(239, 68, 68, 0.6)',
               }}
               animate={{
-                left: dotPosition.x * PIXEL_SIZE + 10 - 2,
-                top: dotPosition.y * PIXEL_SIZE + 10 - 2,
+                left: dotPosition.x * PIXEL_SIZE + 8 - 1.5,
+                top: dotPosition.y * PIXEL_SIZE + 8 - 1.5,
               }}
               transition={{
-                duration: STEP_DURATION / 1000 * 0.8,
+                duration: STEP_DURATION / 1000 * 0.7,
                 ease: [0.4, 0, 0.2, 1],
               }}
             />
           )}
         </div>
 
-        {/* Output line */}
+        {/* Output line - minimal */}
         <motion.div
-          className="mt-6 text-center"
+          className="mt-2 text-center"
           initial={{ opacity: 0 }}
-          animate={{ opacity: drawnPixels.size > 0 ? 0.6 : 0 }}
+          animate={{ opacity: drawnPixels.size > 0 ? 0.5 : 0 }}
           transition={{ duration: 0.3 }}
         >
-          <span className="text-[rgba(255,255,255,0.4)] text-xs font-mono">
-            initializing AI services...
+          <span className="text-[rgba(255,255,255,0.35)] text-[10px] font-mono">
+            AI services ready...
           </span>
         </motion.div>
       </div>

@@ -5,10 +5,10 @@ import { useTranslations } from 'next-intl';
 import { cn } from '@/lib/utils';
 import { staggerChildren, fadeInUp } from '@/components/animations/variants';
 
-// Animated Clock Icon - gentle tick animation
+// Animated Clock Icon - gentle tick animation with proper rotation
 function ClockIcon() {
   return (
-    <motion.svg
+    <svg
       width="34"
       height="34"
       viewBox="0 0 24 24"
@@ -18,28 +18,40 @@ function ClockIcon() {
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden="true"
+      className="clock-icon"
     >
       <circle cx="12" cy="12" r="10" />
-      {/* Animated clock hand */}
-      <motion.line
+      {/* Hour hand - slower rotation */}
+      <line
         x1="12"
         y1="12"
         x2="12"
-        y2="7"
-        style={{ transformOrigin: '12px 12px' }}
-        animate={{ rotate: 360 }}
-        transition={{ duration: 8, repeat: Infinity, ease: 'linear' }}
+        y2="8"
+        className="clock-hour-hand"
       />
-      <motion.line
+      {/* Minute hand - faster rotation */}
+      <line
         x1="12"
         y1="12"
-        x2="16"
-        y2="14"
-        style={{ transformOrigin: '12px 12px' }}
-        animate={{ rotate: 360 }}
-        transition={{ duration: 60, repeat: Infinity, ease: 'linear' }}
+        x2="12"
+        y2="6"
+        className="clock-minute-hand"
       />
-    </motion.svg>
+      <style>{`
+        .clock-hour-hand {
+          transform-origin: 12px 12px;
+          animation: clock-rotate 60s linear infinite;
+        }
+        .clock-minute-hand {
+          transform-origin: 12px 12px;
+          animation: clock-rotate 5s linear infinite;
+        }
+        @keyframes clock-rotate {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+      `}</style>
+    </svg>
   );
 }
 

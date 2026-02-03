@@ -45,10 +45,18 @@ export function TextMorph({
   className,
 }: TextMorphProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPulsing, setIsPulsing] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % words.length);
+      // Start pulsing animation before switching words
+      setIsPulsing(true);
+
+      // After pulsing completes (3 pulses at ~150ms each = ~450ms), switch word
+      setTimeout(() => {
+        setIsPulsing(false);
+        setCurrentIndex((prev) => (prev + 1) % words.length);
+      }, 500);
     }, interval);
 
     return () => clearInterval(timer);
@@ -65,7 +73,31 @@ export function TextMorph({
           animate="animate"
           exit="exit"
         >
-          {words[currentIndex]}
+          <motion.span
+            className="inline-block"
+            animate={
+              isPulsing
+                ? {
+                    scale: [1, 1.08, 1, 1.08, 1, 1.08, 1],
+                    textShadow: [
+                      '0 0 0px transparent',
+                      '0 0 8px var(--color-accent)',
+                      '0 0 0px transparent',
+                      '0 0 8px var(--color-accent)',
+                      '0 0 0px transparent',
+                      '0 0 8px var(--color-accent)',
+                      '0 0 0px transparent',
+                    ],
+                  }
+                : { scale: 1 }
+            }
+            transition={{
+              duration: 0.45,
+              ease: 'easeInOut',
+            }}
+          >
+            {words[currentIndex]}
+          </motion.span>
         </motion.span>
       </AnimatePresence>
     </span>

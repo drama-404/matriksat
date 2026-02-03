@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/Button';
-import { OdometerText } from '@/components/ui/OdometerText';
+import { TextMorph } from '@/components/ui/TextMorph';
 import { PixelTerminal } from '@/components/ui/PixelTerminal';
 import { heroSequence } from '@/components/animations/variants';
 import type { Locale } from '@/i18n/routing';
@@ -83,11 +83,7 @@ export function Hero({ locale }: HeroProps) {
           >
             {content.mainHeading}
             <br />
-            <OdometerText
-              words={content.rotatingWords}
-              interval={4000}
-              rollDuration={1500}
-            />
+            <TextMorph words={content.rotatingWords} interval={3500} />
           </motion.h1>
 
           {/* Subtitle */}

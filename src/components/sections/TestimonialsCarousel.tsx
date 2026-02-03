@@ -1,7 +1,7 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect, useCallback, useMemo } from 'react';
+import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import { ScrollReveal } from '@/components/ui/ScrollReveal';
 import type { Locale } from '@/i18n/routing';
@@ -19,26 +19,42 @@ function getWrappedIndex(index: number, length: number): number {
   return ((index % length) + length) % length;
 }
 
+// Calculate relative position from center (-2, -1, 0, 1, 2)
+function getRelativePosition(cardIndex: number, activeIndex: number, totalCards: number): number {
+  let diff = cardIndex - activeIndex;
+
+  // Handle wrapping for infinite loop
+  if (diff > totalCards / 2) diff -= totalCards;
+  if (diff < -totalCards / 2) diff += totalCards;
+
+  return diff;
+}
+
+// Position configurations for 5-card coverflow effect
+const positionConfigs: Record<number, { x: number; scale: number; opacity: number; zIndex: number; rotateY: number }> = {
+  [-2]: { x: -380, scale: 0.6, opacity: 0.3, zIndex: 1, rotateY: 35 },
+  [-1]: { x: -200, scale: 0.78, opacity: 0.55, zIndex: 5, rotateY: 18 },
+  [0]: { x: 0, scale: 1, opacity: 1, zIndex: 10, rotateY: 0 },
+  [1]: { x: 200, scale: 0.78, opacity: 0.55, zIndex: 5, rotateY: -18 },
+  [2]: { x: 380, scale: 0.6, opacity: 0.3, zIndex: 1, rotateY: -35 },
+};
+
 export function TestimonialsCarousel({ locale }: TestimonialsCarouselProps) {
   const testimonials: Testimonial[] = locale === 'en' ? testimonialsEN : testimonialsAL;
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
-  const [direction, setDirection] = useState(0); // -1 for prev, 1 for next
 
   const goNext = useCallback(() => {
-    setDirection(1);
     setActiveIndex((prev) => getWrappedIndex(prev + 1, testimonials.length));
   }, [testimonials.length]);
 
   const goPrev = useCallback(() => {
-    setDirection(-1);
     setActiveIndex((prev) => getWrappedIndex(prev - 1, testimonials.length));
   }, [testimonials.length]);
 
   const goToIndex = useCallback((index: number) => {
-    setDirection(index > activeIndex ? 1 : -1);
     setActiveIndex(index);
-  }, [activeIndex]);
+  }, []);
 
   // Auto-slide every 5 seconds
   useEffect(() => {
@@ -46,20 +62,6 @@ export function TestimonialsCarousel({ locale }: TestimonialsCarouselProps) {
     const interval = setInterval(goNext, 5000);
     return () => clearInterval(interval);
   }, [goNext, isPaused]);
-
-  // Get visible cards: [prev-prev, prev, center, next, next-next]
-  const prevPrevIndex = getWrappedIndex(activeIndex - 2, testimonials.length);
-  const prevIndex = getWrappedIndex(activeIndex - 1, testimonials.length);
-  const nextIndex = getWrappedIndex(activeIndex + 1, testimonials.length);
-  const nextNextIndex = getWrappedIndex(activeIndex + 2, testimonials.length);
-
-  const visibleCards = [
-    { testimonial: testimonials[prevPrevIndex], position: 'far-left', index: prevPrevIndex },
-    { testimonial: testimonials[prevIndex], position: 'left', index: prevIndex },
-    { testimonial: testimonials[activeIndex], position: 'center', index: activeIndex },
-    { testimonial: testimonials[nextIndex], position: 'right', index: nextIndex },
-    { testimonial: testimonials[nextNextIndex], position: 'far-right', index: nextNextIndex },
-  ];
 
   return (
     <section className="py-[var(--spacing-section)] overflow-hidden" aria-label="Client testimonials">
@@ -90,18 +92,26 @@ export function TestimonialsCarousel({ locale }: TestimonialsCarouselProps) {
             </button>
 
             {/* Cards Container */}
-            <div className="relative w-full max-w-[1200px] mx-auto px-4">
-              <AnimatePresence mode="popLayout" initial={false} custom={direction}>
-                {visibleCards.map(({ testimonial, position, index }) => (
+            <div className="relative w-full max-w-[1200px] mx-auto px-4 h-full">
+              {testimonials.map((testimonial, index) => {
+                const relativePos = getRelativePosition(index, activeIndex, testimonials.length);
+
+                // Only render cards within visible range (-2 to 2)
+                if (Math.abs(relativePos) > 2) return null;
+
+                const config = positionConfigs[relativePos] || positionConfigs[0];
+                const isCenter = relativePos === 0;
+
+                return (
                   <CarouselCard
-                    key={`${testimonial.id}-${position}`}
+                    key={testimonial.id}
                     testimonial={testimonial}
-                    position={position as CarouselCardProps['position']}
-                    direction={direction}
-                    onClick={() => position !== 'center' && goToIndex(index)}
+                    config={config}
+                    isCenter={isCenter}
+                    onClick={() => !isCenter && goToIndex(index)}
                   />
-                ))}
-              </AnimatePresence>
+                );
+              })}
             </div>
 
             {/* Navigation Button - Next */}
@@ -148,60 +158,16 @@ export function TestimonialsCarousel({ locale }: TestimonialsCarouselProps) {
   );
 }
 
-// Position configurations for 5-card coverflow effect
-// Offsets calculated for 420px cards in 1200px container
-const positionConfigs = {
-  'far-left': {
-    x: 'calc(-50% - 380px)',
-    scale: 0.6,
-    opacity: 0.3,
-    zIndex: 1,
-    rotateY: 35,
-  },
-  left: {
-    x: 'calc(-50% - 200px)',
-    scale: 0.78,
-    opacity: 0.55,
-    zIndex: 5,
-    rotateY: 18,
-  },
-  center: {
-    x: '-50%',
-    scale: 1,
-    opacity: 1,
-    zIndex: 10,
-    rotateY: 0,
-  },
-  right: {
-    x: 'calc(-50% + 200px)',
-    scale: 0.78,
-    opacity: 0.55,
-    zIndex: 5,
-    rotateY: -18,
-  },
-  'far-right': {
-    x: 'calc(-50% + 380px)',
-    scale: 0.6,
-    opacity: 0.3,
-    zIndex: 1,
-    rotateY: -35,
-  },
-};
-
 interface CarouselCardProps {
   testimonial: Testimonial;
-  position: 'far-left' | 'left' | 'center' | 'right' | 'far-right';
-  direction: number;
+  config: { x: number; scale: number; opacity: number; zIndex: number; rotateY: number };
+  isCenter: boolean;
   onClick: () => void;
 }
 
-function CarouselCard({ testimonial, position, direction, onClick }: CarouselCardProps) {
-  const config = positionConfigs[position];
-  const isCenter = position === 'center';
-
+function CarouselCard({ testimonial, config, isCenter, onClick }: CarouselCardProps) {
   return (
     <motion.article
-      layout
       className={cn(
         'absolute top-1/2 left-1/2',
         'w-[340px] sm:w-[380px] md:w-[420px]',
@@ -209,39 +175,23 @@ function CarouselCard({ testimonial, position, direction, onClick }: CarouselCar
         isCenter ? 'cursor-default' : 'cursor-pointer'
       )}
       style={{
-        perspective: '1000px',
-        transformStyle: 'preserve-3d',
         boxShadow: isCenter
           ? '0 25px 50px -12px rgba(0, 0, 0, 0.15), 0 12px 24px -8px rgba(0, 0, 0, 0.1)'
           : '0 10px 30px -10px rgba(0, 0, 0, 0.1)',
       }}
-      initial={{
-        x: direction > 0 ? '100%' : '-200%',
-        y: '-50%',
-        scale: 0.7,
-        opacity: 0,
-        rotateY: direction > 0 ? -30 : 30,
-      }}
       animate={{
-        x: config.x,
+        x: `calc(-50% + ${config.x}px)`,
         y: '-50%',
         scale: config.scale,
         opacity: config.opacity,
         rotateY: config.rotateY,
         zIndex: config.zIndex,
       }}
-      exit={{
-        x: direction > 0 ? '-200%' : '100%',
-        y: '-50%',
-        scale: 0.7,
-        opacity: 0,
-        rotateY: direction > 0 ? 30 : -30,
-      }}
       transition={{
         type: 'spring',
         stiffness: 300,
         damping: 30,
-        mass: 1,
+        mass: 0.8,
       }}
       onClick={onClick}
       role="listitem"

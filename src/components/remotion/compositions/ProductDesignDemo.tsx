@@ -73,8 +73,8 @@ const UIMockup: React.FC<UIMockupProps> = ({ frame, morphProgress, fps }) => {
   return (
     <div
       style={{
-        width: 180,
-        height: 240,
+        width: 240,
+        height: 300,
         backgroundColor: `rgb(${Math.round(bgColor * 250)}, ${Math.round(bgColor * 250)}, ${Math.round(bgColor * 250)})`,
         borderRadius: 12,
         padding: 12,

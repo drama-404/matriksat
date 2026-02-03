@@ -35,8 +35,8 @@ export const AIAutomationDemo: React.FC = () => {
     <ServiceDemo accentColor="rgb(52, 145, 255)">
       <div
         style={{
-          width: 320,
-          height: 220,
+          width: 480,
+          height: 300,
           position: 'relative',
         }}
       >
@@ -86,18 +86,18 @@ export const AIAutomationDemo: React.FC = () => {
   );
 };
 
-// Scene 1: Mini chatbot interface
+// Scene 1: Chatbot interface - scaled up
 const ChatbotScene: React.FC<{ frame: number }> = ({ frame }) => (
   <div
     style={{
-      width: 200,
-      height: 180,
-      borderRadius: 16,
+      width: 280,
+      height: 240,
+      borderRadius: 20,
       backgroundColor: 'rgb(30, 30, 30)',
       overflow: 'hidden',
       display: 'flex',
       flexDirection: 'column',
-      boxShadow: '0 16px 40px rgba(0, 0, 0, 0.25)',
+      boxShadow: '0 20px 50px rgba(0, 0, 0, 0.3)',
     }}
   >
     {/* Header */}

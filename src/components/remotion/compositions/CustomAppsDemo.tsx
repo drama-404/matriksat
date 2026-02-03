@@ -96,12 +96,12 @@ const LaptopMockup: React.FC<{ frame: number; syncPulse: number }> = ({ frame, s
     {/* Screen */}
     <div
       style={{
-        width: 220,
-        height: 140,
+        width: 300,
+        height: 190,
         backgroundColor: 'rgb(30, 30, 30)',
-        borderRadius: '8px 8px 0 0',
-        padding: 6,
-        boxShadow: '0 8px 32px rgba(0, 0, 0, 0.25)',
+        borderRadius: '10px 10px 0 0',
+        padding: 8,
+        boxShadow: '0 12px 40px rgba(0, 0, 0, 0.3)',
       }}
     >
       <div

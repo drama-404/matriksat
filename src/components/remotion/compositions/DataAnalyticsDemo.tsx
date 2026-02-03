@@ -56,7 +56,7 @@ export const DataAnalyticsDemo: React.FC = () => {
     <ServiceDemo accentColor="rgb(52, 145, 255)">
       <div
         style={{
-          width: 340,
+          width: 450,
           backgroundColor: 'white',
           borderRadius: 16,
           padding: 16,

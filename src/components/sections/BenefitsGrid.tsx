@@ -96,7 +96,7 @@ function FlipCard({ benefit }: { benefit: BenefitItem }) {
         className="relative w-full h-full"
         style={{ transformStyle: 'preserve-3d' }}
         animate={{ rotateY: isFlipped ? 180 : 0 }}
-        transition={{ duration: 0.7, ease: [0.23, 1, 0.32, 1] }}
+        transition={{ duration: 0.65, ease: [0.5, 1, 0.2, 1] }}
       >
         {/* Front Face */}
         <div
