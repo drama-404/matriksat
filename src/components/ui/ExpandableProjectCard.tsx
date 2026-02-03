@@ -1,13 +1,11 @@
 'use client';
 
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import type { IndustryProject } from '@/types/content';
 
-interface ExpandableProjectCardProps {
+interface ProjectCardProps {
   project: IndustryProject;
-  isExpanded: boolean;
-  onToggle: () => void;
 }
 
 // Industry icon mapping
@@ -24,122 +22,135 @@ const industryIcons: Record<string, React.FC<{ className?: string }>> = {
   cart: CartIcon,
 };
 
-export function ExpandableProjectCard({
-  project,
-  isExpanded,
-  onToggle,
-}: ExpandableProjectCardProps) {
+export function ProjectCard({ project }: ProjectCardProps) {
   const Icon = industryIcons[project.industryIcon] ?? GlobeIcon;
 
   return (
     <motion.article
-      layout
       className={cn(
-        'rounded-2xl bg-[var(--color-background)] cursor-pointer overflow-hidden',
-        'transition-shadow duration-200',
-        isExpanded ? 'ring-2 ring-[var(--color-accent)]' : 'hover:shadow-md'
+        'relative w-full rounded-[38px] overflow-hidden bg-white',
+        'group'
       )}
-      onClick={onToggle}
-      role="button"
-      aria-expanded={isExpanded}
-      tabIndex={0}
-      onKeyDown={(e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          onToggle();
-        }
-      }}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3 }}
     >
-      {/* Collapsed Header - always visible */}
-      <div className="p-4 md:p-5">
-        <div className="flex items-start gap-3">
-          {/* Industry Icon */}
-          <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-white flex items-center justify-center">
-            <Icon className="w-5 h-5" />
+      {/* Project Image Placeholder */}
+      <div className="w-full aspect-[16/9] bg-gradient-to-br from-[rgb(240,240,240)] to-[rgb(220,220,220)] relative">
+        {/* Abstract decorative pattern as placeholder */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="grid grid-cols-4 gap-4 opacity-25">
+            {Array.from({ length: 12 }).map((_, i) => (
+              <div
+                key={i}
+                className="w-14 h-14 rounded-xl"
+                style={{
+                  backgroundColor: i % 3 === 0 ? 'var(--color-accent)' : i % 2 === 0 ? 'var(--color-dark)' : 'rgb(180,180,180)',
+                  opacity: 0.25 + (i * 0.05),
+                  transform: `rotate(${(i * 5) - 15}deg)`,
+                }}
+              />
+            ))}
           </div>
-
-          {/* Content */}
-          <div className="flex-1 min-w-0">
-            <span
-              className="text-[11px] font-medium uppercase tracking-wide"
-              style={{ color: 'var(--color-accent)' }}
-            >
-              {project.industry}
-            </span>
-            <h4
-              className="text-base font-semibold text-[var(--color-dark)] mt-0.5 leading-tight"
-              style={{ fontFamily: 'var(--font-satoshi), var(--font-inter), sans-serif' }}
-            >
-              {project.title}
-            </h4>
-            <p
-              className="text-sm mt-1 line-clamp-2"
-              style={{ color: 'rgba(0, 0, 0, 0.6)' }}
-            >
-              {project.subtitle}
-            </p>
+          {/* Main category icon */}
+          <div className="absolute w-24 h-24 rounded-3xl bg-white/80 backdrop-blur-sm flex items-center justify-center shadow-lg">
+            <Icon className="w-12 h-12" />
           </div>
-
-          {/* Expand indicator */}
-          <motion.div
-            className="flex-shrink-0 w-6 h-6 rounded-full bg-white flex items-center justify-center"
-            animate={{ rotate: isExpanded ? 180 : 0 }}
-            transition={{ duration: 0.2 }}
-          >
-            <ChevronIcon className="w-4 h-4" />
-          </motion.div>
         </div>
 
-        {/* Tags */}
-        <div className="flex flex-wrap gap-1.5 mt-3">
-          {project.tags.slice(0, 3).map((tag) => (
+        {/* Overlay Bar */}
+        <div
+          className={cn(
+            'absolute bottom-4 left-4 right-4',
+            'rounded-[34px] px-6 py-4',
+            'flex items-center justify-between',
+            'backdrop-blur-[10px]'
+          )}
+          style={{ backgroundColor: 'rgba(255, 255, 255, 0.85)' }}
+        >
+          {/* Industry Badge + Title */}
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-[var(--color-accent-subtle)] flex items-center justify-center flex-shrink-0">
+              <Icon className="w-5 h-5" />
+            </div>
+            <div>
+              <span
+                className="text-[11px] font-medium uppercase tracking-wide block"
+                style={{ color: 'var(--color-accent)' }}
+              >
+                {project.industry}
+              </span>
+              <span
+                className="text-base font-bold text-[var(--color-dark)] block leading-tight"
+                style={{ fontFamily: 'var(--font-satoshi), var(--font-inter), sans-serif' }}
+              >
+                {project.title}
+              </span>
+            </div>
+          </div>
+
+          {/* Tags */}
+          <div className="hidden md:flex items-center gap-2">
+            {project.tags.slice(0, 2).map((tag) => (
+              <span
+                key={tag}
+                className="text-[11px] font-medium px-3 py-1.5 rounded-full bg-[var(--color-background)]"
+                style={{ color: 'rgba(0, 0, 0, 0.6)' }}
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Content Section - Challenge, Solution, Results */}
+      <div className="p-6 md:p-8 space-y-5">
+        {/* Subtitle */}
+        <p
+          className="text-lg font-medium leading-snug"
+          style={{ color: 'rgba(0, 0, 0, 0.8)' }}
+        >
+          {project.subtitle}
+        </p>
+
+        {/* Challenge, Solution, Results Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {/* Challenge */}
+          <ProjectSection
+            label="Challenge"
+            content={project.challenge}
+            accentColor="var(--color-accent)"
+          />
+
+          {/* Solution */}
+          <ProjectSection
+            label="Solution"
+            content={project.solution}
+            accentColor="#22c55e"
+          />
+
+          {/* Results */}
+          <ProjectSection
+            label="Results"
+            content={project.results}
+            accentColor="#f59e0b"
+          />
+        </div>
+
+        {/* Mobile Tags */}
+        <div className="flex md:hidden flex-wrap gap-2 pt-2">
+          {project.tags.map((tag) => (
             <span
               key={tag}
-              className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-white"
-              style={{ color: 'rgba(0, 0, 0, 0.5)' }}
+              className="text-[11px] font-medium px-3 py-1.5 rounded-full bg-[var(--color-background)]"
+              style={{ color: 'rgba(0, 0, 0, 0.6)' }}
             >
               {tag}
             </span>
           ))}
         </div>
       </div>
-
-      {/* Expanded Content */}
-      <AnimatePresence initial={false}>
-        {isExpanded && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <div className="px-4 pb-5 md:px-5 md:pb-6 border-t border-white/50">
-              <div className="pt-4 space-y-4">
-                {/* Challenge */}
-                <ProjectSection
-                  label="Challenge"
-                  content={project.challenge}
-                  accentColor="var(--color-accent)"
-                />
-
-                {/* Solution */}
-                <ProjectSection
-                  label="Solution"
-                  content={project.solution}
-                  accentColor="#22c55e"
-                />
-
-                {/* Results */}
-                <ProjectSection
-                  label="Results"
-                  content={project.results}
-                  accentColor="#f59e0b"
-                />
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </motion.article>
   );
 }
@@ -156,47 +167,30 @@ function ProjectSection({
   accentColor: string;
 }) {
   return (
-    <div className="flex gap-3">
-      <div
-        className="flex-shrink-0 w-1 rounded-full"
-        style={{ backgroundColor: accentColor }}
-      />
-      <div>
+    <div className="bg-[var(--color-background)] rounded-2xl p-4">
+      <div className="flex items-center gap-2 mb-2">
+        <div
+          className="w-1.5 h-1.5 rounded-full"
+          style={{ backgroundColor: accentColor }}
+        />
         <span
           className="text-[11px] font-semibold uppercase tracking-wide"
           style={{ color: accentColor }}
         >
           {label}
         </span>
-        <p
-          className="text-sm mt-1 leading-relaxed"
-          style={{ color: 'rgba(0, 0, 0, 0.7)' }}
-        >
-          {content}
-        </p>
       </div>
+      <p
+        className="text-sm leading-relaxed line-clamp-4"
+        style={{ color: 'rgba(0, 0, 0, 0.7)' }}
+      >
+        {content}
+      </p>
     </div>
   );
 }
 
 /* ─── SVG Icons ─── */
-
-function ChevronIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      className={className}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <polyline points="6 9 12 15 18 9" />
-    </svg>
-  );
-}
 
 function HotelIcon({ className }: { className?: string }) {
   return (

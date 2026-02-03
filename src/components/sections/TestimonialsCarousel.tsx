@@ -47,14 +47,18 @@ export function TestimonialsCarousel({ locale }: TestimonialsCarouselProps) {
     return () => clearInterval(interval);
   }, [goNext, isPaused]);
 
-  // Get visible cards: [prev, center, next]
+  // Get visible cards: [prev-prev, prev, center, next, next-next]
+  const prevPrevIndex = getWrappedIndex(activeIndex - 2, testimonials.length);
   const prevIndex = getWrappedIndex(activeIndex - 1, testimonials.length);
   const nextIndex = getWrappedIndex(activeIndex + 1, testimonials.length);
+  const nextNextIndex = getWrappedIndex(activeIndex + 2, testimonials.length);
 
   const visibleCards = [
+    { testimonial: testimonials[prevPrevIndex], position: 'far-left', index: prevPrevIndex },
     { testimonial: testimonials[prevIndex], position: 'left', index: prevIndex },
     { testimonial: testimonials[activeIndex], position: 'center', index: activeIndex },
     { testimonial: testimonials[nextIndex], position: 'right', index: nextIndex },
+    { testimonial: testimonials[nextNextIndex], position: 'far-right', index: nextNextIndex },
   ];
 
   return (
@@ -92,7 +96,7 @@ export function TestimonialsCarousel({ locale }: TestimonialsCarouselProps) {
                   <CarouselCard
                     key={`${testimonial.id}-${position}`}
                     testimonial={testimonial}
-                    position={position as 'left' | 'center' | 'right'}
+                    position={position as CarouselCardProps['position']}
                     direction={direction}
                     onClick={() => position !== 'center' && goToIndex(index)}
                   />
@@ -144,14 +148,22 @@ export function TestimonialsCarousel({ locale }: TestimonialsCarouselProps) {
   );
 }
 
-// Position configurations for coverflow effect
+// Position configurations for 5-card coverflow effect
+// Offsets calculated for 420px cards in 1200px container
 const positionConfigs = {
+  'far-left': {
+    x: 'calc(-50% - 380px)',
+    scale: 0.6,
+    opacity: 0.3,
+    zIndex: 1,
+    rotateY: 35,
+  },
   left: {
-    x: '-55%',
-    scale: 0.8,
-    opacity: 0.5,
+    x: 'calc(-50% - 200px)',
+    scale: 0.78,
+    opacity: 0.55,
     zIndex: 5,
-    rotateY: 15,
+    rotateY: 18,
   },
   center: {
     x: '-50%',
@@ -161,17 +173,24 @@ const positionConfigs = {
     rotateY: 0,
   },
   right: {
-    x: '-45%',
-    scale: 0.8,
-    opacity: 0.5,
+    x: 'calc(-50% + 200px)',
+    scale: 0.78,
+    opacity: 0.55,
     zIndex: 5,
-    rotateY: -15,
+    rotateY: -18,
+  },
+  'far-right': {
+    x: 'calc(-50% + 380px)',
+    scale: 0.6,
+    opacity: 0.3,
+    zIndex: 1,
+    rotateY: -35,
   },
 };
 
 interface CarouselCardProps {
   testimonial: Testimonial;
-  position: 'left' | 'center' | 'right';
+  position: 'far-left' | 'left' | 'center' | 'right' | 'far-right';
   direction: number;
   onClick: () => void;
 }

@@ -37,6 +37,12 @@ const TOTAL_DURATION_FRAMES = STEP_DURATION_FRAMES * NUM_STEPS; // 1200 frames
 export function HowItWorks({ locale }: HowItWorksProps) {
   const content: HowItWorksContent = locale === 'en' ? howItWorksEN : howItWorksAL;
   const [activeStep, setActiveStep] = useState(1);
+  const [seekToStep, setSeekToStep] = useState<number | null>(null);
+
+  // Handler for clicking on step cards - seek to that step's frame
+  const handleStepClick = useCallback((stepNumber: number) => {
+    setSeekToStep(stepNumber);
+  }, []);
 
   return (
     <section
@@ -86,7 +92,11 @@ export function HowItWorks({ locale }: HowItWorksProps) {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
-          <ShowcasePlayer onStepChange={setActiveStep} />
+          <ShowcasePlayer
+            onStepChange={setActiveStep}
+            seekToStep={seekToStep}
+            onSeekComplete={() => setSeekToStep(null)}
+          />
         </motion.div>
 
         {/* Right Column: Step Cards */}
@@ -103,6 +113,7 @@ export function HowItWorks({ locale }: HowItWorksProps) {
               step={step}
               isActive={activeStep === index + 1}
               index={index}
+              onClick={() => handleStepClick(index + 1)}
             />
           ))}
         </motion.div>
@@ -114,15 +125,20 @@ export function HowItWorks({ locale }: HowItWorksProps) {
 /**
  * ShowcasePlayer - Remotion Player wrapper for HowItWorksShowcase
  * Tracks current frame to sync step highlighting
+ * Restarts from beginning when entering viewport
+ * Supports seeking to specific steps on click
  */
 interface ShowcasePlayerProps {
   onStepChange: (step: number) => void;
+  seekToStep: number | null;
+  onSeekComplete: () => void;
 }
 
-function ShowcasePlayer({ onStepChange }: ShowcasePlayerProps) {
+function ShowcasePlayer({ onStepChange, seekToStep, onSeekComplete }: ShowcasePlayerProps) {
   const { ref, inView } = useInView({ threshold: 0.3, triggerOnce: false });
   const [isLoaded, setIsLoaded] = useState(false);
   const [playerRef, setPlayerRef] = useState<any>(null);
+  const [wasInView, setWasInView] = useState(false);
 
   useEffect(() => {
     if (inView) {
@@ -130,6 +146,39 @@ function ShowcasePlayer({ onStepChange }: ShowcasePlayerProps) {
       return () => clearTimeout(timer);
     }
   }, [inView]);
+
+  // RESTART from beginning when entering viewport
+  useEffect(() => {
+    if (!playerRef) return;
+
+    try {
+      if (inView && !wasInView) {
+        // Just entered viewport - seek to beginning and play
+        playerRef.seekTo(0);
+        playerRef.play();
+      } else if (!inView && wasInView) {
+        // Just left viewport - pause
+        playerRef.pause();
+      }
+      setWasInView(inView);
+    } catch {
+      // Player might not be ready
+    }
+  }, [playerRef, inView, wasInView]);
+
+  // Handle seek to specific step when user clicks a step card
+  useEffect(() => {
+    if (!playerRef || seekToStep === null) return;
+
+    try {
+      const targetFrame = (seekToStep - 1) * STEP_DURATION_FRAMES;
+      playerRef.seekTo(targetFrame);
+      playerRef.play();
+      onSeekComplete();
+    } catch {
+      // Player might not be ready
+    }
+  }, [playerRef, seekToStep, onSeekComplete]);
 
   // Track frame changes to sync step highlighting (now 4 steps)
   useEffect(() => {
@@ -150,21 +199,6 @@ function ShowcasePlayer({ onStepChange }: ShowcasePlayerProps) {
 
     return () => clearInterval(intervalId);
   }, [playerRef, inView, onStepChange]);
-
-  // Control play/pause based on visibility
-  useEffect(() => {
-    if (!playerRef) return;
-
-    try {
-      if (inView) {
-        playerRef.play();
-      } else {
-        playerRef.pause();
-      }
-    } catch {
-      // Player might not be ready
-    }
-  }, [playerRef, inView]);
 
   return (
     <div
@@ -205,6 +239,7 @@ function ShowcasePlayer({ onStepChange }: ShowcasePlayerProps) {
 
 /**
  * StepCard - Individual step card with active state styling
+ * Clickable to jump to that step in the demo
  */
 interface StepCardProps {
   step: {
@@ -215,9 +250,10 @@ interface StepCardProps {
   };
   isActive: boolean;
   index: number;
+  onClick: () => void;
 }
 
-function StepCard({ step, isActive, index }: StepCardProps) {
+function StepCard({ step, isActive, index, onClick }: StepCardProps) {
   // Step-specific icons for all 4 steps
   const icons = [
     // Step 1: Search/Understand
@@ -248,15 +284,25 @@ function StepCard({ step, isActive, index }: StepCardProps) {
     <motion.article
       className={cn(
         'relative rounded-[var(--radius-card)] p-5 md:p-6 transition-all duration-300',
-        'flex flex-row gap-4 items-start',
+        'flex flex-row gap-4 items-start cursor-pointer',
         isActive
           ? 'bg-[var(--color-dark)] text-white shadow-xl'
-          : 'bg-white card-shadow'
+          : 'bg-white card-shadow hover:shadow-lg'
       )}
       initial={{ opacity: 0, x: 30 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.1, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+      onClick={onClick}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          onClick();
+        }
+      }}
+      aria-label={`Jump to step ${step.number}: ${step.title}`}
     >
       {/* Step Number/Icon Badge */}
       <div

@@ -127,9 +127,9 @@ export function FeaturesStrip({ className }: FeaturesStripProps) {
     <section className={cn('section-container', className)} aria-label="Key features">
       <motion.div
         className={cn(
-          'flex flex-col sm:flex-row items-center justify-center',
+          'flex flex-col sm:flex-row items-center justify-between',
           'max-w-[1052px] mx-auto py-6',
-          'gap-0'
+          'gap-6 sm:gap-0'
         )}
         variants={staggerChildren}
         initial="hidden"
@@ -137,23 +137,20 @@ export function FeaturesStrip({ className }: FeaturesStripProps) {
         viewport={{ once: true, amount: 0.3 }}
       >
         {features.map((feature, index) => (
-          <div
-            key={feature.bold}
-            className="flex flex-col sm:flex-row items-center"
-          >
-            {/* Dashed Divider - centered between features */}
+          <>
+            {/* Dashed Divider between items */}
             {index > 0 && (
               <>
                 {/* Desktop: vertical divider */}
                 <div
-                  className="hidden sm:flex items-center justify-center px-8"
+                  className="hidden sm:flex items-center justify-center"
                   aria-hidden="true"
                 >
                   <div className="w-[2px] h-[60px] border-l-2 border-dashed border-[rgba(0,0,0,0.17)]" />
                 </div>
                 {/* Mobile: horizontal divider */}
                 <div
-                  className="sm:hidden flex items-center justify-center py-4"
+                  className="sm:hidden flex items-center justify-center"
                   aria-hidden="true"
                 >
                   <div className="w-[60px] h-[2px] border-t-2 border-dashed border-[rgba(0,0,0,0.17)]" />
@@ -162,7 +159,8 @@ export function FeaturesStrip({ className }: FeaturesStripProps) {
             )}
 
             <motion.div
-              className="flex flex-col items-center gap-3 px-6"
+              key={feature.bold}
+              className="flex flex-col items-center gap-3 flex-1 sm:flex-initial"
               variants={fadeInUp}
             >
               <div className="text-[var(--color-accent)]">
@@ -177,7 +175,7 @@ export function FeaturesStrip({ className }: FeaturesStripProps) {
                 </p>
               </div>
             </motion.div>
-          </div>
+          </>
         ))}
       </motion.div>
     </section>

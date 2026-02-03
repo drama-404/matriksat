@@ -8,12 +8,13 @@ interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
   children: React.ReactNode;
-  size?: 'default' | 'wide';
+  size?: 'default' | 'wide' | 'fullscreen';
 }
 
 const sizeClasses = {
-  default: 'max-w-[900px]',
-  wide: 'max-w-[1000px]',
+  default: 'max-w-[900px] max-h-[90vh]',
+  wide: 'max-w-[1000px] max-h-[90vh]',
+  fullscreen: 'w-[95vw] h-[95vh] max-w-none',
 } as const;
 
 export function Modal({ isOpen, onClose, children, size = 'default' }: ModalProps) {
@@ -34,6 +35,8 @@ export function Modal({ isOpen, onClose, children, size = 'default' }: ModalProp
       document.body.style.overflow = '';
     };
   }, [isOpen, handleKeyDown]);
+
+  const isFullscreen = size === 'fullscreen';
 
   return (
     <AnimatePresence>
@@ -56,12 +59,13 @@ export function Modal({ isOpen, onClose, children, size = 'default' }: ModalProp
           {/* Modal Container */}
           <motion.div
             className={cn(
-              'relative bg-white rounded-3xl w-full max-h-[90vh] overflow-y-auto p-8 md:p-12',
+              'relative bg-white rounded-3xl w-full',
+              isFullscreen ? 'p-0 overflow-hidden' : 'p-8 md:p-12 overflow-y-auto',
               sizeClasses[size]
             )}
-            initial={{ scale: 0.9, opacity: 0 }}
+            initial={{ scale: 0.95, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.9, opacity: 0 }}
+            exit={{ scale: 0.95, opacity: 0 }}
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
             role="dialog"
             aria-modal="true"
@@ -69,7 +73,10 @@ export function Modal({ isOpen, onClose, children, size = 'default' }: ModalProp
             {/* Close Button */}
             <button
               onClick={onClose}
-              className="absolute top-6 right-6 w-10 h-10 rounded-full bg-[var(--color-background)] flex items-center justify-center hover:bg-[var(--color-accent-subtle)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]"
+              className={cn(
+                'absolute z-20 w-10 h-10 rounded-full bg-[var(--color-background)] flex items-center justify-center hover:bg-[var(--color-accent-subtle)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]',
+                isFullscreen ? 'top-4 right-4' : 'top-6 right-6'
+              )}
               aria-label="Close modal"
             >
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="rgb(0,0,0)" strokeWidth="2" strokeLinecap="round" aria-hidden="true">

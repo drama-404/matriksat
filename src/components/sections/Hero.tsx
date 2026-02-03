@@ -3,8 +3,8 @@
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/Button';
-import { TextMorph } from '@/components/ui/TextMorph';
-import { TerminalLabel } from '@/components/ui/TerminalLabel';
+import { OdometerText } from '@/components/ui/OdometerText';
+import { PixelTerminal } from '@/components/ui/PixelTerminal';
 import { heroSequence } from '@/components/animations/variants';
 import type { Locale } from '@/i18n/routing';
 
@@ -38,87 +38,93 @@ export function Hero({ locale }: HeroProps) {
         aria-hidden="true"
       />
 
-      {/* Content Container */}
-      <div className="section-container flex flex-col items-center text-center z-10">
-        {/* Status Badge */}
-        <motion.div
-          className="flex items-center gap-2 mb-8"
-          variants={heroSequence.badge}
-          initial="hidden"
-          animate="visible"
-        >
-          {/* Pulsing Status Dot (warm green) */}
-          <span className="relative flex items-center justify-center">
-            <span
-              className="absolute w-2 h-2 rounded-full bg-[var(--color-status-outer)] status-pulse"
-              aria-hidden="true"
-            />
-            <span className="w-1 h-1 rounded-full bg-[var(--color-status-inner)]" />
-          </span>
-          <span
-            className={cn(
-              'text-sm font-medium text-[var(--color-dark)]',
-              'tracking-[-0.42px]'
-            )}
+      {/* 50/50 Split Content Container */}
+      <div className="section-container flex flex-col lg:flex-row items-center gap-8 lg:gap-12 z-10">
+        {/* Left Column: Text Content */}
+        <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left">
+          {/* Status Badge */}
+          <motion.div
+            className="flex items-center gap-2 mb-6"
+            variants={heroSequence.badge}
+            initial="hidden"
+            animate="visible"
           >
-            {content.statusBadge}
-          </span>
-        </motion.div>
+            {/* Pulsing Status Dot (warm green) */}
+            <span className="relative flex items-center justify-center">
+              <span
+                className="absolute w-2 h-2 rounded-full bg-[var(--color-status-outer)] status-pulse"
+                aria-hidden="true"
+              />
+              <span className="w-1 h-1 rounded-full bg-[var(--color-status-inner)]" />
+            </span>
+            <span
+              className={cn(
+                'text-sm font-medium text-[var(--color-dark)]',
+                'tracking-[-0.42px]'
+              )}
+            >
+              {content.statusBadge}
+            </span>
+          </motion.div>
 
-        {/* Main Heading */}
-        <motion.h1
-          className={cn('max-w-[900px]', 'text-[var(--color-dark)]')}
-          style={{
-            fontFamily: 'var(--font-phudu)',
-            fontSize: 'var(--font-hero)',
-            fontWeight: 800,
-            lineHeight: 'var(--font-hero-line-height)',
-            letterSpacing: 'var(--font-hero-letter-spacing)',
-          }}
-          variants={heroSequence.heading}
-          initial="hidden"
-          animate="visible"
-        >
-          {content.mainHeading}
-          <br />
-          <TextMorph words={content.rotatingWords} interval={3000} />
-        </motion.h1>
+          {/* Main Heading */}
+          <motion.h1
+            className={cn('max-w-[600px]', 'text-[var(--color-dark)]')}
+            style={{
+              fontFamily: 'var(--font-phudu)',
+              fontSize: 'clamp(36px, 5vw, 56px)',
+              fontWeight: 800,
+              lineHeight: 1.1,
+              letterSpacing: 'var(--font-hero-letter-spacing)',
+            }}
+            variants={heroSequence.heading}
+            initial="hidden"
+            animate="visible"
+          >
+            {content.mainHeading}
+            <br />
+            <OdometerText
+              words={content.rotatingWords}
+              interval={4000}
+              rollDuration={1500}
+            />
+          </motion.h1>
 
-        {/* Subtitle */}
-        <motion.p
-          className={cn(
-            'mt-6 text-xl text-[var(--color-dark)]',
-            'leading-[26px] tracking-[-0.6px]',
-            'max-w-[600px]'
-          )}
-          variants={heroSequence.subtitle}
-          initial="hidden"
-          animate="visible"
-        >
-          {content.subtitle}
-        </motion.p>
+          {/* Subtitle */}
+          <motion.p
+            className={cn(
+              'mt-5 text-lg text-[var(--color-dark)]',
+              'leading-relaxed tracking-[-0.4px]',
+              'max-w-[480px]'
+            )}
+            variants={heroSequence.subtitle}
+            initial="hidden"
+            animate="visible"
+          >
+            {content.subtitle}
+          </motion.p>
 
-        {/* CTA Button */}
+          {/* CTA Button */}
+          <motion.div
+            className="mt-8"
+            variants={heroSequence.cta}
+            initial="hidden"
+            animate="visible"
+          >
+            <Button href="#how-it-works" variant="primary" subText="Let's Go">
+              {content.ctaPrimary}
+            </Button>
+          </motion.div>
+        </div>
+
+        {/* Right Column: Pixel Terminal */}
         <motion.div
-          className="mt-10"
-          variants={heroSequence.cta}
-          initial="hidden"
-          animate="visible"
+          className="flex-1 flex justify-center lg:justify-end"
+          initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
         >
-          <Button href="#how-it-works" variant="primary" subText="Let's Go">
-            {content.ctaPrimary}
-          </Button>
-        </motion.div>
-
-        {/* Terminal Touch */}
-        <motion.div
-          className="mt-12"
-          variants={heroSequence.cta}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 0.3 }}
-        >
-          <TerminalLabel>{locale === 'en' ? 'ready' : 'gati'}</TerminalLabel>
+          <PixelTerminal className="w-full max-w-[460px]" />
         </motion.div>
       </div>
 

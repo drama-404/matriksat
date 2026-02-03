@@ -129,7 +129,7 @@ function CategoryCard({ category, onClick }: CategoryCardProps) {
       ref={ref}
       className={cn(
         'relative bg-white rounded-[var(--radius-card-lg)] overflow-hidden card-shadow',
-        'h-[320px] p-6 flex flex-col justify-between',
+        'h-[360px] p-6 flex flex-col justify-between',
         'group cursor-pointer'
       )}
       variants={fadeInUp}
@@ -145,24 +145,33 @@ function CategoryCard({ category, onClick }: CategoryCardProps) {
       }}
       aria-label={`View ${category.title} projects`}
     >
-      {/* Title - top left */}
+      {/* Title - top left with gradient backdrop for readability */}
       <div className="relative z-10">
-        <h3
-          className="text-2xl font-bold text-[var(--color-dark)]"
-          style={{ fontFamily: 'var(--font-satoshi), var(--font-inter), sans-serif' }}
-        >
-          {category.title}
-        </h3>
-        <p
-          className="text-sm mt-1"
-          style={{ color: 'var(--color-accent)' }}
-        >
-          {category.subtitle}
-        </p>
+        {/* Gradient backdrop to ensure text readability over video */}
+        <div
+          className="absolute -inset-4 -top-6 rounded-xl pointer-events-none"
+          style={{
+            background: 'linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.8) 60%, rgba(255,255,255,0) 100%)',
+          }}
+        />
+        <div className="relative">
+          <h3
+            className="text-2xl font-bold text-[var(--color-dark)]"
+            style={{ fontFamily: 'var(--font-satoshi), var(--font-inter), sans-serif' }}
+          >
+            {category.title}
+          </h3>
+          <p
+            className="text-sm mt-1"
+            style={{ color: 'var(--color-accent)' }}
+          >
+            {category.subtitle}
+          </p>
+        </div>
       </div>
 
-      {/* Video / Static Visual Container */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
+      {/* Video / Static Visual Container - positioned below title area */}
+      <div className="absolute inset-x-0 top-[85px] bottom-[60px] flex items-center justify-center pointer-events-none overflow-hidden">
         {/* Remotion Player */}
         {hasLoaded && CompositionComponent && (
           <div

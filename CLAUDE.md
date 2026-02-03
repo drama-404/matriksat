@@ -39,23 +39,6 @@ Build a pixel-perfect replica of kree8.studio adapted for MATRIKS (AI & full-sta
 
 ## ✅ Implementation Philosophy
 
-### 1. Pixel-Perfect Precision
-
-**Spacing is Sacred**
-- The plan specifies exact values: 39px padding, 1100px max-width, 83px navbar height
-- Do NOT round these to "nice" numbers like 40px, 1200px, 80px
-- Use the exact values from kree8.studio spec
-
-**Typography Must Match**
-- Phudu 69px, weight 800, line-height 67.62px, letter-spacing -2.07px
-- Do NOT use "close enough" values
-- Load all fonts exactly as specified (Phudu, Satoshi, Inter, Euclid Circular B, Chelsea Market)
-
-**Colors Are Non-Negotiable**
-- `rgb(245, 245, 245)` for background, NOT `#f5f5f5` or `gray-100`
-- `rgb(52, 145, 255)` for accent, NOT `blue-500`
-- `rgba(0, 0, 0, 0.53)` for muted text, NOT `opacity-50`
-
 ### 2. Animation Excellence
 
 **Framer Motion for Complex Interactions**

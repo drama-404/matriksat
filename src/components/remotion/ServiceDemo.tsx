@@ -1,13 +1,14 @@
 import React from 'react';
 import { AbsoluteFill, useCurrentFrame, interpolate, spring, useVideoConfig } from 'remotion';
 
+// Note: useCurrentFrame used in child utility components below
+
 /**
  * ServiceDemo Template
  *
  * Structure (6-second videos @ 30fps = 180 frames):
  * - Mockup container ALWAYS visible (no fade on loop restart)
- * - Frames 0-90: Content animations inside mockup
- * - Frames 150-180: Subtle logo pulse
+ * - Frames 0-180: Content animations inside mockup
  *
  * Note: Title and feature pills removed - service cards already display these
  */
@@ -21,13 +22,6 @@ export const ServiceDemo: React.FC<ServiceDemoProps> = ({
   accentColor = 'rgb(196, 108, 78)',
   children,
 }) => {
-  const frame = useCurrentFrame();
-
-  // Logo subtle pulse at end
-  const logoPulse = frame >= 150
-    ? 1 + Math.sin((frame - 150) * 0.25) * 0.06
-    : 1;
-
   return (
     <AbsoluteFill
       style={{
@@ -45,30 +39,6 @@ export const ServiceDemo: React.FC<ServiceDemoProps> = ({
         }}
       >
         {children}
-      </div>
-
-      {/* Logo - always visible with subtle pulse at end */}
-      <div
-        style={{
-          position: 'absolute',
-          bottom: 24,
-          right: 24,
-          transform: `scale(${logoPulse})`,
-        }}
-      >
-        <div
-          style={{
-            width: 32,
-            height: 32,
-            borderRadius: 8,
-            backgroundColor: accentColor,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <span style={{ fontSize: 14, fontWeight: 700, color: 'white' }}>M</span>
-        </div>
       </div>
     </AbsoluteFill>
   );

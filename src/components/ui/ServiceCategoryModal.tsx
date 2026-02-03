@@ -1,9 +1,8 @@
 'use client';
 
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Modal } from './Modal';
-import { ExpandableProjectCard } from './ExpandableProjectCard';
+import { ProjectCard } from './ExpandableProjectCard';
 import type { ServiceCategory } from '@/types/content';
 
 interface ServiceCategoryModalProps {
@@ -17,125 +16,176 @@ export function ServiceCategoryModal({
   isOpen,
   onClose,
 }: ServiceCategoryModalProps) {
-  const [expandedProjectId, setExpandedProjectId] = useState<string | null>(null);
-
-  // Reset expanded state when modal closes
   const handleClose = () => {
-    setExpandedProjectId(null);
     onClose();
-  };
-
-  // Toggle project expansion (only one at a time)
-  const toggleProject = (projectId: string) => {
-    setExpandedProjectId((current) => (current === projectId ? null : projectId));
   };
 
   if (!category) return null;
 
   return (
-    <Modal isOpen={isOpen} onClose={handleClose} size="wide">
-      <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
-        {/* Left Column: 70% - Projects Grid */}
-        <motion.div
-          className="w-full lg:w-[68%]"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.3, delay: 0.1 }}
-        >
-          <h3
-            className="text-lg font-semibold text-[var(--color-dark)] mb-4"
-            style={{ fontFamily: 'var(--font-satoshi), var(--font-inter), sans-serif' }}
+    <Modal isOpen={isOpen} onClose={handleClose} size="fullscreen">
+      <div className="flex flex-col lg:flex-row h-full">
+        {/* Left Column: 70% - Scrollable Projects */}
+        <div className="w-full lg:w-[68%] h-full overflow-y-auto p-6 lg:p-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.1 }}
           >
-            Projects in {category.title}
-          </h3>
-
-          {/* Projects Grid - 2x2 on desktop, stacked on mobile */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-            {category.projects.map((project) => (
-              <ExpandableProjectCard
-                key={project.id}
-                project={project}
-                isExpanded={expandedProjectId === project.id}
-                onToggle={() => toggleProject(project.id)}
-              />
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Right Column: 30% - Category Overview + CTA */}
-        <motion.div
-          className="w-full lg:w-[32%] lg:border-l lg:border-[var(--color-background)] lg:pl-6"
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.3, delay: 0.2 }}
-        >
-          {/* Category Header */}
-          <div className="flex items-center gap-3 mb-4">
-            <CategoryIcon categoryId={category.id} />
-            <h2
-              className="text-2xl font-bold text-[var(--color-dark)]"
+            <h3
+              className="text-lg font-semibold text-[var(--color-dark)] mb-6"
               style={{ fontFamily: 'var(--font-satoshi), var(--font-inter), sans-serif' }}
             >
-              {category.title}
-            </h2>
+              {category.title} Projects
+            </h3>
+
+            {/* Projects - Vertical Stack */}
+            <div className="space-y-6">
+              {category.projects.map((project, index) => (
+                <motion.div
+                  key={project.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: 0.1 + index * 0.1 }}
+                >
+                  <ProjectCard project={project} />
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Right Column: 30% - Fixed Sidebar */}
+        <div className="hidden lg:block w-[32%] h-full bg-[var(--color-background)] border-l border-white/10">
+          <div className="sticky top-0 p-8 h-full flex flex-col">
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.3, delay: 0.2 }}
+              className="flex flex-col h-full"
+            >
+              {/* Category Icon */}
+              <CategoryIcon categoryId={category.id} />
+
+              {/* Category Header */}
+              <h2
+                className="text-3xl font-bold text-[var(--color-dark)] mt-6"
+                style={{ fontFamily: 'var(--font-satoshi), var(--font-inter), sans-serif' }}
+              >
+                {category.title}
+              </h2>
+
+              {/* Subtitle */}
+              <p
+                className="text-lg font-medium mt-2"
+                style={{ color: 'var(--color-accent)' }}
+              >
+                {category.subtitle}
+              </p>
+
+              {/* Description */}
+              <p
+                className="text-[15px] leading-relaxed mt-6 flex-1"
+                style={{ color: 'rgba(0, 0, 0, 0.7)' }}
+              >
+                {category.description}
+              </p>
+
+              {/* Stats */}
+              <div className="flex items-center gap-4 mt-6 py-4 border-t border-white/50">
+                <div className="text-center">
+                  <span className="text-2xl font-bold text-[var(--color-dark)]">
+                    {category.projects.length}
+                  </span>
+                  <span className="block text-xs" style={{ color: 'rgba(0, 0, 0, 0.5)' }}>
+                    Projects
+                  </span>
+                </div>
+                <div className="w-px h-10 bg-white/50" />
+                <div className="text-center">
+                  <span className="text-2xl font-bold text-[var(--color-dark)]">
+                    {getTotalTags(category)}
+                  </span>
+                  <span className="block text-xs" style={{ color: 'rgba(0, 0, 0, 0.5)' }}>
+                    Technologies
+                  </span>
+                </div>
+              </div>
+
+              {/* CTA Button */}
+              <a
+                href="#contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleClose();
+                  // Smooth scroll to contact section
+                  setTimeout(() => {
+                    const contactSection = document.getElementById('contact');
+                    if (contactSection) {
+                      contactSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }, 300);
+                }}
+                className="inline-flex items-center justify-center gap-2 w-full px-6 py-4 rounded-full bg-[var(--color-dark)] text-white font-semibold text-base transition-transform hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 mt-auto"
+                style={{ fontFamily: 'var(--font-satoshi), var(--font-inter), sans-serif' }}
+              >
+                <span>{category.ctaText}</span>
+                <ArrowIcon className="w-4 h-4" />
+              </a>
+
+              {/* Trust Signal */}
+              <p
+                className="text-center text-xs mt-3"
+                style={{ color: 'rgba(0, 0, 0, 0.5)' }}
+              >
+                Free consultation • No commitment
+              </p>
+            </motion.div>
           </div>
+        </div>
 
-          {/* Subtitle */}
-          <p
-            className="text-base font-medium mb-4"
-            style={{ color: 'var(--color-accent)' }}
-          >
-            {category.subtitle}
-          </p>
-
-          {/* Description */}
-          <p
-            className="text-[15px] leading-relaxed mb-6"
-            style={{ color: 'rgba(0, 0, 0, 0.7)' }}
-          >
-            {category.description}
-          </p>
-
-          {/* CTA Button */}
+        {/* Mobile Bottom Bar (shows on small screens) */}
+        <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-[var(--color-background)] p-4 z-10">
           <a
             href="#contact"
             onClick={(e) => {
               e.preventDefault();
               handleClose();
-              // Smooth scroll to contact section
               setTimeout(() => {
                 const contactSection = document.getElementById('contact');
                 if (contactSection) {
                   contactSection.scrollIntoView({ behavior: 'smooth' });
                 }
-              }, 200);
+              }, 300);
             }}
-            className="inline-flex items-center justify-center gap-2 w-full px-6 py-3.5 rounded-full bg-[var(--color-dark)] text-white font-semibold text-base transition-transform hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2"
+            className="flex items-center justify-center gap-2 w-full px-6 py-4 rounded-full bg-[var(--color-dark)] text-white font-semibold text-base"
             style={{ fontFamily: 'var(--font-satoshi), var(--font-inter), sans-serif' }}
           >
             <span>{category.ctaText}</span>
             <ArrowIcon className="w-4 h-4" />
           </a>
-
-          {/* Trust Signal */}
-          <p
-            className="text-center text-xs mt-4"
-            style={{ color: 'rgba(0, 0, 0, 0.5)' }}
-          >
-            Free consultation • No commitment
-          </p>
-        </motion.div>
+        </div>
       </div>
     </Modal>
   );
 }
 
+/* ─── Helper Functions ─── */
+
+function getTotalTags(category: ServiceCategory): number {
+  const allTags = new Set<string>();
+  category.projects.forEach((project) => {
+    project.tags.forEach((tag) => allTags.add(tag));
+  });
+  return allTags.size;
+}
+
 /* ─── Category Icon Component ─── */
 
 function CategoryIcon({ categoryId }: { categoryId: string }) {
-  const iconClass = 'w-8 h-8';
+  const iconClass = 'w-10 h-10';
   const containerClass =
-    'w-12 h-12 rounded-2xl bg-[var(--color-accent-subtle)] flex items-center justify-center';
+    'w-16 h-16 rounded-2xl bg-white flex items-center justify-center shadow-sm';
 
   const icons: Record<string, React.ReactNode> = {
     'ai-automation': (
