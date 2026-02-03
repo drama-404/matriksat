@@ -3,21 +3,21 @@
   "ctaButton": "Fillo nje Bisede",
   "ctaSub": "Pa asnje detyrim",
   "trustText": "Jemi te mire ne ate qe bejme :)",
-  "buildingText": "duke ndertuar...",
+  "buildingText": "automatizim_",
   "tickerTop": [
-    "Rregullim fluksit chatbot",
-    "Perpuno 100 fatura",
+    "Trajno chatbot",
     "Ndertu sistem rezervimi",
     "Ridizajn paneli",
-    "Konfiguro bot WhatsApp",
-    "Vendos tubacion OCR"
+    "Integrim WhatsApp",
+    "Automatizo raportet",
+    "Perpuno fatura"
   ],
   "tickerBottom": [
+    "Trajno chatbot",
+    "Ndertu sistem rezervimi",
+    "Ridizajn paneli",
     "Integrim WhatsApp",
-    "Mbeshtetje shumegjuheshe",
-    "Perputhje GDPR",
-    "Lidhes API",
-    "Analiza ndjenjash",
-    "Grumbullim komentesh"
+    "Automatizo raportet",
+    "Perpuno fatura"
   ]
 }

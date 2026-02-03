@@ -3,21 +3,21 @@
   "ctaButton": "Start a Conversation",
   "ctaSub": "No commitment needed",
   "trustText": "We're good at what we do :)",
-  "buildingText": "building...",
+  "buildingText": "automating_",
   "tickerTop": [
-    "Fix chatbot flow",
-    "Process 100 invoices",
+    "Train chatbot",
     "Build booking system",
     "Dashboard redesign",
-    "WhatsApp bot setup",
-    "Deploy OCR pipeline"
+    "WhatsApp integration",
+    "Automate reports",
+    "Process invoices"
   ],
   "tickerBottom": [
+    "Train chatbot",
+    "Build booking system",
+    "Dashboard redesign",
     "WhatsApp integration",
-    "Multi-language support",
-    "GDPR compliance",
-    "API connectors",
-    "Sentiment analysis",
-    "Review aggregation"
+    "Automate reports",
+    "Process invoices"
   ]
 }

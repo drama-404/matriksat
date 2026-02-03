@@ -173,6 +173,22 @@ body {
   animation: ticker-right 35s linear infinite;
 }
 
+/* Task Processing Tunnel Animation - Flow LEFT to RIGHT */
+@keyframes tunnel-flow-ltr {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+.tunnel-track-flow {
+  display: flex;
+  flex-direction: row-reverse;
+  animation: tunnel-flow-ltr 8s linear infinite;
+}
+
 /* Matrix Corner Handle Pulse */
 @keyframes pulse-glow {
   0%, 100% {

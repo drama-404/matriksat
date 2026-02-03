@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 import { fadeInUp } from '@/components/animations/variants';
 import type { Locale } from '@/i18n/routing';
 import type { FinalCtaContent } from '@/types/content';
@@ -83,7 +84,7 @@ export function FinalCTA({ locale }: FinalCTAProps) {
 
           {/* Sub-text badge */}
           <span
-            className="inline-block rounded-2xl px-3 py-1.5 text-[11px] font-normal mb-16"
+            className="inline-block rounded-2xl px-3 py-1.5 text-[11px] font-normal mb-12"
             style={{
               backgroundColor: 'rgba(255, 255, 255, 0.1)',
               color: 'rgba(255, 255, 255, 0.7)',
@@ -92,72 +93,229 @@ export function FinalCTA({ locale }: FinalCTAProps) {
             {content.ctaSub}
           </span>
 
-          {/* Trust Section */}
-          <div
-            className="w-full max-w-[800px] rounded-[var(--radius-sm)] p-6 sm:p-8"
-            style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)' }}
-          >
-            {/* Trust Text */}
-            <p className="text-sm font-medium text-white text-center mb-6">
-              {content.trustText}
-            </p>
-
-            {/* Tickers Container */}
-            <div className="relative overflow-hidden space-y-3">
-              {/* Top Ticker - Scrolls Left */}
-              <div className="overflow-hidden">
-                <div className="ticker-left-animation flex gap-3 whitespace-nowrap">
-                  {/* Duplicate for seamless loop */}
-                  {[...content.tickerTop, ...content.tickerTop].map((chip, i) => (
-                    <span
-                      key={`top-${i}`}
-                      className="inline-block rounded-[20px] px-4 py-2 text-[13px] font-medium text-white flex-shrink-0"
-                      style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }}
-                    >
-                      {chip}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Center "building..." text */}
-              <p
-                className="text-center text-base font-normal text-white"
-                style={{ fontFamily: 'var(--font-chelsea-market), var(--font-cursive), cursive' }}
-              >
-                {content.buildingText}
-                <span className="animate-pulse ml-0.5" aria-hidden="true">|</span>
-              </p>
-
-              {/* Bottom Ticker - Scrolls Right */}
-              <div className="overflow-hidden">
-                <div className="ticker-right-animation flex gap-3 whitespace-nowrap">
-                  {/* Duplicate for seamless loop */}
-                  {[...content.tickerBottom, ...content.tickerBottom].map((chip, i) => (
-                    <span
-                      key={`bottom-${i}`}
-                      className="inline-block rounded-[20px] px-4 py-2 text-[13px] font-medium text-white flex-shrink-0"
-                      style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }}
-                    >
-                      {chip}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
+          {/* Task Processing Tunnel */}
+          <ProcessingTunnel content={content} />
         </div>
       </motion.div>
     </section>
   );
 }
 
-/* ─── Icon ─── */
+/* ─── Processing Tunnel Component ─── */
+
+interface ProcessingTunnelProps {
+  content: FinalCtaContent;
+}
+
+function ProcessingTunnel({ content }: ProcessingTunnelProps) {
+  // Use same tasks for both tracks - they enter undone, exit done
+  const tasks = content.tickerTop;
+
+  // Offset the right track by half the tasks so different pills show on each side
+  const tasksOffset = [...tasks.slice(3), ...tasks.slice(0, 3)];
+
+  return (
+    <div className="w-full max-w-[1000px]">
+      {/* Trust Text Header */}
+      <p className="text-sm font-medium text-white text-center mb-5">
+        {content.trustText}
+      </p>
+
+      {/* Tunnel Container */}
+      <div className="relative flex items-center justify-center overflow-hidden h-[70px]">
+        {/* Left Track - Undone Tasks entering from left */}
+        <div
+          className="flex-1 overflow-hidden relative"
+          style={{
+            maskImage: 'linear-gradient(to right, transparent 0%, black 20%, black 100%)',
+            WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 20%, black 100%)',
+          }}
+        >
+          <div className="tunnel-track-flow flex gap-4 whitespace-nowrap items-center h-full">
+            {[...tasks, ...tasks, ...tasks].map((task, i) => (
+              <TaskPill key={`undone-${i}`} label={task} done={false} />
+            ))}
+          </div>
+        </div>
+
+        {/* Center Processing Box */}
+        <div className="relative flex-shrink-0 z-10">
+          <ProcessingBox text={content.buildingText} />
+        </div>
+
+        {/* Right Track - Done Tasks exiting to right (offset so different pills visible) */}
+        <div
+          className="flex-1 overflow-hidden relative"
+          style={{
+            maskImage: 'linear-gradient(to right, black 0%, black 80%, transparent 100%)',
+            WebkitMaskImage: 'linear-gradient(to right, black 0%, black 80%, transparent 100%)',
+          }}
+        >
+          <div className="tunnel-track-flow flex gap-4 whitespace-nowrap items-center h-full">
+            {[...tasksOffset, ...tasksOffset, ...tasksOffset].map((task, i) => (
+              <TaskPill key={`done-${i}`} label={task} done={true} />
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ─── Task Pill Component ─── */
+
+interface TaskPillProps {
+  label: string;
+  done: boolean;
+}
+
+function TaskPill({ label, done }: TaskPillProps) {
+  return (
+    <span
+      className="inline-flex items-center gap-2 rounded-[20px] px-4 py-2.5 text-[13px] font-medium text-white flex-shrink-0"
+      style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }}
+    >
+      {done ? (
+        <CheckIcon />
+      ) : (
+        <span
+          className="w-4 h-4 rounded-full border-2 flex-shrink-0"
+          style={{ borderColor: 'rgba(255, 255, 255, 0.4)' }}
+          aria-hidden="true"
+        />
+      )}
+      {label}
+    </span>
+  );
+}
+
+/* ─── Processing Box with Typewriter Effect ─── */
+
+interface ProcessingBoxProps {
+  text: string;
+}
+
+function ProcessingBox({ text }: ProcessingBoxProps) {
+  const [displayText, setDisplayText] = useState('');
+  const [showCursor, setShowCursor] = useState(true);
+
+  useEffect(() => {
+    let charIndex = 0;
+    let isDeleting = false;
+    let timeoutId: NodeJS.Timeout;
+
+    const typeNextChar = () => {
+      if (!isDeleting) {
+        if (charIndex <= text.length) {
+          setDisplayText(text.slice(0, charIndex));
+          charIndex++;
+          timeoutId = setTimeout(typeNextChar, 80);
+        } else {
+          // Pause at full text before deleting
+          timeoutId = setTimeout(() => {
+            isDeleting = true;
+            typeNextChar();
+          }, 2000);
+        }
+      } else {
+        if (charIndex > 0) {
+          charIndex--;
+          setDisplayText(text.slice(0, charIndex));
+          timeoutId = setTimeout(typeNextChar, 40);
+        } else {
+          // Pause before retyping
+          isDeleting = false;
+          timeoutId = setTimeout(typeNextChar, 500);
+        }
+      }
+    };
+
+    typeNextChar();
+
+    // Cursor blink effect
+    const cursorInterval = setInterval(() => {
+      setShowCursor(prev => !prev);
+    }, 530);
+
+    return () => {
+      clearTimeout(timeoutId);
+      clearInterval(cursorInterval);
+    };
+  }, [text]);
+
+  return (
+    <div
+      className="relative px-6 py-4 rounded-lg flex items-center justify-center w-[240px] h-[70px]"
+      style={{ backgroundColor: 'rgb(28, 26, 24)' }}
+    >
+      {/* Left bracket - taller and more visible */}
+      <span
+        className="absolute left-2 top-1/2 -translate-y-1/2 flex flex-col items-start"
+        style={{ color: 'rgba(255, 255, 255, 0.35)' }}
+        aria-hidden="true"
+      >
+        <span className="w-2 h-[2px] bg-current" />
+        <span className="w-[2px] h-10 bg-current -mt-[1px]" />
+        <span className="w-2 h-[2px] bg-current -mt-[1px]" />
+      </span>
+
+      {/* Text with cursor - terminal style */}
+      <span
+        className="text-white text-[16px] font-medium whitespace-nowrap"
+        style={{ fontFamily: 'var(--font-mono), monospace' }}
+      >
+        <span style={{ color: 'rgba(255, 255, 255, 0.5)' }}>&gt; </span>
+        {displayText}
+        <span
+          className="inline-block w-[2px] h-[1.1em] bg-white ml-0.5 align-middle"
+          style={{ opacity: showCursor ? 1 : 0 }}
+          aria-hidden="true"
+        />
+      </span>
+
+      {/* Right bracket - taller and more visible */}
+      <span
+        className="absolute right-2 top-1/2 -translate-y-1/2 flex flex-col items-end"
+        style={{ color: 'rgba(255, 255, 255, 0.35)' }}
+        aria-hidden="true"
+      >
+        <span className="w-2 h-[2px] bg-current" />
+        <span className="w-[2px] h-10 bg-current -mt-[1px]" />
+        <span className="w-2 h-[2px] bg-current -mt-[1px]" />
+      </span>
+    </div>
+  );
+}
+
+/* ─── Icons ─── */
 
 function SparkleIcon() {
   return (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
       <path d="M12 0L14.59 8.41L23 11L14.59 13.59L12 22L9.41 13.59L1 11L9.41 8.41L12 0Z" />
+    </svg>
+  );
+}
+
+function CheckIcon() {
+  return (
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      fill="none"
+      className="flex-shrink-0"
+      style={{ color: 'rgb(138, 154, 124)' }}
+      aria-hidden="true"
+    >
+      <circle cx="8" cy="8" r="7" stroke="currentColor" strokeWidth="2" fill="none" />
+      <path
+        d="M5 8L7 10L11 6"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
