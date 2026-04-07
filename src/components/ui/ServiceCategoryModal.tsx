@@ -36,7 +36,7 @@ export function ServiceCategoryModal({
               className="text-lg font-semibold text-[var(--color-dark)] mb-6"
               style={{ fontFamily: 'var(--font-satoshi), var(--font-inter), sans-serif' }}
             >
-              {category.title} Projects
+              {category.title} — Solution Demos
             </h3>
 
             {/* Projects - Vertical Stack */}
@@ -98,7 +98,7 @@ export function ServiceCategoryModal({
                     {category.projects.length}
                   </span>
                   <span className="block text-xs" style={{ color: 'rgba(0, 0, 0, 0.5)' }}>
-                    Projects
+                    Demos
                   </span>
                 </div>
                 <div className="w-px h-10 bg-white/50" />

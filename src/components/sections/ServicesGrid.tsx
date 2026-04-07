@@ -143,7 +143,7 @@ function CategoryCard({ category, onClick }: CategoryCardProps) {
           onClick();
         }
       }}
-      aria-label={`View ${category.title} projects`}
+      aria-label={`View ${category.title} demos`}
     >
       {/* Title - top left with gradient backdrop for readability */}
       <div className="relative z-10">
@@ -217,7 +217,7 @@ function CategoryCard({ category, onClick }: CategoryCardProps) {
             className="text-[13px] font-medium px-3 py-1.5 rounded-full bg-[var(--color-background)]"
             style={{ color: 'rgba(0, 0, 0, 0.6)' }}
           >
-            {category.projects.length} projects
+            {category.projects.length} demos
           </span>
         </div>
 

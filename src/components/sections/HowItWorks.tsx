@@ -70,9 +70,8 @@ export function HowItWorks({ locale }: HowItWorksProps) {
           className="text-[36px] md:text-[42px] font-bold tracking-[-1.32px] leading-[1.1] text-[var(--color-dark)]"
           style={{ fontFamily: 'var(--font-satoshi), var(--font-inter), sans-serif' }}
         >
-          How We Get Your
-          <br className="hidden sm:block" />
-          <span className="text-[var(--color-accent)]">Projects</span> Done
+          {content.heading}
+
         </h2>
         <p
           className="mt-4 text-base md:text-lg font-normal max-w-[600px] mx-auto"
@@ -208,7 +207,7 @@ function ShowcasePlayer({ onStepChange, seekToStep, onSeekComplete }: ShowcasePl
         'w-full max-w-[400px]'
       )}
       style={{ aspectRatio: '360/520' }}
-      aria-label="Animated demonstration of our 4-step process"
+      aria-label="Animated demonstration of my 4-step process"
     >
       {/* Remotion Player */}
       {isLoaded && HowItWorksShowcaseComposition && (
@@ -405,7 +404,7 @@ function StaticShowcaseFallback() {
         Loading demo...
       </p>
       <p className="text-[rgba(255,255,255,0.5)] text-sm mt-2 text-center">
-        See how we work
+        See how I work
       </p>
 
       {/* Placeholder step indicators - now 4 */}

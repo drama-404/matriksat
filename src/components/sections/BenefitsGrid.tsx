@@ -17,8 +17,8 @@ interface BenefitsGridProps {
 
 export function BenefitsGrid({ locale }: BenefitsGridProps) {
   const content: BenefitsContent = locale === 'en' ? benefitsEN : benefitsAL;
-  const ctaLabel = locale === 'en' ? 'View Plans and Pricing' : 'Shiko Planet dhe Çmimet';
-  const ctaSub = locale === 'en' ? "Let's Go" : 'Nisemi';
+  const ctaLabel = locale === 'en' ? "Let's Work Together" : 'Le të Punojmë Bashkë';
+  const ctaSub = locale === 'en' ? "Get in Touch" : 'Na Kontaktoni';
 
   return (
     <section className="section-container" aria-labelledby="benefits-heading">
@@ -66,7 +66,7 @@ export function BenefitsGrid({ locale }: BenefitsGridProps) {
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
       >
-        <Button href="#pricing" variant="primary" subText={ctaSub}>
+        <Button href="#contact" variant="primary" subText={ctaSub}>
           {ctaLabel}
         </Button>
       </motion.div>

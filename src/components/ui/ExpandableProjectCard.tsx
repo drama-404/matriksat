@@ -116,23 +116,23 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
         {/* Challenge, Solution, Results Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {/* Challenge */}
+          {/* The Problem */}
           <ProjectSection
-            label="Challenge"
+            label="The Problem"
             content={project.challenge}
             accentColor="var(--color-accent)"
           />
 
-          {/* Solution */}
+          {/* My Approach */}
           <ProjectSection
-            label="Solution"
+            label="My Approach"
             content={project.solution}
             accentColor="#22c55e"
           />
 
-          {/* Results */}
+          {/* Expected Impact */}
           <ProjectSection
-            label="Results"
+            label="Expected Impact"
             content={project.results}
             accentColor="#f59e0b"
           />

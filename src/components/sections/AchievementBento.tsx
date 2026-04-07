@@ -49,7 +49,7 @@ export function AchievementBento({ locale }: AchievementBentoProps) {
   const shared = sharedContent as SharedContent;
 
   return (
-    <section id="our-achievement" className="section-container" aria-labelledby="achievement-heading">
+    <section id="achievements" className="section-container" aria-labelledby="achievement-heading">
       {/* Header */}
       <motion.div
         className="text-center mb-12"

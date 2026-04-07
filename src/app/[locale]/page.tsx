@@ -3,7 +3,8 @@ import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { Hero } from '@/components/sections/Hero';
 import { FeaturesStrip } from '@/components/sections/FeaturesStrip';
-import { TestimonialsCarousel } from '@/components/sections/TestimonialsCarousel';
+// Hidden - will reactivate when real client testimonials exist
+// import { TestimonialsCarousel } from '@/components/sections/TestimonialsCarousel';
 // Hidden for now - will revisit later
 // import { BrandMarquee } from '@/components/sections/BrandMarquee';
 // import { QuoteSection } from '@/components/sections/QuoteSection';
@@ -34,7 +35,8 @@ export default async function HomePage({ params }: HomePageProps) {
       <main>
         <Hero locale={locale as Locale} />
         <FeaturesStrip />
-        <TestimonialsCarousel locale={locale as Locale} />
+        {/* Hidden - will reactivate when real client testimonials exist */}
+        {/* <TestimonialsCarousel locale={locale as Locale} /> */}
         {/* Hidden for now - will revisit later */}
         {/* <BrandMarquee /> */}
         {/* <QuoteSection locale={locale as Locale} /> */}
