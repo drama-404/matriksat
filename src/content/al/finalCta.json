@@ -1,23 +1,23 @@
 {
-  "heading": "Ende ketu? Le te ndertojme dicka.",
-  "ctaButton": "Fillo nje Bisede",
-  "ctaSub": "Pa asnje detyrim",
-  "trustText": "Jemi te mire ne ate qe bejme :)",
+  "heading": "Ende këtu? Le të ndërtojmë diçka.",
+  "ctaButton": "Fillo një Bisedë",
+  "ctaSub": "Pa asnjë detyrim",
+  "trustText": "Jam e mirë në atë që bëj :)",
   "buildingText": "automatizim_",
   "tickerTop": [
     "Trajno chatbot",
-    "Ndertu sistem rezervimi",
+    "Ndërtu sistem rezervimi",
     "Ridizajn paneli",
     "Integrim WhatsApp",
     "Automatizo raportet",
-    "Perpuno fatura"
+    "Përpuno fatura"
   ],
   "tickerBottom": [
     "Trajno chatbot",
-    "Ndertu sistem rezervimi",
+    "Ndërtu sistem rezervimi",
     "Ridizajn paneli",
     "Integrim WhatsApp",
     "Automatizo raportet",
-    "Perpuno fatura"
+    "Përpuno fatura"
   ]
 }

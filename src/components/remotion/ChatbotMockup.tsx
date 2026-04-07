@@ -90,12 +90,12 @@ export const ChatbotMockup: React.FC = () => {
               justifyContent: 'center',
             }}
           >
-            <span style={{ fontSize: 16, fontWeight: 700, color: 'white' }}>M</span>
+            <span style={{ fontSize: 16, fontWeight: 700, color: 'white' }}>D</span>
           </div>
 
           <div style={{ flex: 1 }}>
             <p style={{ fontSize: 14, fontWeight: 600, color: 'white', margin: 0 }}>
-              MATRIKS Bot
+              Denada Bot
             </p>
             <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
               <div

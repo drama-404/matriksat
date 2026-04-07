@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 /* ═══════════════════════════════════════════════════════════════
-   MATRIKS Design System - Exact Kree8.studio Specifications
+   Denada Design System - Exact Kree8.studio Specifications
    ═══════════════════════════════════════════════════════════════ */
 
 :root {
   /* ═══════════════════════════════════════════════════════════════
-     PRIMARY PALETTE - Warm Earth Tones (MATRIKS Identity)
+     PRIMARY PALETTE - Warm Earth Tones (Denada Identity)
      ═══════════════════════════════════════════════════════════════ */
   --color-background: rgb(252, 250, 247);     /* Warm cream */
   --color-accent: rgb(196, 108, 78);          /* Terracotta */

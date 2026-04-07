@@ -8,7 +8,7 @@
     "getStarted": "Get Started Today",
     "home": "Home",
     "achievements": "Achievements",
-    "ourWork": "Our Work",
+    "ourWork": "My Work",
     "faqs": "FAQs",
     "viewPlans": "View Plans and Pricing"
   },
@@ -17,25 +17,25 @@
     "mainHeading": "AI THAT WORKS FOR",
     "subtitle": "AI that actually works. No fluff. No hype. Just results.",
     "ctaPrimary": "View Plans and Pricing",
-    "ctaSecondary": "See Our Work",
+    "ctaSecondary": "See My Work",
     "letsGo": "Let's Go"
   },
   "features": {
-    "delivery": "48 Hours",
-    "deliveryDesc": "Delivery",
-    "portal": "Access to Private",
-    "portalDesc": "Project Portal",
-    "unlimited": "Unlimited",
-    "unlimitedDesc": "Revisions"
+    "delivery": "Fast Delivery",
+    "deliveryDesc": "Weeks, not months",
+    "portal": "Direct",
+    "portalDesc": "Communication",
+    "unlimited": "You Own",
+    "unlimitedDesc": "The Code"
   },
   "sections": {
     "testimonials": "What Clients Say",
     "brands": "Trusted By",
-    "achievements": "Our Achievements",
-    "benefits": "Why Choose Us",
-    "howItWorks": "How It Works",
-    "services": "Our Services",
-    "portfolio": "Our Portfolio",
+    "achievements": "My Achievements",
+    "benefits": "Why Work With Me",
+    "howItWorks": "How I Work",
+    "services": "My Services",
+    "portfolio": "My Portfolio",
     "pricing": "Engagement Models",
     "faq": "Frequently Asked Questions",
     "cta": "Ready to Get Started?"
@@ -47,7 +47,7 @@
     "readMore": "Read More"
   },
   "footer": {
-    "copyright": "MATRIKS. All rights reserved.",
+    "copyright": "denada.dev. All rights reserved.",
     "building": "building...",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service"

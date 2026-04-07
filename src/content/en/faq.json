@@ -1,62 +1,62 @@
 {
-  "heading": "Questions We Get Asked",
-  "subheading": "Good questions deserve honest answers. Here are the ones we hear most.",
+  "heading": "Questions You Might Have",
+  "subheading": "Good questions deserve honest answers. Here are the ones I hear most.",
   "footerText": "Got something else on your mind?",
-  "footerCta": "Drop us a line",
+  "footerCta": "Drop me a line",
   "items": [
     {
       "id": "who-behind",
-      "question": "Who's behind MATRIKS?",
-      "answer": "A small team of developers and AI engineers who've been building production systems for 5+ years. No agency fluff — just people who like solving interesting problems.",
-      "avatarLabel": "Hey! MATRIKS here"
+      "question": "Who are you?",
+      "answer": "I'm Denada, a full-stack developer and AI engineer based in Tirana. Computer engineering degree from Epoka University, data science masters from University of Greenwich, both with distinction. I've spent 5 years building production systems and I specialize in full-stack development, and AI integration.",
+      "avatarLabel": "Hey! Denada here"
     },
     {
       "id": "delivery-process",
       "question": "How does your process work?",
       "answer": "Quick call to understand your problem. Working prototype in days. Iterate with your feedback. Most projects go live in 2-4 weeks.",
-      "avatarLabel": "Hey! MATRIKS here"
+      "avatarLabel": "Hey! Denada here"
     },
     {
       "id": "revision-limit",
       "question": "Is there a limit to revisions?",
-      "answer": "Nope. We iterate until it works for your team. We'd rather spend extra time getting it right than leave you with something half-baked.",
-      "avatarLabel": "Hey! MATRIKS here"
+      "answer": "Nope. I iterate until it works for your team. I'd rather spend extra time getting it right than leave you with something half-baked.",
+      "avatarLabel": "Hey! Denada here"
     },
     {
       "id": "speed",
       "question": "How fast can you deliver?",
-      "answer": "First working prototype: 48-72 hours. Full project: depends on scope, but typically 2-4 weeks. We'll give you a realistic timeline upfront.",
-      "avatarLabel": "Hey! MATRIKS here"
+      "answer": "First working prototype: 48-72 hours. Full project: depends on scope, but typically 2-4 weeks. I'll give you a realistic timeline upfront.",
+      "avatarLabel": "Hey! Denada here"
     },
     {
       "id": "dont-like",
       "question": "What if I don't like what you build?",
-      "answer": "We'll keep working on it. Unlimited revisions until you're happy. If we genuinely can't deliver what you need, we'll tell you early — not after you've paid.",
-      "avatarLabel": "Hey! MATRIKS here"
+      "answer": "I'll keep working on it. Unlimited revisions until you're happy. If I genuinely can't deliver what you need, I'll tell you early, not after you've paid.",
+      "avatarLabel": "Hey! Denada here"
     },
     {
       "id": "platforms",
       "question": "Do you work with Shopify/WordPress/etc?",
-      "answer": "Yes. We integrate with most platforms and can work with whatever stack you're already using. Tell us what you have, we'll figure it out.",
-      "avatarLabel": "Hey! MATRIKS here"
+      "answer": "Yes. I integrate with most platforms and can work with whatever stack you're already using. Tell me what you have, I'll figure it out.",
+      "avatarLabel": "Hey! Denada here"
     },
     {
       "id": "pause-cancel",
       "question": "Can I pause or cancel?",
-      "answer": "For ongoing support: yes, any time. For fixed projects: we scope clearly upfront so there's no surprises. Need to pause? Just tell us.",
-      "avatarLabel": "Hey! MATRIKS here"
+      "answer": "For ongoing support: yes, any time. For fixed projects: I scope clearly upfront so there are no surprises. Need to pause? Just tell me.",
+      "avatarLabel": "Hey! Denada here"
     },
     {
       "id": "why-not-hire",
       "question": "Why not hire a full-time developer?",
-      "answer": "A good full-time dev costs €40-80k/year plus benefits, and you're locked in. With us, you pay for what you need, when you need it. Scale up for a big push, scale down when things are stable.",
-      "avatarLabel": "Hey! MATRIKS here"
+      "answer": "A good full-time dev costs \u20ac40-80k/year plus benefits, and you're locked in. With me, you pay for what you need, when you need it. Scale up for a big push, scale down when things are stable.",
+      "avatarLabel": "Hey! Denada here"
     },
     {
       "id": "refund",
       "question": "Can I get a refund?",
-      "answer": "We don't do refunds, but we also don't disappear. If something's not right, we fix it. If you need to pause, we pause. Our reputation matters more than a single project.",
-      "avatarLabel": "Hey! MATRIKS here"
+      "answer": "I don't do refunds, but I also don't disappear. If something's not right, I fix it. If you need to pause, I pause. My reputation matters more than a single project.",
+      "avatarLabel": "Hey! Denada here"
     }
   ]
 }

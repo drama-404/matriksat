@@ -50,7 +50,7 @@ export function Footer({ locale }: FooterProps) {
                   className="text-lg font-semibold tracking-tight text-white"
                   style={{ fontFamily: 'var(--font-euclid)' }}
                 >
-                  MATRIKS
+                  denada
                 </span>
                 {/* Terracotta underline accent */}
                 <span
@@ -63,8 +63,8 @@ export function Footer({ locale }: FooterProps) {
               </span>
             </Link>
             <p className="text-white/70 max-w-sm mb-6">
-              AI that actually works. No fluff. No hype. Just results for
-              businesses in Albania and Europe.
+              Full-stack developer & AI engineer based in Tirana. I build
+              AI-powered web applications, chatbots, and custom tools.
             </p>
             <TerminalLabel className="text-white/40">
               {locale === 'en' ? 'building...' : 'duke ndërtuar...'}
@@ -103,16 +103,16 @@ export function Footer({ locale }: FooterProps) {
             <ul className="space-y-3 text-white/70">
               <li>
                 <a
-                  href="mailto:hello@matriks.al"
+                  href="mailto:hello@denada.dev"
                   className="hover:text-white transition-colors"
                 >
-                  hello@matriks.al
+                  hello@denada.dev
                 </a>
               </li>
               <li>Tirana, Albania</li>
               <li>
                 <a
-                  href="https://linkedin.com/company/matriks"
+                  href="https://linkedin.com/in/denada"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors"

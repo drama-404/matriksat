@@ -1,6 +1,6 @@
 {
   "headerLabel": "Real work, real results",
-  "heading": "What We've Built",
+  "heading": "What I've Built",
   "projects": [
     {
       "id": "hotel-bot",
@@ -10,7 +10,7 @@
       "tags": ["AI Chatbot", "Hospitality", "Multi-language"],
       "modalContent": {
         "challenge": "A 4-star hotel in Tirana was losing bookings because guests couldn't get quick answers about availability, pricing, and amenities — especially outside business hours.",
-        "solution": "We built a multilingual WhatsApp + web chatbot that handles room inquiries, processes bookings, and sends confirmation emails — in Albanian, English, Italian, and German.",
+        "solution": "I built a multilingual WhatsApp + web chatbot that handles room inquiries, processes bookings, and sends confirmation emails — in Albanian, English, Italian, and German.",
         "results": "The bot handles 80% of guest inquiries automatically. Direct bookings jumped 35% in the first month. Staff now focus on in-person guest experience instead of answering the same questions over and over."
       }
     },
@@ -22,7 +22,7 @@
       "tags": ["Computer Vision", "E-commerce", "AI Search"],
       "modalContent": {
         "challenge": "An e-commerce platform with 10,000+ products struggled with text search. Customers couldn't find products when they didn't know the exact name.",
-        "solution": "We implemented visual search powered by AI — customers snap a photo or upload an image, and the system finds matching products instantly using computer vision.",
+        "solution": "I implemented visual search powered by AI — customers snap a photo or upload an image, and the system finds matching products instantly using computer vision.",
         "results": "Search-to-purchase conversion improved 28%. Average time to find a product dropped from 3 minutes to 15 seconds. Customer satisfaction went up 22%."
       }
     },
@@ -34,7 +34,7 @@
       "tags": ["Supply Chain", "QR Codes", "Traceability"],
       "modalContent": {
         "challenge": "An agricultural exporter needed to track produce from farm to destination for EU compliance. Paper records were unreliable and audits took weeks to prepare.",
-        "solution": "We built a QR-based traceability system. Each batch gets a unique code scanned at every checkpoint — farm, processing, packaging, shipping. Full chain visible in one dashboard.",
+        "solution": "I built a QR-based traceability system. Each batch gets a unique code scanned at every checkpoint — farm, processing, packaging, shipping. Full chain visible in one dashboard.",
         "results": "Audit prep time went from 2 weeks to 2 hours. Zero compliance violations since launch. The client expanded to 3 new EU markets within 6 months."
       }
     },
@@ -46,7 +46,7 @@
       "tags": ["OCR", "Automation", "Finance"],
       "modalContent": {
         "challenge": "A mid-size accounting firm processed 500+ invoices monthly by hand. Data entry errors caused payment delays and frustrated clients.",
-        "solution": "We deployed an OCR pipeline that scans invoices (PDF, photo, email), extracts key fields (amount, date, vendor, line items), and pushes data directly into their accounting software.",
+        "solution": "I deployed an OCR pipeline that scans invoices (PDF, photo, email), extracts key fields (amount, date, vendor, line items), and pushes data directly into their accounting software.",
         "results": "Processing time dropped from 8 minutes to 30 seconds per invoice. Error rate fell from 12% to under 1%. The team redirected 15+ hours per week to advisory work."
       }
     },
@@ -58,7 +58,7 @@
       "tags": ["Analytics", "Multi-platform", "Sentiment"],
       "modalContent": {
         "challenge": "A hotel chain with 8 properties managed reviews across Google, Booking.com, TripAdvisor, and Facebook separately. No unified view, slow response times.",
-        "solution": "We built a centralized dashboard that aggregates reviews from all platforms, runs sentiment analysis, suggests AI-generated responses, and tracks trends over time.",
+        "solution": "I built a centralized dashboard that aggregates reviews from all platforms, runs sentiment analysis, suggests AI-generated responses, and tracks trends over time.",
         "results": "Average response time dropped from 48 hours to 4 hours. Overall rating improved from 4.1 to 4.6 stars within 3 months. Management now has real-time visibility across all properties."
       }
     }

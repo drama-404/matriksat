@@ -1,41 +1,41 @@
 {
-  "heading": "Why MATRIKS?",
-  "subheading": "You've got options. Here's why teams choose to work with us.",
+  "heading": "Why Work With Me?",
+  "subheading": "You've got options. Here's why clients choose to work with me.",
   "items": [
     {
       "id": "results-focused",
       "icon": "chart",
       "title": "Built for Results",
       "frontText": "Outcomes over features",
-      "description": "Every project starts with one question: what measurable outcome do you need? We build towards that, not feature lists."
+      "description": "Every project starts with one question: what measurable outcome do you need? I build towards that, not feature lists."
     },
     {
       "id": "fast-delivery",
       "icon": "lightning",
       "title": "Weeks, Not Months",
       "frontText": "Validated fast",
-      "description": "Your first working prototype arrives in days. Full projects launch in 2-4 weeks. We move fast because your time matters."
+      "description": "Your first working prototype arrives in days. Full projects launch in 2-4 weeks. I move fast because your time matters."
     },
     {
       "id": "transparent-pricing",
       "icon": "dollar",
-      "title": "Clear Pricing",
+      "title": "Transparent Process",
       "frontText": "No surprises",
-      "description": "No surprise invoices. No scope creep fees. You know exactly what you're paying before we write a single line of code."
+      "description": "No surprise invoices. No scope creep fees. You know exactly what you're paying before I write a single line of code."
     },
     {
       "id": "disciplined-execution",
       "icon": "checklist",
       "title": "Disciplined Execution",
-      "frontText": "Not freelancers",
-      "description": "You're not getting random contractors. You get a structured delivery engine with weekly sprints, clear milestones, and zero babysitting needed."
+      "frontText": "Direct access",
+      "description": "You're not getting random contractors. You get me, direct communication, clear milestones, and zero handoffs."
     },
     {
       "id": "product-thinking",
       "icon": "compass",
       "title": "Product Thinking First",
       "frontText": "Vision into plan",
-      "description": "Your idea becomes a clear roadmap, a real team, and consistent output. We think like founders, not just coders."
+      "description": "Your idea becomes a clear roadmap and consistent output. I think like a founder, not just a coder."
     },
     {
       "id": "consistent-progress",

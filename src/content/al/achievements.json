@@ -1,11 +1,11 @@
 {
-  "heading": "Çfarë Kemi Ndërtuar",
+  "heading": "Çfarë Kam Ndërtuar",
   "subheading": "Numrat janë të mirë. Ja çfarë do të thonë vërtet.",
   "cards": [
     {
       "id": "projects-delivered",
-      "metric": "20+ Projekte të Dërguara",
-      "subtitle": "Chatbot, dashboard, mjete automatizimi — në hotele, retail, dhe financa",
+      "metric": "20+ Projekte të Ndërtuara",
+      "subtitle": "Chatbot, dashboard, mjete automatizimi, në hotele, retail, dhe financa",
       "type": "projects"
     },
     {
@@ -17,8 +17,8 @@
     },
     {
       "id": "impact",
-      "metric": "50K+ Mesazhe të Menaxhuara",
-      "subtitle": "Nga bot-at që ndërtuam, që njerëzit të fokusohen në punën që ka vlerë",
+      "metric": "Full-Stack + AI",
+      "subtitle": "Zhvillim nga fillimi në fund, nga frontend tek integrimi AI, që të merreni me një person, jo pesë",
       "type": "impact",
       "header": "Impakti"
     }

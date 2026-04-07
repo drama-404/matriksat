@@ -145,7 +145,7 @@ function getRobotPixels(offsetX: number): { x: number; y: number }[] {
   return pixels;
 }
 
-const TEXT = 'MATRIKS AI';
+const TEXT = 'DENADA DEV';
 const TEXT_PIXELS = textToPixels(TEXT);
 const TEXT_WIDTH = TEXT_PIXELS.length > 0 ? Math.max(...TEXT_PIXELS.map((p) => p.x)) + 1 : 0;
 
@@ -164,7 +164,7 @@ const LOOP_PAUSE = 1500; // pause before restarting
 
 /**
  * PixelTerminal - macOS-style terminal with pixel-drawing animation
- * Draws "MATRIKS AI" + robot icon in white, with red drawing cursor
+ * Draws "DENADA DEV" + robot icon in white, with red drawing cursor
  */
 export function PixelTerminal({ className }: PixelTerminalProps) {
   const [drawnPixels, setDrawnPixels] = useState<Set<string>>(new Set());

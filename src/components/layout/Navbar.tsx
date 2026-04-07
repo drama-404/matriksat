@@ -45,14 +45,14 @@ export function Navbar({ locale }: NavbarProps) {
         <Link
           href={`/${locale}`}
           className="flex items-center group"
-          aria-label="MATRIKS Home"
+          aria-label="denada Home"
         >
           <span className="relative">
             <span
               className="text-lg font-semibold tracking-tight text-[var(--color-dark)]"
               style={{ fontFamily: 'var(--font-euclid)' }}
             >
-              MATRIKS
+              denada
             </span>
             {/* Terracotta underline accent */}
             <span
@@ -89,11 +89,11 @@ export function Navbar({ locale }: NavbarProps) {
         <div className="flex items-center gap-4">
           <LanguageToggle locale={locale} className="hidden sm:flex" />
           <Button
-            href="#pricing"
+            href="#contact"
             variant="primary"
             className="hidden sm:inline-flex"
           >
-            {t('plansAndPricing')}
+            {t('getStarted')}
           </Button>
 
           {/* Mobile Menu Button */}

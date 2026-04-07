@@ -159,7 +159,7 @@ export const SystemConnectorsDemo: React.FC = () => {
           );
         })}
 
-        {/* Central Hub (MATRIKS) */}
+        {/* Central Hub */}
         <div
           style={{
             position: 'absolute',

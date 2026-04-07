@@ -1,8 +1,8 @@
 {
-  "statusBadge": "Pranojmë Projekte të Reja",
-  "mainHeading": "Ne ndërtojmë",
-  "rotatingWords": ["AI chatbot", "portale", "MVP", "automatizime"],
+  "statusBadge": "Pranoj Projekte të Reja",
+  "mainHeading": "Unë ndërtoj",
+  "rotatingWords": ["AI chatbot", "portale", "MVP", "aplikacione web"],
   "subtitle": "Zhvillim full-stack & zgjidhje AI që funksionojnë vërtet. Nga ideja në prodhim brenda javësh, jo muajsh. Pa fjalë boshe, vetëm rezultate.",
-  "ctaPrimary": "Si Punojmë",
+  "ctaPrimary": "Shiko Punën Time",
   "terminalPrompt": "gati"
 }

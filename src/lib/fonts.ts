@@ -46,7 +46,7 @@ export const euclidCircularB = Space_Grotesk({
   display: 'swap',
 });
 
-// JetBrains Mono - Terminal touches for MATRIKS identity
+// JetBrains Mono - Terminal touches for site identity
 export const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
   weight: ['400', '500'],

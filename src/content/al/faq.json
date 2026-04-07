@@ -1,62 +1,62 @@
 {
-  "heading": "Pyetjet Qe na Bejne",
-  "subheading": "Pyetjet e mira meritojne pergjigje te sinqerta. Ja ato qe degjojme me shume.",
-  "footerText": "Keni dicka tjeter ne mendje?",
-  "footerCta": "Na shkruani",
+  "heading": "Pyetje Që Mund të Keni",
+  "subheading": "Pyetjet e mira meritojnë përgjigje të sinqerta. Ja ato që dëgjoj më shumë.",
+  "footerText": "Keni diçka tjetër në mendje?",
+  "footerCta": "Më shkruani",
   "items": [
     {
       "id": "who-behind",
-      "question": "Kush eshte pas MATRIKS?",
-      "answer": "Nje ekip i vogel zhvilluesish dhe inxhinieresh AI qe kane ndertuar sisteme prodhimi per 5+ vite. Pa bosh agjensie — thjesht njerez qe pelqejne te zgjidhin probleme interesante.",
-      "avatarLabel": "Pershendetje! MATRIKS ketu"
+      "question": "Kush je ti?",
+      "answer": "Jam Denada, zhvilluese full-stack dhe inxhiniere AI me bazë në Tiranë. Diplomë në inxhinieri kompjuterike nga Universiteti Epoka, master në shkenca të dhënash nga Universiteti i Greenwich, të dyja me dallim. Kam kaluar 5 vite duke ndërtuar sisteme prodhimi dhe specializohem në zhvillim full-stack dhe integrim AI.",
+      "avatarLabel": "Përshëndetje! Denada këtu"
     },
     {
       "id": "delivery-process",
-      "question": "Si funksionon procesi juaj?",
-      "answer": "Thirrje e shkurter per te kuptuar problemin tuaj. Prototip funksional brenda ditesh. Iterojme me komente tuaja. Shumica e projekteve dalin live brenda 2-4 javesh.",
-      "avatarLabel": "Pershendetje! MATRIKS ketu"
+      "question": "Si funksionon procesi yt?",
+      "answer": "Thirrje e shkurtër për të kuptuar problemin tuaj. Prototip funksional brenda ditësh. Iteroj me komentet tuaja. Shumica e projekteve dalin live brenda 2-4 javësh.",
+      "avatarLabel": "Përshëndetje! Denada këtu"
     },
     {
       "id": "revision-limit",
-      "question": "A ka limit ne rishikime?",
-      "answer": "Jo. Iterojme derisa te funksionoje per ekipin tuaj. Preferojme te shpenzojme kohe shtese per ta bere te drejte sesa t'ju leme me dicka gjysem te bere.",
-      "avatarLabel": "Pershendetje! MATRIKS ketu"
+      "question": "A ka limit në rishikime?",
+      "answer": "Jo. Iteroj derisa të funksionojë për ekipin tuaj. Preferoj të shpenzoj kohë shtesë për ta bërë të drejtë sesa t'ju lë me diçka gjysmë të bërë.",
+      "avatarLabel": "Përshëndetje! Denada këtu"
     },
     {
       "id": "speed",
-      "question": "Sa shpejt mund te dorezzoni?",
-      "answer": "Prototipi i pare funksional: 48-72 ore. Projekti i plote: varet nga fusha, por zakonisht 2-4 jave. Do t'ju japim nje afat realist qe ne fillim.",
-      "avatarLabel": "Pershendetje! MATRIKS ketu"
+      "question": "Sa shpejt mund të dorëzosh?",
+      "answer": "Prototipi i parë funksional: 48-72 orë. Projekti i plotë: varet nga fusha, por zakonisht 2-4 javë. Do t'ju jap një afat realist që në fillim.",
+      "avatarLabel": "Përshëndetje! Denada këtu"
     },
     {
       "id": "dont-like",
-      "question": "Po sikur nuk me pelqen cfare ndertoni?",
-      "answer": "Do te vazhdojme te punojme. Rishikime te pakufizuara derisa te jeni te kenaqur. Nese vertete nuk mund te ofrojme ate qe keni nevoje, do t'ju themi heret — jo pasi te keni paguar.",
-      "avatarLabel": "Pershendetje! MATRIKS ketu"
+      "question": "Po sikur nuk më pëlqen çfarë ndërton?",
+      "answer": "Do të vazhdoj të punoj. Rishikime të pakufizuara derisa të jeni të kënaqur. Nëse vërtet nuk mund të ofroj atë që keni nevojë, do t'ju them herët, jo pasi të keni paguar.",
+      "avatarLabel": "Përshëndetje! Denada këtu"
     },
     {
       "id": "platforms",
-      "question": "A punoni me Shopify/WordPress/etj?",
-      "answer": "Po. Integrohemi me shumicen e platformave dhe mund te punojme me cfaredolloj stack qe keni. Na tregoni cfare keni, ne do ta gjejme zgjidhjen.",
-      "avatarLabel": "Pershendetje! MATRIKS ketu"
+      "question": "A punon me Shopify/WordPress/etj?",
+      "answer": "Po. Integrohem me shumicën e platformave dhe mund të punoj me çfarëdolloj stack që keni. Më tregoni çfarë keni, unë do ta gjej zgjidhjen.",
+      "avatarLabel": "Përshëndetje! Denada këtu"
     },
     {
       "id": "pause-cancel",
       "question": "A mund ta ndaloj ose anuloj?",
-      "answer": "Per mbeshtetje te vazhdueshme: po, kurdo. Per projekte fikse: e percaktojme qarte fushen qe ne fillim qe te mos kete surpriza. Duhet ta ndalosh? Thjesht na thuaj.",
-      "avatarLabel": "Pershendetje! MATRIKS ketu"
+      "answer": "Për mbështetje të vazhdueshme: po, kurdo. Për projekte fikse: e përcaktoj qartë fushën që në fillim që të mos ketë surpriza. Duhet ta ndalësh? Thjesht më thuaj.",
+      "avatarLabel": "Përshëndetje! Denada këtu"
     },
     {
       "id": "why-not-hire",
-      "question": "Pse te mos punesoj nje zhvillues me kohe te plote?",
-      "answer": "Nje zhvillues i mire me kohe te plote kushton €40-80k/vit plus perfitim, dhe jeni te lidhur. Me ne, paguani per ate qe keni nevoje, kur keni nevoje. Rrini per nje shtytje te madhe, ulni kur gjerat jane stabile.",
-      "avatarLabel": "Pershendetje! MATRIKS ketu"
+      "question": "Pse të mos punësoj një zhvillues me kohë të plotë?",
+      "answer": "Një zhvillues i mirë me kohë të plotë kushton \u20ac40-80k/vit plus përfitime, dhe jeni të lidhur. Me mua, paguani për atë që keni nevojë, kur keni nevojë. Rrini për një shtytje të madhe, ulni kur gjërat janë stabile.",
+      "avatarLabel": "Përshëndetje! Denada këtu"
     },
     {
       "id": "refund",
-      "question": "A mund te marr rimbursim?",
-      "answer": "Nuk bejme rimbursime, por gjithashtu nuk zhdukem. Nese dicka nuk eshte e drejte, e rregullojme. Nese duhet te ndaloni, ndalojme. Reputacioni yne ka me shume rendesi se nje projekt i vetem.",
-      "avatarLabel": "Pershendetje! MATRIKS ketu"
+      "question": "A mund të marr rimbursim?",
+      "answer": "Nuk bëj rimbursime, por gjithashtu nuk zhdukem. Nëse diçka nuk është e drejtë, e rregulloj. Nëse duhet të ndaloni, ndaloj. Reputacioni im ka më shumë rëndësi se një projekt i vetëm.",
+      "avatarLabel": "Përshëndetje! Denada këtu"
     }
   ]
 }

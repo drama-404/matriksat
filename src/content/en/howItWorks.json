@@ -1,30 +1,30 @@
 {
-  "heading": "How We Get Your Projects Done",
+  "heading": "How I Work",
   "subheading": "No guesswork. No scope creep. A clear path from idea to production.",
   "steps": [
     {
       "id": "step-1",
       "number": "1",
       "title": "Understand Your Challenge",
-      "description": "We dig into your business, challenges, and what success looks like. The hard questions upfront mean building the right thing from day one."
+      "description": "I dig into your business, challenges, and what success looks like. The hard questions upfront mean building the right thing from day one."
     },
     {
       "id": "step-2",
       "number": "2",
       "title": "Design Your Roadmap",
-      "description": "Team structure, timeline, milestones, and costs — all mapped out. You'll have a clear plan before we write a single line of code."
+      "description": "Structure, timeline, milestones, and costs, all mapped out. You'll have a clear plan before I write a single line of code."
     },
     {
       "id": "step-3",
       "number": "3",
       "title": "Build in Sprints",
-      "description": "Weekly releases, real demos, tight communication. You see progress every week, not just at the end. No surprises."
+      "description": "I build in focused sprints. You see progress every week, not just at the end. No surprises."
     },
     {
       "id": "step-4",
       "number": "4",
       "title": "Scale Together",
-      "description": "Add features, expand capacity, improve systems. We stick around as your technical partner, not a one-time vendor."
+      "description": "Add features, expand capacity, improve systems. I stick around as your technical partner, not a one-time vendor."
     }
   ]
 }

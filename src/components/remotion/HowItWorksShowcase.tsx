@@ -8,7 +8,7 @@ import {
 } from 'remotion';
 
 /**
- * HowItWorksShowcase - Multi-state animation showcasing MATRIKS's 4-step process
+ * HowItWorksShowcase - Multi-state animation showcasing the 4-step process
  *
  * Duration: 40 seconds (1200 frames @ 30fps)
  *
@@ -151,10 +151,10 @@ const Step1Understand: React.FC<StepProps> = ({ localFrame, fps }) => {
               justifyContent: 'center',
             }}
           >
-            <span style={{ color: 'white', fontWeight: 700, fontSize: 14 }}>M</span>
+            <span style={{ color: 'white', fontWeight: 700, fontSize: 14 }}>D</span>
           </div>
           <div>
-            <p style={{ margin: 0, fontSize: 13, fontWeight: 600, color: COLORS.dark }}>MATRIKS</p>
+            <p style={{ margin: 0, fontSize: 13, fontWeight: 600, color: COLORS.dark }}>Denada</p>
             <p style={{ margin: 0, fontSize: 10, color: COLORS.muted }}>Discovery Call • 30 min</p>
           </div>
         </div>
@@ -587,7 +587,7 @@ const Step3Build: React.FC<StepProps> = ({ localFrame, fps }) => {
 };
 
 const ClientChat: React.FC<{ localFrame: number }> = ({ localFrame }) => {
-  const showMatriksMsg = localFrame >= 15;
+  const showDevMsg = localFrame >= 15;
   const showClientMsg = localFrame >= 70;
 
   return (
@@ -606,7 +606,7 @@ const ClientChat: React.FC<{ localFrame: number }> = ({ localFrame }) => {
 
       {/* Messages */}
       <div style={{ flex: 1, padding: 16, display: 'flex', flexDirection: 'column', gap: 12 }}>
-        {showMatriksMsg && (
+        {showDevMsg && (
           <ChatBubble
             text="Week 1 demo ready! 🎉 Chatbot handles orders, FAQs, and supports AL+EN."
             isBot

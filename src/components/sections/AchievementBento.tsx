@@ -38,7 +38,7 @@ const cardHover = {
   y: -12,
   scale: 1.02,
   transition: {
-    type: 'spring',
+    type: 'spring' as const,
     stiffness: 400,
     damping: 25,
   },

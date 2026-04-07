@@ -1,5 +1,5 @@
 {
-  "heading": "What We Build",
+  "heading": "What I Build",
   "subheading": "Chatbots, dashboards, automation tools — whatever your business actually needs.",
   "services": [
     {
@@ -61,7 +61,7 @@
     {
       "id": "connectors",
       "title": "System Connectors",
-      "description": "Connect your tools. CRM, ERP, payment systems, legacy databases — we build the bridges between systems that don't talk to each other.",
+      "description": "Connect your tools. CRM, ERP, payment systems, legacy databases — I build the bridges between systems that don't talk to each other.",
       "icon": "connector",
       "remotionId": "SystemConnectorsDemo",
       "features": ["API Integration", "Data Sync", "Webhooks", "Legacy Support"]
@@ -75,6 +75,6 @@
       "features": ["Consent Management", "Data Requests", "Audit Logs", "Auto-deletion"]
     }
   ],
-  "footerText": "That's not all — we also do",
+  "footerText": "That's not all — I also do",
   "footerHighlight": "more..."
 }

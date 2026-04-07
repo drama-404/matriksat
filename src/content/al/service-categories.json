@@ -1,5 +1,5 @@
 {
-  "heading": "Çfarë Ndërtojmë",
+  "heading": "Çfarë Ndërtoj",
   "subheading": "Chatbotë, aplikacione, mjete automatizimi — çfarëdo që biznesi juaj ka vërtet nevojë. Zgjidhni secilën kartë për të parë projekte reale.",
   "categories": [
     {
@@ -7,7 +7,7 @@
       "title": "AI & Automatizim",
       "subtitle": "Sisteme inteligjente që punojnë ndërsa ju flini",
       "remotionId": "AIAutomationDemo",
-      "description": "Nga chatbotë që flasin gjuhën e klientëve tuaj tek rrjedha pune që eliminojnë detyrat e përsëritura — ndërtojmë AI që sjell rezultate të matshme. Pa fjalë boshe. Pa hype. Vetëm mjete që funksionojnë.",
+      "description": "Nga chatbotë që flasin gjuhën e klientëve tuaj tek rrjedha pune që eliminojnë detyrat e përsëritura — ndërtoj AI që sjell rezultate të matshme. Pa fjalë boshe. Pa hype. Vetëm mjete që funksionojnë.",
       "ctaText": "Të automatizojmë",
       "projects": [
         {
@@ -17,7 +17,7 @@
           "title": "Bot AI për Hotel",
           "subtitle": "Asistent rezervimesh shumëgjuhësh që trajton 80% të pyetjeve",
           "challenge": "Një hotel 4-yjësh në Tiranë po humbiste rezervime sepse mysafirët nuk merrnin përgjigje të shpejta për disponueshmëri, çmime dhe shërbime — sidomos jashtë orarit të punës. Stafi kalonte orë të tëra duke iu përgjigjur të njëjtave pyetje.",
-          "solution": "Ndërtuam një chatbot shumëgjuhësh për WhatsApp + web që trajton pyetjet për dhomat, procesin rezervimet, dhe dërgon email konfirmimi — në shqip, anglisht, italisht dhe gjermanisht. Integrohet me sistemin ekzistues të rezervimeve.",
+          "solution": "Ndërtova një chatbot shumëgjuhësh për WhatsApp + web që trajton pyetjet për dhomat, procesin rezervimet, dhe dërgon email konfirmimi — në shqip, anglisht, italisht dhe gjermanisht. Integrohet me sistemin ekzistues të rezervimeve.",
           "results": "Boti trajton 80% të pyetjeve automatikisht. Rezervimet direkte u rritën 35% në muajin e parë. Stafi tani fokusohet tek eksperienca e mysafirëve në vend të përgjigjeve të njëjta.",
           "tags": ["WhatsApp", "Shumëgjuhësh", "24/7", "Integrim Rezervimesh"]
         },
@@ -28,7 +28,7 @@
           "title": "Rekomandime Produktesh me AI",
           "subtitle": "Kërkim vizual që gjen atë që klientët s'dinë ta përshkruajnë",
           "challenge": "Një platformë e-commerce me 10,000+ produkte kishte problem me kërkimin tekstual. Klientët nuk gjenin produkte kur nuk dinin emrin e saktë. Braktisja e karrocës ishte shumë e lartë.",
-          "solution": "Implementuam kërkim vizual me AI — klientët bëjnë foto ose ngarkojnë imazh, dhe sistemi gjen produktet përkatëse menjëherë duke përdorur vizion kompjuterik. Plus rekomandime të personalizuara bazuar në historikun e shfletimit.",
+          "solution": "Implementova kërkim vizual me AI — klientët bëjnë foto ose ngarkojnë imazh, dhe sistemi gjen produktet përkatëse menjëherë duke përdorur vizion kompjuterik. Plus rekomandime të personalizuara bazuar në historikun e shfletimit.",
           "results": "Konvertimi nga kërkimi në blerje u përmirësua 28%. Koha mesatare për të gjetur produkt ra nga 3 minuta në 15 sekonda. Kënaqësia e klientëve u rrit 22%.",
           "tags": ["Vizion Kompjuterik", "Personalizim", "Real-time", "Modele ML"]
         },
@@ -39,7 +39,7 @@
           "title": "Motor Parashikimi të Kërkesës",
           "subtitle": "Mos hamendësoni inventarin — lëreni të dhënat të vendosin",
           "challenge": "Një shpërndarës me shumicë ose mbante shumë stok (duke bllokuar kapital) ose mbante pak (duke humbur shitje). Modelet sezonale, kohët e furnitorëve, dhe 2,000+ SKU e bënin parashikimin manual të pamundur.",
-          "solution": "Ndërtuam sistem parashikimi të kërkesës duke përdorur shitjet historike, sezonalitetin, trendet e tregut, dhe faktorë të jashtëm (moti, eventet). Gjeneron automatikisht porosi blerje kur stoku arrin pikat e riporosisë.",
+          "solution": "Ndërtova sistem parashikimi të kërkesës duke përdorur shitjet historike, sezonalitetin, trendet e tregut, dhe faktorë të jashtëm (moti, eventet). Gjeneron automatikisht porosi blerje kur stoku arrin pikat e riporosisë.",
           "results": "Mungesat e stokut u reduktuan 67%. Inventari i tepërt ra 40%. Ekipi i prokurimit tani shqyrton rekomandimet e AI në vend që të ndërtojë spreadsheet-a nga fillimi.",
           "tags": ["Parashikim", "Modele ML", "Auto-porosi", "Analitikë"]
         },
@@ -50,7 +50,7 @@
           "title": "Procesim Automatik Faturash",
           "subtitle": "Ekipi juaj ndalon së shkruari të dhëna me dorë. AI trajton letrat.",
           "challenge": "Një firmë kontabiliteti mesatare procesonte 500+ fatura në muaj me dorë. Gabimet në futjen e të dhënave shkaktonin vonesa pagesash dhe zhgënjenin klientët. 8 minuta për faturë, plus korrigjimet.",
-          "solution": "Vendosëm një pipeline OCR që skanon faturat (PDF, foto, email), nxjerr fushat kyçe (shuma, data, furnitori, zërat), dhe i fut të dhënat drejtpërdrejt në softuer-in e kontabilitetit. Rishikim njerëzor vetëm për rastet e veçanta.",
+          "solution": "Vendosa një pipeline OCR që skanon faturat (PDF, foto, email), nxjerr fushat kyçe (shuma, data, furnitori, zërat), dhe i fut të dhënat drejtpërdrejt në softuer-in e kontabilitetit. Rishikim njerëzor vetëm për rastet e veçanta.",
           "results": "Koha e procesimit ra nga 8 minuta në 30 sekonda për faturë. Shkalla e gabimeve ra nga 12% në nën 1%. Ekipi ridrejtoi 15+ orë në javë tek puna këshilluese.",
           "tags": ["OCR", "Document AI", "Integrim ERP", "Rrjedhë Pune"]
         }
@@ -61,7 +61,7 @@
       "title": "Zhvillim Aplikacionesh",
       "subtitle": "Aplikacione që përshtaten me mënyrën tuaj të punës",
       "remotionId": "CustomAppsDemo",
-      "description": "Softueri i gatshëm kurrë nuk përshtatet tamam. Ndërtojmë aplikacione të personalizuara — web, mobile, mjete interne — të dizajnuara sipas mënyrës si punon ekipi juaj. Pa tarifa abonimi. Ju zotëroni kodin.",
+      "description": "Softueri i gatshëm kurrë nuk përshtatet tamam. Ndërtoj aplikacione të personalizuara — web, mobile, mjete interne — të dizajnuara sipas mënyrës si punon ekipi juaj. Pa tarifa abonimi. Ju zotëroni kodin.",
       "ctaText": "Të ndërtojmë",
       "projects": [
         {
@@ -70,9 +70,9 @@
           "industryIcon": "hotel",
           "title": "Motor Rezervimesh pa Komision",
           "subtitle": "Sistemi juaj i rezervimeve. Pa tarifa për rezervim. Kurrë.",
-          "challenge": "Një grup restorantesh paguante €8,000/muaj platformave të palëve të treta — 15% komision për çdo rezervim. Plus, nuk zotëronin të dhënat e klientëve.",
-          "solution": "Ndërtuam sistem rezervimesh të personalizuar me menaxhim tavolinash, listë pritje, përkujtues SMS, dhe bazë të dhënash klientësh. Integrohet në website-in e tyre. Sinkronizohet me Google Calendar. Zero komision.",
-          "results": "Kursyen €96,000 në vitin e parë. Shkalla e klientëve që kthehen u përmirësua 23% me marketing direkt. Zotërimi i plotë i të dhënave të mysafirëve mundësoi programe besnikërie.",
+          "challenge": "Një grup restorantesh paguante \u20ac8,000/muaj platformave të palëve të treta — 15% komision për çdo rezervim. Plus, nuk zotëronin të dhënat e klientëve.",
+          "solution": "Ndërtova sistem rezervimesh të personalizuar me menaxhim tavolinash, listë pritje, përkujtues SMS, dhe bazë të dhënash klientësh. Integrohet në website-in e tyre. Sinkronizohet me Google Calendar. Zero komision.",
+          "results": "Kursyen \u20ac96,000 në vitin e parë. Shkalla e klientëve që kthehen u përmirësua 23% me marketing direkt. Zotërimi i plotë i të dhënave të mysafirëve mundësoi programe besnikërie.",
           "tags": ["Rezervime", "Integrim SMS", "Pa Komision", "CRM"]
         },
         {
@@ -82,8 +82,8 @@
           "title": "Platformë E-commerce",
           "subtitle": "Dyqan që rritet me ju, jo kundër jush",
           "challenge": "Një shitës mode i tejkaloi Shopify. Rrjedha checkout-i të personalizuara, nivele çmimesh B2B, dhe inventar multi-magazinë kërkonin veçori që platforma e tyre nuk i ofronte. Migrimi dukej i pamundur.",
-          "solution": "Ndërtuam platformë e-commerce headless me admin të personalizuar, ndarje B2B/B2C, mbështetje multi-valutash, dhe inventar specifik për magazinë. Migruam 5 vjet të dhëna klientësh pa ndërprerje.",
-          "results": "Konvertimi i checkout-it u rrit 18%. Porositë B2B u rritën 45% me portalin e personalizuar. Kostot mujore të platformës ranë nga €2,400 në €180 (vetëm hosting).",
+          "solution": "Ndërtova platformë e-commerce headless me admin të personalizuar, ndarje B2B/B2C, mbështetje multi-valutash, dhe inventar specifik për magazinë. Migrova 5 vjet të dhëna klientësh pa ndërprerje.",
+          "results": "Konvertimi i checkout-it u rrit 18%. Porositë B2B u rritën 45% me portalin e personalizuar. Kostot mujore të platformës ranë nga \u20ac2,400 në \u20ac180 (vetëm hosting).",
           "tags": ["Headless CMS", "Portal B2B", "Multi-magazinë", "Migrim"]
         },
         {
@@ -93,7 +93,7 @@
           "title": "Sistem Menaxhimi Inventari",
           "subtitle": "Dijeni saktësisht çfarë keni, ku është, në kohë reale",
           "challenge": "Një shumicë materialesh ndërtimi menaxhonte inventarin në 4 magazina duke përdorur Excel. Numërimet e stokut ishin gjithmonë gabim. Klientët merrnin telefonata \"nuk ka stok\" pasi kishin porositur.",
-          "solution": "Ndërtuam sistem inventari në kohë reale me skanim barkodi, transferta multi-lokacioni, alarme stoku të ulët, dhe integrim porosish. Aplikacion mobile për përdorim në magazinë.",
+          "solution": "Ndërtova sistem inventari në kohë reale me skanim barkodi, transferta multi-lokacioni, alarme stoku të ulët, dhe integrim porosish. Aplikacion mobile për përdorim në magazinë.",
           "results": "Saktësia e inventarit shkoi nga 73% në 99.2%. Gabimet e përmbushjes së porosive ranë 85%. Stafi kalon 60% më pak kohë në numërime stoku.",
           "tags": ["Skanim Barkodi", "Multi-lokacion", "Aplikacion Mobile", "Real-time"]
         },
@@ -104,7 +104,7 @@
           "title": "Portal Menaxhimi Furnitorësh",
           "subtitle": "Një vend për porosi, fatura, dhe komunikim",
           "challenge": "Një zinxhir restorantesh koordinonte me 40+ furnitorë përmes email-it, telefonit, dhe WhatsApp-it. Porositë humbishin. Faturat nuk përputheshin me dorëzimet. Askush nuk dinte çfarë vinte kur.",
-          "solution": "Ndërtuam portal furnitorësh ku shitësit dorëzojnë oferta, marrin PO, konfirmojnë dorëzime, dhe ngarkojnë fatura. Gjurmim në kohë reale nga porosia tek dorëzimi tek pagesa.",
+          "solution": "Ndërtova portal furnitorësh ku shitësit dorëzojnë oferta, marrin PO, konfirmojnë dorëzime, dhe ngarkojnë fatura. Gjurmim në kohë reale nga porosia tek dorëzimi tek pagesa.",
           "results": "Mosmarrëveshjet e porosive ranë 90%. Ekipi i prokurimit kurseu 12 orë/javë në koordinim. Cikli i pagesave u shkurtua nga 45 ditë në 15 ditë mesatarisht.",
           "tags": ["Portal Furnitorësh", "Menaxhim PO", "Gjurmim Dorëzimi", "Përputhje Faturash"]
         }
@@ -115,7 +115,7 @@
       "title": "Të Dhëna & Analitikë",
       "subtitle": "Kthejini të dhënat kaotike në vendime të qarta",
       "remotionId": "DataAnalyticsDemo",
-      "description": "Biznesi juaj gjeneron shumë të dhëna. Shumica rri në spreadsheet-a që askush nuk i hap. Ndërtojmë dashboard-e dhe mjete analitike që nxjerrin njohuritë që ju vërtet duheni — pa nevojë për diplomë në shkencë të dhënash.",
+      "description": "Biznesi juaj gjeneron shumë të dhëna. Shumica rri në spreadsheet-a që askush nuk i hap. Ndërtoj dashboard-e dhe mjete analitike që nxjerrin njohuritë që ju vërtet duheni — pa nevojë për diplomë në shkencë të dhënash.",
       "ctaText": "Të vizualizojmë",
       "projects": [
         {
@@ -125,7 +125,7 @@
           "title": "Dashboard Analitik Restorantesh",
           "subtitle": "Shikoni çfarë shitet, kur, dhe pse — në kohë reale",
           "challenge": "Një zinxhir hotelesh me 8 prona menaxhonte review-t në Google, Booking.com, TripAdvisor, dhe Facebook veçmas. Asnjë pamje e unifikuar e performancës, kohë e ngadaltë reagimi ndaj review-ve negative.",
-          "solution": "Ndërtuam dashboard të centralizuar që grumbullon review-t nga të gjitha platformat, kryen analizë sentimenti, sugjeron përgjigje të gjeneruara me AI, dhe ndjek trendet me kalimin e kohës në të gjitha pronat.",
+          "solution": "Ndërtova dashboard të centralizuar që grumbullon review-t nga të gjitha platformat, kryen analizë sentimenti, sugjeron përgjigje të gjeneruara me AI, dhe ndjek trendet me kalimin e kohës në të gjitha pronat.",
           "results": "Koha mesatare e përgjigjes ra nga 48 orë në 4 orë. Vlerësimi i përgjithshëm u përmirësua nga 4.1 në 4.6 yje brenda 3 muajve. Menaxhmenti tani ka dukshmëri në kohë reale.",
           "tags": ["Multi-platformë", "Sentiment AI", "Analizë Trendesh", "Alarme"]
         },
@@ -136,8 +136,8 @@
           "title": "Platformë Analitike E-commerce",
           "subtitle": "Përtej Google Analytics — metrikat që kanë rëndësi",
           "challenge": "Një shitës online kishte të dhëna kudo — Google Analytics, Shopify, Facebook Ads, fushata email — por asnjë pamje të vetme. Nuk mund të përgjigjeshin pyetje të thjeshta si \"cili kanal është më fitimprurës?\"",
-          "solution": "Ndërtuam platformë analitike të unifikuar që tërheq të dhëna nga 8 burime. Modelim atribuimi të personalizuar, gjurmim të vlerës gjatë jetës së klientit, analizë kohorte, dhe raporte automatike javore.",
-          "results": "Identifikuam €45,000/muaj shpenzime reklamash të humbura. Rialokuam buxhetin tek kanalet me performancë më të mirë. ROI e marketingut u përmirësua 34% në tremujorin e parë.",
+          "solution": "Ndërtova platformë analitike të unifikuar që tërheq të dhëna nga 8 burime. Modelim atribuimi të personalizuar, gjurmim të vlerës gjatë jetës së klientit, analizë kohorte, dhe raporte automatike javore.",
+          "results": "Identifikova \u20ac45,000/muaj shpenzime reklamash të humbura. Rialokova buxhetin tek kanalet me performancë më të mirë. ROI e marketingut u përmirësua 34% në tremujorin e parë.",
           "tags": ["Data Warehouse", "Atribuim", "Gjurmim CLV", "Raporte të Personalizuara"]
         },
         {
@@ -147,8 +147,8 @@
           "title": "Analizë Blerjesh Klientësh",
           "subtitle": "Njihni klientët tuaj më mirë se vetë ata",
           "challenge": "Një shumicë ushqimore kishte 500+ klientë B2B por i trajtonte të gjithë njësoj. Asnjë dukshmëri mbi modelet e blerjeve, rrezikun e largimit, ose mundësitë e shitjes së kryqëzuar. Bazoheshin në instinktin e përfaqësuesve.",
-          "solution": "Ndërtuam dashboard inteligjence klientësh me analizë frekuence blerjesh, analizë shporte, parashikim largimi, dhe metrika performace për përfaqësues. Alarme automatike për llogaritë në rrezik.",
-          "results": "Identifikuam 23 llogari në rrezik largimi — shpëtuam 18 prej tyre. Rekomandimet e shitjes së kryqëzuar gjeneruan €180,000 të ardhura shtesë. Produktiviteti i ekipit të shitjeve u rrit 25%.",
+          "solution": "Ndërtova dashboard inteligjence klientësh me analizë frekuence blerjesh, analizë shporte, parashikim largimi, dhe metrika performace për përfaqësues. Alarme automatike për llogaritë në rrezik.",
+          "results": "Identifikova 23 llogari në rrezik largimi — shpëtova 18 prej tyre. Rekomandimet e shitjes së kryqëzuar gjeneruan \u20ac180,000 të ardhura shtesë. Produktiviteti i ekipit të shitjeve u rrit 25%.",
           "tags": ["Inteligjencë Klientësh", "Parashikim Largimi", "Analizë Shporte", "Alarme"]
         },
         {
@@ -158,7 +158,7 @@
           "title": "Portal Klientësh Ndërtimi",
           "subtitle": "Klientët shohin progresin e projektit pa ju telefonuar",
           "challenge": "Një kompani ndërtimi kalonte orë çdo javë duke iu përgjigjur pyetjeve të klientëve: \"Cila është gjendja?\" \"Kur fillon faza 2?\" \"A mund të shoh foto?\" Menaxherët e projekteve po mbyteshin në telefonata përditësimi.",
-          "solution": "Ndërtuam portal klientësh me linja kohore projekti në kohë reale, galeri fotosh, ruajtje dokumentesh, dhe njoftime kilometrash. Klientët vetë-shërbehen për përditësimet e tyre.",
+          "solution": "Ndërtova portal klientësh me linja kohore projekti në kohë reale, galeri fotosh, ruajtje dokumentesh, dhe njoftime kilometrash. Klientët vetë-shërbehen për përditësimet e tyre.",
           "results": "Telefonatat e klientëve për përditësime statusi ranë 80%. Menaxherët e projekteve fituan 8 orë/javë. Vlerësimet e kënaqësisë së klientëve u përmirësuan 31%. Shkalla e referimeve u dyfishua.",
           "tags": ["Portal Klientësh", "Përditësime Real-time", "Hub Dokumentesh", "Njoftime"]
         }
@@ -169,7 +169,7 @@
       "title": "Dizajn Produkti",
       "subtitle": "Ndërfaqe të bukura që përdoruesit i kuptojnë vërtet",
       "remotionId": "ProductDesignDemo",
-      "description": "Dizajni i mirë nuk është dekorim — është mënyra si funksionojnë gjërat. Dizajnojmë produkte që njerëzit duan t'i përdorin: ndërfaqe të qarta, rrjedha intuitive, dhe pamje vizuale që ndërtojnë besim. Nga wireframe-t tek dorëzimi piksel-perfekt.",
+      "description": "Dizajni i mirë nuk është dekorim — është mënyra si funksionojnë gjërat. Dizajnoj produkte që njerëzit duan t'i përdorin: ndërfaqe të qarta, rrjedha intuitive, dhe pamje vizuale që ndërtojnë besim. Nga wireframe-t tek dorëzimi piksel-perfekt.",
       "ctaText": "Të dizajnojmë",
       "projects": [
         {
@@ -179,8 +179,8 @@
           "title": "Dizajn Aplikacionesh Web",
           "subtitle": "Funksionalitet kompleks, ndërfaqe të thjeshta",
           "challenge": "Kthimi i kërkesave komplekse të biznesit në ndërfaqe që nuk kërkojnë manual. Veçori enterprise me përdorshmëri niveli startup.",
-          "solution": "Dizajnojmë aplikacione web me kërkim përdoruesish, arkitekturë informacioni, biblioteka komponentësh, dhe paraqitje responsive. Nga mjete me shumë dashboard-e tek portale për klientë.",
-          "results": "Dizajnet tona të aplikacioneve web arrijnë vazhdimisht 40%+ përshpejtim në adoptimin e përdoruesve dhe 60%+ reduktim në biletat e mbështetjes për konfuzion UI.",
+          "solution": "Dizajnoj aplikacione web me kërkim përdoruesish, arkitekturë informacioni, biblioteka komponentësh, dhe paraqitje responsive. Nga mjete me shumë dashboard-e tek portale për klientë.",
+          "results": "Dizajnet e mia të aplikacioneve web arrijnë vazhdimisht 40%+ përshpejtim në adoptimin e përdoruesve dhe 60%+ reduktim në biletat e mbështetjes për konfuzion UI.",
           "tags": ["UI Dashboard", "Sisteme Komponentësh", "Responsive", "Kërkim Përdoruesish"]
         },
         {
@@ -189,9 +189,9 @@
           "industryIcon": "phone",
           "title": "Dizajn Aplikacionesh Mobile",
           "subtitle": "Ndjesi native. Gjithçka miqësore me gishtin.",
-          "challenge": "Përdoruesit mobile janë të padurueshëm. Keni 3 sekonda të bëni kuptim. Dizajnojmë aplikacione që ndihen intuitive që në hapjen e parë — pa nevojë për tutoriale.",
-          "solution": "Dizajnojmë për iOS dhe Android me modele specifike për platformë, navigim me gjeste, gjendje offline, dhe asete të optimizuara për performancë. Zona prekjeje që vërtet funksionojnë.",
-          "results": "Aplikacionet mobile që dizajnojmë mesatarisht marrin 4.7+ vlerësim me yje. Mbajtja e përdoruesve në 30 ditë është 2.3x më lart se mesatarja e industrisë. \"E lehtë për t'u përdorur\" është fjala kyçe #1 në review.",
+          "challenge": "Përdoruesit mobile janë të padurueshëm. Keni 3 sekonda të bëni kuptim. Dizajnoj aplikacione që ndihen intuitive që në hapjen e parë — pa nevojë për tutoriale.",
+          "solution": "Dizajnoj për iOS dhe Android me modele specifike për platformë, navigim me gjeste, gjendje offline, dhe asete të optimizuara për performancë. Zona prekjeje që vërtet funksionojnë.",
+          "results": "Aplikacionet mobile që dizajnoj mesatarisht marrin 4.7+ vlerësim me yje. Mbajtja e përdoruesve në 30 ditë është 2.3x më lart se mesatarja e industrisë. \"E lehtë për t'u përdorur\" është fjala kyçe #1 në review.",
           "tags": ["Dizajn iOS", "Dizajn Android", "Gjeste", "UX Offline"]
         },
         {
@@ -201,8 +201,8 @@
           "title": "Dizajn Platformash SaaS",
           "subtitle": "Produkte që shiten vetë përmes UX të shkëlqyer",
           "challenge": "SaaS jeton ose vdes nga përdorshmëria. Përdoruesit e provës falas duhet të shohin vlerë menjëherë. Adoptimi duhet të jetë pa fërkime. Veçoritë duhet të jenë të zbulueshme.",
-          "solution": "Dizajnojmë produkte SaaS me adoptim të fokusuar në konvertim, zbulim progresiv, gjendje boshe që edukojnë, dhe rrjedha abonimi që nuk ndihen të bezdisshme.",
-          "results": "Produktet SaaS që dizajnojmë shohin 45%+ përmirësim në konvertimin nga prova në abonim. Largimi bie 25%+ kur përdoruesit vërtet mund të gjejnë dhe përdorin veçoritë.",
+          "solution": "Dizajnoj produkte SaaS me adoptim të fokusuar në konvertim, zbulim progresiv, gjendje boshe që edukojnë, dhe rrjedha abonimi që nuk ndihen të bezdisshme.",
+          "results": "Produktet SaaS që dizajnoj shohin 45%+ përmirësim në konvertimin nga prova në abonim. Largimi bie 25%+ kur përdoruesit vërtet mund të gjejnë dhe përdorin veçoritë.",
           "tags": ["UX Adoptimi", "Dizajn Konvertimi", "Zbulim Veçorish", "UI Çmimesh"]
         },
         {
@@ -211,8 +211,8 @@
           "industryIcon": "cart",
           "title": "Dizajn E-commerce",
           "subtitle": "Dyqane që konvertojnë shfletuesit në blerës",
-          "challenge": "Shumica e faqeve e-commerce duken njësoj. Faqe produktesh që nuk shesin. Checkout me 6 hapa të panevojshëm. Braktisje karrocene mbi 70%.",
-          "solution": "Dizajnojmë eksperienca e-commerce me faqe produktesh që ndalin scroll-in, checkout pa fërkime, sinjale besimi që funksionojnë, dhe upsell që ndihen të dobishme jo të bezdisshme.",
+          "challenge": "Shumica e faqeve e-commerce duken njësoj. Faqe produktesh që nuk shesin. Checkout me 6 hapa të panevojshëm. Braktisje karroce mbi 70%.",
+          "solution": "Dizajnoj eksperienca e-commerce me faqe produktesh që ndalin scroll-in, checkout pa fërkime, sinjale besimi që funksionojnë, dhe upsell që ndihen të dobishme jo të bezdisshme.",
           "results": "Ridizajnimet e e-commerce mesatarisht rrisin konvertimin 23%. Braktisja e karrocës bie 35%+ me rrjedha checkout të optimizuara. Vlera mesatare e porosisë rritet 18%.",
           "tags": ["Faqe Produktesh", "UX Checkout", "Mobile Commerce", "Konvertim"]
         }

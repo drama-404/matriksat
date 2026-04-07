@@ -1,80 +1,80 @@
 {
-  "heading": "Cfare Ndertojme",
-  "subheading": "Chatbot, dashboard, mjete automatizimi — cfaredolloj qe biznesi juaj ka nevoje vertet.",
+  "heading": "Çfarë Ndërtoj",
+  "subheading": "Chatbot, dashboard, mjete automatizimi — çfarëdolloj që biznesi juaj ka nevojë vërtet.",
   "services": [
     {
       "id": "chatbots",
-      "title": "Chatbot Qe Funksionojne",
-      "description": "Chatbot AI shumegjuheshe qe trajtojne 80% te pyetjeve te klienteve. WhatsApp, web, Messenger — kudo ku jane tashem klientet tuaj.",
+      "title": "Chatbot Që Funksionojnë",
+      "description": "Chatbot AI shumëgjuhëshe që trajtojnë 80% të pyetjeve të klientëve. WhatsApp, web, Messenger — kudo ku janë tashmë klientët tuaj.",
       "icon": "chat",
       "remotionId": "ChatbotsDemo",
-      "features": ["Shumegjuhesh", "WhatsApp", "Messenger", "Web Widget"]
+      "features": ["Shumëgjuhësh", "WhatsApp", "Messenger", "Web Widget"]
     },
     {
       "id": "invoice-ocr",
-      "title": "Perpunim Faturash",
-      "description": "Skanoni, nxirrni dhe perpunoni faturat automatikisht. Ekipi juaj ndalon se shkruari te dhenat me dore. AI merret me dokumentet.",
+      "title": "Përpunim Faturash",
+      "description": "Skanoni, nxirrni dhe përpunoni faturat automatikisht. Ekipi juaj ndalon së shkruari të dhënat me dorë. AI merret me dokumentet.",
       "icon": "document",
       "remotionId": "InvoiceOCRDemo",
-      "features": ["Nxjerrje PDF", "Shumeformat", "Auto-kategorizim", "Eksport"]
+      "features": ["Nxjerrje PDF", "Shumëformat", "Auto-kategorizim", "Eksport"]
     },
     {
       "id": "booking-systems",
       "title": "Sisteme Rezervimi",
-      "description": "Sisteme rezervimi qe sinkronizojne kalendaret, dergojne kujtesa dhe trajtojne anulimet. Pa njeri te nevojshem per rezervime rutine.",
+      "description": "Sisteme rezervimi që sinkronizojnë kalendarët, dërgojnë kujtesa dhe trajtojnë anulimet. Pa njeri të nevojshëm për rezervime rutinë.",
       "icon": "calendar",
       "remotionId": "BookingSystemsDemo",
-      "features": ["Sinkronizim Kalendari", "Kujtesa", "Auto-konfirmim", "Shumeplatforme"]
+      "features": ["Sinkronizim Kalendari", "Kujtesa", "Auto-konfirmim", "Shumëplatformë"]
     },
     {
       "id": "dashboards",
-      "title": "Dashboard te Personalizuara",
-      "description": "Dashboard ne kohe reale qe kthejne te dhenat e rremnuara ne njohuri te qarta. Grafike, KPI dhe raporte qe ekipi juaj do ti perdore vertet.",
+      "title": "Dashboard të Personalizuara",
+      "description": "Dashboard në kohë reale që kthejnë të dhënat e rrëmujshme në njohuri të qarta. Grafikë, KPI dhe raporte që ekipi juaj do t'i përdorë vërtet.",
       "icon": "chart",
       "remotionId": "CustomerDashboardsDemo",
-      "features": ["Te dhena ne kohe reale", "KPI te personalizuara", "Eksport Raportesh", "Akses sipas Rolit"]
+      "features": ["Të dhëna në kohë reale", "KPI të personalizuara", "Eksport Raportesh", "Akses sipas Rolit"]
     },
     {
       "id": "sentiment",
       "title": "Analiza e Ndjenjave",
-      "description": "Dijeni cfare mendojne vertet klientet tuaj. Analiza e fuqizuar nga AI e komenteve, feedback-ut dhe permendjet sociale — ne shume gjuhe.",
+      "description": "Dijeni çfarë mendojnë vërtet klientët tuaj. Analiza e fuqizuar nga AI e komenteve, feedback-ut dhe përmendjeve sociale — në shumë gjuhë.",
       "icon": "emoji",
       "remotionId": "SentimentAnalysisDemo",
-      "features": ["Analiza Komenteve", "Degjim Social", "Zbulim Tendencash", "Njoftime"]
+      "features": ["Analiza Komenteve", "Dëgjim Social", "Zbulim Tendencash", "Njoftime"]
     },
     {
       "id": "reviews",
       "title": "Menaxhimi i Komenteve",
-      "description": "Terhiqni komente nga Google, Booking, TripAdvisor ne nje vend. Pergjigjuni me shpejt. Identifikoni tendencat. Mbroni reputacionin.",
+      "description": "Tërhiqni komente nga Google, Booking, TripAdvisor në një vend. Përgigjuni më shpejt. Identifikoni tendencat. Mbroni reputacionin.",
       "icon": "star",
       "remotionId": "ReviewManagementDemo",
-      "features": ["Shumeplatforme", "Auto-pergjigje", "Analitike", "Njoftime"]
+      "features": ["Shumëplatformë", "Auto-përgjigje", "Analitikë", "Njoftime"]
     },
     {
       "id": "mobile-apps",
       "title": "Aplikacione Mobile",
-      "description": "Aplikacione ndër-platforme te ndertuar per performancen. Nga flukset e rezervimit deri tek mjetet e brendshme — ndjesi native, shpejtesi web.",
+      "description": "Aplikacione ndër-platformë të ndërtuara për performancën. Nga flukset e rezervimit deri tek mjetet e brendshme — ndjesi native, shpejtësi web.",
       "icon": "phone",
       "remotionId": "MobileAppsDemo",
-      "features": ["iOS & Android", "Njoftimet Push", "Modaliteti Offline", "Hapje e Shpejte"]
+      "features": ["iOS & Android", "Njoftimet Push", "Modaliteti Offline", "Hapje e Shpejtë"]
     },
     {
       "id": "connectors",
-      "title": "Lidhesit e Sistemeve",
-      "description": "Lidhni mjetet tuaja. CRM, ERP, sisteme pagese, databaza legacy — ndertojme urat mes sistemeve qe nuk flasin me njera-tjetren.",
+      "title": "Lidhësit e Sistemeve",
+      "description": "Lidhni mjetet tuaja. CRM, ERP, sisteme pagesë, databaza legacy — ndërtoj urat mes sistemeve që nuk flasin me njëra-tjetrën.",
       "icon": "connector",
       "remotionId": "SystemConnectorsDemo",
-      "features": ["Integrim API", "Sinkronizim te Dhenash", "Webhooks", "Mbeshtetje Legacy"]
+      "features": ["Integrim API", "Sinkronizim të Dhënash", "Webhooks", "Mbështetje Legacy"]
     },
     {
       "id": "gdpr",
-      "title": "Pershtatje GDPR",
-      "description": "Qendroni ne perputhje pa dhimbje koke. Menaxhim automatik i pelqimit, kerkesave per te dhena dhe gjurmeve te auditimit — gjerat e merzitshme te menaxhuara.",
+      "title": "Përshtatje GDPR",
+      "description": "Qëndroni në përputhje pa dhimbje koke. Menaxhim automatik i pëlqimit, kërkesave për të dhëna dhe gjurmëve të auditimit — gjërat e mërzitshme të menaxhuara.",
       "icon": "shield",
       "remotionId": "GDPRComplianceDemo",
-      "features": ["Menaxhim Pelqimi", "Kerkesa te Dhenash", "Regjistrat e Auditimit", "Auto-fshirje"]
+      "features": ["Menaxhim Pëlqimi", "Kërkesa të Dhënash", "Regjistrat e Auditimit", "Auto-fshirje"]
     }
   ],
-  "footerText": "Kjo nuk eshte e gjitha — bejme edhe",
-  "footerHighlight": "me shume..."
+  "footerText": "Kjo nuk është e gjitha — bëj edhe",
+  "footerHighlight": "më shumë..."
 }

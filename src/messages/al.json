@@ -4,38 +4,38 @@
     "aiLab": "Laboratori AI",
     "portfolio": "Portofoli",
     "contact": "Kontakt",
-    "plansAndPricing": "Planet dhe Cmimet",
+    "plansAndPricing": "Planet dhe Çmimet",
     "getStarted": "Fillo Sot",
     "home": "Ballina",
     "achievements": "Arritjet",
-    "ourWork": "Punimet Tona",
+    "ourWork": "Puna Ime",
     "faqs": "Pyetje të Shpeshta",
-    "viewPlans": "Shiko Planet dhe Cmimet"
+    "viewPlans": "Shiko Planet dhe Çmimet"
   },
   "hero": {
-    "statusBadge": "Disponibel për Projekte të Reja",
+    "statusBadge": "Disponibël për Projekte të Reja",
     "mainHeading": "AI QË PUNON PËR",
     "subtitle": "AI që funksionon vërtet. Pa fjalë boshe. Pa hype. Vetëm rezultate.",
-    "ctaPrimary": "Shiko Planet dhe Cmimet",
-    "ctaSecondary": "Shiko Punimet Tona",
+    "ctaPrimary": "Shiko Planet dhe Çmimet",
+    "ctaSecondary": "Shiko Punën Time",
     "letsGo": "Nisemi"
   },
   "features": {
-    "delivery": "48 Orë",
-    "deliveryDesc": "Dorëzim",
-    "portal": "Qasje në Portalin",
-    "portalDesc": "Privat të Projektit",
-    "unlimited": "Revizione",
-    "unlimitedDesc": "Pa Limit"
+    "delivery": "Dorëzim i Shpejtë",
+    "deliveryDesc": "Javë, jo muaj",
+    "portal": "Komunikim",
+    "portalDesc": "Direkt",
+    "unlimited": "Ju Zotëroni",
+    "unlimitedDesc": "Kodin"
   },
   "sections": {
     "testimonials": "Çfarë Thonë Klientët",
     "brands": "Na Besojnë",
-    "achievements": "Arritjet Tona",
-    "benefits": "Pse Na Zgjidhni",
-    "howItWorks": "Si Funksionon",
-    "services": "Shërbimet Tona",
-    "portfolio": "Portofoli Ynë",
+    "achievements": "Arritjet e Mia",
+    "benefits": "Pse të Punosh me Mua",
+    "howItWorks": "Si Punoj",
+    "services": "Shërbimet e Mia",
+    "portfolio": "Portofoli Im",
     "pricing": "Modelet e Angazhimit",
     "faq": "Pyetje të Shpeshta",
     "cta": "Gati për të Filluar?"
@@ -47,7 +47,7 @@
     "readMore": "Lexo Më Shumë"
   },
   "footer": {
-    "copyright": "MATRIKS. Të gjitha të drejtat e rezervuara.",
+    "copyright": "denada.dev. Të gjitha të drejtat e rezervuara.",
     "building": "duke ndërtuar...",
     "privacy": "Politika e Privatësisë",
     "terms": "Kushtet e Shërbimit"

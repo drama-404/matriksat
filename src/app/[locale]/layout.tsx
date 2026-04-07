@@ -16,13 +16,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
 
   const titles = {
-    en: 'MATRIKS - AI & Full-Stack Development Agency',
-    al: 'MATRIKS - Agjenci për Zhvillim AI & Full-Stack',
+    en: 'Denada | Full-Stack Developer & AI Engineer — Tirana',
+    al: 'Denada | Zhvilluese Full-Stack & Inxhiniere AI — Tiranë',
   };
 
   const descriptions = {
-    en: 'AI that actually works. Custom chatbots, automation, and full-stack development for businesses in Albania and Europe.',
-    al: 'AI që funksionon vërtet. Chatbot të personalizuar, automatizim dhe zhvillim full-stack për biznese në Shqipëri dhe Europë.',
+    en: 'I build AI-powered web applications, chatbots, and custom tools. Based in Tirana, Albania. From idea to production in weeks.',
+    al: 'Ndërtoj aplikacione web me AI, chatbot, dhe mjete të personalizuara. Me bazë në Tiranë, Shqipëri. Nga ideja në prodhim brenda javësh.',
   };
 
   return {

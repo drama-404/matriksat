@@ -80,7 +80,7 @@ export function FAQ({ locale }: FAQProps) {
           {content.footerText}
         </p>
         <a
-          href="mailto:matriks.dev@gmail.com"
+          href="mailto:hello@denada.dev"
           className={cn(
             'inline-flex items-center gap-2',
             'bg-[var(--color-dark)] text-white rounded-[58px] px-6 py-4',

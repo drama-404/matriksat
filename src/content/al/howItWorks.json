@@ -1,30 +1,30 @@
 {
-  "heading": "Si i Realizojmë Projektet Tuaja",
+  "heading": "Si Punoj",
   "subheading": "Pa hamendje. Pa ndryshime të papritura. Një rrugë e qartë nga ideja në prodhim.",
   "steps": [
     {
       "id": "step-1",
       "number": "1",
-      "title": "Kuptojmë Sfidën Tuaj",
-      "description": "Gërmojmë në biznesin tuaj, sfidat dhe çfarë do të thotë sukses. Pyetjet e vështira që në fillim do të thotë të ndërtojmë gjënë e duhur."
+      "title": "Kuptoj Sfidën Tuaj",
+      "description": "Gërmoj në biznesin tuaj, sfidat dhe çfarë do të thotë sukses. Pyetjet e vështira që në fillim do të thotë të ndërtoj gjënë e duhur."
     },
     {
       "id": "step-2",
       "number": "2",
-      "title": "Dizajnojmë Rrugëtimin",
-      "description": "Struktura e ekipit, afatet, objektivat dhe kostot — të gjitha të planifikuara. Do të keni një plan të qartë para se të shkruajmë një rresht kod."
+      "title": "Dizajnoj Rrugëtimin",
+      "description": "Struktura, afatet, objektivat dhe kostot, të gjitha të planifikuara. Do të keni një plan të qartë para se të shkruaj një rresht kod."
     },
     {
       "id": "step-3",
       "number": "3",
-      "title": "Ndërtojmë në Sprinte",
-      "description": "Dorëzime javore, demo reale, komunikim i ngushtë. Shihni progres çdo javë, jo vetëm në fund. Pa surpriza."
+      "title": "Ndërtoj në Sprinte",
+      "description": "Ndërtoj në sprinte të fokusuar. Shihni progres çdo javë, jo vetëm në fund. Pa surpriza."
     },
     {
       "id": "step-4",
       "number": "4",
       "title": "Rritemi Bashkë",
-      "description": "Shtoni funksione, zgjeroni kapacitetin, përmirësoni sistemet. Ne qëndrojmë si partneri juaj teknik, jo një furnitor njëherësh."
+      "description": "Shtoni funksione, zgjeroni kapacitetin, përmirësoni sistemet. Qëndroj si partneri juaj teknik, jo një furnitor njëherësh."
     }
   ]
 }

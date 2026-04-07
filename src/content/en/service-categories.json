@@ -1,5 +1,5 @@
 {
-  "heading": "What We Build",
+  "heading": "What I Build",
   "subheading": "Chatbots, custom apps, automation tools — whatever your business actually needs. Select each card to view real projects.",
   "categories": [
     {
@@ -7,7 +7,7 @@
       "title": "AI & Automation",
       "subtitle": "Smart systems that work while you sleep",
       "remotionId": "AIAutomationDemo",
-      "description": "From chatbots that speak your customers' language to workflows that eliminate repetitive tasks — we build AI that delivers measurable ROI. No buzzwords. No hype. Just tools that actually work.",
+      "description": "From chatbots that speak your customers' language to workflows that eliminate repetitive tasks — I build AI that delivers measurable ROI. No buzzwords. No hype. Just tools that actually work.",
       "ctaText": "Let's automate",
       "projects": [
         {
@@ -17,7 +17,7 @@
           "title": "Hotel AI Customer Bot",
           "subtitle": "Multilingual booking assistant handling 80% of inquiries",
           "challenge": "A 4-star hotel in Tirana was losing bookings because guests couldn't get quick answers about availability, pricing, and amenities — especially outside business hours. Staff spent hours answering the same questions.",
-          "solution": "We built a multilingual WhatsApp + web chatbot that handles room inquiries, processes bookings, and sends confirmation emails — in Albanian, English, Italian, and German. Integrates with their existing booking system.",
+          "solution": "I built a multilingual WhatsApp + web chatbot that handles room inquiries, processes bookings, and sends confirmation emails — in Albanian, English, Italian, and German. Integrates with their existing booking system.",
           "results": "The bot handles 80% of guest inquiries automatically. Direct bookings jumped 35% in the first month. Staff now focus on in-person guest experience instead of answering the same questions over and over.",
           "tags": ["WhatsApp", "Multi-language", "24/7", "Booking Integration"]
         },
@@ -28,7 +28,7 @@
           "title": "AI Product Recommendations",
           "subtitle": "Visual search that finds what customers can't describe",
           "challenge": "An e-commerce platform with 10,000+ products struggled with text search. Customers couldn't find products when they didn't know the exact name. Cart abandonment was sky-high.",
-          "solution": "We implemented visual search powered by AI — customers snap a photo or upload an image, and the system finds matching products instantly using computer vision. Plus personalized recommendations based on browsing history.",
+          "solution": "I implemented visual search powered by AI — customers snap a photo or upload an image, and the system finds matching products instantly using computer vision. Plus personalized recommendations based on browsing history.",
           "results": "Search-to-purchase conversion improved 28%. Average time to find a product dropped from 3 minutes to 15 seconds. Customer satisfaction went up 22%.",
           "tags": ["Computer Vision", "Personalization", "Real-time", "ML Models"]
         },
@@ -39,7 +39,7 @@
           "title": "Demand Prediction Engine",
           "subtitle": "Stop guessing inventory — let the data decide",
           "challenge": "A wholesale distributor was either overstocking (tying up cash) or understocking (losing sales). Seasonal patterns, supplier lead times, and 2,000+ SKUs made manual forecasting impossible.",
-          "solution": "We built a demand prediction system using historical sales, seasonality, market trends, and external factors (weather, events). Auto-generates purchase orders when stock hits reorder points.",
+          "solution": "I built a demand prediction system using historical sales, seasonality, market trends, and external factors (weather, events). Auto-generates purchase orders when stock hits reorder points.",
           "results": "Stockouts reduced by 67%. Excess inventory dropped 40%. The procurement team now reviews AI recommendations instead of building spreadsheets from scratch.",
           "tags": ["Forecasting", "ML Models", "Auto-ordering", "Analytics"]
         },
@@ -50,7 +50,7 @@
           "title": "Automated Invoice Processing",
           "subtitle": "Your team stops typing data by hand. The AI handles paperwork.",
           "challenge": "A mid-size accounting firm processed 500+ invoices monthly by hand. Data entry errors caused payment delays and frustrated clients. 8 minutes per invoice, plus corrections.",
-          "solution": "We deployed an OCR pipeline that scans invoices (PDF, photo, email), extracts key fields (amount, date, vendor, line items), and pushes data directly into their accounting software. Human review only for edge cases.",
+          "solution": "I deployed an OCR pipeline that scans invoices (PDF, photo, email), extracts key fields (amount, date, vendor, line items), and pushes data directly into their accounting software. Human review only for edge cases.",
           "results": "Processing time dropped from 8 minutes to 30 seconds per invoice. Error rate fell from 12% to under 1%. The team redirected 15+ hours per week to advisory work.",
           "tags": ["OCR", "Document AI", "ERP Integration", "Workflow"]
         }
@@ -61,7 +61,7 @@
       "title": "Custom App Development",
       "subtitle": "Apps that fit your workflow, not the other way around",
       "remotionId": "CustomAppsDemo",
-      "description": "Off-the-shelf software never quite fits. We build custom applications — web, mobile, internal tools — designed around how your team actually works. No subscription fees. You own the code.",
+      "description": "Off-the-shelf software never quite fits. I build custom applications — web, mobile, internal tools — designed around how your team actually works. No subscription fees. You own the code.",
       "ctaText": "Let's build",
       "projects": [
         {
@@ -70,9 +70,9 @@
           "industryIcon": "hotel",
           "title": "Commission-Free Reservation Engine",
           "subtitle": "Your own booking system. No per-booking fees. Ever.",
-          "challenge": "A restaurant group was paying €8,000/month to third-party booking platforms — 15% commission on every reservation. Plus, they didn't own their customer data.",
-          "solution": "We built a custom reservation system with table management, waitlist, SMS reminders, and a customer database. Embeds into their website. Syncs with Google Calendar. Zero commission.",
-          "results": "Saved €96,000 in the first year. Customer repeat rate improved 23% with direct marketing. Full ownership of guest data enabled loyalty programs.",
+          "challenge": "A restaurant group was paying \u20ac8,000/month to third-party booking platforms — 15% commission on every reservation. Plus, they didn't own their customer data.",
+          "solution": "I built a custom reservation system with table management, waitlist, SMS reminders, and a customer database. Embeds into their website. Syncs with Google Calendar. Zero commission.",
+          "results": "Saved \u20ac96,000 in the first year. Customer repeat rate improved 23% with direct marketing. Full ownership of guest data enabled loyalty programs.",
           "tags": ["Reservations", "SMS Integration", "No Commission", "CRM"]
         },
         {
@@ -82,8 +82,8 @@
           "title": "E-commerce Platform",
           "subtitle": "A store that scales with you, not against you",
           "challenge": "A fashion retailer outgrew Shopify. Custom checkout flows, B2B pricing tiers, and multi-warehouse inventory needed features their platform couldn't provide. Migration seemed impossible.",
-          "solution": "We built a headless e-commerce platform with custom admin, B2B/B2C split, multi-currency support, and warehouse-specific inventory. Migrated 5 years of customer data without downtime.",
-          "results": "Checkout conversion up 18%. B2B orders increased 45% with custom portal. Monthly platform costs dropped from €2,400 to €180 (just hosting).",
+          "solution": "I built a headless e-commerce platform with custom admin, B2B/B2C split, multi-currency support, and warehouse-specific inventory. Migrated 5 years of customer data without downtime.",
+          "results": "Checkout conversion up 18%. B2B orders increased 45% with custom portal. Monthly platform costs dropped from \u20ac2,400 to \u20ac180 (just hosting).",
           "tags": ["Headless CMS", "B2B Portal", "Multi-warehouse", "Migration"]
         },
         {
@@ -93,7 +93,7 @@
           "title": "Inventory Management System",
           "subtitle": "Know exactly what you have, where it is, in real-time",
           "challenge": "A building materials wholesaler managed inventory across 4 warehouses using Excel. Stock counts were always wrong. Customers received \"out of stock\" calls after placing orders.",
-          "solution": "We built a real-time inventory system with barcode scanning, multi-location transfers, low-stock alerts, and customer order integration. Mobile app for warehouse floor use.",
+          "solution": "I built a real-time inventory system with barcode scanning, multi-location transfers, low-stock alerts, and customer order integration. Mobile app for warehouse floor use.",
           "results": "Inventory accuracy went from 73% to 99.2%. Order fulfillment errors dropped 85%. Staff spends 60% less time on stock counts.",
           "tags": ["Barcode Scanning", "Multi-location", "Mobile App", "Real-time"]
         },
@@ -104,7 +104,7 @@
           "title": "Supplier Management Portal",
           "subtitle": "One place for orders, invoices, and communications",
           "challenge": "A restaurant chain coordinated with 40+ suppliers via email, phone, and WhatsApp. Orders got lost. Invoices didn't match deliveries. Nobody knew what was coming when.",
-          "solution": "We built a supplier portal where vendors submit quotes, receive POs, confirm deliveries, and upload invoices. Real-time tracking from order to delivery to payment.",
+          "solution": "I built a supplier portal where vendors submit quotes, receive POs, confirm deliveries, and upload invoices. Real-time tracking from order to delivery to payment.",
           "results": "Order disputes dropped 90%. Procurement team saved 12 hours/week on coordination. Payment cycle shortened from 45 days to 15 days average.",
           "tags": ["Supplier Portal", "PO Management", "Delivery Tracking", "Invoice Matching"]
         }
@@ -115,7 +115,7 @@
       "title": "Data & Analytics",
       "subtitle": "Turn messy data into clear decisions",
       "remotionId": "DataAnalyticsDemo",
-      "description": "Your business generates tons of data. Most of it sits in spreadsheets nobody opens. We build dashboards and analytics tools that surface the insights you actually need — no data science degree required.",
+      "description": "Your business generates tons of data. Most of it sits in spreadsheets nobody opens. I build dashboards and analytics tools that surface the insights you actually need — no data science degree required.",
       "ctaText": "Let's visualize",
       "projects": [
         {
@@ -125,7 +125,7 @@
           "title": "Restaurant Analytics Dashboard",
           "subtitle": "See what sells, when, and why — in real-time",
           "challenge": "A hotel chain with 8 properties managed reviews across Google, Booking.com, TripAdvisor, and Facebook separately. No unified view of performance, slow response times to negative reviews.",
-          "solution": "We built a centralized dashboard that aggregates reviews from all platforms, runs sentiment analysis, suggests AI-generated responses, and tracks trends over time across all properties.",
+          "solution": "I built a centralized dashboard that aggregates reviews from all platforms, runs sentiment analysis, suggests AI-generated responses, and tracks trends over time across all properties.",
           "results": "Average response time dropped from 48 hours to 4 hours. Overall rating improved from 4.1 to 4.6 stars within 3 months. Management now has real-time visibility.",
           "tags": ["Multi-platform", "Sentiment AI", "Trend Analysis", "Alerts"]
         },
@@ -136,8 +136,8 @@
           "title": "E-commerce Analytics Platform",
           "subtitle": "Beyond Google Analytics — the metrics that matter",
           "challenge": "An online retailer had data everywhere — Google Analytics, Shopify, Facebook Ads, email campaigns — but no single view. Couldn't answer simple questions like \"which channel is most profitable?\"",
-          "solution": "We built a unified analytics platform pulling data from 8 sources. Custom attribution modeling, customer lifetime value tracking, cohort analysis, and automated weekly reports.",
-          "results": "Identified €45,000/month in wasted ad spend. Reallocated budget to top-performing channels. Marketing ROI improved 34% in first quarter.",
+          "solution": "I built a unified analytics platform pulling data from 8 sources. Custom attribution modeling, customer lifetime value tracking, cohort analysis, and automated weekly reports.",
+          "results": "Identified \u20ac45,000/month in wasted ad spend. Reallocated budget to top-performing channels. Marketing ROI improved 34% in first quarter.",
           "tags": ["Data Warehouse", "Attribution", "CLV Tracking", "Custom Reports"]
         },
         {
@@ -147,8 +147,8 @@
           "title": "Customer Purchase Analysis",
           "subtitle": "Know your customers better than they know themselves",
           "challenge": "A food wholesaler had 500+ B2B customers but treated them all the same. No visibility into purchase patterns, churn risk, or cross-sell opportunities. Relied on sales reps' gut feelings.",
-          "solution": "We built a customer intelligence dashboard with purchase frequency analysis, basket analysis, churn prediction, and rep-specific performance metrics. Automated alerts for at-risk accounts.",
-          "results": "Identified 23 accounts at churn risk — saved 18 of them. Cross-sell recommendations generated €180,000 in incremental revenue. Sales team productivity up 25%.",
+          "solution": "I built a customer intelligence dashboard with purchase frequency analysis, basket analysis, churn prediction, and rep-specific performance metrics. Automated alerts for at-risk accounts.",
+          "results": "Identified 23 accounts at churn risk — saved 18 of them. Cross-sell recommendations generated \u20ac180,000 in incremental revenue. Sales team productivity up 25%.",
           "tags": ["Customer Intelligence", "Churn Prediction", "Basket Analysis", "Alerts"]
         },
         {
@@ -158,7 +158,7 @@
           "title": "Construction Customer Portal",
           "subtitle": "Clients see project progress without calling you",
           "challenge": "A construction company spent hours every week answering client questions: \"What's the status?\" \"When will phase 2 start?\" \"Can I see photos?\" Project managers were drowning in update calls.",
-          "solution": "We built a customer portal with real-time project timelines, photo galleries, document storage, and milestone notifications. Clients self-serve their own updates.",
+          "solution": "I built a customer portal with real-time project timelines, photo galleries, document storage, and milestone notifications. Clients self-serve their own updates.",
           "results": "Client calls for status updates dropped 80%. Project managers gained 8 hours/week. Client satisfaction scores improved 31%. Referral rate doubled.",
           "tags": ["Customer Portal", "Real-time Updates", "Document Hub", "Notifications"]
         }
@@ -169,7 +169,7 @@
       "title": "Product Design",
       "subtitle": "Beautiful interfaces that users actually understand",
       "remotionId": "ProductDesignDemo",
-      "description": "Good design isn't decoration — it's how things work. We design products people want to use: clear interfaces, intuitive flows, and visuals that build trust. From wireframes to pixel-perfect handoff.",
+      "description": "Good design isn't decoration — it's how things work. I design products people want to use: clear interfaces, intuitive flows, and visuals that build trust. From wireframes to pixel-perfect handoff.",
       "ctaText": "Let's design",
       "projects": [
         {
@@ -179,8 +179,8 @@
           "title": "Web Application Design",
           "subtitle": "Complex functionality, simple interfaces",
           "challenge": "Turning complex business requirements into interfaces that don't require a manual. Enterprise features with startup-level usability.",
-          "solution": "We design web applications with user research, information architecture, component libraries, and responsive layouts. From dashboard-heavy tools to customer-facing portals.",
-          "results": "Our web app designs consistently achieve 40%+ faster user onboarding and 60%+ reduction in support tickets related to UI confusion.",
+          "solution": "I design web applications with user research, information architecture, component libraries, and responsive layouts. From dashboard-heavy tools to customer-facing portals.",
+          "results": "My web app designs consistently achieve 40%+ faster user onboarding and 60%+ reduction in support tickets related to UI confusion.",
           "tags": ["Dashboard UI", "Component Systems", "Responsive", "User Research"]
         },
         {
@@ -189,9 +189,9 @@
           "industryIcon": "phone",
           "title": "Mobile App Design",
           "subtitle": "Native feel. Thumb-friendly everything.",
-          "challenge": "Mobile users are impatient. You have 3 seconds to make sense. We design apps that feel intuitive from first launch — no tutorials needed.",
-          "solution": "We design for iOS and Android with platform-specific patterns, gesture-based navigation, offline states, and performance-optimized assets. Touch targets that actually work.",
-          "results": "Mobile apps we design average 4.7+ star ratings. User retention at 30 days is 2.3x industry average. \"Easy to use\" is the #1 review keyword.",
+          "challenge": "Mobile users are impatient. You have 3 seconds to make sense. I design apps that feel intuitive from first launch — no tutorials needed.",
+          "solution": "I design for iOS and Android with platform-specific patterns, gesture-based navigation, offline states, and performance-optimized assets. Touch targets that actually work.",
+          "results": "Mobile apps I design average 4.7+ star ratings. User retention at 30 days is 2.3x industry average. \"Easy to use\" is the #1 review keyword.",
           "tags": ["iOS Design", "Android Design", "Gestures", "Offline UX"]
         },
         {
@@ -201,8 +201,8 @@
           "title": "SaaS Platform Design",
           "subtitle": "Products that sell themselves through great UX",
           "challenge": "SaaS lives or dies on usability. Free trial users need to see value immediately. Onboarding needs to be frictionless. Features need to be discoverable.",
-          "solution": "We design SaaS products with conversion-focused onboarding, progressive disclosure, empty states that educate, and upgrade flows that don't feel pushy.",
-          "results": "SaaS products we design see 45%+ trial-to-paid conversion improvements. Churn drops 25%+ when users can actually find and use features.",
+          "solution": "I design SaaS products with conversion-focused onboarding, progressive disclosure, empty states that educate, and upgrade flows that don't feel pushy.",
+          "results": "SaaS products I design see 45%+ trial-to-paid conversion improvements. Churn drops 25%+ when users can actually find and use features.",
           "tags": ["Onboarding UX", "Conversion Design", "Feature Discovery", "Pricing UI"]
         },
         {
@@ -212,7 +212,7 @@
           "title": "E-commerce Design",
           "subtitle": "Stores that convert browsers into buyers",
           "challenge": "Most e-commerce sites look the same. Product pages that don't sell. Checkouts with 6 unnecessary steps. Cart abandonment over 70%.",
-          "solution": "We design e-commerce experiences with scroll-stopping product pages, frictionless checkout, trust signals that work, and upsells that feel helpful not pushy.",
+          "solution": "I design e-commerce experiences with scroll-stopping product pages, frictionless checkout, trust signals that work, and upsells that feel helpful not pushy.",
           "results": "E-commerce redesigns average 23% conversion lift. Cart abandonment drops 35%+ with optimized checkout flows. Average order value increases 18%.",
           "tags": ["Product Pages", "Checkout UX", "Mobile Commerce", "Conversion"]
         }

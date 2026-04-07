@@ -1,11 +1,11 @@
 {
-  "heading": "What We've Built",
+  "heading": "What I've Built",
   "subheading": "Numbers are nice. Here's what they actually mean.",
   "cards": [
     {
       "id": "projects-delivered",
-      "metric": "20+ Projects Shipped",
-      "subtitle": "Chatbots, dashboards, automation tools — across hospitality, retail, and finance",
+      "metric": "20+ Projects Built",
+      "subtitle": "Chatbots, dashboards, automation tools, across hospitality, retail, and finance",
       "type": "projects"
     },
     {
@@ -17,8 +17,8 @@
     },
     {
       "id": "impact",
-      "metric": "50K+ Messages Handled",
-      "subtitle": "By bots we built, so humans could focus on work that matters",
+      "metric": "Full-Stack + AI",
+      "subtitle": "End-to-end development, from frontend to AI integration, so you deal with one person, not five",
       "type": "impact",
       "header": "Impact"
     }
