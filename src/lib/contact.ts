@@ -5,17 +5,17 @@
 
 export const CONTACT = {
   /** Calendly booking page */
-  calendly: 'https://calendly.com/denada',
+  calendly: 'https://calendly.com/denadadev',
 
   /** WhatsApp direct chat (international format, no + or spaces) */
-  whatsapp: 'https://wa.me/355XXXXXXXXX',
+  whatsapp: 'https://wa.me/355698250549',
 
   /** Primary email */
   email: 'hello@denada.dev',
   emailHref: 'mailto:hello@denada.dev',
 
   /** LinkedIn profile */
-  linkedin: 'https://linkedin.com/in/denada',
+  linkedin: 'https://linkedin.com/in/denadarama',
 
   /** GitHub profile */
   github: 'https://github.com/denada',
