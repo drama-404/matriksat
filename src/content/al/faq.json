@@ -19,7 +19,7 @@
     {
       "id": "revision-limit",
       "question": "A ka limit në rishikime?",
-      "answer": "Jo. Iteroj derisa të funksionojë për ekipin tuaj. Preferoj të shpenzoj kohë shtesë për ta bërë të drejtë sesa t'ju lë me diçka gjysmë të bërë.",
+      "answer": "Çdo fazë përfshin një raund feedback-u ku përmirësojmë derisa të jetë siç duhet. Preferoj të shpenzoj kohë shtesë për ta bërë mirë sesa t'ju lë me diçka gjysmake. Nëse ndryshon shumë skopi i projektit, bisedojmë para se të vazhdojmë.",
       "avatarLabel": "Përshëndetje! Denada këtu"
     },
     {
@@ -30,26 +30,14 @@
     },
     {
       "id": "dont-like",
-      "question": "Po sikur nuk më pëlqen çfarë ndërton?",
-      "answer": "Do të vazhdoj të punoj. Rishikime të pakufizuara derisa të jeni të kënaqur. Nëse vërtet nuk mund të ofroj atë që keni nevojë, do t'ju them herët, jo pasi të keni paguar.",
+      "question": "Po sikur mos të më pëlqejë ajo çfarë ndërton?",
+      "answer": "Gjatë gjithë procesit do të shihni demo funksionale, kështu që nuk ka surpriza në fund. Çdo fazë përfshin mundësi për ndryshime. Nëse diçka nuk shkon, e rregullojmë para se të vazhdojmë. Dhe nëse kuptoj herët që nuk jam personi i duhur për projektin tuaj, do t'jua them drejt.",
       "avatarLabel": "Përshëndetje! Denada këtu"
     },
     {
       "id": "platforms",
       "question": "A punon me Shopify/WordPress/etj?",
-      "answer": "Po. Mund të shumicën e platformave dhe mund të punoj me çfarëdolloj stack që keni. Më tregoni çfarë keni, unë do ta gjej zgjidhjen.",
-      "avatarLabel": "Përshëndetje! Denada këtu"
-    },
-    {
-      "id": "why-not-hire",
-      "question": "Pse të mos punësoj një zhvillues me kohë të plotë?",
-      "answer": "Një zhvillues i mirë me kohë të plotë kushton \u20ac40-80k/vit plus përfitime, dhe jeni të lidhur. Me mua, paguani për atë që keni nevojë, kur keni nevojë. Rrini për një shtytje të madhe, ulni kur gjërat janë stabile.",
-      "avatarLabel": "Përshëndetje! Denada këtu"
-    },
-    {
-      "id": "refund",
-      "question": "A mund të marr rimbursim?",
-      "answer": "Nuk bëj rimbursime, por gjithashtu nuk zhdukem. Nëse diçka nuk është e drejtë, e rregulloj. Nëse duhet të ndaloni, ndaloj. Reputacioni im ka më shumë rëndësi se një projekt i vetëm.",
+      "answer": "Po. Punoj me shumicën e platformave dhe mund të ndërtoj mbi çdo stack që përdorni tashmë. Më tregoni çfarë keni dhe ju tregoj si mund t'ju ndihmoj.",
       "avatarLabel": "Përshëndetje! Denada këtu"
     }
   ]
