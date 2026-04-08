@@ -17,8 +17,8 @@ export function Footer({ locale }: FooterProps) {
   return (
     <footer className="bg-[var(--color-dark)] text-white">
       {/* Main Footer Content */}
-      <div className="section-container py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div className="section-container py-10 sm:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 sm:gap-12">
           {/* Logo & Description */}
           <div className="md:col-span-2">
             <Link href={`/${locale}`} className="inline-block mb-6 group">
@@ -52,7 +52,7 @@ export function Footer({ locale }: FooterProps) {
             <h4 className="text-sm font-semibold uppercase tracking-wider mb-4 text-white/50">
               {t('quickLinks')}
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-2">
               {[
                 { href: '#services', labelKey: 'linkServices' as const },
                 { href: '#how-it-works', labelKey: 'linkProcess' as const },
@@ -61,7 +61,7 @@ export function Footer({ locale }: FooterProps) {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-white/70 hover:text-white transition-colors"
+                    className="text-white/70 hover:text-white transition-colors inline-block py-1"
                   >
                     {t(link.labelKey)}
                   </a>

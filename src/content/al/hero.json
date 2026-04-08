@@ -1,8 +1,9 @@
 {
-  "statusBadge": "Pranoj Projekte të Reja",
-  "mainHeading": "Unë ndërtoj",
+  "statusBadge": "Duke Pranuar Projekte të Reja",
+  "mainHeading": "Ndërtoj",
   "rotatingWords": ["AI chatbot", "portale", "MVP", "aplikacione web"],
   "subtitle": "Zhvillim full-stack & zgjidhje AI që funksionojnë vërtet. Nga ideja në prodhim brenda javësh.",
   "ctaPrimary": "Shiko Punën Time",
+  "letsGo": "",
   "terminalPrompt": "gati"
 }

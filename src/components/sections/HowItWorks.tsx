@@ -67,7 +67,7 @@ export function HowItWorks({ locale }: HowItWorksProps) {
       >
         <h2
           id="how-it-works-heading"
-          className="text-[36px] md:text-[42px] font-bold tracking-[-1.32px] leading-[1.1] text-[var(--color-dark)]"
+          className="text-[28px] sm:text-[36px] md:text-[42px] font-bold tracking-[-1.32px] leading-[1.1] text-[var(--color-dark)]"
           style={{ fontFamily: 'var(--font-satoshi), var(--font-inter), sans-serif' }}
         >
           {content.heading}
@@ -203,8 +203,8 @@ function ShowcasePlayer({ onStepChange, seekToStep, onSeekComplete }: ShowcasePl
     <div
       ref={ref}
       className={cn(
-        'relative rounded-[var(--radius-card-lg)] overflow-visible',
-        'w-full max-w-[400px]'
+        'relative rounded-[var(--radius-card-lg)] overflow-hidden',
+        'w-full max-w-[320px] sm:max-w-[400px]'
       )}
       style={{ aspectRatio: '360/520' }}
       aria-label="Animated demonstration of my 4-step process"

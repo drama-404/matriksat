@@ -22,8 +22,8 @@ export function Hero({ locale }: HeroProps) {
   return (
     <section
       className={cn(
-        'relative min-h-[735px] flex flex-col items-center justify-center',
-        'pt-[83px]' // Offset for fixed navbar
+        'relative min-h-[100svh] lg:min-h-[735px] flex flex-col items-center justify-center',
+        'pt-[83px] overflow-hidden' // Offset for fixed navbar
       )}
     >
       {/* Data Flow Background Pattern with Vignette Mask */}
@@ -39,7 +39,7 @@ export function Hero({ locale }: HeroProps) {
       />
 
       {/* 50/50 Split Content Container */}
-      <div className="section-container flex flex-col lg:flex-row items-center gap-8 lg:gap-12 z-10">
+      <div className="section-container flex flex-col lg:flex-row items-center gap-6 sm:gap-8 lg:gap-12 z-10 w-full">
         {/* Left Column: Text Content */}
         <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left">
           {/* Status Badge */}
@@ -102,12 +102,12 @@ export function Hero({ locale }: HeroProps) {
 
           {/* CTA Button */}
           <motion.div
-            className="mt-8"
+            className="mt-8 w-full sm:w-auto"
             variants={heroSequence.cta}
             initial="hidden"
             animate="visible"
           >
-            <Button href="#how-it-works" variant="primary" subText="Let's Go">
+            <Button href="#how-it-works" variant="primary" subText="Let's Go" className="w-full sm:w-auto">
               {content.ctaPrimary}
             </Button>
           </motion.div>
@@ -115,12 +115,12 @@ export function Hero({ locale }: HeroProps) {
 
         {/* Right Column: Pixel Terminal */}
         <motion.div
-          className="flex-1 flex justify-center lg:justify-end"
+          className="flex-1 flex justify-center lg:justify-end w-full max-w-[460px]"
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
         >
-          <PixelTerminal className="w-full max-w-[460px]" />
+          <PixelTerminal className="w-full" />
         </motion.div>
       </div>
 

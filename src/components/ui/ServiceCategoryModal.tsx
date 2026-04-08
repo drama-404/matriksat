@@ -27,7 +27,7 @@ export function ServiceCategoryModal({
     <Modal isOpen={isOpen} onClose={handleClose} size="fullscreen">
       <div className="flex flex-col lg:flex-row h-full">
         {/* Left Column: 70% - Scrollable Projects */}
-        <div className="w-full lg:w-[68%] h-full overflow-y-auto p-6 lg:p-8">
+        <div className="w-full lg:w-[68%] h-full overflow-y-auto p-4 sm:p-6 lg:p-8 pb-24 lg:pb-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

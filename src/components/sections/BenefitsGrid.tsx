@@ -19,7 +19,7 @@ interface BenefitsGridProps {
 export function BenefitsGrid({ locale }: BenefitsGridProps) {
   const content: BenefitsContent = locale === 'en' ? benefitsEN : benefitsAL;
   const ctaLabel = locale === 'en' ? "Let's Work Together" : 'Le të Punojmë Bashkë';
-  const ctaSub = locale === 'en' ? "Get in Touch" : 'Na Kontaktoni';
+  const ctaSub = locale === 'en' ? "Get in Touch" : 'Kontakto';
 
   return (
     <section className="section-container" aria-labelledby="benefits-heading">
@@ -33,7 +33,7 @@ export function BenefitsGrid({ locale }: BenefitsGridProps) {
       >
         <h2
           id="benefits-heading"
-          className="text-[33px] font-bold tracking-[-1.32px] leading-[39.6px] text-[var(--color-dark)]"
+          className="text-[26px] sm:text-[33px] font-bold tracking-[-1.32px] leading-[1.2] text-[var(--color-dark)]"
           style={{ fontFamily: 'var(--font-satoshi), var(--font-inter), sans-serif' }}
         >
           {content.heading}
@@ -89,6 +89,7 @@ function FlipCard({ benefit }: { benefit: BenefitItem }) {
       variants={fadeInUp}
       onMouseEnter={() => setIsFlipped(true)}
       onMouseLeave={() => setIsFlipped(false)}
+      onClick={() => setIsFlipped((prev) => !prev)}
       onFocus={() => setIsFlipped(true)}
       onBlur={() => setIsFlipped(false)}
       tabIndex={0}

@@ -293,7 +293,7 @@ export function PixelTerminal({ className }: PixelTerminalProps) {
       </div>
 
       {/* Terminal Content - minimal padding */}
-      <div className="p-3">
+      <div className="p-3 overflow-hidden">
         {/* Command prompt line */}
         <div className="flex items-center gap-1.5 mb-3">
           <span className="text-[#28c840] text-xs font-mono">➜</span>

@@ -55,7 +55,7 @@ export function ServicesGrid({ locale }: ServicesGridProps) {
         >
           <h2
             id="services-heading"
-            className="text-[33px] font-bold tracking-[-1.32px] leading-[39.6px] text-[var(--color-dark)]"
+            className="text-[26px] sm:text-[33px] font-bold tracking-[-1.32px] leading-[1.2] text-[var(--color-dark)]"
             style={{ fontFamily: 'var(--font-satoshi), var(--font-inter), sans-serif' }}
           >
             {content.heading}
@@ -129,7 +129,7 @@ function CategoryCard({ category, onClick }: CategoryCardProps) {
       ref={ref}
       className={cn(
         'relative bg-white rounded-[var(--radius-card-lg)] overflow-hidden card-shadow',
-        'h-[360px] p-6 flex flex-col justify-between',
+        'h-[300px] sm:h-[360px] p-5 sm:p-6 flex flex-col justify-between',
         'group cursor-pointer'
       )}
       variants={fadeInUp}

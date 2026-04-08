@@ -20,7 +20,7 @@ export function FinalCTA({ locale }: FinalCTAProps) {
   return (
     <section id="contact" className="section-container" aria-labelledby="final-cta-heading">
       <motion.div
-        className="relative max-w-[1082px] mx-auto rounded-[var(--radius-card-lg)] bg-[var(--color-dark)] px-8 py-16 sm:py-24 overflow-hidden"
+        className="relative max-w-[1082px] mx-auto rounded-[var(--radius-card-lg)] bg-[var(--color-dark)] px-4 sm:px-8 py-12 sm:py-16 md:py-24 overflow-hidden"
         variants={fadeInUp}
         initial="hidden"
         whileInView="visible"
@@ -48,7 +48,7 @@ export function FinalCTA({ locale }: FinalCTAProps) {
           {/* Heading */}
           <h2
             id="final-cta-heading"
-            className="text-[32px] sm:text-[44px] font-bold text-white leading-[1] max-w-[700px] mb-8"
+            className="text-[26px] sm:text-[32px] md:text-[44px] font-bold text-white leading-[1.1] max-w-[700px] mb-8"
             style={{ fontFamily: 'var(--font-satoshi), var(--font-inter), sans-serif' }}
           >
             {content.heading}
@@ -68,7 +68,7 @@ export function FinalCTA({ locale }: FinalCTAProps) {
             />
             <motion.a
               href={CONTACT.calendly}
-              className="relative inline-flex items-center gap-2 bg-white text-[var(--color-dark)] rounded-[72px] px-8 py-5 text-base font-semibold hover:opacity-90 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-dark)]"
+              className="relative inline-flex items-center gap-2 bg-white text-[var(--color-dark)] rounded-[72px] px-6 sm:px-8 py-4 sm:py-5 text-sm sm:text-base font-semibold hover:opacity-90 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-dark)]"
               animate={{
                 scale: [1, 1.02, 1],
               }}
@@ -127,11 +127,11 @@ function ProcessingTunnel({ content }: ProcessingTunnelProps) {
         </p>
       )}
 
-      {/* Tunnel Container */}
+      {/* Tunnel Container - hidden on very small screens, tracks hidden on mobile */}
       <div className="relative flex items-center justify-center overflow-hidden h-[70px]">
-        {/* Left Track - Undone Tasks entering from left */}
+        {/* Left Track - Undone Tasks entering from left (hidden on mobile) */}
         <div
-          className="flex-1 overflow-hidden relative"
+          className="hidden sm:block flex-1 overflow-hidden relative"
           style={{
             maskImage: 'linear-gradient(to right, transparent 0%, black 20%, black 100%)',
             WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 20%, black 100%)',
@@ -149,9 +149,9 @@ function ProcessingTunnel({ content }: ProcessingTunnelProps) {
           <ProcessingBox text={content.buildingText} />
         </div>
 
-        {/* Right Track - Done Tasks exiting to right (offset so different pills visible) */}
+        {/* Right Track - Done Tasks exiting to right (hidden on mobile) */}
         <div
-          className="flex-1 overflow-hidden relative"
+          className="hidden sm:block flex-1 overflow-hidden relative"
           style={{
             maskImage: 'linear-gradient(to right, black 0%, black 80%, transparent 100%)',
             WebkitMaskImage: 'linear-gradient(to right, black 0%, black 80%, transparent 100%)',
@@ -251,7 +251,7 @@ function ProcessingBox({ text }: ProcessingBoxProps) {
 
   return (
     <div
-      className="relative px-6 py-4 rounded-lg flex items-center justify-center w-[240px] h-[70px]"
+      className="relative px-4 sm:px-6 py-4 rounded-lg flex items-center justify-center w-[200px] sm:w-[240px] h-[60px] sm:h-[70px]"
       style={{ backgroundColor: 'rgb(28, 26, 24)' }}
     >
       {/* Left bracket - taller and more visible */}

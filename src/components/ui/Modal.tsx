@@ -14,7 +14,7 @@ interface ModalProps {
 const sizeClasses = {
   default: 'max-w-[900px] max-h-[90vh]',
   wide: 'max-w-[1000px] max-h-[90vh]',
-  fullscreen: 'w-[95vw] h-[95vh] max-w-none',
+  fullscreen: 'w-full h-full sm:w-[95vw] sm:h-[95vh] max-w-none',
 } as const;
 
 export function Modal({ isOpen, onClose, children, size = 'default' }: ModalProps) {
@@ -42,7 +42,7 @@ export function Modal({ isOpen, onClose, children, size = 'default' }: ModalProp
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center p-0 sm:p-4"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -59,8 +59,8 @@ export function Modal({ isOpen, onClose, children, size = 'default' }: ModalProp
           {/* Modal Container */}
           <motion.div
             className={cn(
-              'relative bg-white rounded-3xl w-full',
-              isFullscreen ? 'p-0 overflow-hidden' : 'p-8 md:p-12 overflow-y-auto',
+              'relative bg-white w-full',
+              isFullscreen ? 'p-0 overflow-hidden rounded-none sm:rounded-3xl' : 'rounded-3xl p-6 sm:p-8 md:p-12 overflow-y-auto',
               sizeClasses[size]
             )}
             initial={{ scale: 0.95, opacity: 0 }}

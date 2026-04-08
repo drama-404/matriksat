@@ -35,7 +35,7 @@ export function FAQ({ locale }: FAQProps) {
       >
         <h2
           id="faq-heading"
-          className="text-[33px] font-bold tracking-[-1.32px] leading-[39.6px] text-[var(--color-dark)]"
+          className="text-[26px] sm:text-[33px] font-bold tracking-[-1.32px] leading-[1.2] text-[var(--color-dark)]"
           style={{ fontFamily: 'var(--font-satoshi), var(--font-inter), sans-serif' }}
         >
           {content.heading}
@@ -113,8 +113,8 @@ function FAQChatPair({ faqItem, isOpen, onToggle }: FAQChatPairProps) {
       <button
         onClick={onToggle}
         className={cn(
-          'self-end max-w-[70%]',
-          'bg-[var(--color-background)] rounded-3xl px-5 py-4',
+          'self-end max-w-[90%] sm:max-w-[70%]',
+          'bg-[var(--color-background)] rounded-2xl sm:rounded-3xl px-4 sm:px-5 py-3 sm:py-4',
           'flex items-center gap-3',
           'text-left cursor-pointer',
           'hover:bg-[var(--color-accent-subtle)] transition-colors',
@@ -143,7 +143,7 @@ function FAQChatPair({ faqItem, isOpen, onToggle }: FAQChatPairProps) {
         {isOpen && (
           <motion.div
             id={`answer-${faqItem.id}`}
-            className="flex gap-3 items-start self-start max-w-[70%]"
+            className="flex gap-3 items-start self-start max-w-[90%] sm:max-w-[70%]"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}

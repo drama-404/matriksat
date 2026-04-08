@@ -36,7 +36,7 @@ export function EngagementModels({ locale }: EngagementModelsProps) {
       >
         <h2
           id="pricing-heading"
-          className="text-[33px] font-bold tracking-[-1.32px] leading-[39.6px] text-[var(--color-dark)]"
+          className="text-[26px] sm:text-[33px] font-bold tracking-[-1.32px] leading-[1.2] text-[var(--color-dark)]"
           style={{ fontFamily: 'var(--font-satoshi), var(--font-inter), sans-serif' }}
         >
           {content.heading}
@@ -82,7 +82,7 @@ function PricingCard({ model }: { model: EngagementModel }) {
     >
       <div
         className={cn(
-          'rounded-[32px] p-6 flex flex-col h-full',
+          'rounded-[24px] sm:rounded-[32px] p-5 sm:p-6 flex flex-col h-full',
           isDark ? 'bg-[var(--color-dark)]' : 'bg-white'
         )}
       >

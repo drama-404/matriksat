@@ -60,7 +60,7 @@ export function AchievementBento({ locale }: AchievementBentoProps) {
       >
         <h2
           id="achievement-heading"
-          className="text-[33px] font-bold tracking-[-1.32px] leading-[39.6px] text-[var(--color-dark)]"
+          className="text-[26px] sm:text-[33px] font-bold tracking-[-1.32px] leading-[1.2] text-[var(--color-dark)]"
           style={{ fontFamily: 'var(--font-satoshi), var(--font-inter), sans-serif' }}
         >
           {content.heading}

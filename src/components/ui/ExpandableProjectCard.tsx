@@ -28,7 +28,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <motion.article
       className={cn(
-        'relative w-full rounded-[38px] overflow-hidden bg-white',
+        'relative w-full rounded-2xl sm:rounded-[38px] overflow-hidden bg-white',
         'group'
       )}
       initial={{ opacity: 0, y: 20 }}
@@ -61,8 +61,8 @@ export function ProjectCard({ project }: ProjectCardProps) {
         {/* Overlay Bar */}
         <div
           className={cn(
-            'absolute bottom-4 left-4 right-4',
-            'rounded-[34px] px-6 py-4',
+            'absolute bottom-2 left-2 right-2 sm:bottom-4 sm:left-4 sm:right-4',
+            'rounded-2xl sm:rounded-[34px] px-3 sm:px-6 py-3 sm:py-4',
             'flex items-center justify-between',
             'backdrop-blur-[10px]'
           )}
