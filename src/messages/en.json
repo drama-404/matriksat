@@ -1,16 +1,14 @@
 {
   "nav": {
     "services": "Services",
-    "aiLab": "AI Lab",
     "portfolio": "Portfolio",
+    "howItWorks": "Process",
     "contact": "Contact",
-    "plansAndPricing": "Plans and Pricing",
-    "getStarted": "Get Started Today",
+    "bookCall": "Book a Call",
     "home": "Home",
     "achievements": "Achievements",
     "ourWork": "My Work",
-    "faqs": "FAQs",
-    "viewPlans": "View Plans and Pricing"
+    "faqs": "FAQs"
   },
   "hero": {
     "statusBadge": "Available for New Projects",
@@ -50,7 +48,15 @@
     "copyright": "denada.dev. All rights reserved.",
     "building": "building...",
     "privacy": "Privacy Policy",
-    "terms": "Terms of Service"
+    "terms": "Terms of Service",
+    "description": "Full-stack developer & AI engineer based in Tirana. I build AI-powered web applications, chatbots, and custom tools.",
+    "quickLinks": "Quick Links",
+    "contactHeading": "Contact",
+    "location": "Tirana, Albania",
+    "linkServices": "Services",
+    "linkPortfolio": "Portfolio",
+    "linkProcess": "Process",
+    "linkContact": "Contact"
   },
   "common": {
     "loading": "Loading...",

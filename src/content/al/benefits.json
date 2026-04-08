@@ -1,20 +1,20 @@
 {
   "heading": "Pse të Punosh me Mua?",
-  "subheading": "Keni opsione. Ja pse klientët zgjedhin të punojnë me mua.",
+  "subheading": "",
   "items": [
     {
       "id": "results-focused",
       "icon": "chart",
       "title": "Ndërtuar për Rezultate",
-      "frontText": "Rezultate, jo funksione",
-      "description": "Çdo projekt fillon me një pyetje: çfarë rezultati të matshëm ju nevojitet? Ndërtoj drejt saj, jo lista funksionesh."
+      "frontText": "Rezultate mbi funksione",
+      "description": "Çdo projekt fillon me një pyetje: çfarë rezultati të matshëm ju nevojitet?"
     },
     {
       "id": "fast-delivery",
       "icon": "lightning",
       "title": "Javë, Jo Muaj",
       "frontText": "Validuar shpejt",
-      "description": "Prototipi juaj i parë funksional vjen brenda ditësh. Projektet e plota nisin brenda 2-4 javësh. Lëviz shpejt sepse koha juaj ka vlerë."
+      "description": "Prototipi juaj i parë funksional vjen brenda ditësh. Projektet e plota nisin brenda 2-4 javësh."
     },
     {
       "id": "transparent-pricing",
@@ -28,19 +28,19 @@
       "icon": "checklist",
       "title": "Ekzekutim i Disiplinuar",
       "frontText": "Akses direkt",
-      "description": "Nuk merrni kontraktorë të rastësishëm. Merrni mua, komunikim direkt, objektiva të qarta, dhe zero ndërmjetës."
+      "description": "Një zhvilluese, komunikim direkt, objektiva të qarta, dhe zero ndërmjetës."
     },
     {
       "id": "product-thinking",
       "icon": "compass",
-      "title": "Mendim Produkti",
+      "title": "Mendoj si Produkt",
       "frontText": "Vizioni në plan",
-      "description": "Ideja juaj bëhet një rrugë e qartë dhe rezultate konsistente. Mendoj si themelues, jo vetëm kodues."
+      "description": "Ideja juaj bëhet një rrugë e qartë me rezultate të qëndrueshme, çdo hap i rrugës."
     },
     {
       "id": "consistent-progress",
       "icon": "calendar",
-      "title": "Progres Konsistent",
+      "title": "Progres i Qëndrueshëm",
       "frontText": "Përditësime javore",
       "description": "Raporte javore progresi, ndjekje transparente, dhe komunikim direkt. Gjithmonë e dini saktësisht ku qëndron projekti juaj."
     }

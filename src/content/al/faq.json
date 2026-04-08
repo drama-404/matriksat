@@ -7,7 +7,7 @@
     {
       "id": "who-behind",
       "question": "Kush je ti?",
-      "answer": "Jam Denada, zhvilluese full-stack dhe inxhiniere AI me bazë në Tiranë. Diplomë në inxhinieri kompjuterike nga Universiteti Epoka, master në shkenca të dhënash nga Universiteti i Greenwich, të dyja me dallim. Kam kaluar 5 vite duke ndërtuar sisteme prodhimi dhe specializohem në zhvillim full-stack dhe integrim AI.",
+      "answer": "Jam Denada, zhvilluese full-stack dhe inxhiniere AI me bazë në Tiranë. Diplomë në inxhinieri kompjuterike nga Universiteti Epoka, master në shkenca të dhënash nga Universiteti i Greenwich, të dyja me dallim të lartë. Kam 5 vite që ndërtoj sisteme prodhimi dhe jam e specializuar në zhvillim full-stack dhe integrim AI.",
       "avatarLabel": "Përshëndetje! Denada këtu"
     },
     {
@@ -37,7 +37,7 @@
     {
       "id": "platforms",
       "question": "A punon me Shopify/WordPress/etj?",
-      "answer": "Po. Integrohem me shumicën e platformave dhe mund të punoj me çfarëdolloj stack që keni. Më tregoni çfarë keni, unë do ta gjej zgjidhjen.",
+      "answer": "Po. Mund të shumicën e platformave dhe mund të punoj me çfarëdolloj stack që keni. Më tregoni çfarë keni, unë do ta gjej zgjidhjen.",
       "avatarLabel": "Përshëndetje! Denada këtu"
     },
     {

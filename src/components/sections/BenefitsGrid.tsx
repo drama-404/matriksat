@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
+import { CONTACT } from '@/lib/contact';
 import { fadeInUp, staggerChildren } from '@/components/animations/variants';
 import { Button } from '@/components/ui/Button';
 import type { Locale } from '@/i18n/routing';
@@ -37,12 +38,14 @@ export function BenefitsGrid({ locale }: BenefitsGridProps) {
         >
           {content.heading}
         </h2>
-        <p
-          className="mt-3 text-base font-normal max-w-[700px] mx-auto"
-          style={{ color: 'rgba(0, 0, 0, 0.6)' }}
-        >
-          {content.subheading}
-        </p>
+        {content.subheading && (
+          <p
+            className="mt-3 text-base font-normal max-w-[700px] mx-auto"
+            style={{ color: 'rgba(0, 0, 0, 0.6)' }}
+          >
+            {content.subheading}
+          </p>
+        )}
       </motion.div>
 
       {/* Grid */}
@@ -66,7 +69,7 @@ export function BenefitsGrid({ locale }: BenefitsGridProps) {
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
       >
-        <Button href="#contact" variant="primary" subText={ctaSub}>
+        <Button href={CONTACT.calendly} variant="primary" subText={ctaSub}>
           {ctaLabel}
         </Button>
       </motion.div>

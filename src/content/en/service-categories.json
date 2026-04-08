@@ -59,7 +59,7 @@
     {
       "id": "custom-apps",
       "title": "Custom App Development",
-      "subtitle": "Apps that fit your workflow, not the other way around",
+      "subtitle": "Apps built around how your team actually works",
       "remotionId": "CustomAppsDemo",
       "description": "Off-the-shelf software never quite fits. I build custom applications designed around how your team actually works. No subscription fees. You own the code.",
       "ctaText": "Let's talk",
@@ -80,7 +80,7 @@
           "industry": "Retail & E-commerce",
           "industryIcon": "store",
           "title": "Headless E-commerce Platform",
-          "subtitle": "A store that scales with you, not against you",
+          "subtitle": "A store that grows alongside your business",
           "challenge": "Growing retailers outgrow platforms like Shopify. Custom checkout flows, B2B pricing tiers, and multi-warehouse inventory need features their current platform can't provide.",
           "solution": "A headless e-commerce platform with custom admin, B2B/B2C split, multi-currency support, and warehouse-specific inventory. Full data migration without downtime.",
           "results": "Custom checkout flows improve conversion. B2B portals unlock wholesale channels. Monthly platform costs drop from hundreds to just hosting fees, since you own the code.",

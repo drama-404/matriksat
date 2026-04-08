@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { cn } from '@/lib/utils';
+import { CONTACT } from '@/lib/contact';
 import { useScrollDirection } from '@/hooks/useScrollDirection';
 import { Button } from '@/components/ui/Button';
 import { LanguageToggle } from './LanguageToggle';
@@ -16,8 +17,8 @@ interface NavbarProps {
 
 const navLinks = [
   { href: '#services', key: 'services' },
-  { href: '#ai-lab', key: 'aiLab' },
-  { href: '#portfolio', key: 'portfolio' },
+  { href: '#how-it-works', key: 'howItWorks' },
+  { href: '#faqs', key: 'faqs' },
   { href: '#contact', key: 'contact' },
 ] as const;
 
@@ -89,11 +90,11 @@ export function Navbar({ locale }: NavbarProps) {
         <div className="flex items-center gap-4">
           <LanguageToggle locale={locale} className="hidden sm:flex" />
           <Button
-            href="#contact"
+            href={CONTACT.calendly}
             variant="primary"
             className="hidden sm:inline-flex"
           >
-            {t('getStarted')}
+            {t('bookCall')}
           </Button>
 
           {/* Mobile Menu Button */}

@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { CONTACT } from '@/lib/contact';
 import { Modal } from './Modal';
 import { ProjectCard } from './ExpandableProjectCard';
 import type { ServiceCategory } from '@/types/content';
@@ -114,32 +115,15 @@ export function ServiceCategoryModal({
 
               {/* CTA Button */}
               <a
-                href="#contact"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleClose();
-                  // Smooth scroll to contact section
-                  setTimeout(() => {
-                    const contactSection = document.getElementById('contact');
-                    if (contactSection) {
-                      contactSection.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }, 300);
-                }}
+                href={CONTACT.calendly}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 w-full px-6 py-4 rounded-full bg-[var(--color-dark)] text-white font-semibold text-base transition-transform hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 mt-auto"
                 style={{ fontFamily: 'var(--font-satoshi), var(--font-inter), sans-serif' }}
               >
                 <span>{category.ctaText}</span>
                 <ArrowIcon className="w-4 h-4" />
               </a>
-
-              {/* Trust Signal */}
-              <p
-                className="text-center text-xs mt-3"
-                style={{ color: 'rgba(0, 0, 0, 0.5)' }}
-              >
-                Free consultation • No commitment
-              </p>
             </motion.div>
           </div>
         </div>
@@ -147,17 +131,9 @@ export function ServiceCategoryModal({
         {/* Mobile Bottom Bar (shows on small screens) */}
         <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-[var(--color-background)] p-4 z-10">
           <a
-            href="#contact"
-            onClick={(e) => {
-              e.preventDefault();
-              handleClose();
-              setTimeout(() => {
-                const contactSection = document.getElementById('contact');
-                if (contactSection) {
-                  contactSection.scrollIntoView({ behavior: 'smooth' });
-                }
-              }, 300);
-            }}
+            href={CONTACT.calendly}
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 w-full px-6 py-4 rounded-full bg-[var(--color-dark)] text-white font-semibold text-base"
             style={{ fontFamily: 'var(--font-satoshi), var(--font-inter), sans-serif' }}
           >

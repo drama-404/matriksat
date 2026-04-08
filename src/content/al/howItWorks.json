@@ -6,25 +6,25 @@
       "id": "step-1",
       "number": "1",
       "title": "Kuptoj Sfidën Tuaj",
-      "description": "Gërmoj në biznesin tuaj, sfidat dhe çfarë do të thotë sukses. Pyetjet e vështira që në fillim do të thotë të ndërtoj gjënë e duhur."
+      "description": "Analizoj biznesin tuaj, sfidat dhe çfarë do të thotë sukses. Pyetjet e vështira që në fillim do të thotë të ndërtoj gjënë e duhur."
     },
     {
       "id": "step-2",
       "number": "2",
-      "title": "Dizajnoj Rrugëtimin",
+      "title": "Dizenjoj Rrugëtimin",
       "description": "Struktura, afatet, objektivat dhe kostot, të gjitha të planifikuara. Do të keni një plan të qartë para se të shkruaj një rresht kod."
     },
     {
       "id": "step-3",
       "number": "3",
       "title": "Ndërtoj në Sprinte",
-      "description": "Ndërtoj në sprinte të fokusuar. Shihni progres çdo javë, jo vetëm në fund. Pa surpriza."
+      "description": "Ndërtoj në sprinte të fokusuar. Shihni progres çdo javë. Pa surpriza."
     },
     {
       "id": "step-4",
       "number": "4",
       "title": "Rritemi Bashkë",
-      "description": "Shtoni funksione, zgjeroni kapacitetin, përmirësoni sistemet. Qëndroj si partneri juaj teknik, jo një furnitor njëherësh."
+      "description": "Shtoni funksione, zgjeroni kapacitetin, përmirësoni sistemet. Qëndroj si partneri juaj teknik afatgjatë."
     }
   ]
 }

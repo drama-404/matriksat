@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
+import { CONTACT } from '@/lib/contact';
 import { fadeIn } from '@/components/animations/variants';
 import type { Locale } from '@/i18n/routing';
 import type { QuoteContent } from '@/types/content';
@@ -91,7 +92,7 @@ export function QuoteSection({ locale }: QuoteSectionProps) {
 
         {/* CTA Badge */}
         <motion.a
-          href="#pricing"
+          href={CONTACT.calendly}
           className={cn(
             'mt-6 inline-block',
             'bg-[var(--color-dark)] text-white text-xs font-normal',

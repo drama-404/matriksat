@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { fadeInUp } from '@/components/animations/variants';
+import { CONTACT } from '@/lib/contact';
 import type { Locale } from '@/i18n/routing';
 import type { FinalCtaContent } from '@/types/content';
 
@@ -17,7 +18,7 @@ export function FinalCTA({ locale }: FinalCTAProps) {
   const content: FinalCtaContent = locale === 'en' ? ctaEN : ctaAL;
 
   return (
-    <section className="section-container" aria-labelledby="final-cta-heading">
+    <section id="contact" className="section-container" aria-labelledby="final-cta-heading">
       <motion.div
         className="relative max-w-[1082px] mx-auto rounded-[var(--radius-card-lg)] bg-[var(--color-dark)] px-8 py-16 sm:py-24 overflow-hidden"
         variants={fadeInUp}
@@ -66,7 +67,7 @@ export function FinalCTA({ locale }: FinalCTAProps) {
               aria-hidden="true"
             />
             <motion.a
-              href="#pricing"
+              href={CONTACT.calendly}
               className="relative inline-flex items-center gap-2 bg-white text-[var(--color-dark)] rounded-[72px] px-8 py-5 text-base font-semibold hover:opacity-90 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-dark)]"
               animate={{
                 scale: [1, 1.02, 1],
@@ -83,15 +84,18 @@ export function FinalCTA({ locale }: FinalCTAProps) {
           </div>
 
           {/* Sub-text badge */}
-          <span
-            className="inline-block rounded-2xl px-3 py-1.5 text-[11px] font-normal mb-12"
-            style={{
-              backgroundColor: 'rgba(255, 255, 255, 0.1)',
-              color: 'rgba(255, 255, 255, 0.7)',
-            }}
-          >
-            {content.ctaSub}
-          </span>
+          {content.ctaSub && (
+            <span
+              className="inline-block rounded-2xl px-3 py-1.5 text-[11px] font-normal mb-12"
+              style={{
+                backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                color: 'rgba(255, 255, 255, 0.7)',
+              }}
+            >
+              {content.ctaSub}
+            </span>
+          )}
+          {!content.ctaSub && <div className="mb-12" />}
 
           {/* Task Processing Tunnel */}
           <ProcessingTunnel content={content} />
@@ -117,9 +121,11 @@ function ProcessingTunnel({ content }: ProcessingTunnelProps) {
   return (
     <div className="w-full max-w-[1000px]">
       {/* Trust Text Header */}
-      <p className="text-sm font-medium text-white text-center mb-5">
-        {content.trustText}
-      </p>
+      {content.trustText && (
+        <p className="text-sm font-medium text-white text-center mb-5">
+          {content.trustText}
+        </p>
+      )}
 
       {/* Tunnel Container */}
       <div className="relative flex items-center justify-center overflow-hidden h-[70px]">

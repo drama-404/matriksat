@@ -16,7 +16,7 @@
       ],
       "pricing": "",
       "pricingPeriod": "",
-      "ctaPrimary": "Rezervo një Thirrje",
+      "ctaPrimary": "Rezervo një Telefonatë",
       "ctaPrimaryHover": "Le të Flasim",
       "ctaSecondary": "Më Shkruaj në WhatsApp",
       "ctaSecondaryHover": "Bisedë e Shpejtë",
@@ -25,7 +25,7 @@
     },
     {
       "id": "build-launch",
-      "name": "Ndërtu & Dërgo",
+      "name": "Ndërto & Dërgo",
       "description": "Projekt i plotë nga prototipi në prodhim. Ju e zotëroni kodin.",
       "icon": "rocket",
       "features": [
@@ -39,7 +39,7 @@
       ],
       "pricing": "",
       "pricingPeriod": "",
-      "ctaPrimary": "Rezervo një Thirrje",
+      "ctaPrimary": "Rezervo një Telefonatë",
       "ctaPrimaryHover": "Le të Flasim",
       "ctaSecondary": "Më Shkruaj në WhatsApp",
       "ctaSecondaryHover": "Bisedë e Shpejtë",
@@ -49,7 +49,7 @@
     {
       "id": "ongoing",
       "name": "Mbështetje e Vazhdueshme",
-      "description": "Retainer mujor për përditësime, mirëmbajtje, dhe funksione të reja sipas nevojës.",
+      "description": "Shërbim mujor për përditësime, mirëmbajtje, dhe funksione të reja sipas nevojës.",
       "icon": "headset",
       "features": [
         "Alokacion orësh mujor",
@@ -61,7 +61,7 @@
       ],
       "pricing": "",
       "pricingPeriod": "",
-      "ctaPrimary": "Rezervo një Thirrje",
+      "ctaPrimary": "Rezervo një Telefonatë",
       "ctaPrimaryHover": "Le të Flasim",
       "ctaSecondary": "Më Shkruaj në WhatsApp",
       "ctaSecondaryHover": "Bisedë e Shpejtë",

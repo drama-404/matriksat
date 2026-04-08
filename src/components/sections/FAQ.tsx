@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
+import { CONTACT } from '@/lib/contact';
 import { fadeInUp, staggerChildren } from '@/components/animations/variants';
 import type { Locale } from '@/i18n/routing';
 import type { FAQContent, FAQItem } from '@/types/content';
@@ -80,7 +81,7 @@ export function FAQ({ locale }: FAQProps) {
           {content.footerText}
         </p>
         <a
-          href="mailto:hello@denada.dev"
+          href={CONTACT.emailHref}
           className={cn(
             'inline-flex items-center gap-2',
             'bg-[var(--color-dark)] text-white rounded-[58px] px-6 py-4',

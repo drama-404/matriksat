@@ -1,16 +1,14 @@
 {
   "nav": {
     "services": "Shërbimet",
-    "aiLab": "Laboratori AI",
     "portfolio": "Portofoli",
+    "howItWorks": "Procesi",
     "contact": "Kontakt",
-    "plansAndPricing": "Planet dhe Çmimet",
-    "getStarted": "Fillo Sot",
+    "bookCall": "Rezervo Telefonatë",
     "home": "Ballina",
     "achievements": "Arritjet",
     "ourWork": "Puna Ime",
-    "faqs": "Pyetje të Shpeshta",
-    "viewPlans": "Shiko Planet dhe Çmimet"
+    "faqs": "Pyetje të Shpeshta"
   },
   "hero": {
     "statusBadge": "Disponibël për Projekte të Reja",
@@ -41,7 +39,7 @@
     "cta": "Gati për të Filluar?"
   },
   "cta": {
-    "bookCall": "Rezervo një Thirrje",
+    "bookCall": "Rezervo një Telefonatë",
     "learnMore": "Mëso Më Shumë",
     "viewProject": "Shiko Projektin",
     "readMore": "Lexo Më Shumë"
@@ -50,7 +48,15 @@
     "copyright": "denada.dev. Të gjitha të drejtat e rezervuara.",
     "building": "duke ndërtuar...",
     "privacy": "Politika e Privatësisë",
-    "terms": "Kushtet e Shërbimit"
+    "terms": "Kushtet e Shërbimit",
+    "description": "Zhvilluese full-stack & inxhiniere AI me bazë në Tiranë. Ndërtoj aplikacione web me AI, chatbot, dhe mjete të personalizuara.",
+    "quickLinks": "Lidhje të Shpejta",
+    "contactHeading": "Kontakto",
+    "location": "Tiranë, Shqipëri",
+    "linkServices": "Shërbimet",
+    "linkPortfolio": "Portofoli",
+    "linkProcess": "Procesi",
+    "linkContact": "Kontakto"
   },
   "common": {
     "loading": "Duke ngarkuar...",

@@ -17,41 +17,23 @@ const WORD_SPACING = 4;
 
 // Letter definitions (5x7 pixel grid per letter, 1 = pixel on)
 const LETTERS: Record<string, number[][]> = {
-  M: [
-    [1, 0, 0, 0, 1],
-    [1, 1, 0, 1, 1],
-    [1, 0, 1, 0, 1],
+  B: [
+    [1, 1, 1, 1, 0],
     [1, 0, 0, 0, 1],
     [1, 0, 0, 0, 1],
+    [1, 1, 1, 1, 0],
     [1, 0, 0, 0, 1],
     [1, 0, 0, 0, 1],
+    [1, 1, 1, 1, 0],
   ],
-  A: [
+  U: [
+    [1, 0, 0, 0, 1],
+    [1, 0, 0, 0, 1],
+    [1, 0, 0, 0, 1],
+    [1, 0, 0, 0, 1],
+    [1, 0, 0, 0, 1],
+    [1, 0, 0, 0, 1],
     [0, 1, 1, 1, 0],
-    [1, 0, 0, 0, 1],
-    [1, 0, 0, 0, 1],
-    [1, 1, 1, 1, 1],
-    [1, 0, 0, 0, 1],
-    [1, 0, 0, 0, 1],
-    [1, 0, 0, 0, 1],
-  ],
-  T: [
-    [1, 1, 1, 1, 1],
-    [0, 0, 1, 0, 0],
-    [0, 0, 1, 0, 0],
-    [0, 0, 1, 0, 0],
-    [0, 0, 1, 0, 0],
-    [0, 0, 1, 0, 0],
-    [0, 0, 1, 0, 0],
-  ],
-  R: [
-    [1, 1, 1, 1, 0],
-    [1, 0, 0, 0, 1],
-    [1, 0, 0, 0, 1],
-    [1, 1, 1, 1, 0],
-    [1, 0, 1, 0, 0],
-    [1, 0, 0, 1, 0],
-    [1, 0, 0, 0, 1],
   ],
   I: [
     [1, 1, 1, 1, 1],
@@ -62,23 +44,50 @@ const LETTERS: Record<string, number[][]> = {
     [0, 0, 1, 0, 0],
     [1, 1, 1, 1, 1],
   ],
-  K: [
+  L: [
+    [1, 0, 0, 0, 0],
+    [1, 0, 0, 0, 0],
+    [1, 0, 0, 0, 0],
+    [1, 0, 0, 0, 0],
+    [1, 0, 0, 0, 0],
+    [1, 0, 0, 0, 0],
+    [1, 1, 1, 1, 1],
+  ],
+  D: [
+    [1, 1, 1, 1, 0],
     [1, 0, 0, 0, 1],
-    [1, 0, 0, 1, 0],
-    [1, 0, 1, 0, 0],
-    [1, 1, 0, 0, 0],
-    [1, 0, 1, 0, 0],
-    [1, 0, 0, 1, 0],
+    [1, 0, 0, 0, 1],
+    [1, 0, 0, 0, 1],
+    [1, 0, 0, 0, 1],
+    [1, 0, 0, 0, 1],
+    [1, 1, 1, 1, 0],
+  ],
+  N: [
+    [1, 0, 0, 0, 1],
+    [1, 1, 0, 0, 1],
+    [1, 0, 1, 0, 1],
+    [1, 0, 0, 1, 1],
+    [1, 0, 0, 0, 1],
+    [1, 0, 0, 0, 1],
     [1, 0, 0, 0, 1],
   ],
-  S: [
-    [0, 1, 1, 1, 1],
-    [1, 0, 0, 0, 0],
-    [1, 0, 0, 0, 0],
+  G: [
     [0, 1, 1, 1, 0],
-    [0, 0, 0, 0, 1],
-    [0, 0, 0, 0, 1],
-    [1, 1, 1, 1, 0],
+    [1, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0],
+    [1, 0, 1, 1, 1],
+    [1, 0, 0, 0, 1],
+    [1, 0, 0, 0, 1],
+    [0, 1, 1, 1, 0],
+  ],
+  A: [
+    [0, 1, 1, 1, 0],
+    [1, 0, 0, 0, 1],
+    [1, 0, 0, 0, 1],
+    [1, 1, 1, 1, 1],
+    [1, 0, 0, 0, 1],
+    [1, 0, 0, 0, 1],
+    [1, 0, 0, 0, 1],
   ],
   ' ': [
     [0, 0, 0, 0, 0],
@@ -102,9 +111,15 @@ const ROBOT_PIXELS: number[][] = [
   [0, 1, 1, 0, 1, 1, 0],
 ];
 
+interface PixelData {
+  x: number;
+  y: number;
+  isRobot: boolean;
+}
+
 // Convert text to pixel coordinates
-function textToPixels(text: string): { x: number; y: number }[] {
-  const pixels: { x: number; y: number }[] = [];
+function textToPixels(text: string): PixelData[] {
+  const pixels: PixelData[] = [];
   let currentX = 0;
 
   for (let charIndex = 0; charIndex < text.length; charIndex++) {
@@ -118,6 +133,7 @@ function textToPixels(text: string): { x: number; y: number }[] {
             pixels.push({
               x: currentX + col,
               y: row,
+              isRobot: false,
             });
           }
         }
@@ -130,14 +146,15 @@ function textToPixels(text: string): { x: number; y: number }[] {
 }
 
 // Get robot pixels with offset
-function getRobotPixels(offsetX: number): { x: number; y: number }[] {
-  const pixels: { x: number; y: number }[] = [];
+function getRobotPixels(offsetX: number): PixelData[] {
+  const pixels: PixelData[] = [];
   for (let row = 0; row < ROBOT_PIXELS.length; row++) {
     for (let col = 0; col < ROBOT_PIXELS[row].length; col++) {
       if (ROBOT_PIXELS[row][col] === 1) {
         pixels.push({
           x: offsetX + col,
           y: row,
+          isRobot: true,
         });
       }
     }
@@ -145,7 +162,7 @@ function getRobotPixels(offsetX: number): { x: number; y: number }[] {
   return pixels;
 }
 
-const TEXT = 'DENADA DEV';
+const TEXT = 'BUILDING AI';
 const TEXT_PIXELS = textToPixels(TEXT);
 const TEXT_WIDTH = TEXT_PIXELS.length > 0 ? Math.max(...TEXT_PIXELS.map((p) => p.x)) + 1 : 0;
 
@@ -156,6 +173,10 @@ const ROBOT_PIXEL_LIST = getRobotPixels(ROBOT_OFFSET_X);
 // Combine all pixels
 const ALL_PIXELS = [...TEXT_PIXELS, ...ROBOT_PIXEL_LIST];
 const TOTAL_WIDTH = ALL_PIXELS.length > 0 ? Math.max(...ALL_PIXELS.map((p) => p.x)) + 1 : 0;
+
+// Colors
+const COLOR_TEXT = '#ffffff';
+const COLOR_ROBOT = 'var(--color-accent)';
 
 // Animation timing - FASTER
 const STEP_DURATION = 40; // ms per pixel (was 80)
@@ -302,11 +323,12 @@ export function PixelTerminal({ className }: PixelTerminalProps) {
             }}
           />
 
-          {/* Drawn pixels - WHITE color */}
+          {/* Drawn pixels - white for text, accent for robot */}
           {ALL_PIXELS.map((pixel, index) => {
             const pixelKey = `${pixel.x}-${pixel.y}`;
             const isDrawn = drawnPixels.has(pixelKey);
             const isGlowing = glowingPixels.has(pixelKey);
+            const color = pixel.isRobot ? COLOR_ROBOT : COLOR_TEXT;
 
             return (
               <motion.div
@@ -322,7 +344,7 @@ export function PixelTerminal({ className }: PixelTerminalProps) {
                 initial={{ opacity: 0, backgroundColor: 'transparent' }}
                 animate={{
                   opacity: isDrawn ? 1 : 0,
-                  backgroundColor: isDrawn ? '#ffffff' : 'transparent',
+                  backgroundColor: isDrawn ? color : 'transparent',
                   boxShadow: isGlowing
                     ? '0 0 6px 2px rgba(239, 68, 68, 0.7)'
                     : '0 0 0 0 transparent',
@@ -365,7 +387,7 @@ export function PixelTerminal({ className }: PixelTerminalProps) {
           transition={{ duration: 0.3 }}
         >
           <span className="text-[rgba(255,255,255,0.35)] text-[10px] font-mono">
-            AI services ready...
+            ready to build...
           </span>
         </motion.div>
       </div>

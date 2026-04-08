@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
+import { CONTACT } from '@/lib/contact';
 import { fadeInUp, staggerChildren } from '@/components/animations/variants';
 import { Button } from '@/components/ui/Button';
 import type { Locale } from '@/i18n/routing';
@@ -190,13 +191,13 @@ function PricingCard({ model }: { model: EngagementModel }) {
         <div className="flex flex-col gap-3">
           <Button
             variant={isDark ? 'secondary' : 'primary'}
-            href="#contact"
+            href={CONTACT.calendly}
           >
             {model.ctaPrimary}
           </Button>
           <Button
             variant="outline"
-            href="#contact"
+            href={CONTACT.whatsapp}
             className={isDark ? 'border-white text-white hover:bg-white hover:text-[var(--color-dark)]' : ''}
           >
             {model.ctaSecondary}

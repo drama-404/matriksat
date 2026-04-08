@@ -59,7 +59,7 @@
     {
       "id": "custom-apps",
       "title": "Zhvillim Aplikacionesh",
-      "subtitle": "Aplikacione që përshtaten me mënyrën tuaj të punës",
+      "subtitle": "Aplikacione të ndërtuara sipas mënyrës si punon ekipi juaj",
       "remotionId": "CustomAppsDemo",
       "description": "Softueri i gatshëm kurrë nuk përshtatet tamam. Ndërtoj aplikacione të personalizuara të dizajnuara sipas mënyrës si punon ekipi juaj. Pa tarifa abonimi. Ju zotëroni kodin.",
       "ctaText": "Le të flasim",
@@ -80,7 +80,7 @@
           "industry": "Retail & E-commerce",
           "industryIcon": "store",
           "title": "Platformë Headless E-commerce",
-          "subtitle": "Dyqan që rritet me ju, jo kundër jush",
+          "subtitle": "Dyqan që rritet bashkë me biznesin tuaj",
           "challenge": "Shitësit në rritje i tejkalojnë platformat si Shopify. Rrjedha checkout-i të personalizuara, nivele çmimesh B2B, dhe inventar multi-magazinë kërkojnë veçori që platforma aktuale nuk i ofron.",
           "solution": "Platformë e-commerce headless me admin të personalizuar, ndarje B2B/B2C, mbështetje multi-valutash, dhe inventar specifik për magazinë. Migrim i plotë i të dhënave pa ndërprerje.",
           "results": "Rrjedhat e personalizuara të checkout-it përmirësojnë konvertimin. Portalet B2B hapin kanale me shumicë. Kostot mujore të platformës bien nga qindra në vetëm tarifat e hosting-ut, pasi zotëroni kodin.",
@@ -169,7 +169,7 @@
       "title": "Dizajn Produkti",
       "subtitle": "Ndërfaqe të bukura që përdoruesit i kuptojnë vërtet",
       "remotionId": "ProductDesignDemo",
-      "description": "Dizajni i mirë nuk është dekorim. Është mënyra si funksionojnë gjërat. Dizajnoj produkte që njerëzit duan t'i përdorin: ndërfaqe të qarta, rrjedha intuitive, dhe pamje vizuale që ndërtojnë besim. Nga wireframe-t tek dorëzimi piksel-perfekt.",
+      "description": "Dizajni i mirë nuk është dekorim. Është mënyra si funksionojnë gjërat. Dizenjoj produkte që njerëzit duan t'i përdorin: ndërfaqe të qarta, rrjedha intuitive, dhe pamje vizuale që ndërtojnë besim. Nga wireframe-t tek dorëzimi piksel-perfekt.",
       "ctaText": "Le të flasim",
       "projects": [
         {
@@ -179,7 +179,7 @@
           "title": "Dizajn Aplikacionesh Web",
           "subtitle": "Funksionalitet kompleks, ndërfaqe të thjeshta",
           "challenge": "Kthimi i kërkesave komplekse të biznesit në ndërfaqe që nuk kërkojnë manual. Veçori enterprise me përdorshmëri niveli startup.",
-          "solution": "Dizajnoj aplikacione web me kërkim përdoruesish, arkitekturë informacioni, biblioteka komponentësh, dhe paraqitje responsive. Nga mjete me shumë dashboard-e tek portale për klientë.",
+          "solution": "Dizenjoj aplikacione web me kërkim përdoruesish, arkitekturë informacioni, biblioteka komponentësh, dhe paraqitje responsive. Nga mjete me shumë dashboard-e tek portale për klientë.",
           "results": "Aplikacionet web të dizajnuara mirë kanë adoptim më të shpejtë dhe më pak bileta mbështetjeje. Sistemi i qartë i komponentëve gjithashtu përshpejton zhvillimin dhe mban UI konsistente ndërsa veçoritë rriten.",
           "tags": ["UI Dashboard", "Sisteme Komponentësh", "Responsive", "Kërkim Përdoruesish"]
         },
@@ -190,7 +190,7 @@
           "title": "Dizajn Aplikacionesh Mobile",
           "subtitle": "Ndjesi native. Gjithçka miqësore me gishtin.",
           "challenge": "Përdoruesit mobile janë të padurueshëm. Keni 3 sekonda të bëni kuptim. Aplikacionet duhet të ndihen intuitive që në hapjen e parë, pa nevojë për tutoriale.",
-          "solution": "Dizajnoj për iOS dhe Android me modele specifike platforme, navigim me gjeste, gjendje offline, dhe asete të optimizuara për performancë. Zona prekjeje që vërtet funksionojnë.",
+          "solution": "Dizenjoj për iOS dhe Android me modele specifike platforme, navigim me gjeste, gjendje offline, dhe asete të optimizuara për performancë. Zona prekjeje që vërtet funksionojnë.",
           "results": "Modelet e dizajnit native i bëjnë aplikacionet të ndihen të njohura që në prekjen e parë. Mbështetja e menduar e gjesteve dhe zonat e sakta të prekjes përmirësojnë drejtpërdrejt mbajtjen dhe vlerësimet në app store.",
           "tags": ["Dizajn iOS", "Dizajn Android", "Gjeste", "UX Offline"]
         },
@@ -201,7 +201,7 @@
           "title": "Dizajn Platformash SaaS",
           "subtitle": "Produkte që shiten vetë përmes UX të shkëlqyer",
           "challenge": "SaaS jeton ose vdes nga përdorshmëria. Përdoruesit e provës falas duhet të shohin vlerë menjëherë. Adoptimi duhet të jetë pa fërkime. Veçoritë duhet të jenë të zbulueshme.",
-          "solution": "Dizajnoj produkte SaaS me adoptim të fokusuar në konvertim, zbulim progresiv, gjendje boshe që edukojnë, dhe rrjedha abonimi që nuk ndihen të bezdisshme.",
+          "solution": "Dizenjoj produkte SaaS me adoptim të fokusuar në konvertim, zbulim progresiv, gjendje boshe që edukojnë, dhe rrjedha abonimi që nuk ndihen të bezdisshme.",
           "results": "Adoptimi i mirë dhe zbulimi i veçorive ndikojnë drejtpërdrejt konvertimin nga prova në abonim. Kur përdoruesit gjejnë dhe përdorin veçoritë pa fërkime, largimi bie dhe të ardhurat nga zgjerimi rriten.",
           "tags": ["UX Adoptimi", "Dizajn Konvertimi", "Zbulim Veçorish", "UI Çmimesh"]
         },
@@ -212,7 +212,7 @@
           "title": "Dizajn E-commerce",
           "subtitle": "Dyqane që konvertojnë shfletuesit në blerës",
           "challenge": "Shumica e faqeve e-commerce duken njësoj. Faqe produktesh që nuk shesin. Checkout me hapa të panevojshëm. Braktisje karroce mbi 70%.",
-          "solution": "Dizajnoj eksperienca e-commerce me faqe produktesh që ndalin scroll-in, checkout pa fërkime, sinjale besimi që funksionojnë, dhe upsell që ndihen të dobishme jo të bezdisshme.",
+          "solution": "Dizenjoj eksperienca e-commerce me faqe produktesh që ndalin scroll-in, checkout pa fërkime, sinjale besimi që funksionojnë, dhe upsell që ndihen të dobishme jo të bezdisshme.",
           "results": "Rrjedhat e thjeshtuara të checkout-it dhe faqet më të mira të produkteve përmirësojnë drejtpërdrejt normat e konvertimit. Çdo hap i panevojshëm i hequr nga checkout-i rikuperon karroca të braktisura.",
           "tags": ["Faqe Produktesh", "UX Checkout", "Mobile Commerce", "Konvertim"]
         }

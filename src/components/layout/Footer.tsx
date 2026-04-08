@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { cn } from '@/lib/utils';
+import { CONTACT } from '@/lib/contact';
 import { TerminalLabel } from '@/components/ui/TerminalLabel';
 import type { Locale } from '@/i18n/routing';
 
@@ -10,35 +11,11 @@ interface FooterProps {
   locale: Locale;
 }
 
-const currentTasks = [
-  'Building AI chatbots',
-  'Processing invoices',
-  'Automating workflows',
-  'Creating dashboards',
-  'Training models',
-  'Integrating APIs',
-];
-
 export function Footer({ locale }: FooterProps) {
   const t = useTranslations('footer');
 
   return (
     <footer className="bg-[var(--color-dark)] text-white">
-      {/* Task Ticker */}
-      <div className="overflow-hidden py-4 border-b border-white/10">
-        <div className="ticker-animation whitespace-nowrap">
-          {[...currentTasks, ...currentTasks].map((task, index) => (
-            <span
-              key={index}
-              className="inline-flex items-center gap-2 mx-8 text-sm text-white/70"
-            >
-              <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-accent)]" />
-              {task}
-            </span>
-          ))}
-        </div>
-      </div>
-
       {/* Main Footer Content */}
       <div className="section-container py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
@@ -63,8 +40,7 @@ export function Footer({ locale }: FooterProps) {
               </span>
             </Link>
             <p className="text-white/70 max-w-sm mb-6">
-              Full-stack developer & AI engineer based in Tirana. I build
-              AI-powered web applications, chatbots, and custom tools.
+              {t('description')}
             </p>
             <TerminalLabel className="text-white/40">
               {locale === 'en' ? 'building...' : 'duke ndërtuar...'}
@@ -74,21 +50,20 @@ export function Footer({ locale }: FooterProps) {
           {/* Quick Links */}
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wider mb-4 text-white/50">
-              Quick Links
+              {t('quickLinks')}
             </h4>
             <ul className="space-y-3">
               {[
-                { href: '#services', label: 'Services' },
-                { href: '#portfolio', label: 'Portfolio' },
-                { href: '#pricing', label: 'Pricing' },
-                { href: '#contact', label: 'Contact' },
+                { href: '#services', labelKey: 'linkServices' as const },
+                { href: '#how-it-works', labelKey: 'linkProcess' as const },
+                { href: '#contact', labelKey: 'linkContact' as const },
               ].map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
                     className="text-white/70 hover:text-white transition-colors"
                   >
-                    {link.label}
+                    {t(link.labelKey)}
                   </a>
                 </li>
               ))}
@@ -98,21 +73,21 @@ export function Footer({ locale }: FooterProps) {
           {/* Contact */}
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wider mb-4 text-white/50">
-              Contact
+              {t('contactHeading')}
             </h4>
             <ul className="space-y-3 text-white/70">
               <li>
                 <a
-                  href="mailto:hello@denada.dev"
+                  href={CONTACT.emailHref}
                   className="hover:text-white transition-colors"
                 >
-                  hello@denada.dev
+                  {CONTACT.email}
                 </a>
               </li>
-              <li>Tirana, Albania</li>
+              <li>{t('location')}</li>
               <li>
                 <a
-                  href="https://linkedin.com/in/denada"
+                  href={CONTACT.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors"
