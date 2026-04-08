@@ -15,11 +15,11 @@ import {
  * STEP 1 - Understand Your Challenge (frames 0-300):
  *   - Calendly booking interface
  *   - Discovery notes appearing
- *   - "We're mapping your challenges" transition
+ *   - "Building your roadmap..." transition
  *
  * STEP 2 - Design Your Roadmap (frames 300-600):
  *   - Timeline with milestones
- *   - Team structure cards
+ *   - Skills/expertise cards
  *   - Fixed cost breakdown
  *
  * STEP 3 - Build in Sprints (frames 600-900):
@@ -315,7 +315,7 @@ const Step1Understand: React.FC<StepProps> = ({ localFrame, fps }) => {
 };
 
 // ═══════════════════════════════════════════════════════════════
-// STEP 2: Design Your Roadmap - Timeline + Team + Cost
+// STEP 2: Design Your Roadmap - Timeline + Skills + Scope
 // ═══════════════════════════════════════════════════════════════
 
 const MILESTONES = [
@@ -325,10 +325,10 @@ const MILESTONES = [
   { week: 'Week 5', label: 'Launch 🚀', color: COLORS.success },
 ];
 
-const TEAM = [
-  { role: 'Full-Stack Dev', icon: '💻' },
-  { role: 'AI Engineer', icon: '🤖' },
-  { role: 'Project Lead', icon: '📋' },
+const SKILLS = [
+  { role: 'Full-Stack', icon: '💻' },
+  { role: 'AI / ML', icon: '🤖' },
+  { role: 'DevOps', icon: '📋' },
 ];
 
 const Step2Design: React.FC<StepProps> = ({ localFrame }) => {
@@ -393,14 +393,14 @@ const Step2Design: React.FC<StepProps> = ({ localFrame }) => {
         </div>
       )}
 
-      {/* Team Structure */}
+      {/* Skills Coverage */}
       {showTeam && (
         <div style={{ marginBottom: 16 }}>
           <p style={{ margin: '0 0 10px 0', fontSize: 11, fontWeight: 600, color: COLORS.muted, textTransform: 'uppercase', letterSpacing: 1 }}>
-            Your Team
+            What I Cover
           </p>
           <div style={{ display: 'flex', gap: 8 }}>
-            {TEAM.map((member, i) => {
+            {SKILLS.map((member, i) => {
               const teamDelay = i * 20;
               const teamOpacity = interpolate(localFrame - 140, [teamDelay, teamDelay + 15], [0, 1], { extrapolateRight: 'clamp' });
               const teamScale = interpolate(localFrame - 140, [teamDelay, teamDelay + 15], [0.8, 1], { extrapolateRight: 'clamp' });
@@ -428,7 +428,7 @@ const Step2Design: React.FC<StepProps> = ({ localFrame }) => {
         </div>
       )}
 
-      {/* Fixed Cost */}
+      {/* Scope Summary */}
       {showCost && (
         <div
           style={{
@@ -443,10 +443,10 @@ const Step2Design: React.FC<StepProps> = ({ localFrame }) => {
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <div>
               <p style={{ margin: 0, fontSize: 10, fontWeight: 600, color: 'rgba(255,255,255,0.8)', textTransform: 'uppercase' }}>
-                Fixed Price
+                Clear Scope
               </p>
               <p style={{ margin: '4px 0 0', fontSize: 24, fontWeight: 700, color: 'white' }}>
-                €4,500
+                5 Weeks
               </p>
             </div>
             <div style={{ textAlign: 'right' }}>

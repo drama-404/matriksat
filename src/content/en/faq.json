@@ -41,12 +41,6 @@
       "avatarLabel": "Hey! Denada here"
     },
     {
-      "id": "pause-cancel",
-      "question": "Can I pause or cancel?",
-      "answer": "For ongoing support: yes, any time. For fixed projects: I scope clearly upfront so there are no surprises. Need to pause? Just tell me.",
-      "avatarLabel": "Hey! Denada here"
-    },
-    {
       "id": "why-not-hire",
       "question": "Why not hire a full-time developer?",
       "answer": "A good full-time dev costs \u20ac40-80k/year plus benefits, and you're locked in. With me, you pay for what you need, when you need it. Scale up for a big push, scale down when things are stable.",

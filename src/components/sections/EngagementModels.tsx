@@ -166,23 +166,25 @@ function PricingCard({ model }: { model: EngagementModel }) {
           ))}
         </ul>
 
-        {/* Pricing */}
-        <div className="mb-6">
-          <span
-            className={cn(
-              'text-[29px] font-semibold',
-              isDark ? 'text-white' : 'text-[var(--color-dark)]'
-            )}
-          >
-            {model.pricing}
-          </span>
-          <span
-            className="text-lg font-normal ml-2"
-            style={{ color: isDark ? 'rgba(255, 255, 255, 0.54)' : 'rgba(0, 0, 0, 0.54)' }}
-          >
-            {model.pricingPeriod}
-          </span>
-        </div>
+        {/* Pricing - hidden (prices removed during rebrand) */}
+        {model.pricing && (
+          <div className="mb-6">
+            <span
+              className={cn(
+                'text-[29px] font-semibold',
+                isDark ? 'text-white' : 'text-[var(--color-dark)]'
+              )}
+            >
+              {model.pricing}
+            </span>
+            <span
+              className="text-lg font-normal ml-2"
+              style={{ color: isDark ? 'rgba(255, 255, 255, 0.54)' : 'rgba(0, 0, 0, 0.54)' }}
+            >
+              {model.pricingPeriod}
+            </span>
+          </div>
+        )}
 
         {/* CTA Buttons */}
         <div className="flex flex-col gap-3">

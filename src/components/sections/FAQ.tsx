@@ -154,7 +154,7 @@ function FAQChatPair({ faqItem, isOpen, onToggle }: FAQChatPairProps) {
                 className="w-10 h-10 rounded-full bg-[var(--color-accent)] flex items-center justify-center text-white text-xs font-bold"
                 aria-hidden="true"
               >
-                M
+                D
               </div>
               <span
                 className="text-[10px] font-medium whitespace-nowrap"

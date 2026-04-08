@@ -41,12 +41,6 @@
       "avatarLabel": "Përshëndetje! Denada këtu"
     },
     {
-      "id": "pause-cancel",
-      "question": "A mund ta ndaloj ose anuloj?",
-      "answer": "Për mbështetje të vazhdueshme: po, kurdo. Për projekte fikse: e përcaktoj qartë fushën që në fillim që të mos ketë surpriza. Duhet ta ndalësh? Thjesht më thuaj.",
-      "avatarLabel": "Përshëndetje! Denada këtu"
-    },
-    {
       "id": "why-not-hire",
       "question": "Pse të mos punësoj një zhvillues me kohë të plotë?",
       "answer": "Një zhvillues i mirë me kohë të plotë kushton \u20ac40-80k/vit plus përfitime, dhe jeni të lidhur. Me mua, paguani për atë që keni nevojë, kur keni nevojë. Rrini për një shtytje të madhe, ulni kur gjërat janë stabile.",
