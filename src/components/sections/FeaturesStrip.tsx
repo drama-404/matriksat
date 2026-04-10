@@ -1,5 +1,6 @@
 'use client';
 
+import { Fragment } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { cn } from '@/lib/utils';
@@ -139,9 +140,8 @@ export function FeaturesStrip({ className }: FeaturesStripProps) {
     <section className={cn('section-container', className)} aria-label="Key features">
       <motion.div
         className={cn(
-          'flex flex-col sm:flex-row items-center justify-between',
-          'max-w-[1052px] mx-auto py-6',
-          'gap-6 sm:gap-0'
+          'flex flex-row items-center',
+          'max-w-[1052px] mx-auto py-4 sm:py-6'
         )}
         variants={staggerChildren}
         initial="hidden"
@@ -149,45 +149,34 @@ export function FeaturesStrip({ className }: FeaturesStripProps) {
         viewport={{ once: true, amount: 0.3 }}
       >
         {features.map((feature, index) => (
-          <>
-            {/* Dashed Divider between items */}
+          <Fragment key={feature.bold}>
+            {/* Dashed vertical divider between items */}
             {index > 0 && (
-              <>
-                {/* Desktop: vertical divider */}
-                <div
-                  className="hidden sm:flex items-center justify-center"
-                  aria-hidden="true"
-                >
-                  <div className="w-[2px] h-[60px] border-l-2 border-dashed border-[rgba(0,0,0,0.17)]" />
-                </div>
-                {/* Mobile: horizontal divider */}
-                <div
-                  className="sm:hidden flex items-center justify-center"
-                  aria-hidden="true"
-                >
-                  <div className="w-[60px] h-[2px] border-t-2 border-dashed border-[rgba(0,0,0,0.17)]" />
-                </div>
-              </>
+              <div
+                className="flex items-center justify-center flex-shrink-0"
+                aria-hidden="true"
+              >
+                <div className="w-[2px] h-10 sm:h-[60px] border-l-2 border-dashed border-[rgba(0,0,0,0.17)]" />
+              </div>
             )}
 
             <motion.div
-              key={feature.bold}
-              className="flex flex-col items-center gap-3 flex-1 sm:flex-initial"
+              className="flex flex-1 flex-col items-center gap-1.5 sm:gap-3"
               variants={fadeInUp}
             >
-              <div className="text-[var(--color-accent)]">
+              <div className="text-[var(--color-accent)] flex-shrink-0">
                 <feature.Icon />
               </div>
               <div className="text-center">
-                <p className="text-base font-medium text-[var(--color-dark)] leading-tight">
+                <p className="text-[11px] sm:text-base font-medium text-[var(--color-dark)] leading-tight">
                   {feature.bold}
                 </p>
-                <p className="text-base font-normal text-[var(--color-dark)] leading-tight">
+                <p className="text-[10px] sm:text-base font-normal text-[var(--color-muted)] leading-tight">
                   {feature.regular}
                 </p>
               </div>
             </motion.div>
-          </>
+          </Fragment>
         ))}
       </motion.div>
     </section>
