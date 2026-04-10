@@ -17,8 +17,8 @@ interface NavbarProps {
 }
 
 const navLinks = [
-  { href: '#services', key: 'services' },
   { href: '#how-it-works', key: 'howItWorks' },
+  { href: '#services', key: 'services' },
   { href: '#faqs', key: 'faqs' },
   { href: '#contact', key: 'contact' },
 ] as const;

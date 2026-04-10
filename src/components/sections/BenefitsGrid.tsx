@@ -78,6 +78,7 @@ export function BenefitsGrid({ locale }: BenefitsGridProps) {
 }
 
 // FlipCard component with 3D flip effect
+// Uses pointerType detection so hover works on desktop and tap works on mobile
 function FlipCard({ benefit }: { benefit: BenefitItem }) {
   const [isFlipped, setIsFlipped] = useState(false);
   const Icon = iconMap[benefit.icon] ?? ChartIcon;
@@ -87,14 +88,18 @@ function FlipCard({ benefit }: { benefit: BenefitItem }) {
       className="relative h-[220px] perspective-1000"
       style={{ perspective: '1000px' }}
       variants={fadeInUp}
-      onMouseEnter={() => setIsFlipped(true)}
-      onMouseLeave={() => setIsFlipped(false)}
+      onPointerEnter={(e) => {
+        if (e.pointerType === 'mouse') setIsFlipped(true);
+      }}
+      onPointerLeave={(e) => {
+        if (e.pointerType === 'mouse') setIsFlipped(false);
+      }}
       onClick={() => setIsFlipped((prev) => !prev)}
       onFocus={() => setIsFlipped(true)}
       onBlur={() => setIsFlipped(false)}
       tabIndex={0}
-      role="article"
-      aria-label={benefit.title}
+      role="button"
+      aria-label={`${benefit.title} — tap to ${isFlipped ? 'close' : 'read more'}`}
     >
       <motion.div
         className="relative w-full h-full"
@@ -107,7 +112,7 @@ function FlipCard({ benefit }: { benefit: BenefitItem }) {
           className={cn(
             'absolute inset-0 backface-hidden',
             'bg-white rounded-[var(--radius-card)] p-6 card-shadow',
-            'flex flex-col items-center justify-center text-center gap-4'
+            'flex flex-col items-center justify-center text-center gap-3'
           )}
           style={{ backfaceVisibility: 'hidden' }}
         >
@@ -126,6 +131,10 @@ function FlipCard({ benefit }: { benefit: BenefitItem }) {
           <p className="text-sm text-[var(--color-muted)]">
             {benefit.frontText}
           </p>
+          {/* Tap hint - visible on touch devices only */}
+          <span className="text-[11px] text-[var(--color-accent)] font-medium mt-1 sm:hidden" aria-hidden="true">
+            Tap to read more
+          </span>
         </div>
 
         {/* Back Face */}
@@ -146,6 +155,10 @@ function FlipCard({ benefit }: { benefit: BenefitItem }) {
           <p className="text-sm font-normal leading-relaxed text-white/80">
             {benefit.description}
           </p>
+          {/* Tap hint on back face */}
+          <span className="text-[11px] text-[var(--color-accent)] font-medium mt-3 sm:hidden" aria-hidden="true">
+            Tap to close
+          </span>
         </div>
       </motion.div>
     </motion.div>

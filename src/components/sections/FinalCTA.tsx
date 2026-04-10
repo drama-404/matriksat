@@ -68,6 +68,8 @@ export function FinalCTA({ locale }: FinalCTAProps) {
             />
             <motion.a
               href={CONTACT.calendly}
+              target="_blank"
+              rel="noopener noreferrer"
               className="relative inline-flex items-center gap-2 bg-white text-[var(--color-dark)] rounded-[72px] px-6 sm:px-8 py-4 sm:py-5 text-sm sm:text-base font-semibold hover:opacity-90 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-dark)]"
               animate={{
                 scale: [1, 1.02, 1],

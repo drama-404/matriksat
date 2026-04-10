@@ -1,6 +1,7 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import { CONTACT } from '@/lib/contact';
 import { fadeInUp, staggerChildren } from '@/components/animations/variants';
@@ -23,12 +24,17 @@ const modelIconMap: Record<string, React.FC> = {
 
 export function EngagementModels({ locale }: EngagementModelsProps) {
   const content: PricingContent = locale === 'en' ? pricingEN : pricingAL;
+  const [activeModel, setActiveModel] = useState(1); // 1-indexed, default to "Build & Ship" (highlighted)
+
+  // Start on the highlighted model (index 1 = "Build & Ship")
+  const highlightedIndex = content.models.findIndex((m) => m.highlighted);
+  const defaultIndex = highlightedIndex >= 0 ? highlightedIndex : 0;
 
   return (
     <section id="pricing" className="section-container" aria-labelledby="pricing-heading">
       {/* Header */}
       <motion.div
-        className="text-center mb-12"
+        className="text-center mb-8 sm:mb-12"
         variants={fadeInUp}
         initial="hidden"
         whileInView="visible"
@@ -49,9 +55,19 @@ export function EngagementModels({ locale }: EngagementModelsProps) {
         </p>
       </motion.div>
 
-      {/* 3 Cards */}
+      {/* ─── MOBILE: Stepper with 1 > 2 > 3 navigation ─── */}
+      <div className="lg:hidden max-w-[500px] mx-auto">
+        <MobileModelStepper
+          models={content.models}
+          activeIndex={activeModel}
+          onSelect={setActiveModel}
+          defaultIndex={defaultIndex}
+        />
+      </div>
+
+      {/* ─── DESKTOP: 3-column grid ─── */}
       <motion.div
-        className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-[1100px] mx-auto"
+        className="hidden lg:grid grid-cols-3 gap-6 max-w-[1100px] mx-auto"
         variants={staggerChildren}
         initial="hidden"
         whileInView="visible"
@@ -62,6 +78,106 @@ export function EngagementModels({ locale }: EngagementModelsProps) {
         ))}
       </motion.div>
     </section>
+  );
+}
+
+/* ─── Mobile Model Stepper ─── */
+
+interface MobileModelStepperProps {
+  models: EngagementModel[];
+  activeIndex: number;
+  onSelect: (index: number) => void;
+  defaultIndex: number;
+}
+
+function MobileModelStepper({ models, activeIndex, onSelect, defaultIndex }: MobileModelStepperProps) {
+  // Initialize to highlighted model
+  const [current, setCurrent] = useState(defaultIndex);
+
+  const handleSelect = (index: number) => {
+    setCurrent(index);
+    onSelect(index);
+  };
+
+  const total = models.length;
+
+  return (
+    <div>
+      {/* Step selector: numbered tabs with connector lines */}
+      <div className="flex items-center justify-center gap-0 mb-6">
+        {models.map((model, index) => {
+          const isActive = current === index;
+          const Icon = modelIconMap[model.icon] ?? CompassIcon;
+
+          return (
+            <div key={model.id} className="flex items-center">
+              {/* Connector line before (except first) */}
+              {index > 0 && (
+                <div
+                  className={cn(
+                    'w-8 sm:w-12 h-[2px] transition-colors duration-300',
+                    current >= index ? 'bg-[var(--color-accent)]' : 'bg-[rgba(0,0,0,0.1)]'
+                  )}
+                />
+              )}
+
+              {/* Step button */}
+              <button
+                onClick={() => handleSelect(index)}
+                className={cn(
+                  'relative flex items-center justify-center w-11 h-11 rounded-full transition-all duration-300 flex-shrink-0',
+                  isActive
+                    ? 'bg-[var(--color-dark)] text-white scale-110 shadow-lg'
+                    : current > index
+                      ? 'bg-[var(--color-accent)] text-white'
+                      : 'bg-[var(--color-background)] text-[var(--color-muted)] border-2 border-[rgba(0,0,0,0.08)]'
+                )}
+                aria-label={`View ${model.name}`}
+              >
+                <span className="text-sm font-bold">{index + 1}</span>
+                {/* Badge indicator for highlighted model */}
+                {model.badge && (
+                  <span className="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-[var(--color-accent)] border-2 border-white" />
+                )}
+              </button>
+            </div>
+          );
+        })}
+      </div>
+
+      {/* Active model card */}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={models[current].id}
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -12 }}
+          transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <PricingCard model={models[current]} />
+        </motion.div>
+      </AnimatePresence>
+
+      {/* Navigation buttons */}
+      <div className="flex gap-3 mt-4">
+        <button
+          onClick={() => handleSelect(current > 0 ? current - 1 : total - 1)}
+          className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-white card-shadow text-sm font-medium text-[var(--color-dark)] active:scale-[0.98] transition-transform"
+          aria-label="Previous model"
+        >
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6" /></svg>
+          Previous
+        </button>
+        <button
+          onClick={() => handleSelect(current < total - 1 ? current + 1 : 0)}
+          className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-[var(--color-accent)] text-sm font-medium text-white active:scale-[0.98] transition-transform"
+          aria-label="Next model"
+        >
+          Next
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6" /></svg>
+        </button>
+      </div>
+    </div>
   );
 }
 

@@ -9,6 +9,8 @@ interface ButtonProps {
   variant?: 'primary' | 'secondary' | 'outline';
   size?: 'default' | 'large';
   href?: string;
+  target?: string;
+  rel?: string;
   onClick?: () => void;
   className?: string;
   subText?: string;
@@ -19,6 +21,8 @@ export function Button({
   variant = 'primary',
   size = 'default',
   href,
+  target,
+  rel,
   onClick,
   className,
   subText,
@@ -55,9 +59,15 @@ export function Button({
   );
 
   if (href) {
+    const isExternal = href.startsWith('http');
+    const linkTarget = target ?? (isExternal ? '_blank' : undefined);
+    const linkRel = rel ?? (isExternal ? 'noopener noreferrer' : undefined);
+
     return (
       <motion.a
         href={href}
+        target={linkTarget}
+        rel={linkRel}
         className={baseStyles}
         variants={buttonHover}
         initial="rest"
