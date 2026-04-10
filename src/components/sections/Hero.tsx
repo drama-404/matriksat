@@ -124,11 +124,6 @@ export function Hero({ locale }: HeroProps) {
         </motion.div>
       </div>
 
-      {/* Dashed Line Divider */}
-      <div
-        className="absolute bottom-0 left-0 right-0 h-[2px] border-dashed-custom border-t-2"
-        aria-hidden="true"
-      />
     </section>
   );
 }
