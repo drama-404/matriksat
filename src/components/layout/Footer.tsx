@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { cn } from '@/lib/utils';
 import { CONTACT } from '@/lib/contact';
@@ -21,23 +22,14 @@ export function Footer({ locale }: FooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 sm:gap-12">
           {/* Logo & Description */}
           <div className="md:col-span-2">
-            <Link href={`/${locale}`} className="inline-block mb-6 group">
-              <span className="relative">
-                <span
-                  className="text-lg font-semibold tracking-tight text-white"
-                  style={{ fontFamily: 'var(--font-euclid)' }}
-                >
-                  denada
-                </span>
-                {/* Terracotta underline accent */}
-                <span
-                  className={cn(
-                    'absolute -bottom-0.5 left-0 h-[2px] w-0',
-                    'bg-[var(--color-accent)]',
-                    'group-hover:w-full transition-all duration-300 ease-out'
-                  )}
-                />
-              </span>
+            <Link href={`/${locale}`} className="inline-block mb-6">
+              <Image
+                src="/denada-portfolio-logo.png"
+                alt="denada"
+                width={120}
+                height={32}
+                className="h-8 w-auto brightness-0 invert"
+              />
             </Link>
             <p className="text-white/70 max-w-sm mb-6">
               {t('description')}

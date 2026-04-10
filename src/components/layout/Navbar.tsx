@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { cn } from '@/lib/utils';
@@ -59,28 +60,20 @@ export function Navbar({ locale }: NavbarProps) {
           className="flex items-center justify-between h-full mx-auto px-4 sm:px-8"
           style={{ maxWidth: 1094 }}
         >
-          {/* Logo with subtle underline accent */}
+          {/* Logo */}
           <Link
             href={`/${locale}`}
-            className="flex items-center group"
+            className="flex items-center"
             aria-label="denada Home"
           >
-            <span className="relative">
-              <span
-                className="text-lg font-semibold tracking-tight text-[var(--color-dark)]"
-                style={{ fontFamily: 'var(--font-euclid)' }}
-              >
-                denada
-              </span>
-              {/* Terracotta underline accent */}
-              <span
-                className={cn(
-                  'absolute -bottom-0.5 left-0 h-[2px] w-0',
-                  'bg-[var(--color-accent)]',
-                  'group-hover:w-full transition-all duration-300 ease-out'
-                )}
-              />
-            </span>
+            <Image
+              src="/denada-portfolio-logo.png"
+              alt="denada"
+              width={120}
+              height={32}
+              className="h-8 w-auto"
+              priority
+            />
           </Link>
 
           {/* Navigation Links - Hidden on mobile */}

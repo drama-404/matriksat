@@ -5,6 +5,9 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Denada | Full-Stack Developer & AI Engineer',
   description: 'I build AI-powered web applications, chatbots, and custom tools. Based in Tirana, Albania. From idea to production in weeks.',
+  icons: {
+    icon: '/denada-portfolio-favicon.ico',
+  },
 };
 
 const fontVariables = [
