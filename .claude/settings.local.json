@@ -7,7 +7,9 @@
       "Bash(pip install:*)",
       "mcp__plugin_context7_context7__query-docs",
       "Bash(npm run build:*)",
-      "Bash(npx tsc:*)"
+      "Bash(npx tsc:*)",
+      "Bash(python3 -c \"from PIL import Image; img = Image.open\\('c:/Users/Denada/Desktop/projects/matriksat/src/app/apple-icon.png'\\); print\\(f'Dimensions: {img.size}'\\)\")",
+      "Bash(magick identify:*)"
     ]
   },
   "enableAllProjectMcpServers": true,
